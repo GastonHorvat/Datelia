@@ -2,7 +2,8 @@
 
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { ContactEmailTemplate } from '@/components/email/ContactEmailTemplate'; // Importamos nuestro componente
+// Asegúrate que esta ruta sea correcta según donde creaste el archivo de la plantilla
+import { ContactEmailTemplate } from '@/components/email/ContactEmailTemplate'; 
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,10 +12,16 @@ export async function POST(request: Request) {
     const body = await request.json();
     
     const { data, error } = await resend.emails.send({
-      from: 'Datelia <onboarding@resend.dev>', // Reemplaza con tu dominio verificado
-      to: ['info@datelia.tech'],
+      // ===================================================================
+      // CAMBIO PRINCIPAL AQUÍ
+      // Reemplazamos la dirección de prueba por una de tu dominio verificado.
+      from: 'Datelia <info@datelia.com.ar>', 
+      // ===================================================================
+      
+      to: ['info@datelia.tech'], // El email que recibirá la consulta. Puede ser el mismo o diferente.
       subject: `Nueva consulta de ${body.nombre} desde la web`,
-      // Aquí usamos nuestro componente de React limpio
+
+      // Pasamos los datos al componente de la plantilla del email
       react: ContactEmailTemplate({ 
         nombre: body.nombre,
         email: body.email,
