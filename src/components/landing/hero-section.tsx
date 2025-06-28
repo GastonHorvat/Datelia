@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white pt-20">
+    <section id="inicio" className="relative h-[50vh] min-h-[700px] w-full flex items-center justify-center text-center text-white pt-20">
       <div className="absolute inset-0">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="/images/nasa.jpg"
           alt="Fondo abstracto de tecnología"
           fill
           objectFit="cover"
-          className="opacity-20"
+          className="opacity-50"
           priority
           data-ai-hint="abstract data neural network"
         />

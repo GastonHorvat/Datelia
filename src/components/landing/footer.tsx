@@ -8,10 +8,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 space-y-4">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-foreground">
-            <img 
-              src="/src/assets/logo.jpg" 
-              alt="Logo de Datelia" 
-              className="h-8 w-auto" // Ajusta la altura (h-8) según necesites. El ancho será automático.
+            <img
+              src="/images/logo.jpg" // Ruta correcta
+              alt="Logo de Datelia"
+              className="h-9 w-auto"
             />
           </Link>
             <p className="text-sm max-w-xs">

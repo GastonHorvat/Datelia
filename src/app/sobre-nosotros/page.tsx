@@ -3,132 +3,139 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Componentes de tu UI y Layout
+import { Layout } from '@/components/layout';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+
+// Iconos profesionales de lucide-react
+import { Linkedin, Trophy, Lightbulb, Handshake } from 'lucide-react';
+
 const AboutUsPage = () => {
+  // CORRECCIÓN: Reducido a 2 fundadores con nuevos roles y bios
   const teamMembers = [
     {
-      photo: '/placeholders/foto-fundador.jpg',
-      name: '[Nombre del Fundador]',
-      title: 'Fundador y Director de Estrategia',
-      bio: 'Con más de [X] años de experiencia en la intersección de la tecnología y los negocios, [Nombre] fundó Datelia con la misión de hacer la IA accesible y rentable para empresas de todos los tamaños.',
-      linkedin: '[URL del perfil de LinkedIn]',
+      photo: '/placeholders/founder-comercial.jpg', // Reemplaza con la foto real
+      name: 'Jimena G. Pinto',
+      title: 'Founder & Directora de Relaciones Comerciales',
+      bio: 'Con una visión estratégica centrada en el cliente, lidera el crecimiento y las alianzas de Datelia, asegurando que cada solución no solo sea innovadora, sino que también genere un éxito tangible para nuestros socios.',
+      linkedin: '#', // Reemplaza con la URL real
     },
     {
-      photo: '/placeholders/foto-cto.jpg',
-      name: '[Nombre del CTO]',
-      title: 'Director de Tecnología',
-      bio: '[Nombre] es el arquitecto detrás de nuestras soluciones. Su pasión es traducir los desafíos de negocio complejos en sistemas de IA robustos, escalables y seguros.',
-      linkedin: '[URL del perfil de LinkedIn]',
-    },
-    {
-      photo: '/placeholders/foto-coo.jpg',
-      name: '[Nombre del COO]',
-      title: 'Directora de Operaciones',
-      bio: '[Nombre] se asegura de que cada proyecto se entregue a tiempo y supere las expectativas. Es el puente entre la visión del cliente y la ejecución técnica del equipo.',
-      linkedin: '[URL del perfil de LinkedIn]',
+      photo: '/placeholders/founder-tech.jpg', // Reemplaza con la foto real
+      name: 'Gastón M. Horvat',
+      title: 'Founder & Director de Tecnología',
+      bio: 'Es el arquitecto técnico detrás de nuestras soluciones. Su pasión es transformar ideas complejas en sistemas de IA robustos, escalables y seguros que impulsan la eficiencia y la transformación digital.',
+      linkedin: '#', // Reemplaza con la URL real
     },
   ];
 
   const philosophyPoints = [
-    {
-      icon: '/icons/trophy-icon.svg', // Placeholder icon
-      title: 'Resultados por Encima de Todo',
-      description: 'Nuestro éxito se mide por el éxito de nuestros clientes. El ROI, el ahorro de tiempo y la eficiencia son las métricas que nos impulsan.',
-    },
-    {
-      icon: '/icons/bulb-icon.svg', // Placeholder icon
-      title: 'Innovación con Propósito',
-      description: 'Exploramos constantemente las nuevas fronteras de la IA, pero solo aplicamos tecnologías que resuelven problemas reales y tienen un caso de negocio sólido.',
-    },
-    {
-      icon: '/icons/handshake-icon.svg', // Placeholder icon
-      title: 'Colaboración y Transparencia',
-      description: 'Trabajamos como una extensión de tu equipo. Creemos en una comunicación abierta y un proceso claro de principio a fin.',
-    },
+    { icon: Trophy, title: 'Resultados por Encima de Todo', description: 'Nuestro éxito se mide por el éxito de nuestros clientes. El ROI, el ahorro de tiempo y la eficiencia son las métricas que nos impulsan.' },
+    { icon: Lightbulb, title: 'Innovación con Propósito', description: 'Exploramos las nuevas fronteras de la IA, pero solo aplicamos tecnologías que resuelven problemas reales y tienen un caso de negocio sólido.' },
+    { icon: Handshake, title: 'Colaboración y Transparencia', description: 'Trabajamos como una extensión de tu equipo. Creemos en una comunicación abierta y un proceso claro de principio a fin.' },
   ];
 
   return (
-    <>
+    <Layout>
       <Head>
         <title>Sobre Nosotros | El Equipo Experto en IA de Datelia</title>
         <meta name="description" content="Conoce la misión, visión y al equipo de expertos detrás de Datelia. Estamos dedicados a implementar soluciones de IA que transforman negocios." />
       </Head>
 
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] overflow-hidden">
+      <section className="relative w-full min-h-[50vh] flex items-center justify-center text-center overflow-hidden">
         <Image
-          src="/placeholders/equipo-trabajando.jpg" // Placeholder image
-          alt="Equipo de Datelia trabajando"
+          src="/placeholders/equipo-trabajando.jpg"
+          alt="Equipo de Datelia colaborando en un proyecto de IA"
           layout="fill"
           objectFit="cover"
           className="z-0"
+          priority
         />
-        <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Somos un Equipo de Expertos, Obsesionados con los Resultados.</h1>
-          <p className="text-lg md:text-xl max-w-3xl">Nacimos de una convicción simple: la Inteligencia Artificial no debe ser una promesa lejana, sino una herramienta práctica que genera eficiencia y crecimiento hoy.</p>
+        {/* CORRECCIÓN 1: Overlay más oscuro para máximo contraste */}
+        <div className="absolute inset-0 bg-black/75 z-10"></div>
+        
+        {/* CORRECCIÓN 2: Texto explícitamente blanco y subtítulo más claro */}
+        <div className="relative z-20 text-white px-4">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
+            Somos un Equipo de Expertos, Obsesionados con los Resultados.
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/80">
+            Nacimos de una convicción simple: la IA no debe ser una promesa lejana, sino una herramienta práctica que genera eficiencia y crecimiento hoy.
+          </p>
         </div>
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 sm:py-24 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Nuestra Filosofía</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {philosophyPoints.map((point, index) => (
-              <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
-                <Image src={point.icon} alt={point.title} width={60} height={60} className="mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{point.title}</h3>
-                <p className="text-gray-600">{point.description}</p>
-              </div>
-            ))}
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Nuestra Filosofía</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {philosophyPoints.map((point) => {
+              const Icon = point.icon;
+              return (
+                <div key={point.title} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className="bg-primary/10 p-4 rounded-full">
+                      <Icon className="w-8 h-8 text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{point.title}</h3>
+                  <p className="text-accent-foreground/80">{point.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-16">
+      <section className="py-20 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">El Equipo Detrás de la IA</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm">
-                <Image
-                  src={member.photo}
-                  alt={member.name}
-                  width={120}
-                  height={120}
-                  className="rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-1 text-gray-800">{member.name}</h3>
-                <p className="text-sm text-gray-500 italic mb-4">{member.title}</p>
-                <p className="text-gray-600 mb-4">{member.bio}</p>
-                {member.linkedin && (
-                  <Link href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <a className="text-blue-600 hover:underline flex items-center">
-                      <Image src="/icons/linkedin-icon.svg" alt="LinkedIn" width={20} height={20} className="mr-2" />
-                      LinkedIn
-                    </a>
-                  </Link>
-                )}
-              </div>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">El Equipo Fundador</h2>
+          {/* CORRECCIÓN: Usando 'lg:grid-cols-2' para 2 miembros y centrándolo */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {teamMembers.map((member) => (
+              <Card key={member.name} className="text-center flex flex-col">
+                <CardContent className="pt-6 flex-grow">
+                  {/* CORRECCIÓN: Foto redonda y de tamaño consistente */}
+                  <Image
+                    src={member.photo}
+                    alt={`Foto de ${member.name}`}
+                    width={120}
+                    height={120}
+                    className="rounded-full mb-4 mx-auto object-cover"
+                  />
+                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                  <p className="text-sm text-primary font-medium mb-3">{member.title}</p>
+                  <p className="text-muted-foreground">{member.bio}</p>
+                </CardContent>
+                <CardFooter className="justify-center">
+                  <Button asChild variant="ghost" size="sm">
+                    <Link href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="mr-2 h-4 w-4" />
+                      Perfil de LinkedIn
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-blue-600 text-white py-16 text-center">
+      <section className="bg-primary text-primary-foreground text-center py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Listo para que nuestro equipo se una al tuyo?</h2>
-          <p className="text-lg mb-8">Ahora que nos conoces, nos encantaría conocerte a ti. Hablemos de tus objetivos y de cómo podemos ayudarte a alcanzarlos.</p>
-          <Link href="/contacto">
-            <a className="inline-block bg-yellow-400 text-blue-800 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-500 transition duration-300">
-              Contactar al Equipo
-            </a>
-          </Link>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">¿Listo para que nuestro equipo se una al tuyo?</h2>
+          <p className="text-xl mb-8 text-primary-foreground/80">Ahora que nos conoces, nos encantaría conocerte. Hablemos de tus objetivos.</p>
+          <Button asChild size="lg" variant="secondary">
+            <Link href="/contacto">Contactar al Equipo</Link>
+          </Button>
         </div>
       </section>
-    </>
+    </Layout>
   );
 };
 

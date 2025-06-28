@@ -1,90 +1,40 @@
+// src/app/api/contact/route.tsx
+
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
+import { ContactEmailTemplate } from '@/components/email/ContactEmailTemplate'; // Importamos nuestro componente
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.json();
-
-    const {
-      nombre,
-      email,
-      telefono,
-      empresa,
-      sector, // This should be an array of selected sectors
-      mensaje,
-      comoNosEncontro, // This should be an array of selected options
-    } = formData;
-
-    // Basic validation (you can add more detailed validation as needed)
-    if (!nombre || !email || !telefono || !sector || sector.length === 0 || !mensaje) {
-      return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
-    }
-
-    // Email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
-    }
-
-    // Format the email body
-    const emailBody = `
-Asunto: Nuevo Lead desde la Página de Contacto - Datelia
-
-Has recibido una nueva consulta desde la web.
-
---- DATOS DEL CONTACTO ---
-
-Nombre: ${nombre}
-Email: ${email}
-Teléfono: ${telefono}
-Empresa: ${empresa || 'No especificado'}
-
---- DETALLES DE LA CONSULTA ---
-
-Sector(es): ${sector.join(', ') || 'No especificado'}
-Mensaje:
-${mensaje}
-
---- INFORMACIÓN ADICIONAL ---
-
-Cómo nos encontró: ${comoNosEncontro?.join(', ') || 'No especificado'}
-    `;
-
-    // Placeholder for sending the email
-    // Replace this with your actual email sending logic
-    // Example using a hypothetical sendEmail function:
-    /*
-    const emailSent = await sendEmail({
-      to: 'info@datelia.tech',
-      subject: 'Nuevo Lead desde la Página de Contacto - Datelia',
-      text: emailBody,
+    const body = await request.json();
+    
+    const { data, error } = await resend.emails.send({
+      from: 'Datelia <onboarding@resend.dev>', // Reemplaza con tu dominio verificado
+      to: ['info@datelia.tech'],
+      subject: `Nueva consulta de ${body.nombre} desde la web`,
+      // Aquí usamos nuestro componente de React limpio
+      react: ContactEmailTemplate({ 
+        nombre: body.nombre,
+        email: body.email,
+        telefono: body.telefono,
+        empresa: body.empresa,
+        sector: body.sector,
+        mensaje: body.mensaje,
+        howFound: body.howFound,
+       }),
     });
 
-    if (!emailSent) {
-      return NextResponse.json({ message: 'Failed to send email' }, { status: 500 });
+    if (error) {
+      console.error("Error desde Resend:", error);
+      return NextResponse.json({ error: 'Error al enviar el email.' }, { status: 500 });
     }
-    */
 
-    // For now, we'll just return a success message
-    console.log('Email would be sent with body:', emailBody); // Log the email body for debugging
-
-    return NextResponse.json({ message: 'Message received successfully' }, { status: 200 });
+    return NextResponse.json({ message: 'Email enviado con éxito!', data }, { status: 200 });
 
   } catch (error) {
-    console.error('Error processing contact form submission:', error);
-    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
+    console.error("Error en el servidor:", error);
+    return NextResponse.json({ error: 'Error interno del servidor.' }, { status: 500 });
   }
 }
-
-// You would need to implement or import a sendEmail function here
-// based on your chosen email sending library or service.
-// Example placeholder function:
-/*
-async function sendEmail({ to, subject, text }: { to: string; subject: string; text: string }): Promise<boolean> {
-  // Implement your email sending logic here (e.g., using Nodemailer, SendGrid, etc.)
-  // This is a placeholder and will not actually send an email.
-  console.log(`Attempting to send email to ${to} with subject: ${subject}`);
-  console.log('Email body:', text);
-  // Simulate success
-  return true;
-}
-*/
