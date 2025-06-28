@@ -24,7 +24,7 @@ export function Footer() {
               <li><Link href="#servicios" className="hover:text-primary transition-colors">Servicios</Link></li>
               <li><Link href="#casos-de-exito" className="hover:text-primary transition-colors">Casos de Éxito</Link></li>
               <li><Link href="#contacto" className="hover:text-primary transition-colors">Contacto</Link></li>
-              <li><Link href="/privacy" className="hover:text-primary transition-colors">Política de Privacidad</Link></li>
+ <li><Link href="/politica-de-privacidad" className="hover:text-primary transition-colors">Política de Privacidad</Link></li>
             </ul>
           </div>
           <div>
