@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -26,9 +27,13 @@ export function HeroSection() {
         <div className="mt-8 text-base text-gray-400 max-w-2xl mx-auto">
           <p>Aumentamos tu ROI operativo y liberamos hasta un 40% del tiempo de tu equipo, eliminando cuellos de botella e implementando eficiencia.</p>
         </div>
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg">Descubre Cómo Transformamos tu Negocio</Button>
-          <Button size="lg" variant="outline">Ver Casos de Éxito</Button>
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <Button asChild size="lg">
+            <Link href="/soluciones">Descubre Cómo Transformamos tu Negocio</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/casos-de-exito">Ver Casos de Éxito</Link>
+          </Button>
         </div>
       </div>
     </section>
