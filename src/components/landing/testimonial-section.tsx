@@ -8,8 +8,8 @@ export function TestimonialSection() {
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           <div className="lg:col-span-1 flex justify-center">
             <Image
-              src="https://placehold.co/400x400.png"
-              alt="Foto del cliente"
+              src="/images/lauraInnovate.jpg"
+              alt="Foto del Laura Sánchez, Directora de Operaciones de Innovate Solutions"
               width={300}
               height={300}
               className="rounded-full object-cover shadow-lg aspect-square"

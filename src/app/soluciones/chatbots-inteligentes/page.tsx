@@ -135,7 +135,7 @@ const ChatbotsPage = () => {
       <section className="py-20 sm:py-28 bg-accent text-accent-foreground">
         <div className="container mx-auto max-w-3xl px-4 text-center">
             <Image
-              src="/placeholder-client-photo.jpg" // Reemplaza con una foto real
+              src="/images/martinAventura.jpg" // Reemplaza con una foto real
               alt="Foto de cliente satisfecho"
               width={80}
               height={80}
@@ -144,8 +144,8 @@ const ChatbotsPage = () => {
             <blockquote className="text-xl italic mb-6 text-accent-foreground/90">
               "Pasamos de responder en horas a hacerlo en segundos, y nuestras ventas desde WhatsApp aumentaron un 40% en los primeros tres meses. El chatbot se pagó solo."
             </blockquote>
-            <p className="text-lg font-semibold">[Placeholder: Nombre Cliente]</p>
-            <p className="text-md text-accent-foreground/70">[Empresa Cliente]</p>
+            <p className="text-lg font-semibold">Martín Rojas</p>
+            <p className="text-md text-accent-foreground/70">Head of Growth - Aventura Austral Viajes</p>
         </div>
       </section>
 

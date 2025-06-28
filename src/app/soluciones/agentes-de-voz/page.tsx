@@ -123,7 +123,7 @@ const VoiceAgentsPage = () => {
       <section className="py-20 sm:py-24 bg-accent text-accent-foreground">
         <div className="container mx-auto max-w-3xl px-4 text-center">
           <Image
-            src="/placeholder-photo.jpg" // Reemplaza con una foto real
+            src="/images/carolinaVitalia.jpg" // Reemplaza con una foto real
             alt="Foto de un director de clínica satisfecho"
             width={80}
             height={80}
@@ -132,8 +132,8 @@ const VoiceAgentsPage = () => {
           <blockquote className="text-xl italic mb-6 text-accent-foreground/90">
             "El agente de voz se paga solo. Hemos recuperado unas 15 horas de trabajo administrativo a la semana y las citas olvidadas casi han desaparecido. Increíble."
           </blockquote>
-          <p className="text-lg font-semibold">[Placeholder: Nombre Cliente]</p>
-          <p className="text-md text-accent-foreground/70">Director, [Nombre de la Clínica]</p>
+          <p className="text-lg font-semibold">Carolina Méndez</p>
+          <p className="text-md text-accent-foreground/70">Directora de Operaciones - Centro Médico Vitalia</p>
         </div>
       </section>
 

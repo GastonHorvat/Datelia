@@ -12,21 +12,21 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
     {
-      logo: '/placeholders/logo-empresa-retail.svg',
+      logo: '/images/casos/urban-retail.png',
       title: 'Empresa de Retail Aumenta su Conversión en un 35% con un Chatbot Inteligente',
       summary: 'Implementamos un chatbot multicanal que no solo automatizó el 80% de las consultas de soporte, sino que también optimizó la captación y calificación de leads 24/7.',
       metrics: ['+35% Conversión de Leads', '-50% en Costos de Soporte', 'ROI en 6 meses'],
       href: '/casos-de-exito/caso-retail-chatbot',
     },
     {
-      logo: '/placeholders/logo-clinica-salud.svg',
+      logo: "/images/casos/clinica-vitalia.png",
       title: 'Clínica Líder Reduce sus "No-Shows" en un 40% con un Agente de Voz IA',
       summary: 'Nuestro agente de voz se encargó de la confirmación proactiva de citas, liberando 15 horas semanales del personal administrativo y recuperando ingresos perdidos.',
       metrics: ['-40% Tasa de No-Show', '+15 Horas/Semana Ahorradas', '+95% Satisfacción'],
       href: '/casos-de-exito/caso-clinica-agente-voz',
     },
     {
-      logo: '/placeholders/logo-empresa-logistica.svg',
+      logo: '/images/casos/nexus-logistica.png',
       title: 'Empresa de Logística Optimiza su Cadena de Suministro con IA a Medida',
       summary: 'Desarrollamos una solución personalizada que analiza datos en tiempo real para predecir cuellos de botella, optimizando rutas y reduciendo los costos operativos en un 22%.',
       metrics: ['-22% Costos Operativos', '+30% Precisión', 'Proceso Automatizado'],
