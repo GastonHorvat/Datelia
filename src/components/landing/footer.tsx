@@ -7,10 +7,13 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl text-foreground">
-              <Mountain className="h-6 w-6 text-primary" />
-              <span className="font-headline">Datelia.tech</span>
-            </Link>
+          <Link href="/" className="flex items-center gap-2 font-bold text-xl text-foreground">
+            <img 
+              src="/src/assets/logo.jpg" 
+              alt="Logo de Datelia" 
+              className="h-8 w-auto" // Ajusta la altura (h-8) según necesites. El ancho será automático.
+            />
+          </Link>
             <p className="text-sm max-w-xs">
               Agencia de Inteligencia artificial aplicada a los negocios.
             </p>
@@ -27,8 +30,8 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground tracking-wider uppercase">Contacto</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><a href="mailto:contacto@datelia.tech" className="hover:text-primary transition-colors">contacto@datelia.tech</a></li>
-              <li><p>+XX XXX XXXX</p></li>
+              <li><a href="mailto:contacto@datelia.tech" className="hover:text-primary transition-colors">info@datelia.tech</a></li>
+              <li><p>+54 11.5246.6310</p></li>
               <li><p>Dirección de la oficina</p></li>
             </ul>
           </div>
@@ -36,7 +39,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border/50">
         <div className="container mx-auto px-4 md:px-6 py-6 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Datelia.tech. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Datelia. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
