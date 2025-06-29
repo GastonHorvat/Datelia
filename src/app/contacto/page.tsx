@@ -105,7 +105,7 @@ export default function ContactPage() {
         <meta name="description" content="Contacta a Datelia para diseñar una solución de IA adaptada a tus procesos, impulsando la eficiencia y el crecimiento empresarial." />
       </Head>
 
-      <section className="bg-accent text-accent-foreground py-20 sm:py-24">
+      <section className="bg-accent text-accent-foreground pt-28 pb-12 text-center">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">
             Hablemos de tu Próxima Solución Inteligente

@@ -42,6 +42,7 @@ export function Header() {
       ],
     },
     { href: "/casos-de-exito", label: "Casos de Éxito" },
+    { href: "/blog", label: "Blog" },
     { href: "/sobre-nosotros", label: "Sobre Nosotros" },
     { href: "/contacto", label: "Contacto" },
   ];
