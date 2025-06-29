@@ -16,6 +16,13 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+            // Objeto 2: El que necesitas añadir para las imágenes de tu blog
+      {
+        protocol: 'https',
+        hostname: 'juhmwanicmpjvyakrjbg.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/public/blog-assets/**',
+      },
     ],
   },
 };
