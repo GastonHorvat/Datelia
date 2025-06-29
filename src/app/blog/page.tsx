@@ -55,7 +55,7 @@ export default async function BlogIndexPage() {
   return (
     <Layout>
       {/* --- Encabezado --- */}
-      <section className="bg-accent text-accent-foreground py-20 text-center">
+      <section className="bg-accent text-accent-foreground py-32 sm:py-32 text-center"> 
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Datelia Insights</h1>
           <p className="text-xl text-accent-foreground/80 max-w-2xl mx-auto">
