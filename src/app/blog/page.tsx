@@ -1,89 +1,100 @@
 // src/app/blog/page.tsx
 
-// =======================================================================================
-// SECCIÓN 1: IMPORTACIONES
-// =======================================================================================
 import { Layout } from '@/components/layout';
 import { supabase } from '@/lib/supabaseClient';
-import Link from 'next/link';
-import { Post } from '@/types/blog'; // ¡Importamos nuestro tipo unificado y centralizado!
-
-// ¡Importamos los componentes que acabamos de arreglar!
+import { Post } from '@/types/blog'; 
 import { FeaturedPostCard } from '@/components/blog/FeaturedPostCard';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
+import { Pagination } from '@/components/ui/Pagination'; // Importamos el nuevo componente
 
-// Buena práctica: Revalidar los datos del blog cada hora para no sobrecargar la DB.
-export const revalidate = 3600; 
+export const revalidate = 3600; // Revalidar cada hora
 
-// =======================================================================================
-// SECCIÓN 2: OBTENCIÓN DE DATOS (DATA FETCHING)
-// =======================================================================================
-async function getPosts() {
+const POSTS_PER_PAGE = 6; // ¡Nuestra nueva constante!
+
+// --- SECCIÓN 2: OBTENCIÓN DE DATOS CON LÓGICA DE PAGINACIÓN ---
+async function getPosts({ currentPage = 1 }: { currentPage: number }) {
   try {
-    // Usamos la misma lógica robusta de tu código que ya funcionaba
-    const { data: allPosts, error } = await supabase
-      .from('posts_view') // Usamos la vista
-      .select('*')
-      .order('created_at', { ascending: false });
+    let featuredPost: Post | null = null;
+    let regularPostsQuery = supabase.from('posts_view').select('*', { count: 'exact' });
 
-    if (error) {
-      throw new Error(`Error fetching posts: ${error.message}`);
+    // El post destacado solo se busca y se muestra en la primera página
+    if (currentPage === 1) {
+      const { data: featuredData, error: featuredError } = await supabase
+        .from('posts_view')
+        .select('*')
+        .eq('is_featured', true)
+        .limit(1)
+        .maybeSingle<Post>();
+
+      if (featuredError) console.error("Error fetching featured post:", featuredError.message);
+      featuredPost = featuredData;
+      
+      // Si encontramos un destacado, lo excluimos de la consulta de posts regulares
+      if (featuredPost) {
+        regularPostsQuery = regularPostsQuery.neq('post_id', featuredPost.post_id);
+      }
     }
     
-    // Ahora hacemos el type casting a un array de nuestro tipo Post unificado
-    const posts = allPosts as Post[];
+    // Filtramos para obtener solo los no destacados
+    regularPostsQuery = regularPostsQuery.or('is_featured.is.null,is_featured.eq.false');
 
-    // Lógica para separar el destacado de los regulares
-    const featuredPost = posts.find(p => p.is_featured) || null;
-    const regularPosts = posts.filter(p => !p.is_featured);
+    // Calculamos el rango de posts a obtener para la página actual
+    const offset = (currentPage - 1) * POSTS_PER_PAGE;
+    
+    const { data: regularPosts, error: regularError, count } = await regularPostsQuery
+      .order('created_at', { ascending: false })
+      .range(offset, offset + POSTS_PER_PAGE - 1);
 
-    return { featuredPost, regularPosts, error: null };
+    if (regularError) throw new Error(regularError.message);
+
+    const totalPages = Math.ceil((count || 0) / POSTS_PER_PAGE);
+
+    return { featuredPost, regularPosts: regularPosts as Post[], totalPages, error: null };
 
   } catch (error) {
-    console.error("Error connecting to Supabase or processing posts:", error);
-    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred.";
-    return { featuredPost: null, regularPosts: [], error: errorMessage };
+    const message = error instanceof Error ? error.message : "An unknown error occurred.";
+    console.error("Error en getPosts:", message);
+    return { featuredPost: null, regularPosts: [], totalPages: 0, error: message };
   }
 }
 
-// =======================================================================================
-// SECCIÓN 3: EL COMPONENTE DE LA PÁGINA
-// =======================================================================================
-export default async function BlogIndexPage() {
-  const { featuredPost, regularPosts, error } = await getPosts();
+// --- SECCIÓN 3: EL COMPONENTE DE LA PÁGINA ---
+// Ahora recibe `searchParams` para saber en qué página estamos
+export default async function BlogIndexPage({ searchParams }: { searchParams?: { page?: string } }) {
+  const currentPage = Number(searchParams?.page) || 1;
+  const { featuredPost, regularPosts, totalPages, error } = await getPosts({ currentPage });
 
   return (
     <Layout>
-      {/* --- Encabezado --- */}
-      <section className="bg-accent text-accent-foreground pt-28 pb-12 text-center"> 
+      <section className="bg-accent text-accent-foreground pt-28 pb-12 text-center">
+        {/* ... (código del encabezado sin cambios) ... */}
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Datelia Insights</h1>
-          <p className="text-xl text-accent-foreground/80 max-w-2xl mx-auto">
-            Tu fuente de conocimiento sobre IA, consejos de automatización y estrategias de negocio.
-          </p>
+          <p className="text-xl text-accent-foreground/80 max-w-2xl mx-auto">Tu fuente de conocimiento sobre IA, consejos de automatización y estrategias de negocio.</p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 py-16 sm:py-20">
-        {/* --- Manejo de Errores --- */}
         {error ? (
           <div className="text-center py-20 text-destructive">
-            <h2 className="text-2xl font-bold">Error al Cargar Contenido</h2>
-            <p>{error}</p>
+            <h2 className="text-2xl font-bold">Error al Cargar Contenido</h2><p>{error}</p>
           </div>
         ) : (
           <div className="space-y-16">
-            {/* --- Renderizado de Post Destacado (si existe) --- */}
-            {featuredPost && <FeaturedPostCard post={featuredPost} />}
+            {/* El post destacado solo se muestra en la primera página */}
+            {currentPage === 1 && featuredPost && <FeaturedPostCard post={featuredPost} />}
             
-            {/* --- Renderizado de Posts Regulares (si existen) --- */}
             {regularPosts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {regularPosts.map((post) => (
-                  <BlogPostCard post={post} key={post.post_id} />
-                ))}
-              </div>
-            ) : !featuredPost ? ( // Solo muestra "Próximamente" si NO hay destacado tampoco
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {regularPosts.map((post) => (
+                    <BlogPostCard post={post} key={post.post_id} />
+                  ))}
+                </div>
+                {/* La paginación solo se muestra si hay más de una página */}
+                {totalPages > 1 && <Pagination totalPages={totalPages} />}
+              </>
+            ) : currentPage === 1 && !featuredPost ? (
               <div className="text-center py-20 text-muted-foreground">
                 <h2 className="text-2xl font-bold text-foreground">Próximamente...</h2>
                 <p>Estamos preparando contenido increíble. ¡Vuelve pronto!</p>
