@@ -10,8 +10,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import parse from 'html-react-parser';
-// ¡Importamos el componente que faltaba!
+import { parseAndCleanHtml } from '@/lib/utils';
 import { ShareButtons } from '@/components/blog/ShareButtons';
 
 // =======================================================================================
@@ -115,7 +114,7 @@ export default async function BlogPostPage({ params }: MetadataProps) {
               prose-a:hover:underline
               dark:prose-invert
             ">
-              {parse(post.post_content)}
+              {parseAndCleanHtml(post.post_content)}
             </div>
 
             {/* --- Footer del Artículo --- */}
