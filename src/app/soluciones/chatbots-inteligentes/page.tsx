@@ -27,7 +27,7 @@ const ChatbotsPage = () => {
       </Head>
 
       {/* Hero Section - Estilo de la landing */}
-      <section className="bg-accent text-accent-foreground py-24 sm:py-32 flex items-center justify-center">
+      <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto text-center px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Conversaciones que Convierten, 24/7.</h1>
           <h2 className="text-xl md:text-2xl text-accent-foreground/80 mb-8 max-w-3xl mx-auto">

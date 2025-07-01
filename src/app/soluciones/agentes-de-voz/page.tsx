@@ -49,7 +49,7 @@ const VoiceAgentsPage = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-accent text-accent-foreground py-24 sm:py-32 text-center">
+      <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Tu Agenda se Llena Sola, por Voz.</h1>
           <p className="text-xl text-accent-foreground/80 max-w-3xl mx-auto mb-8">

@@ -40,7 +40,7 @@ const CaseStudyClinicaPage = () => {
       {/* ======================================================================================= */}
       {/* SECCIÓN 1: HERO - EL TITULAR PRINCIPAL                                                 */}
       {/* ======================================================================================= */}
-      <section className="bg-accent text-accent-foreground py-28 sm:py-32 text-center">
+      <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4">
           <div className="h-20 flex items-center justify-center mb-6">
             <Image src={caseStudy.logo} alt={`Logo de ${caseStudy.client}`} width={180} height={50} className="h-24 w-auto" />

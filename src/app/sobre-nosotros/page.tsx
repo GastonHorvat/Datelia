@@ -44,24 +44,12 @@ const AboutUsPage = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[50vh] flex items-center justify-center text-center overflow-hidden">
-        <Image
-          src="/placeholders/equipo-trabajando.jpg"
-          alt="Equipo de Datelia colaborando en un proyecto de IA"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-          priority
-        />
-        {/* CORRECCIÓN 1: Overlay más oscuro para máximo contraste */}
-        <div className="absolute inset-0 bg-black/75 z-10"></div>
-        
-        {/* CORRECCIÓN 2: Texto explícitamente blanco y subtítulo más claro */}
-        <div className="relative z-20 text-white px-4">
+      <section className="bg-background text-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
+        <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
             Somos un Equipo de Expertos, Obsesionados con los Resultados.
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/80">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground/80">
             Nacimos de una convicción simple: la IA no debe ser una promesa lejana, sino una herramienta práctica que genera eficiencia y crecimiento hoy.
           </p>
         </div>

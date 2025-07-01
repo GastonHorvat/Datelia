@@ -58,7 +58,7 @@ const SolutionsPage = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-accent text-accent-foreground py-24 text-center">
+      <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
             Soluciones de IA que Impulsan tu Negocio

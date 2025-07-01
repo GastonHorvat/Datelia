@@ -140,3 +140,17 @@ Generated code
 2.  Dentro, crea un archivo `page.tsx`.
 3.  Copia el contenido de otro caso de éxito como plantilla y actualiza el texto, las métricas y las imágenes.
 4.  Añade una nueva entrada al array `caseStudies` en la página principal `src/app/casos-de-exito/page.tsx` para que aparezca en la galería.
+
+---
+
+## 7. Scripts Disponibles
+
+Puedes ejecutar los siguientes scripts desde la raíz del proyecto:
+
+*   `npm run dev`: Inicia el servidor de desarrollo con Next.js y Turbopack en el puerto 9002.
+*   `npm run genkit:dev`: Inicia el entorno de desarrollo de Genkit AI para las funciones de IA.
+*   `npm run genkit:watch`: Inicia el entorno de Genkit AI en modo "watch", reiniciándose automáticamente con los cambios.
+*   `npm run build`: Compila la aplicación para producción.
+*   `npm run start`: Inicia el servidor de producción de la versión compilada.
+*   `npm run lint`: Ejecuta el linter de Next.js para encontrar problemas en el código.
+*   `npm run typecheck`: Verifica los tipos de TypeScript en todo el proyecto sin generar una compilación.
