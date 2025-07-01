@@ -82,12 +82,9 @@ export const FeaturedPostCard = ({ post }: { post: Post }) => {
         {displayTags.length > 0 && (
             <div className="flex flex-wrap gap-2 pt-4 mt-4 border-t border-primary/50">
                 {displayTags.map((tagName, index) => (
-                    <Link href={`/blog/tag/${displayTagSlugs[index]}`} key={index}>
-                        {/* CORRECCIÓN DE ESTILO: Badge de Tags */}
-                        <Badge variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
-                          #{tagName}
-                        </Badge>
-                    </Link>
+                    <Badge variant="outline" className="border-primary/50 text-primary" key={index}>
+                        #{tagName}
+                    </Badge>
                 ))}
             </div>
         )}

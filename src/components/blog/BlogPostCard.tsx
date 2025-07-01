@@ -78,13 +78,7 @@ export const BlogPostCard = ({ post }: { post: Post }) => {
         {displayTags.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-3 mt-3 border-t border-border">
             {displayTags.map((tagName, index) => (
-              <Link 
-                href={`/blog/tag/${displayTagSlugs[index]}`} 
-                key={index}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Badge variant="secondary">#{tagName}</Badge>
-              </Link>
+              <Badge variant="secondary" key={index}>#{tagName}</Badge>
             ))}
           </div>
         )}

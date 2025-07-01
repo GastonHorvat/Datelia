@@ -124,11 +124,9 @@ export default async function BlogPostPage({ params }: MetadataProps) {
                     <div className="flex flex-wrap items-center gap-2">
                         <strong className="text-foreground mr-2">Tags:</strong>
                         {displayTags.map((tagName, index) => (
-                            <Link href={`/blog/tag/${displayTagSlugs[index]}`} key={index}>
-                                <Badge variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
-                                  #{tagName}
-                                </Badge>
-                            </Link>
+                            <Badge variant="outline" className="border-primary/50 text-primary" key={index}>
+                                #{tagName}
+                            </Badge>
                         ))}
                     </div>
                 )}
