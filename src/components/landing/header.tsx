@@ -61,7 +61,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Logo de Datelia"
             width={110}
             height={36}
@@ -116,7 +116,7 @@ export function Header() {
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                   <Image
-                    src="/images/logo.jpg"
+                    src="/images/logo.png"
                     alt="Logo de Datelia"
                     width={110}
                     height={36}

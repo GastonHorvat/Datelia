@@ -133,7 +133,7 @@ const VoiceAgentsPage = () => {
             "El agente de voz se paga solo. Hemos recuperado unas 15 horas de trabajo administrativo a la semana y las citas olvidadas casi han desaparecido. Increíble."
           </blockquote>
           <p className="text-lg font-semibold">Carolina Méndez</p>
-          <p className="text-md text-accent-foreground/70">Directora de Operaciones - Centro Médico Vitalia</p>
+          <p className="text-md text-accent-foreground/70">Directora de Operaciones</p>
         </div>
       </section>
 

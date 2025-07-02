@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/landing/hero-section";
-import { ClientsSection } from "@/components/landing/clients-section";
+//import { ClientsSection } from "@/components/landing/clients-section";
 import { ProblemSolutionSection } from "@/components/landing/problem-solution-section";
 import { ServicesSection } from "@/components/landing/services-section";
 import { TestimonialSection } from "@/components/landing/testimonial-section";
@@ -11,7 +11,7 @@ export default function Home() {
     <Layout>
       <main className="flex-1">
         <HeroSection />
-        <ClientsSection />
+        {/* <ClientsSection /> */}
         <ProblemSolutionSection />
         <ServicesSection />
         <TestimonialSection />

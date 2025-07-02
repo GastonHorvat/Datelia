@@ -23,7 +23,7 @@ export function TestimonialSection() {
             </blockquote>
             <footer className="mt-6">
               <p className="font-semibold text-lg text-accent-foreground">Laura Sánchez</p>
-              <p className="text-accent-foreground/80">Directora de Operaciones, Innovate Solutions</p>
+              <p className="text-accent-foreground/80">Directora de Operaciones</p>
             </footer>
           </div>
         </div>

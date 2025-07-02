@@ -48,7 +48,7 @@ El proyecto está diseñado bajo una arquitectura **"Headless"**, donde el conte
 La estructura sigue las convenciones del App Router de Next.js.
 ├── public/
 │ └── images/
-│ ├── logo.jpg
+│ ├── logo.png
 │ └── ... (otras imágenes estáticas)
 ├── src/
 │ ├── app/

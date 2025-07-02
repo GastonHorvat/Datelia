@@ -145,7 +145,7 @@ const ChatbotsPage = () => {
               "Pasamos de responder en horas a hacerlo en segundos, y nuestras ventas desde WhatsApp aumentaron un 40% en los primeros tres meses. El chatbot se pagó solo."
             </blockquote>
             <p className="text-lg font-semibold">Martín Rojas</p>
-            <p className="text-md text-accent-foreground/70">Head of Growth - Aventura Austral Viajes</p>
+            <p className="text-md text-accent-foreground/70">Head of Growth</p>
         </div>
       </section>
 

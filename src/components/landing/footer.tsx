@@ -10,7 +10,7 @@ import { Linkedin, Mail, Phone, Instagram, Twitter, Facebook } from 'lucide-reac
 // --- SECCIÓN DE DATOS: Editando aquí puedes cambiar el contenido del footer fácilmente ---
 const currentYear = new Date().getFullYear();
 const companyName = "Datelia";
-const logoSrc = "/images/logo.jpg";
+const logoSrc = "/images/logo.png";
 const logoAlt = "Logo de Datelia";
 
 // CORRECCIÓN: Se añade el objeto de Facebook a la lista
