@@ -23,7 +23,7 @@ const socialLinks = [
 
 const contactInfo = {
   email: "info@datelia.tech",
-  phone: "+54 9 351 246-8310",
+  phone: "+54 9 11 5246-6310",‬
   address: "Córdoba, Argentina", 
 };
 
