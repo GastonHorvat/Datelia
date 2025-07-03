@@ -23,8 +23,8 @@ const socialLinks = [
 
 const contactInfo = {
   email: "info@datelia.tech",
-  phone: "+54 9 11 5246-6310",‬
-  address: "Córdoba, Argentina", 
+  phone: "+54 911 5246-6310",‬
+  address: "Buenos Aires, Argentina", 
 };
 
 // --- COMPONENTE DEL FOOTER ---
