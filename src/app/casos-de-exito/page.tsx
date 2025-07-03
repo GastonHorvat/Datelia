@@ -12,21 +12,18 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
     {
-      logo: '/images/casos/urban-retail.png',
       title: 'Empresa de Retail Aumenta su Conversión en un 35% con un Chatbot Inteligente',
       summary: 'Implementamos un chatbot multicanal que no solo automatizó el 80% de las consultas de soporte, sino que también optimizó la captación y calificación de leads 24/7.',
       metrics: ['+35% Conversión de Leads', '-50% en Costos de Soporte', 'ROI en 6 meses'],
       href: '/casos-de-exito/caso-retail-chatbot',
     },
     {
-      logo: "/images/casos/clinica-vitalia.png",
       title: 'Clínica Líder Reduce sus "No-Shows" en un 40% con un Agente de Voz IA',
       summary: 'Nuestro agente de voz se encargó de la confirmación proactiva de citas, liberando 15 horas semanales del personal administrativo y recuperando ingresos perdidos.',
       metrics: ['-40% Tasa de No-Show', '+15 Horas/Semana Ahorradas', '+95% Satisfacción'],
       href: '/casos-de-exito/caso-clinica-agente-voz',
     },
     {
-      logo: '/images/casos/nexus-logistica.png',
       title: 'Empresa de Logística Optimiza su Cadena de Suministro con IA a Medida',
       summary: 'Desarrollamos una solución personalizada que analiza datos en tiempo real para predecir cuellos de botella, optimizando rutas y reduciendo los costos operativos en un 22%.',
       metrics: ['-22% Costos Operativos', '+30% Precisión', 'Proceso Automatizado'],
@@ -69,16 +66,7 @@ const CaseStudiesPage = () => {
             {caseStudies.map((caseStudy) => (
               <Link href={caseStudy.href} key={caseStudy.title} className="block group h-full">
                 <Card className="h-full flex flex-col hover:border-primary transition-colors">
-                  <CardHeader>
-                    <div className="h-16 flex items-center justify-center mb-4">
-                       <Image
-                          src={caseStudy.logo}
-                          alt={`Logo de cliente de Datelia`}
-                          width={140}
-                          height={40}
-                          className="h-10 w-auto object-contain"
-                        />
-                    </div>
+                  <CardHeader className="pb-4">
                     <CardTitle className="text-xl leading-snug">{caseStudy.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">

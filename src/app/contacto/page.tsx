@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, AlertCircle } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // Opciones para los checkboxes, haciendo el código más limpio
 const sectors = [
@@ -28,12 +29,23 @@ const howFoundOptions = [
   { id: "otro-how", label: "Otro" },
 ];
 
+const employeeRanges = [
+  { value: "1-10", label: "1-10 empleados" },
+  { value: "11-50", label: "11-50 empleados" },
+  { value: "51-200", label: "51-200 empleados" },
+  { value: "201-500", label: "201-500 empleados" },
+  { value: "501-1000", label: "501-1000 empleados" },
+  { value: "1000+", label: "Más de 1000 empleados" },
+];
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     telefono: "",
+    website: "",
     empresa: "",
+    cantidadEmpleados: "",
     sector: [] as string[],
     mensaje: "",
     howFound: [] as string[],
@@ -45,6 +57,7 @@ export default function ContactPage() {
     telefono: "",
     sector: "",
     mensaje: "",
+    cantidadEmpleados: "",
   });
 
   const [submitStatus, setSubmitStatus] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
@@ -65,9 +78,20 @@ export default function ContactPage() {
     });
   };
 
+  const handleSelectChange = (value: string) => {
+    setFormData(prev => ({ ...prev, cantidadEmpleados: value }));
+  };
+
   const validateForm = () => {
     let valid = true;
-    const newErrors = { nombre: "", email: "", telefono: "", sector: "", mensaje: "" };
+    const newErrors = { 
+      nombre: "", 
+      email: "", 
+      telefono: "", 
+      sector: "", 
+      mensaje: "",
+      cantidadEmpleados: "" 
+    };
 
     if (!formData.nombre.trim()) { newErrors.nombre = "El nombre es requerido."; valid = false; }
     if (!formData.email.trim()) { newErrors.email = "El email es requerido."; valid = false; } 
@@ -75,6 +99,7 @@ export default function ContactPage() {
     if (!formData.telefono.trim()) { newErrors.telefono = "El teléfono es requerido."; valid = false; }
     if (formData.sector.length === 0) { newErrors.sector = "Selecciona al menos un sector."; valid = false; }
     if (!formData.mensaje.trim()) { newErrors.mensaje = "El mensaje es requerido."; valid = false; }
+    if (!formData.cantidadEmpleados) { newErrors.cantidadEmpleados = "Selecciona la cantidad de empleados."; valid = false; }
 
     setErrors(newErrors);
     return valid;
@@ -148,8 +173,28 @@ export default function ContactPage() {
                       {errors.telefono && <p className="text-sm text-destructive">{errors.telefono}</p>}
                     </div>
                     <div className="space-y-2">
+                      <Label htmlFor="website">Website</Label>
+                      <Input id="website" name="website" type="url" placeholder="https://www.tuempresa.com" value={formData.website} onChange={handleInputChange} />
+                    </div>
+                    <div className="space-y-2">
                       <Label htmlFor="empresa">Empresa</Label>
-                      <Input id="empresa" name="empresa" placeholder="Nombre y web de la empresa" value={formData.empresa} onChange={handleInputChange} />
+                      <Input id="empresa" name="empresa" placeholder="Nombre de la empresa" value={formData.empresa} onChange={handleInputChange} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="cantidadEmpleados">Cantidad de empleados*</Label>
+                      <Select name="cantidadEmpleados" value={formData.cantidadEmpleados} onValueChange={handleSelectChange}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Selecciona un rango" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {employeeRanges.map((range) => (
+                            <SelectItem key={range.value} value={range.value}>
+                              {range.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      {errors.cantidadEmpleados && <p className="text-sm text-destructive">{errors.cantidadEmpleados}</p>}
                     </div>
                   </div>
                   
