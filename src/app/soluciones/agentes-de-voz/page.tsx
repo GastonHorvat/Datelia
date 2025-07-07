@@ -124,7 +124,7 @@ const VoiceAgentsPage = () => {
         <div className="container mx-auto max-w-3xl px-4 text-center">
           <Image
             src="/images/carolinaVitalia.jpg" // Reemplaza con una foto real
-            alt="Foto de un director de clínica satisfecho"
+            alt="Carolina Méndez, Directora de Operaciones de Clínica Vitalia, cliente satisfecha con agente de voz de Datelia"
             width={80}
             height={80}
             className="rounded-full mx-auto mb-6"

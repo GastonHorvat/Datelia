@@ -1,0 +1,7 @@
+Contact: mailto:security@datelia.tech
+Contact: https://datelia.tech/contacto
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://datelia.tech/.well-known/pgp-key.txt
+Preferred-Languages: es, en
+Canonical: https://datelia.tech/.well-known/security.txt
+Policy: https://datelia.tech/politica-de-privacidad 

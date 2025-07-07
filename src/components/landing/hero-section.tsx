@@ -8,7 +8,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/nasa.jpg"
-          alt="Fondo abstracto de tecnología"
+          alt="Fondo tecnológico representando automatización con IA y soluciones empresariales de Datelia"
           fill
           objectFit="cover"
           className="opacity-50"
@@ -19,7 +19,7 @@ export function HeroSection() {
       </div>
       <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-4xl">
         <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400">
-          IA que piensa, automatiza y transforma.
+          Soluciones de Inteligencia Artificial para Automatizar tu Negocio
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
           Libera el potencial oculto de tu empresa con automatización inteligente que genera resultados.
@@ -29,7 +29,7 @@ export function HeroSection() {
         </div>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg">
-            <Link href="/soluciones">Descubre Cómo Transformamos tu Negocio</Link>
+            <Link href="/soluciones">Descubre cómo transformamos tu negocio</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link href="/casos-de-exito">Ver Casos de Éxito</Link>

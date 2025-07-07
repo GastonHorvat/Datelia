@@ -136,7 +136,7 @@ const ChatbotsPage = () => {
         <div className="container mx-auto max-w-3xl px-4 text-center">
             <Image
               src="/images/martinAventura.jpg" // Reemplaza con una foto real
-              alt="Foto de cliente satisfecho"
+              alt="Martín Rojas, Head of Growth de Aventura Digital, cliente satisfecho con chatbot inteligente de Datelia"
               width={80}
               height={80}
               className="rounded-full mx-auto mb-6"
