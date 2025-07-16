@@ -17,16 +17,16 @@ const AboutUsPage = () => {
     {
       photo: '/images/jime.jpg',
       name: 'Jimena G. Pinto',
-      title: 'Founder & Directora de Relaciones Comerciales',
+      title: 'Founder & Directora de Partnerships',
       bio: 'Con una visión estratégica centrada en el cliente, lidera el crecimiento y las alianzas de Datelia, asegurando que cada solución no solo sea innovadora, sino que también genere un éxito tangible para nuestros socios.',
-      linkedin: '#', // Reemplaza con la URL real
+      linkedin: 'https://www.linkedin.com/in/jimenagarciapinto/', // Reemplaza con la URL real
     },
     {
       photo: '/images/gas.png',
       name: 'Gastón M. Horvat',
       title: 'Founder & Director de Tecnología',
       bio: 'Es el arquitecto técnico detrás de nuestras soluciones. Su pasión es transformar ideas complejas en sistemas de IA robustos, escalables y seguros que impulsan la eficiencia y la transformación digital.',
-      linkedin: '#', // Reemplaza con la URL real
+      linkedin: 'https://www.linkedin.com/in/gastonhorvat/', // Reemplaza con la URL real
     },
   ];
 
