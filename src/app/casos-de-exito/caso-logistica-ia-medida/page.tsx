@@ -20,7 +20,7 @@ const caseStudy = {
   testimonial: {
     quote: "Datelia nos dio la visibilidad que nos faltaba. Ahora no solo reaccionamos a los problemas, los anticipamos. La reducción de costos fue una consecuencia directa de operar de forma más inteligente.",
     author: "Javier Morales",
-    role: "Director de Logística, Nexus Logística"
+    role: "Director de Logística"
   },
   metrics: [
     { value: "-22%", label: "Reducción de Costos Operativos", icon: Truck },
