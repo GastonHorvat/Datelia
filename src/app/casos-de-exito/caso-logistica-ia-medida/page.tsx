@@ -42,9 +42,9 @@ const CaseStudyLogisticaPage = () => {
       {/* ======================================================================================= */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4">
-          <div className="h-20 flex items-center justify-center mb-6">
+          {/* <div className="h-20 flex items-center justify-center mb-6">
             <Image src={caseStudy.logo} alt={`Logo de ${caseStudy.client}`} width={180} height={50} className="h-24 w-auto" />
-          </div>
+          </div> */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold max-w-4xl mx-auto">
             {caseStudy.title}
           </h1>
@@ -82,7 +82,7 @@ const CaseStudyLogisticaPage = () => {
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">El Desafío</h2>
               <p className="text-accent-foreground/80">
-                Nexus Logística manejaba una operación compleja con cientos de variables: rutas, inventario, tiempos de entrega y costos de combustible. Su principal problema era la falta de visibilidad en tiempo real, lo que provocaba una reacción tardía a los cuellos de botella, rutas ineficientes y costos operativos impredecibles.
+                Este departamento de logística manejaba una operación compleja con cientos de variables: rutas, inventario, tiempos de entrega y costos de combustible. Su principal problema era la falta de visibilidad en tiempo real, lo que provocaba una reacción tardía a los cuellos de botella, rutas ineficientes y costos operativos impredecibles.
               </p>
             </div>
             <div className="space-y-4">

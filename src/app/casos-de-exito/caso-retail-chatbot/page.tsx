@@ -20,7 +20,7 @@ const caseStudy = {
   testimonial: {
     quote: "Pasamos de responder en horas a hacerlo en segundos, y nuestras ventas desde WhatsApp aumentaron un 40% en los primeros tres meses. El chatbot se pagó solo.",
     author: "Sofía Castro",
-    role: "Gerente de E-commerce, UrbanThread"
+    role: "Gerente de E-commerce"
   },
   metrics: [
     { value: "+35%", label: "Aumento en Conversión de Leads", icon: TrendingUp },
@@ -42,9 +42,9 @@ const CaseStudyRetailPage = () => {
       {/* ======================================================================================= */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4">
-          <div className="h-20 flex items-center justify-center mb-6">
+          {/* <div className="h-20 flex items-center justify-center mb-6">
             <Image src={caseStudy.logo} alt={`Logo de ${caseStudy.client}`} width={180} height={50} className="h-24 w-auto" />
-          </div>
+          </div>  */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold max-w-4xl mx-auto">
             {caseStudy.title}
           </h1>
@@ -82,7 +82,7 @@ const CaseStudyRetailPage = () => {
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">El Desafío</h2>
               <p className="text-accent-foreground/80">
-                UrbanThread, una marca de retail en pleno crecimiento, se enfrentaba a un volumen masivo de consultas a través de su sitio web y redes sociales. El equipo de soporte no daba abasto, lo que resultaba en tiempos de respuesta lentos y, peor aún, en la pérdida de leads valiosos que llegaban fuera del horario comercial.
+                Una marca de retail en pleno crecimiento, se enfrentaba a un volumen masivo de consultas a través de su sitio web y redes sociales. El equipo de soporte no daba abasto, lo que resultaba en tiempos de respuesta lentos y, peor aún, en la pérdida de leads valiosos que llegaban fuera del horario comercial.
               </p>
             </div>
             <div className="space-y-4">

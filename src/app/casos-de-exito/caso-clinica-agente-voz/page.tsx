@@ -20,7 +20,7 @@ const caseStudy = {
   testimonial: {
     quote: "El agente de voz se paga solo. Hemos recuperado unas 15 horas de trabajo administrativo a la semana y las citas olvidadas casi han desaparecido. Increíble.",
     author: "Laura Herrera",
-    role: "Directora de Operaciones, Clínica Vitalia"
+    role: "Directora de Operaciones"
   },
   metrics: [
     { value: "-40%", label: "Reducción de Tasa de No-Show", icon: CalendarX2 },
@@ -42,9 +42,9 @@ const CaseStudyClinicaPage = () => {
       {/* ======================================================================================= */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4">
-          <div className="h-20 flex items-center justify-center mb-6">
+          {/* <div className="h-20 flex items-center justify-center mb-6">
             <Image src={caseStudy.logo} alt={`Logo de ${caseStudy.client}`} width={180} height={50} className="h-24 w-auto" />
-          </div>
+          </div>  */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold max-w-4xl mx-auto">
             {caseStudy.title}
           </h1>
@@ -82,7 +82,7 @@ const CaseStudyClinicaPage = () => {
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">El Desafío</h2>
               <p className="text-accent-foreground/80">
-                Clínica Vitalia enfrentaba un problema operativo común pero costoso: una alta tasa de ausencias (no-shows) y un equipo administrativo sobrecargado con la gestión manual de citas. Cada cita perdida era una pérdida directa de ingresos, y el tiempo invertido en llamadas de confirmación impedía al personal atender a los pacientes en la clínica.
+                Esta clínica enfrentaba un problema operativo común pero costoso: una alta tasa de ausencias (no-shows) y un equipo administrativo sobrecargado con la gestión manual de citas. Cada cita perdida era una pérdida directa de ingresos, y el tiempo invertido en llamadas de confirmación impedía al personal atender a los pacientes en la clínica.
               </p>
             </div>
             <div className="space-y-4">
