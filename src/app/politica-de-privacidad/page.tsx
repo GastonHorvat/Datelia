@@ -1,8 +1,17 @@
 import React from 'react';
-import Head from 'next/head';
 import { Layout } from '@/components/layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Política de Privacidad | Datelia',
+  description: 'Conoce cómo Datelia recopila, usa y protege tus datos personales. Tu privacidad y seguridad son nuestra prioridad.',
+  alternates: {
+    canonical: '/politica-de-privacidad',
+  },
+};
 const PrivacyPolicyPage = () => {
   const currentDate = new Date().toLocaleDateString('es-ES', {
     year: 'numeric',
@@ -12,14 +21,6 @@ const PrivacyPolicyPage = () => {
 
   return (
     <Layout>
-      {/* ======================================================================================= */}
-      {/* SECCIÓN 1: METADATOS DE LA PÁGINA                                                       */}
-      {/* ======================================================================================= */}
-      <Head>
-        <title>Política de Privacidad | Datelia</title>
-        <meta name="description" content="Conoce cómo Datelia recopila, usa y protege tus datos personales. Tu privacidad y seguridad son nuestra prioridad." />
-      </Head>
-
       {/* ======================================================================================= */}
       {/* SECCIÓN 2: CONTENEDOR PRINCIPAL DE LA PÁGINA                                            */}
       {/* ======================================================================================= */}

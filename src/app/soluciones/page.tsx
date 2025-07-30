@@ -73,7 +73,7 @@ const SolutionsPage = () => {
       {solutions.map((solution, index) => {
         const Icon = solution.icon;
         return (
-          <section key={index} className={`py-20 sm:py-24 ${index % 2 === 0 ? 'bg-background' : 'bg-accent'}`}>
+          <section key={index} className={`py-20 sm:py-24 ${index % 2 === 0 ? 'bg-background text-foreground' : 'bg-accent text-accent-foreground'}`}>
             <div className="container mx-auto px-4">
               <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''}`}>
                 <div className={`flex justify-center ${index % 2 !== 0 ? 'md:order-2' : ''}`}>

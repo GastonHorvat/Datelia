@@ -1,7 +1,8 @@
-import type {Metadata} from 'next';
+import type { Metadata, Viewport } from 'next'; // 1. Importa Viewport
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
+// 2. El objeto metadata ya NO contiene la clave 'viewport'
 export const metadata: Metadata = {
   title: 'Datelia | Soluciones de IA y Automatización para Empresas',
   description: 'Optimiza tus procesos con IA. En Datelia ofrecemos chatbots inteligentes, agentes de voz y soluciones a medida para potenciar tu negocio. ¡Solicita una demo!',
@@ -56,11 +57,14 @@ export const metadata: Metadata = {
     // yandex: 'your-yandex-verification-code', // Si necesitas Yandex
     // bing: 'your-bing-verification-code', // Si necesitas Bing
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
+  // La clave 'viewport' ha sido eliminada de aquí.
+};
+
+// 3. Se exporta el viewport como una constante separada
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -71,6 +75,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        {/* Nota: Next.js gestiona las fuentes de Google de forma optimizada.
+            Considera usar next/font para un mejor rendimiento en el futuro.
+            Por ahora, esto funciona bien. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -106,7 +113,7 @@ export default function RootLayout({
                   "description": "Automatización de atención al cliente con chatbots inteligentes para WhatsApp, Web e Instagram"
                 },
                 {
-                  "@type": "Service", 
+                  "@type": "Service",
                   "name": "Agentes de Voz",
                   "description": "Agentes de voz con IA para agendamiento automático de citas y gestión telefónica"
                 },

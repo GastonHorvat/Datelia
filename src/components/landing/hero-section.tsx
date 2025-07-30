@@ -10,8 +10,7 @@ export function HeroSection() {
           src="/images/nasa.jpg"
           alt="Fondo tecnológico representando automatización con IA y soluciones empresariales de Datelia"
           fill
-          objectFit="cover"
-          className="opacity-50"
+          className="object-cover opacity-50"
           priority
           data-ai-hint="abstract data neural network"
         />
