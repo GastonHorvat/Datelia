@@ -24,12 +24,12 @@ export const BlogPostCard = ({ post }: { post: Post }) => {
       {/* --- Contenedor de la Imagen (Ahora es un Link) --- */}
       <Link href={postUrl} className="relative aspect-video overflow-hidden block">
         {post.post_image_url && (
-          <Image
+        <Image
             src={post.post_image_url}
             alt={post.post_title || 'Imagen del post'}
             fill
-            style={{ objectFit: 'cover' }}
-            className="group-hover:scale-105 transition-transform duration-500"
+            style={{ objectFit: 'cover' }} // <-- 2. Volvemos a 'cover'
+            className="object-top group-hover:scale-105 transition-transform duration-500" // <-- 3. ¡LA MAGIA!
           />
         )}
       </Link>

@@ -27,8 +27,8 @@ export const FeaturedPostCard = ({ post }: { post: Post }) => {
               src={post.post_image_url}
               alt={post.post_title || 'Imagen del post destacado'}
               fill
-              style={{ objectFit: 'cover' }}
-              className="group-hover:scale-105 transition-transform duration-500"
+              style={{ objectFit: 'cover' }} // <-- 2. Volvemos a 'cover' para que rellene
+              className="object-top group-hover:scale-105 transition-transform duration-500" // <-- 3. ¡LA MAGIA ESTÁ AQUÍ!
               priority
             />
           )}
