@@ -33,7 +33,7 @@ El proyecto está diseñado bajo una arquitectura **"Headless"**, donde el conte
 *   **`@supabase/supabase-js`:** La librería cliente oficial para interactuar con Supabase desde el código.
 
 #### **Servicios de Terceros**
-*   **Resend:** Servicio de API para el envío de emails transaccionales. Se utiliza para enviar los datos del formulario de contacto a `info@datelia.tech`.
+*   **Resend:** Servicio de API para el envío de emails transaccionales. Se utiliza para enviar los datos del formulario de contacto a `info@datelia.com.ar`.
 *   **`html-react-parser`:** Librería para "limpiar" y renderizar de forma segura el contenido HTML de los posts del blog.
 
 #### **Hosting y Despliegue (CI/CD)**
@@ -105,7 +105,7 @@ La estructura sigue las convenciones del App Router de Next.js.
 1.  **Frontend:** La página `/contacto` contiene un formulario de React con validación en el lado del cliente para asegurar que los campos requeridos estén completos.
 2.  **Petición API:** Al hacer "submit", el formulario envía una petición `POST` al endpoint de la API interna: `/api/contact`.
 3.  **Backend (API Route):** El archivo `src/app/api/contact/route.tsx` recibe esta petición.
-4.  **Envío de Email:** La API Route utiliza la librería `Resend` para construir y enviar un email con los datos del formulario a `info@datelia.tech`. La plantilla del email es un componente de React (`ContactEmailTemplate.tsx`).
+4.  **Envío de Email:** La API Route utiliza la librería `Resend` para construir y enviar un email con los datos del formulario a `info@datelia.com.ar`. La plantilla del email es un componente de React (`ContactEmailTemplate.tsx`).
 5.  **Respuesta:** La API Route devuelve una respuesta de éxito (200) o error (500) al frontend, que muestra el mensaje correspondiente al usuario.
 
 ---

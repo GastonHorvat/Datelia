@@ -85,7 +85,7 @@ const CookiesPolicyPage = () => {
 
                 <h3>6. Contacto</h3>
                 <p>
-                  Si tiene alguna pregunta sobre nuestra Política de Cookies, no dude en contactarnos en: <a href="mailto:info@datelia.tech">info@datelia.tech</a>.
+                  Si tiene alguna pregunta sobre nuestra Política de Cookies, no dude en contactarnos en: <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a>.
                 </p>
               </div>
             </CardContent>

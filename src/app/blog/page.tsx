@@ -61,7 +61,9 @@ async function getPosts({ currentPage = 1 }: { currentPage: number }) {
 // --- SECCIÓN 3: EL COMPONENTE DE LA PÁGINA ---
 // Ahora recibe `searchParams` para saber en qué página estamos
 export default async function BlogIndexPage({ searchParams }: { searchParams?: { page?: string } }) {
-  const currentPage = Number(searchParams?.page) || 1;
+  const page = (await searchParams)?.page;
+  const currentPage = Number(page) || 1;
+  
   const { featuredPost, regularPosts, totalPages, error } = await getPosts({ currentPage });
 
   return (

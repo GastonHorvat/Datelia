@@ -89,7 +89,7 @@ const TermsAndConditionsPage = () => {
 
                 <h3>8. Contacto</h3>
                 <p>
-                  Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos a través de nuestro correo electrónico: <a href="mailto:info@datelia.tech">info@datelia.tech</a>.
+                  Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos a través de nuestro correo electrónico: <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a>.
                 </p>
               </div>
             </CardContent>

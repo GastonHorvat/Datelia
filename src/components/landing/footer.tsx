@@ -22,7 +22,7 @@ const socialLinks = [
 ];
 
 const contactInfo = {
-  email: "info@datelia.tech",
+  email: "info@datelia.com.ar",
   // CORRECCIÓN: Se eliminó el carácter invisible \u202c al final de la línea.
   phone: "+54 387 585-8088",
   address: "Buenos Aires, Argentina", 

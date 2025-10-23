@@ -68,7 +68,7 @@ const PrivacyPolicyPage = () => {
                 <h3>1. Responsable del Tratamiento de Datos</h3>
                 <ul>
                   <li><strong>Nombre de la empresa:</strong> Datelia</li>
-                  <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@datelia.tech">info@datelia.tech</a></li>
+                  <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a></li>
                   <li><strong>Sitio web:</strong> <a href="https://www.datelia.com.ar" target="_blank" rel="noopener noreferrer">https://www.datelia.com.ar</a></li>
                 </ul>
 
@@ -104,7 +104,7 @@ const PrivacyPolicyPage = () => {
                 </p>
 
                 <h3>6. Tus Derechos sobre tus Datos</h3>
-                <p>Tienes derecho a acceder, rectificar, suprimir u oponerte al tratamiento de tus datos personales. Para ejercer cualquiera de estos derechos, por favor contáctanos en `info@datelia.tech`.</p>
+                <p>Tienes derecho a acceder, rectificar, suprimir u oponerte al tratamiento de tus datos personales. Para ejercer cualquiera de estos derechos, por favor contáctanos en `info@datelia.com.ar`.</p>
 
                 <h3>7. Uso de Cookies</h3>
                 <p>
@@ -118,7 +118,7 @@ const PrivacyPolicyPage = () => {
 
                 <h3>9. Contacto</h3>
                 <p>
-                  Si tienes alguna pregunta sobre esta política de privacidad, puedes contactarnos usando la información a continuación: `info@datelia.tech`.
+                  Si tienes alguna pregunta sobre esta política de privacidad, puedes contactarnos usando la información a continuación: `info@datelia.com.ar`.
                 </p>
               </div>
             </CardContent>

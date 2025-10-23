@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       from: 'Datelia <info@datelia.com.ar>', 
       // ===================================================================
       
-      to: ['info@datelia.tech'], // El email que recibirá la consulta. Puede ser el mismo o diferente.
+      to: ['info@datelia.com.ar'], // El email que recibirá la consulta. Puede ser el mismo o diferente.
       subject: `Nueva consulta de ${body.nombre} desde la web`,
 
       // Pasamos los datos al componente de la plantilla del email
