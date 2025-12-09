@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabaseClient'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://datelia.tech'
-  
+
   // Rutas estáticas principales
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -72,20 +72,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Páginas legales
     {
-      url: `${baseUrl}/politica-de-privacidad`,
+      url: `${baseUrl}/legal/politica-de-privacidad`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/politica-de-cookies`,
+      url: `${baseUrl}/legal/terminos-y-condiciones`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/terminos-y-condiciones`,
+      url: `${baseUrl}/legal/politica-de-cookies`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
@@ -132,4 +133,4 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   return [...staticRoutes, ...blogRoutes, ...categoryRoutes]
-} 
+}

@@ -1,98 +1,121 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { Layout } from '@/components/layout';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Política de Privacidad | Datelia',
-    description: 'Política de Privacidad de Datelia. Conoce cómo protegemos y tratamos tus datos personales.',
-    robots: {
-        index: false,
-        follow: true,
+    description: 'Conoce cómo Datelia recopila, usa y protege tus datos personales. Tu privacidad y seguridad son nuestra prioridad.',
+    alternates: {
+        canonical: 'https://datelia.tech/legal/politica-de-privacidad',
     },
 };
 
-export default function PrivacyPolicyPage() {
+const PrivacyPolicyPage = () => {
+    const currentDate = new Date().toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+
     return (
         <Layout>
-            <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
+            <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12">
                 <div className="container mx-auto px-4 flex flex-col items-center">
                     <Breadcrumbs className="mb-6" />
-                    <h1 className="text-3xl md:text-4xl font-headline font-bold mb-4">
+                    <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-center">
                         Política de Privacidad
                     </h1>
-                    <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto">
-                        Última actualización: Diciembre 2025
-                    </p>
                 </div>
             </section>
 
-            <section className="py-12 sm:py-20 bg-background">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    {/* CORRECCIÓN: Estilos de alto contraste aplicados manualmente */}
-                    <div className="prose prose-lg max-w-none text-foreground prose-headings:text-primary prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground prose-a:text-primary hover:prose-a:text-primary/80">
-                        <p>
-                            En <strong>Datelia</strong>, respetamos su privacidad y estamos comprometidos a proteger los datos personales que comparte con nosotros. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información cuando visita nuestro sitio web <strong>datelia.tech</strong>.
-                        </p>
+            <section className="py-20 sm:py-24 bg-background">
+                <div className="container mx-auto px-4">
+                    <Card className="max-w-4xl mx-auto">
+                        <CardHeader>
+                            <p className="text-sm text-muted-foreground">
+                                Última actualización: {currentDate}
+                            </p>
+                        </CardHeader>
 
-                        <h3>1. Responsable del Tratamiento de Datos</h3>
-                        <p>
-                            El responsable del tratamiento de los datos personales recogidos en este sitio web es Datelia, con domicilio en Buenos Aires, Argentina. Para cualquier consulta relacionada con la privacidad, puede contactarnos en <strong>info@datelia.com.ar</strong>.
-                        </p>
+                        <CardContent>
+                            <div className="
+                prose max-w-none 
+                text-foreground
+                prose-headings:text-primary
+                prose-h3:text-foreground
+                prose-strong:text-foreground
+                prose-a:text-primary
+                prose-a:hover:underline
+                prose-li:text-foreground
+              ">
+                                <p>
+                                    Bienvenido a Datelia. Tu privacidad es de suma importancia. Esta Política de Privacidad tiene como objetivo informarte sobre cómo recopilamos, usamos, protegemos y tratamos la información que proporcionas a través de nuestro sitio web.
+                                </p>
 
-                        <h3>2. Información que Recopilamos</h3>
-                        <p>Podemos recopilar y procesar los siguientes datos:</p>
-                        <ul>
-                            <li><strong>Datos de Contacto:</strong> Nombre, dirección de correo electrónico, número de teléfono y empresa, que usted nos proporciona voluntariamente al completar nuestros formularios de contacto o solicitar una demo.</li>
-                            <li><strong>Datos de Navegación:</strong> Dirección IP, tipo de navegador, páginas visitadas y tiempo de permanencia, recopilados a través de cookies y tecnologías similares para mejorar la experiencia del usuario.</li>
-                        </ul>
+                                <h3>1. Responsable del Tratamiento de Datos</h3>
+                                <ul>
+                                    <li><strong>Nombre de la empresa:</strong> Datelia</li>
+                                    <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a></li>
+                                    <li><strong>Sitio web:</strong> <a href="https://datelia.tech" target="_blank" rel="noopener noreferrer">https://datelia.tech</a></li>
+                                </ul>
 
-                        <h3>3. Finalidad del Tratamiento</h3>
-                        <p>Utilizamos sus datos personales para los siguientes fines:</p>
-                        <ul>
-                            <li>Responder a sus consultas y solicitudes de información.</li>
-                            <li>Proporcionar, operar y mantener nuestros servicios.</li>
-                            <li>Enviar comunicaciones comerciales y newsletters (si ha dado su consentimiento explícito).</li>
-                            <li>Mejorar nuestro sitio web y analizar tendencias de uso.</li>
-                        </ul>
+                                <h3>2. ¿Qué información recopilamos?</h3>
+                                <p>Recopilamos información de dos maneras:</p>
+                                <p><strong>Información que proporcionas directamente:</strong> A través de nuestro formulario de contacto, recopilamos datos personales que incluyen, entre otros:</p>
+                                <ul>
+                                    <li>Nombre completo</li>
+                                    <li>Correo electrónico</li>
+                                    <li>Número de teléfono</li>
+                                    <li>Nombre de la empresa</li>
+                                    <li>Sector de actividad</li>
+                                    <li>Cualquier otra información que decidas incluir en el cuerpo del mensaje.</li>
+                                </ul>
+                                <p><strong>Información recopilada automáticamente:</strong> A través de cookies y tecnologías similares, podemos recopilar datos no personales sobre tu visita, como dirección IP, tipo de navegador y dispositivo, y páginas visitadas.</p>
 
-                        <h3>4. Base Legal</h3>
-                        <p>
-                            El tratamiento de sus datos se basa en su consentimiento (al enviar un formulario) y en nuestro interés legítimo de responder a sus solicitudes y mejorar nuestros servicios.
-                        </p>
+                                <h3>3. ¿Con qué finalidad usamos tu información?</h3>
+                                <p>La información que recopilamos se utiliza para los siguientes propósitos:</p>
+                                <ul>
+                                    <li><strong>Para responder a tus consultas:</strong> Usamos tus datos para comunicarnos contigo y responder a las solicitudes de información.</li>
+                                    <li><strong>Para mejorar nuestro sitio web:</strong> Analizamos los datos de uso para entender cómo interactúan los visitantes con nuestro sitio.</li>
+                                    <li><strong>Para fines de marketing (con tu consentimiento):</strong> Podríamos usar tu correo para enviarte información sobre nuestros servicios o casos de éxito.</li>
+                                </ul>
 
-                        <h3>5. Compartir Información</h3>
-                        <p>
-                            No vendemos, alquilamos ni compartimos su información personal con terceros con fines comerciales. Podemos compartir datos con proveedores de servicios de confianza (como servicios de hosting o email marketing) que nos ayudan a operar nuestro negocio, siempre bajo estrictos acuerdos de confidencialidad.
-                        </p>
+                                <h3>4. ¿Cómo protegemos tu información?</h3>
+                                <p>
+                                    Implementamos una variedad de medidas de seguridad para mantener la seguridad de tu información personal. Tus datos se almacenan en redes seguras y solo son accesibles por un número limitado de personas con derechos especiales de acceso.
+                                </p>
 
-                        <h3>6. Seguridad de los Datos</h3>
-                        <p>
-                            Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger sus datos personales contra el acceso no autorizado, la alteración, la divulgación o la destrucción.
-                        </p>
+                                <h3>5. ¿Compartimos tus datos con terceros?</h3>
+                                <p>
+                                    No vendemos, intercambiamos ni transferimos de ningún otro modo a terceros tu información de identificación personal. Esto no incluye a terceros de confianza que nos asisten en la operación de nuestro negocio (como proveedores de CRM o servicios de email), siempre que se comprometan a mantener esta información confidencial.
+                                </p>
 
-                        <h3>7. Sus Derechos</h3>
-                        <p>
-                            De acuerdo con la Ley 25.326 de Protección de Datos Personales (Argentina) y otras normativas aplicables, usted tiene derecho a:
-                        </p>
-                        <ul>
-                            <li>Acceder a sus datos personales.</li>
-                            <li>Rectificar datos inexactos o incompletos.</li>
-                            <li>Solicitar la supresión de sus datos.</li>
-                            <li>Oponerse al tratamiento de sus datos.</li>
-                            <li>Retirar su consentimiento en cualquier momento.</li>
-                        </ul>
-                        <p>
-                            Para ejercer estos derechos, envíe un correo electrónico a <strong>info@datelia.com.ar</strong>.
-                        </p>
+                                <h3>6. Tus Derechos sobre tus Datos</h3>
+                                <p>Tienes derecho a acceder, rectificar, suprimir u oponerte al tratamiento de tus datos personales. Para ejercer cualquiera de estos derechos, por favor contáctanos en <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a>.</p>
 
-                        <h3>8. Cambios en esta Política</h3>
-                        <p>
-                            Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos cualquier cambio publicando la nueva política en esta página.
-                        </p>
-                    </div>
+                                <h3>7. Uso de Cookies</h3>
+                                <p>
+                                    Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario. Las cookies son pequeños archivos que un sitio transfiere al disco duro de tu computadora a través de tu navegador para capturar y recordar cierta información. Para obtener más detalles, consulta nuestra <a href="/legal/politica-de-cookies">Política de Cookies</a>.
+                                </p>
+
+                                <h3>8. Cambios a nuestra Política de Privacidad</h3>
+                                <p>
+                                    Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento. Cualquier cambio será publicado en esta página y la fecha de "Última actualización" será modificada.
+                                </p>
+
+                                <h3>9. Contacto</h3>
+                                <p>
+                                    Si tienes alguna pregunta sobre esta política de privacidad, puedes contactarnos en <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a>.
+                                </p>
+                            </div>
+                        </CardContent>
+                    </Card>
                 </div>
             </section>
         </Layout>
     );
-}
+};
+
+export default PrivacyPolicyPage;
