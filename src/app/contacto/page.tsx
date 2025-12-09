@@ -51,7 +51,7 @@ export default function ContactPage() {
 
           <Button asChild size="lg" className="mb-4">
             <a href={siteConfig.links.calendly} target="_blank" rel="noopener noreferrer">
-              Agendar Reunión de 30min
+              Agendar Reunión Gratuita
             </a>
           </Button>
           <p className="text-sm text-accent-foreground/60">
