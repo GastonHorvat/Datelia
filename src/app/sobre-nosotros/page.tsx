@@ -1,15 +1,45 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 // Componentes de tu UI y Layout
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 // Iconos profesionales de lucide-react
 import { Linkedin, Trophy, Lightbulb, Handshake } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Sobre Nosotros | Equipo Experto en IA | Datelia',
+  description: 'Conoce al equipo de expertos en IA detrás de Datelia. Jimena García Pinto y Gastón M. Horvat lideran soluciones que transforman negocios.',
+  keywords: 'equipo Datelia, expertos IA Argentina, fundadores Datelia, empresa IA Buenos Aires',
+  openGraph: {
+    title: 'Sobre Nosotros | Datelia',
+    description: 'Conoce al equipo experto detrás de las soluciones de IA que transforman negocios.',
+    url: 'https://datelia.tech/sobre-nosotros',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og/og-sobre-nosotros.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Equipo de Datelia - Expertos en IA y Automatización',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sobre Nosotros | Datelia',
+    description: 'Conoce al equipo experto en IA',
+    images: ['/images/og/og-sobre-nosotros.jpg'],
+  },
+  alternates: {
+    canonical: 'https://datelia.tech/sobre-nosotros',
+  },
+};
 
 const AboutUsPage = () => {
   // CORRECCIÓN: Reducido a 2 fundadores con nuevos roles y bios
@@ -38,74 +68,45 @@ const AboutUsPage = () => {
 
   return (
     <Layout>
-      <Head>
-        <title>Sobre Nosotros | El Equipo Experto en IA de Datelia</title>
-        <meta name="description" content="Conoce la misión, visión y al equipo de expertos detrás de Datelia. Estamos dedicados a implementar soluciones de IA que transforman negocios." />
-      </Head>
-
       {/* Hero Section */}
       <section className="bg-background text-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" />
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
             Somos un Equipo de Expertos, Obsesionados con los Resultados.
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground/80">
-            Nacimos de una convicción simple: la IA no debe ser una promesa lejana, sino una herramienta práctica que genera eficiencia y crecimiento hoy.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            En Datelia, combinamos la excelencia técnica con una visión estratégica de negocios. No solo implementamos IA; implementamos crecimiento.
           </p>
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* Team Section */}
       <section className="py-20 sm:py-24 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Nuestra Filosofía</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {philosophyPoints.map((point) => {
-              const Icon = point.icon;
-              return (
-                <div key={point.title} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-primary/10 p-4 rounded-full">
-                      <Icon className="w-8 h-8 text-primary" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{point.title}</h3>
-                  <p className="text-accent-foreground/80">{point.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 sm:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">El Equipo Fundador</h2>
-          {/* CORRECCIÓN: Usando 'lg:grid-cols-2' para 2 miembros y centrándolo */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-headline font-bold text-center mb-16">Liderazgo</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {teamMembers.map((member) => (
-              <Card key={member.name} className="text-center flex flex-col">
-                <CardContent className="pt-6 flex-grow">
-                  {/* CORRECCIÓN: Foto redonda y de tamaño consistente */}
+              <Card key={member.name} className="bg-background text-foreground overflow-hidden border-none shadow-lg">
+                <div className="relative h-80 w-full">
                   <Image
                     src={member.photo}
-                    alt={`Foto de ${member.name}`}
-                    width={120}
-                    height={120}
-                    className="rounded-full mb-4 mx-auto object-cover"
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top" // object-top para enfocar caras si la foto es vertical
                   />
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium mb-3">{member.title}</p>
+                </div>
+                <CardHeader>
+                  <h3 className="text-2xl font-bold">{member.name}</h3>
+                  <p className="text-primary font-medium">{member.title}</p>
+                </CardHeader>
+                <CardContent>
                   <p className="text-muted-foreground">{member.bio}</p>
                 </CardContent>
-                <CardFooter className="justify-center">
-                  <Button asChild variant="ghost" size="sm">
-                    <Link href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="mr-2 h-4 w-4" />
-                      Perfil de LinkedIn
-                    </Link>
-                  </Button>
+                <CardFooter>
+                  <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#0077b5] transition-colors">
+                    <Linkedin className="w-6 h-6" />
+                  </Link>
                 </CardFooter>
               </Card>
             ))}
@@ -113,13 +114,38 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Philosophy Section */}
+      <section className="py-20 sm:py-24 bg-background">
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-headline font-bold text-center mb-16">Nuestra Filosofía</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {philosophyPoints.map((point, index) => {
+              const Icon = point.icon;
+              return (
+                <div key={index} className="text-center p-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{point.title}</h3>
+                  <p className="text-muted-foreground">{point.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="bg-primary text-primary-foreground text-center py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">¿Listo para que nuestro equipo se una al tuyo?</h2>
-          <p className="text-xl mb-8 text-primary-foreground/80">Ahora que nos conoces, nos encantaría conocerte. Hablemos de tus objetivos.</p>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">
+            ¿Listo para trabajar con nosotros?
+          </h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/80">
+            Si buscas un socio tecnológico que entienda tu negocio y hable tu idioma, estamos aquí.
+          </p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contacto">Contactar al Equipo</Link>
+            <Link href="/contacto">Hablemos</Link>
           </Button>
         </div>
       </section>

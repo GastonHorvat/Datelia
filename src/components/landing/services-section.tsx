@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Bot, Phone, Settings } from "lucide-react";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export function ServicesSection() {
   const solutions = [
@@ -10,6 +11,7 @@ export function ServicesSection() {
       description: "Conecta con tus clientes 24/7 en Web, WhatsApp e Instagram. Nuestros chatbots no solo responden, sino que califican leads, agendan demos y aumentan tus ventas de forma automática.",
       link: "/soluciones/chatbots-inteligentes",
       linkText: "Descubrir la Solución →",
+      isExternal: false,
     },
     {
       icon: <Phone className="h-8 w-8 text-primary" />,
@@ -17,13 +19,15 @@ export function ServicesSection() {
       description: "Libera a tu equipo del teléfono. Nuestro agente de IA gestiona, confirma y reagenda citas con una voz natural, reduciendo los no-shows y optimizando tu calendario sin intervención humana.",
       link: "/soluciones/agentes-de-voz",
       linkText: "Ver Agentes de Voz →",
+      isExternal: false,
     },
     {
       icon: <Settings className="h-8 w-8 text-primary" />,
       title: "Soluciones de IA a Medida",
       description: '¿Tienes un desafío único? Nuestro lema es "No vendemos promesas. Implementamos resultados". Analizamos tus procesos y desarrollamos soluciones de IA personalizadas para eliminar tus cuellos de botella.',
-      link: "/contacto",
-      linkText: "Contactar a un Experto →",
+      link: siteConfig.links.calendly,
+      linkText: "Agendar Consultoría →",
+      isExternal: true,
     },
   ];
 
@@ -49,7 +53,12 @@ export function ServicesSection() {
                 <CardDescription>{solution.description}</CardDescription>
               </CardContent>
               <div className="p-6 pt-0">
-                <Link href={solution.link} className="font-semibold text-primary inline-flex items-center gap-2">
+                <Link
+                  href={solution.link}
+                  className="font-semibold text-primary inline-flex items-center gap-2"
+                  target={solution.isExternal ? "_blank" : undefined}
+                  rel={solution.isExternal ? "noopener noreferrer" : undefined}
+                >
                   {solution.linkText}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>

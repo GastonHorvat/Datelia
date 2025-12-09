@@ -12,20 +12,21 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { parseAndCleanHtml } from '@/lib/utils';
 import { ShareButtons } from '@/components/blog/ShareButtons';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 // =======================================================================================
 // SECCIÓN 2: OBTENCIÓN DE DATOS DEL POST (SIN CAMBIOS)
 // =======================================================================================
 async function getPostBySlug(slug: string): Promise<Post> {
   const { data, error } = await supabase
-    .from('posts_view') 
+    .from('posts_view')
     .select('*')
     .eq('post_slug', slug)
     .single();
 
   if (error) {
     console.error(`Error fetching post with slug "${slug}":`, error);
-    notFound(); 
+    notFound();
   }
   return data as Post;
 }
@@ -34,11 +35,12 @@ async function getPostBySlug(slug: string): Promise<Post> {
 // SECCIÓN 3: GENERACIÓN DE METADATOS DINÁMICOS (SIN CAMBIOS)
 // =======================================================================================
 type MetadataProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: MetadataProps) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   if (!post) return { title: 'Post No Encontrado' };
   return {
     title: `${post.post_title} | Datelia Insights`,
@@ -55,7 +57,8 @@ export async function generateMetadata({ params }: MetadataProps) {
 // SECCIÓN 4: EL COMPONENTE DE LA PÁGINA
 // =======================================================================================
 export default async function BlogPostPage({ params }: MetadataProps) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   const displayTags = post.tag_names || [];
   const displayTagSlugs = post.tag_slugs || [];
 
@@ -64,15 +67,19 @@ export default async function BlogPostPage({ params }: MetadataProps) {
       <main className="bg-background">
         <div className="container mx-auto px-4 py-16 sm:py-20">
           <article className="max-w-3xl mx-auto">
-            
+
+            {/* Breadcrumbs */}
+            <div className="flex justify-center mb-8">
+              <Breadcrumbs lastItemName={post.post_title} />
+            </div>
+
             {/* --- Cabecera del Artículo --- */}
             <header className="text-center mb-12">
               {post.category_name && (
                 <Link href={`/blog/categoria/${post.category_slug}`}>
-                    {/* CORRECCIÓN DE ESTILO: Restauramos el estilo del badge */}
-                    <Badge className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs uppercase mb-4">
-                      {post.category_name}
-                    </Badge>
+                  <Badge className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs uppercase mb-4">
+                    {post.category_name}
+                  </Badge>
                 </Link>
               )}
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-foreground">
@@ -83,10 +90,10 @@ export default async function BlogPostPage({ params }: MetadataProps) {
                 <span className="opacity-50">•</span>
                 <span>{new Date(post.published_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 {post.estimated_read_time > 0 && (
-                    <>
-                        <span className="opacity-50">•</span>
-                        <span>{post.estimated_read_time} min de lectura</span>
-                    </>
+                  <>
+                    <span className="opacity-50">•</span>
+                    <span>{post.estimated_read_time} min de lectura</span>
+                  </>
                 )}
               </div>
             </header>
@@ -103,7 +110,7 @@ export default async function BlogPostPage({ params }: MetadataProps) {
                 />
               </div>
             )}
-            
+
             {/* --- Contenido del Post --- */}
             <div className="
               prose max-w-none text-lg leading-relaxed
@@ -119,20 +126,19 @@ export default async function BlogPostPage({ params }: MetadataProps) {
 
             {/* --- Footer del Artículo --- */}
             <footer className="mt-12 pt-8 border-t border-border space-y-8">
-                {/* Sección de Tags */}
-                {displayTags.length > 0 && (
-                    <div className="flex flex-wrap items-center gap-2">
-                        <strong className="text-foreground mr-2">Tags:</strong>
-                        {displayTags.map((tagName, index) => (
-                            <Badge variant="outline" className="border-primary/50 text-primary" key={index}>
-                                #{tagName}
-                            </Badge>
-                        ))}
-                    </div>
-                )}
+              {/* Sección de Tags */}
+              {displayTags.length > 0 && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <strong className="text-foreground mr-2">Tags:</strong>
+                  {displayTags.map((tagName, index) => (
+                    <Badge variant="outline" className="border-primary/50 text-primary" key={index}>
+                      #{tagName}
+                    </Badge>
+                  ))}
+                </div>
+              )}
 
-                {/* CORRECCIÓN: Volvemos a añadir el componente de ShareButtons */}
-                <ShareButtons title={post.post_title} />
+              <ShareButtons title={post.post_title} />
             </footer>
 
           </article>

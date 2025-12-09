@@ -1,47 +1,73 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 // Componentes de tu UI y Layout
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRight } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Casos de Éxito en IA y Automatización | Resultados Reales | Datelia',
+  description: 'Descubre resultados reales: +35% conversión, -40% no-shows, -22% costos operativos. Casos de éxito con métricas de ROI verificables en IA y automatización empresarial.',
+  keywords: 'casos de éxito IA, ROI automatización, testimonios chatbots, resultados IA empresas, casos de estudio automatización',
+  openGraph: {
+    title: 'Casos de Éxito en IA y Automatización | Datelia',
+    description: 'Resultados reales verificables: +35% conversión, -40% no-shows, -22% costos operativos con soluciones de IA.',
+    url: 'https://datelia.tech/casos-de-exito',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og/og-casos-exito.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Casos de Éxito - Resultados Reales con IA y Automatización',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Casos de Éxito en IA y Automatización | Datelia',
+    description: 'Resultados reales verificables con soluciones de IA',
+    images: ['/images/og/og-casos-exito.jpg'],
+  },
+  alternates: {
+    canonical: 'https://datelia.tech/casos-de-exito',
+  },
+};
+
 const caseStudies = [
-    {
-      title: 'Empresa de Retail Aumenta su Conversión en un 35% con un Chatbot Inteligente',
-      summary: 'Implementamos un chatbot multicanal que no solo automatizó el 80% de las consultas de soporte, sino que también optimizó la captación y calificación de leads 24/7.',
-      metrics: ['+35% Conversión de Leads', '-50% en Costos de Soporte', 'ROI en 6 meses'],
-      href: '/casos-de-exito/caso-retail-chatbot',
-    },
-    {
-      title: 'Clínica Líder Reduce sus "No-Shows" en un 40% con un Agente de Voz IA',
-      summary: 'Nuestro agente de voz se encargó de la confirmación proactiva de citas, liberando 15 horas semanales del personal administrativo y recuperando ingresos perdidos.',
-      metrics: ['-40% Tasa de No-Show', '+15 Horas/Semana Ahorradas', '+95% Satisfacción'],
-      href: '/casos-de-exito/caso-clinica-agente-voz',
-    },
-    {
-      title: 'Empresa de Logística Optimiza su Cadena de Suministro con IA a Medida',
-      summary: 'Desarrollamos una solución personalizada que analiza datos en tiempo real para predecir cuellos de botella, optimizando rutas y reduciendo los costos operativos en un 22%.',
-      metrics: ['-22% Costos Operativos', '+30% Precisión', 'Proceso Automatizado'],
-      href: '/casos-de-exito/caso-logistica-ia-medida',
-    },
-  ];
+  {
+    title: 'Empresa de Retail Aumenta su Conversión en un 35% con un Chatbot Inteligente',
+    summary: 'Implementamos un chatbot multicanal que no solo automatizó el 80% de las consultas de soporte, sino que también optimizó la captación y calificación de leads 24/7.',
+    metrics: ['+35% Conversión de Leads', '-50% en Costos de Soporte', 'ROI en 6 meses'],
+    href: '/casos-de-exito/caso-retail-chatbot',
+  },
+  {
+    title: 'Clínica Líder Reduce sus "No-Shows" en un 40% con un Agente de Voz IA',
+    summary: 'Nuestro agente de voz se encargó de la confirmación proactiva de citas, liberando 15 horas semanales del personal administrativo y recuperando ingresos perdidos.',
+    metrics: ['-40% Tasa de No-Show', '+15 Horas/Semana Ahorradas', '+95% Satisfacción'],
+    href: '/casos-de-exito/caso-clinica-agente-voz',
+  },
+  {
+    title: 'Empresa de Logística Optimiza su Cadena de Suministro con IA a Medida',
+    summary: 'Desarrollamos una solución personalizada que analiza datos en tiempo real para predecir cuellos de botella, optimizando rutas y reduciendo los costos operativos en un 22%.',
+    metrics: ['-22% Costos Operativos', '+30% Precisión', 'Proceso Automatizado'],
+    href: '/casos-de-exito/caso-logistica-ia-medida',
+  },
+];
 
 const CaseStudiesPage = () => {
   return (
     <Layout>
-      <Head>
-        <title>Casos de Éxito en IA y Automatización | Datelia</title>
-        <meta name="description" content="Descubre los resultados reales que hemos generado para nuestros clientes. Casos de estudio con métricas de ROI, eficiencia y crecimiento impulsados por IA." />
-      </Head>
-
       {/* Hero Section */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" />
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
             Resultados Reales, No Promesas.
           </h1>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 
 export function CtaSection() {
   return (
@@ -12,9 +13,11 @@ export function CtaSection() {
             Hablemos de tus desafíos. Agenda una consultoría gratuita y sin compromiso con uno de nuestros expertos en IA para obtener un diagnóstico inicial de tus oportunidades de automatización.
           </p>
           <div className="mt-8">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-primary/20 shadow-[0_8px_20px]">
-              Agendar Consultoría Gratuita Ahora
-            </Button>
+            <a href={siteConfig.links.calendly} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg px-8 py-6 shadow-primary/20 shadow-[0_8px_20px]">
+                Agendar Consultoría Gratuita Ahora
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { siteConfig } from "@/config/site";
 
 // CORRECCIÓN: Se añade el icono de Facebook
 import { Linkedin, Mail, Phone, Instagram, Twitter, Facebook } from 'lucide-react';
@@ -16,16 +17,16 @@ const logoAlt = "Logo de Datelia";
 // CORRECCIÓN: Se añade el objeto de Facebook a la lista
 const socialLinks = [
   { name: 'LinkedIn', href: "https://www.linkedin.com/company/datelia/", icon: Linkedin },
-  { name: 'Twitter', href: "#", icon: Twitter }, // Reemplaza '#' con tu URL real
-  { name: 'Instagram', href: "#", icon: Instagram }, // Reemplaza '#' con tu URL real
-  { name: 'Facebook', href: "#", icon: Facebook }, // Reemplaza '#' con tu URL real
+  // { name: 'Twitter', href: "#", icon: Twitter }, // Reemplaza '#' con tu URL real
+  // { name: 'Instagram', href: "#", icon: Instagram }, // Reemplaza '#' con tu URL real
+  // { name: 'Facebook', href: "#", icon: Facebook }, // Reemplaza '#' con tu URL real
 ];
 
 const contactInfo = {
   email: "info@datelia.com.ar",
   // CORRECCIÓN: Se eliminó el carácter invisible \u202c al final de la línea.
   phone: "+54 387 585-8088",
-  address: "Buenos Aires, Argentina", 
+  address: "Buenos Aires, Argentina",
 };
 
 // --- COMPONENTE DEL FOOTER ---
@@ -33,10 +34,10 @@ export function Footer() {
   return (
     <footer className="bg-card text-muted-foreground">
       <div className="container mx-auto px-4 md:px-6 py-16">
-        
+
         {/* --- CORRECCIÓN: Grid de 5 columnas en desktop (lg) --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          
+
           {/* --- Columna 1: Logo, Descripción y Redes Sociales (ocupa 1 columna) --- */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
@@ -79,12 +80,16 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Recursos</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/contacto" className="hover:text-primary transition-colors">Solicitar una Demo</Link></li>
+              <li>
+                <a href={siteConfig.links.calendly} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Solicitar una Demo
+                </a>
+              </li>
               <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/politica-de-privacidad" className="hover:text-primary transition-colors">Privacidad</Link></li>
+              <li><Link href="/legal/politica-de-privacidad" className="hover:text-primary transition-colors">Privacidad</Link></li>
             </ul>
           </div>
-          
+
           {/* --- Columna 5: Contacto --- */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">Contacto</h4>
@@ -110,9 +115,8 @@ export function Footer() {
           </p>
           {/* CORRECCIÓN: Se usan Links para las páginas legales */}
           <div className="flex flex-col sm:flex-row items-center gap-x-6 gap-y-2">
-            <Link href="/politica-de-privacidad" className="hover:text-primary transition-colors">Política de Privacidad</Link>
-            <Link href="/terminos-y-condiciones" className="hover:text-primary transition-colors">Términos y Condiciones</Link>
-            <Link href="/politica-de-cookies" className="hover:text-primary transition-colors">Política de Cookies</Link>
+            <Link href="/legal/politica-de-privacidad" className="hover:text-primary transition-colors">Política de Privacidad</Link>
+            <Link href="/legal/terminos-y-condiciones" className="hover:text-primary transition-colors">Términos y Condiciones</Link>
           </div>
         </div>
       </div>

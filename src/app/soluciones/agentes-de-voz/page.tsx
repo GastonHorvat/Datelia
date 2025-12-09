@@ -1,19 +1,20 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 // Componentes de tu UI y Layout
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 // Iconos profesionales de lucide-react
-import { 
-  PhoneOff, 
-  CalendarX2, 
-  Clock, 
+import {
+  PhoneOff,
+  CalendarX2,
+  Clock,
   Users,
   CalendarClock,
   TrendingDown,
@@ -21,7 +22,57 @@ import {
   Spline
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Agentes de Voz con IA para Agendar Citas | Datelia',
+  description: 'Automatiza agendamiento de citas y gestión telefónica con agentes de voz IA. Reduce no-shows hasta 40% y libera tiempo de tu equipo.',
+  keywords: 'agentes de voz IA, automatización llamadas, IVR inteligente, agendamiento automático, bot telefónico',
+  openGraph: {
+    title: 'Agentes de Voz con IA | Datelia',
+    description: 'Automatiza llamadas y reduce no-shows hasta 40% con agentes de voz inteligentes.',
+    url: 'https://datelia.tech/soluciones/agentes-de-voz',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og/og-agentes-voz.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Agentes de Voz con IA - Automatización de Llamadas Telefónicas',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agentes de Voz con IA | Datelia',
+    description: 'Automatiza llamadas y reduce no-shows hasta 40%',
+    images: ['/images/og/og-agentes-voz.jpg'],
+  },
+  alternates: {
+    canonical: 'https://datelia.tech/soluciones/agentes-de-voz',
+  },
+};
+
 const VoiceAgentsPage = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Agentes de Voz con Inteligencia Artificial",
+    "provider": {
+      "@type": "Organization",
+      "name": "Datelia",
+      "url": "https://datelia.tech"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    },
+    "description": "Agentes telefónicos con IA que gestionan llamadas entrantes y salientes, agendan citas y califican leads con voz humana natural.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceRange": "Consultar"
+    }
+  };
+
   const problems = [
     { icon: PhoneOff, text: 'Tu personal de recepción pasa horas al teléfono en lugar de atender a los clientes que tiene en frente.' },
     { icon: CalendarX2, text: 'Pierdes ingresos significativos por una alta tasa de "no-shows" (citas no asistidas).' },
@@ -37,20 +88,21 @@ const VoiceAgentsPage = () => {
   ];
 
   const useCases = [
-    'Clínicas Médicas y Dentales', 'Talleres Mecánicos', 'Salones de Belleza y Spas', 
+    'Clínicas Médicas y Dentales', 'Talleres Mecánicos', 'Salones de Belleza y Spas',
     'Consultorios Profesionales', 'Inmobiliarias', 'Centros de Fisioterapia', 'y más...'
   ];
 
   return (
     <Layout>
-      <Head>
-        <title>Agentes de Voz con IA para Agendar Citas | Datelia</title>
-        <meta name="description" content="Libera a tu equipo del teléfono. Nuestros agentes de voz inteligentes gestionan, confirman y reagendan citas automáticamente, reduciendo costos y no-shows." />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* Hero Section */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" />
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Tu Agenda se Llena Sola, por Voz.</h1>
           <p className="text-xl text-accent-foreground/80 max-w-3xl mx-auto mb-8">
             Nuestro agente de voz inteligente gestiona, confirma y reagenda citas por teléfono con una voz humana y natural, liberando a tu equipo para siempre.

@@ -7,7 +7,8 @@ import { Layout } from '@/components/layout';
 import { supabase } from '@/lib/supabaseClient';
 import { Post } from '@/types/blog';
 import { notFound } from 'next/navigation';
-import { BlogPostCard } from '@/components/blog/BlogPostCard'; // Reutilizamos la tarjeta de post
+import { BlogPostCard } from '@/components/blog/BlogPostCard';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 // =======================================================================================
 // SECCIÓN 2: OBTENCIÓN DE DATOS POR CATEGORÍA
@@ -34,7 +35,7 @@ async function getPostsByCategory(categorySlug: string) {
         .select('name')
         .eq('slug', categorySlug)
         .single();
-      
+
       if (!categoryExists) {
         notFound(); // Si la categoría no existe, muestra la página 404.
       }
@@ -56,12 +57,13 @@ async function getPostsByCategory(categorySlug: string) {
 // SECCIÓN 3: METADATOS DINÁMICOS PARA LA PÁGINA DE CATEGORÍA
 // =======================================================================================
 type CategoryPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: CategoryPageProps) {
   // Obtenemos el nombre de la categoría para el título de la página.
-  const { categoryName } = await getPostsByCategory(params.slug);
+  const { slug } = await params;
+  const { categoryName } = await getPostsByCategory(slug);
   return {
     title: `Categoría: ${categoryName} | Datelia Insights`,
     description: `Explora todos los artículos de Datelia en la categoría de ${categoryName}.`,
@@ -72,13 +74,15 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 // SECCIÓN 4: EL COMPONENTE DE LA PÁGINA
 // =======================================================================================
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { posts, categoryName, error } = await getPostsByCategory(params.slug);
+  const { slug } = await params;
+  const { posts, categoryName, error } = await getPostsByCategory(slug);
 
   return (
     <Layout>
       {/* --- Encabezado de la Página de Categoría --- */}
       <section className="bg-accent text-accent-foreground pt-28 pb-12 text-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" lastItemName={categoryName} />
           <p className="text-primary font-semibold mb-2">Categoría</p>
           <h1 className="text-4xl md:text-5xl font-headline font-bold">
             {categoryName}

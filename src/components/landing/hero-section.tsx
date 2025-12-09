@@ -17,7 +17,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
       </div>
       <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-4xl">
-        <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400">
+        <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 pb-4">
           Soluciones de Inteligencia Artificial para Automatizar tu Negocio
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">

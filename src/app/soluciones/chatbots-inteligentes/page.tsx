@@ -1,34 +1,86 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
-// Usando los componentes de tu UI y lucide-react, como en tu ejemplo
+// Usando los componentes de tu UI y lucide-react
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Clock, 
-  Users, 
-  MessageSquareWarning, 
-  Frown, 
-  TrendingUp, 
-  ShieldHalf, 
-  AppWindow, 
-  BrainCircuit 
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+import {
+  Clock,
+  Users,
+  MessageSquareWarning,
+  Frown,
+  TrendingUp,
+  ShieldHalf,
+  AppWindow,
+  BrainCircuit
 } from "lucide-react";
-import { Layout } from '@/components/layout'; // Asegúrate que tu layout se importa correctamente
+import { Layout } from '@/components/layout';
+
+export const metadata: Metadata = {
+  title: 'Chatbots con IA para WhatsApp y Web | Automatización 24/7 | Datelia',
+  description: 'Aumenta tus ventas hasta 40% con chatbots inteligentes en WhatsApp, Web e Instagram. Automatiza atención al cliente 24/7, captura leads y cierra ventas mientras duermes.',
+  keywords: 'chatbot WhatsApp, chatbot IA, automatización atención cliente, bot Instagram, chatbot empresas Argentina, WhatsApp Business API, automatización ventas',
+  openGraph: {
+    title: 'Chatbots con IA para WhatsApp y Web | Datelia',
+    description: 'Aumenta tus ventas hasta 40% con chatbots inteligentes. Atención automatizada 24/7 en WhatsApp, Web e Instagram.',
+    url: 'https://datelia.tech/soluciones/chatbots-inteligentes',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og/og-chatbots.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Chatbots Inteligentes con IA - Automatización de Atención al Cliente 24/7',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chatbots con IA para WhatsApp y Web | Datelia',
+    description: 'Automatiza atención al cliente 24/7 y aumenta ventas hasta 40%',
+    images: ['/images/og/og-chatbots.jpg'],
+  },
+  alternates: {
+    canonical: 'https://datelia.tech/soluciones/chatbots-inteligentes',
+  },
+};
 
 const ChatbotsPage = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Chatbot con Inteligencia Artificial",
+    "provider": {
+      "@type": "Organization",
+      "name": "Datelia",
+      "url": "https://datelia.tech"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    },
+    "description": "Automatiza tu atención al cliente con chatbots inteligentes que capturan leads, resuelven dudas y venden por ti 24/7 en WhatsApp, Web e Instagram.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceRange": "Consultar"
+    }
+  };
+
   return (
     <Layout>
-      <Head>
-        <title>Chatbots con IA para WhatsApp y Web | Datelia</title>
-        <meta name="description" content="Automatiza tu atención al cliente y dispara tus ventas con chatbots inteligentes que capturan leads, resuelven dudas y venden por ti 24/7." />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
-      {/* Hero Section - Estilo de la landing */}
+      {/* Hero Section */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
-        <div className="container mx-auto text-center px-4">
+        <div className="container mx-auto text-center px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" />
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Conversaciones que Convierten, 24/7.</h1>
           <h2 className="text-xl md:text-2xl text-accent-foreground/80 mb-8 max-w-3xl mx-auto">
             Implementa chatbots en WhatsApp, Web e Instagram que capturan leads, resuelven dudas y venden por ti, incluso mientras duermes.
@@ -39,7 +91,7 @@ const ChatbotsPage = () => {
         </div>
       </section>
 
-      {/* Problem Section - Fondo claro para contraste */}
+      {/* Problem Section */}
       <section className="py-20 sm:py-28 bg-background">
         <div className="container mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-headline font-bold text-center mb-12">¿Te suena familiar este escenario?</h2>
@@ -76,7 +128,7 @@ const ChatbotsPage = () => {
         </div>
       </section>
 
-      {/* Solution/Benefits Section - Fondo oscuro para contraste */}
+      {/* Solution/Benefits Section */}
       <section className="py-20 sm:py-28 bg-accent text-accent-foreground">
         <div className="container mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-headline font-bold text-center mb-12">La Solución: Un Chatbot que Trabaja para tu ROI</h2>
@@ -105,7 +157,7 @@ const ChatbotsPage = () => {
         </div>
       </section>
 
-      {/* Process Section (Timeline) - Fondo claro */}
+      {/* Process Section */}
       <section className="py-20 sm:py-28 bg-background">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-3xl font-headline font-bold text-center mb-16">Un Proceso Transparente y Eficaz</h2>
@@ -131,25 +183,25 @@ const ChatbotsPage = () => {
         </div>
       </section>
 
-      {/* Testimonial Section - Fondo oscuro */}
+      {/* Testimonial Section */}
       <section className="py-20 sm:py-28 bg-accent text-accent-foreground">
         <div className="container mx-auto max-w-3xl px-4 text-center">
-            <Image
-              src="/images/martinAventura.jpg" // Reemplaza con una foto real
-              alt="Martín Rojas, Head of Growth de Aventura Digital, cliente satisfecho con chatbot inteligente de Datelia"
-              width={80}
-              height={80}
-              className="rounded-full mx-auto mb-6"
-            />
-            <blockquote className="text-xl italic mb-6 text-accent-foreground/90">
-              "Pasamos de responder en horas a hacerlo en segundos, y nuestras ventas desde WhatsApp aumentaron un 40% en los primeros tres meses. El chatbot se pagó solo."
-            </blockquote>
-            <p className="text-lg font-semibold">Martín Rojas</p>
-            <p className="text-md text-accent-foreground/70">Head of Growth</p>
+          <Image
+            src="/images/martinAventura.jpg"
+            alt="Martín Rojas, Head of Growth de Aventura Digital, cliente satisfecho con chatbot inteligente de Datelia"
+            width={80}
+            height={80}
+            className="rounded-full mx-auto mb-6"
+          />
+          <blockquote className="text-xl italic mb-6 text-accent-foreground/90">
+            "Pasamos de responder en horas a hacerlo en segundos, y nuestras ventas desde WhatsApp aumentaron un 40% en los primeros tres meses. El chatbot se pagó solo."
+          </blockquote>
+          <p className="text-lg font-semibold">Martín Rojas</p>
+          <p className="text-md text-accent-foreground/70">Head of Growth</p>
         </div>
       </section>
 
-      {/* Final CTA Section - Fondo primario para máximo impacto */}
+      {/* Final CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">¿Listo para automatizar tus conversaciones?</h2>

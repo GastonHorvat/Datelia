@@ -1,14 +1,44 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 // Componentes de tu UI y Layout
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 // Iconos profesionales de lucide-react
 import { Bot, Mic, Wrench, CheckCircle2 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Soluciones de IA y Automatización | Chatbots y Agentes de Voz | Datelia',
+  description: 'Descubre nuestras soluciones de IA: chatbots inteligentes, agentes de voz y automatización a medida. Optimiza procesos y aumenta tu ROI hasta 40%.',
+  keywords: 'soluciones IA, chatbots empresariales, agentes de voz, automatización empresarial, IA a medida',
+  openGraph: {
+    title: 'Soluciones de IA y Automatización | Datelia',
+    description: 'Chatbots 24/7, agentes de voz y automatización a medida para empresas.',
+    url: 'https://datelia.tech/soluciones',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og/og-soluciones.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Soluciones de IA - Chatbots, Agentes de Voz y Automatización',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Soluciones de IA y Automatización | Datelia',
+    description: 'Chatbots, agentes de voz y automatización empresarial',
+    images: ['/images/og/og-soluciones.jpg'],
+  },
+  alternates: {
+    canonical: 'https://datelia.tech/soluciones',
+  },
+};
 
 const solutions = [
   {
@@ -50,16 +80,38 @@ const solutions = [
 ];
 
 const SolutionsPage = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Soluciones de Inteligencia Artificial para Empresas",
+    "provider": {
+      "@type": "Organization",
+      "name": "Datelia",
+      "url": "https://datelia.tech"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    },
+    "description": "Consultoría y desarrollo de soluciones de IA a medida, incluyendo chatbots, agentes de voz y automatización de procesos para empresas.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceRange": "Consultar"
+    }
+  };
+
   return (
     <Layout>
-      <Head>
-        <title>Soluciones de IA y Automatización para Empresas | Datelia</title>
-        <meta name="description" content="Descubre nuestras soluciones de IA: Chatbots inteligentes, agentes de voz para agendamiento y desarrollos a medida para transformar tu negocio." />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* Hero Section */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" />
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
             Soluciones de IA que Impulsan tu Negocio
           </h1>

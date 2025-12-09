@@ -2,14 +2,15 @@
 
 import { Layout } from '@/components/layout';
 import { supabase } from '@/lib/supabaseClient';
-import { Post } from '@/types/blog'; 
+import { Post } from '@/types/blog';
 import { FeaturedPostCard } from '@/components/blog/FeaturedPostCard';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
-import { Pagination } from '@/components/ui/Pagination'; // Importamos el nuevo componente
+import { Pagination } from '@/components/ui/Pagination';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 export const revalidate = 3600; // Revalidar cada hora
 
-const POSTS_PER_PAGE = 6; // ¡Nuestra nueva constante!
+const POSTS_PER_PAGE = 6;
 
 // --- SECCIÓN 2: OBTENCIÓN DE DATOS CON LÓGICA DE PAGINACIÓN ---
 async function getPosts({ currentPage = 1 }: { currentPage: number }) {
@@ -28,19 +29,19 @@ async function getPosts({ currentPage = 1 }: { currentPage: number }) {
 
       if (featuredError) console.error("Error fetching featured post:", featuredError.message);
       featuredPost = featuredData;
-      
+
       // Si encontramos un destacado, lo excluimos de la consulta de posts regulares
       if (featuredPost) {
         regularPostsQuery = regularPostsQuery.neq('post_id', featuredPost.post_id);
       }
     }
-    
+
     // Filtramos para obtener solo los no destacados
     regularPostsQuery = regularPostsQuery.or('is_featured.is.null,is_featured.eq.false');
 
     // Calculamos el rango de posts a obtener para la página actual
     const offset = (currentPage - 1) * POSTS_PER_PAGE;
-    
+
     const { data: regularPosts, error: regularError, count } = await regularPostsQuery
       .order('created_at', { ascending: false })
       .range(offset, offset + POSTS_PER_PAGE - 1);
@@ -49,28 +50,33 @@ async function getPosts({ currentPage = 1 }: { currentPage: number }) {
 
     const totalPages = Math.ceil((count || 0) / POSTS_PER_PAGE);
 
-    return { featuredPost, regularPosts: regularPosts as Post[], totalPages, error: null };
+    return {
+      featuredPost,
+      regularPosts: regularPosts as Post[],
+      totalPages,
+      error: null
+    };
 
   } catch (error) {
-    const message = error instanceof Error ? error.message : "An unknown error occurred.";
-    console.error("Error en getPosts:", message);
-    return { featuredPost: null, regularPosts: [], totalPages: 0, error: message };
+    console.error("Error en getPosts:", error);
+    const errorMessage = error instanceof Error ? error.message : "Ocurrió un error desconocido.";
+    return { featuredPost: null, regularPosts: [], totalPages: 0, error: errorMessage };
   }
 }
 
 // --- SECCIÓN 3: EL COMPONENTE DE LA PÁGINA ---
 // Ahora recibe `searchParams` para saber en qué página estamos
-export default async function BlogIndexPage({ searchParams }: { searchParams?: { page?: string } }) {
-  const page = (await searchParams)?.page;
+export default async function BlogIndexPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+  const { page } = await searchParams;
   const currentPage = Number(page) || 1;
-  
+
   const { featuredPost, regularPosts, totalPages, error } = await getPosts({ currentPage });
 
   return (
     <Layout>
       <section className="bg-accent text-accent-foreground pt-28 pb-12 text-center">
-        {/* ... (código del encabezado sin cambios) ... */}
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <Breadcrumbs className="mb-6" />
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Datelia Insights</h1>
           <p className="text-xl text-accent-foreground/80 max-w-2xl mx-auto">Tu fuente de conocimiento sobre IA, consejos de automatización y estrategias de negocio.</p>
         </div>
@@ -85,7 +91,7 @@ export default async function BlogIndexPage({ searchParams }: { searchParams?: {
           <div className="space-y-16">
             {/* El post destacado solo se muestra en la primera página */}
             {currentPage === 1 && featuredPost && <FeaturedPostCard post={featuredPost} />}
-            
+
             {regularPosts.length > 0 ? (
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
