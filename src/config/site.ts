@@ -3,7 +3,7 @@ export const siteConfig = {
     description: "Agencia de Inteligencia Artificial aplicada a los negocios.",
     url: "https://datelia.tech",
     links: {
-        calendly: "https://calendly.com/gas-datelia/30min",
+        calendly: "https://calendly.com/jimenagarciapinto-datelia/datelia-consultoria-gratuita/",
         linkedin: "https://www.linkedin.com/company/datelia/",
         email: "info@datelia.com.ar",
     },
