@@ -10,6 +10,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRight } from 'lucide-react';
+import { SectorsSection } from '@/components/case-studies/sectors-section';
+import { CtaSection } from '@/components/landing/cta-section';
 
 export const metadata: Metadata = {
   title: 'Casos de Éxito en IA y Automatización | Resultados Reales | Datelia',
@@ -118,20 +120,11 @@ const CaseStudiesPage = () => {
         </div>
       </section>
 
+      {/* Sectors Section */}
+      <SectorsSection />
+
       {/* Final CTA Section */}
-      <section className="bg-primary text-primary-foreground text-center py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
-            Ahora, imagina estos resultados en tu empresa.
-          </h2>
-          <p className="text-xl mb-8 text-primary-foreground/80">
-            El próximo caso de éxito podría ser el tuyo. Si estás listo para empezar a implementar, hablemos.
-          </p>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/contacto">Hablemos de tu Proyecto</Link>
-          </Button>
-        </div>
-      </section>
+      <CtaSection />
     </Layout>
   );
 };

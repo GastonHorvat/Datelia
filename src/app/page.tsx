@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { ProblemSolutionSection } from "@/components/landing/problem-solution-section";
 import { ServicesSection } from "@/components/landing/services-section";
 import { TestimonialSection } from "@/components/landing/testimonial-section";
+import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Layout } from "@/components/layout";
 import { Metadata } from 'next';
@@ -45,6 +46,7 @@ export default function Home() {
         <ProblemSolutionSection />
         <ServicesSection />
         <TestimonialSection />
+        <FaqSection />
         <CtaSection />
       </main>
     </Layout>

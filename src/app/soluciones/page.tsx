@@ -7,6 +7,8 @@ import { Metadata } from 'next';
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+import { ProblemVsSolutionSection } from '@/components/solutions/problem-vs-solution';
+import { CtaSection } from '@/components/landing/cta-section';
 
 // Iconos profesionales de lucide-react
 import { Bot, Mic, Wrench, CheckCircle2 } from 'lucide-react';
@@ -156,20 +158,11 @@ const SolutionsPage = () => {
         );
       })}
 
+      {/* Problem vs Solution Section */}
+      <ProblemVsSolutionSection />
+
       {/* Final CTA Section */}
-      <section className="bg-primary text-primary-foreground text-center py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
-            ¿No estás seguro por dónde empezar?
-          </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/80">
-            No te preocupes. El primer paso es una conversación. Hablemos de tus objetivos y te ayudaremos a identificar la solución que generará el mayor impacto para tu negocio.
-          </p>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/contacto">Agendar una Consultoría Gratuita</Link>
-          </Button>
-        </div>
-      </section>
+      <CtaSection />
     </Layout>
   );
 };
