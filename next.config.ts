@@ -22,13 +22,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Forzar dominio sin www
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.datelia.com.ar' }],
-        destination: 'https://datelia.com.ar/:path*',
-        permanent: true,
-      },
+
       // Redirects de páginas legales antiguas a /legal/
       {
         source: '/politica-de-privacidad',

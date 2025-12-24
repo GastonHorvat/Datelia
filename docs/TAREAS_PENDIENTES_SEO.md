@@ -147,7 +147,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Soluciones de IA y Automatización | Datelia',
     description: 'Chatbots 24/7, agentes de voz y automatización a medida para empresas.',
-    url: 'https://datelia.tech/soluciones',
+    url: 'https://datelia.com.ar/soluciones',
     type: 'website',
     images: [
       {
@@ -165,7 +165,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-soluciones.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/soluciones',
+    canonical: 'https://datelia.com.ar/soluciones',
   },
 };
 ```
@@ -182,7 +182,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Agentes de Voz con IA | Datelia',
     description: 'Automatiza llamadas y reduce no-shows hasta 40% con agentes de voz inteligentes.',
-    url: 'https://datelia.tech/soluciones/agentes-de-voz',
+    url: 'https://datelia.com.ar/soluciones/agentes-de-voz',
     type: 'website',
     images: [
       {
@@ -200,7 +200,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-agentes-voz.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/soluciones/agentes-de-voz',
+    canonical: 'https://datelia.com.ar/soluciones/agentes-de-voz',
   },
 };
 ```
@@ -217,7 +217,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sobre Nosotros | Datelia',
     description: 'Conoce al equipo experto detrás de las soluciones de IA que transforman negocios.',
-    url: 'https://datelia.tech/sobre-nosotros',
+    url: 'https://datelia.com.ar/sobre-nosotros',
     type: 'website',
     images: [
       {
@@ -235,7 +235,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-sobre-nosotros.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/sobre-nosotros',
+    canonical: 'https://datelia.com.ar/sobre-nosotros',
   },
 };
 ```
@@ -267,7 +267,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contacto | Datelia',
     description: 'Agenda una consultoría gratuita y descubre cómo la IA puede transformar tu negocio.',
-    url: 'https://datelia.tech/contacto',
+    url: 'https://datelia.com.ar/contacto',
     type: 'website',
     images: [
       {
@@ -285,7 +285,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-contacto.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/contacto',
+    canonical: 'https://datelia.com.ar/contacto',
   },
 };
 ```

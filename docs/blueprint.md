@@ -1,10 +1,10 @@
-# **App Name**: Datelia.tech Landing Page
+# **App Name**: Datelia.com.ar Landing Page
 
 ## Core Features:
 
 - Hero Section: Implement a Hero section with a video background and clear CTAs.
 - Client Logos: Display client logos to build trust through social proof.
-- Problem/Solution Section: Highlight the main problems and how Datelia.tech provides solutions with AI.
+- Problem/Solution Section: Highlight the main problems and how Datelia.com.ar provides solutions with AI.
 - AI Services Cards: Showcase key AI services using interactive cards.
 - Client Testimonial: Feature a client quote in a testimonial section to showcase how other customers feel about the product.
 - Contact Form: Add a contact form to capture user information.
