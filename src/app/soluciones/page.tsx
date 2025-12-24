@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Soluciones de IA y Automatización | Datelia',
     description: 'Chatbots 24/7, agentes de voz y automatización a medida para empresas.',
-    url: 'https://datelia.com.ar/soluciones',
+    url: 'https://www.datelia.com.ar/soluciones',
     type: 'website',
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-soluciones.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.com.ar/soluciones',
+    canonical: 'https://www.datelia.com.ar/soluciones',
   },
 };
 
@@ -89,7 +89,7 @@ const SolutionsPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "Datelia",
-      "url": "https://datelia.com.ar"
+      "url": "https://www.datelia.com.ar"
     },
     "areaServed": {
       "@type": "Country",

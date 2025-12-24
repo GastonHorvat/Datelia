@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Casos de Éxito en IA y Automatización | Datelia',
     description: 'Resultados reales verificables: +35% conversión, -40% no-shows, -22% costos operativos con soluciones de IA.',
-    url: 'https://datelia.com.ar/casos-de-exito',
+    url: 'https://www.datelia.com.ar/casos-de-exito',
     type: 'website',
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-casos-exito.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.com.ar/casos-de-exito',
+    canonical: 'https://www.datelia.com.ar/casos-de-exito',
   },
 };
 

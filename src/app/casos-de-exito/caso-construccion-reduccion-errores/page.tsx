@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Descubre cómo una empresa de construcción redujo errores operativos en un 70% y aceleró 3× la actualización de datos con IA que interpreta audios y fotos de obra.',
     keywords: 'caso éxito construcción IA, automatización obra construcción, reducir errores construcción, gestión obra inteligente',
     alternates: {
-        canonical: 'https://datelia.com.ar/casos-de-exito/caso-construccion-reduccion-errores',
+        canonical: 'https://www.datelia.com.ar/casos-de-exito/caso-construccion-reduccion-errores',
     },
 };
 

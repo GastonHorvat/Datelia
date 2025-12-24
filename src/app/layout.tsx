@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://datelia.com.ar'),
+  metadataBase: new URL('https://www.datelia.com.ar'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Datelia | Soluciones de IA y Automatización para Empresas',
     description: 'Optimiza tus procesos con IA. En Datelia ofrecemos chatbots inteligentes, agentes de voz y soluciones a medida para potenciar tu negocio.',
-    url: 'https://datelia.com.ar',
+    url: 'https://www.datelia.com.ar',
     siteName: 'Datelia',
     images: [
       {
@@ -79,8 +79,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Datelia",
               "description": "Soluciones de IA y Automatización para Empresas",
-              "url": "https://datelia.com.ar",
-              "logo": "https://datelia.com.ar/images/logo.png",
+              "url": "https://www.datelia.com.ar",
+              "logo": "https://www.datelia.com.ar/images/logo.png",
               "sameAs": [
                 "https://www.linkedin.com/company/datelia/"
               ],

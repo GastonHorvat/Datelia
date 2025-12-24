@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Datelia | Automatización con IA que Genera Resultados',
     description: 'Libera hasta 40% del tiempo de tu equipo con automatización inteligente. Chatbots, agentes de voz y soluciones de IA a medida.',
-    url: 'https://datelia.com.ar',
+    url: 'https://www.datelia.com.ar',
     type: 'website',
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-home.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.com.ar',
+    canonical: 'https://www.datelia.com.ar',
   },
 };
 

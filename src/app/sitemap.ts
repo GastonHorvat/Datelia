@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabaseClient'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://datelia.com.ar'
+  const baseUrl = 'https://www.datelia.com.ar'
 
   // Rutas estáticas principales
   const staticRoutes: MetadataRoute.Sitemap = [

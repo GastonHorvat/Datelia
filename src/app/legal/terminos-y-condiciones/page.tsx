@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Términos y Condiciones | Datelia',
     description: 'Términos y Condiciones de uso para los servicios y el sitio web de Datelia.',
     alternates: {
-        canonical: 'https://datelia.com.ar/legal/terminos-y-condiciones',
+        canonical: 'https://www.datelia.com.ar/legal/terminos-y-condiciones',
     },
 };
 

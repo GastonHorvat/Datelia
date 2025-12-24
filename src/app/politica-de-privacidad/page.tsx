@@ -69,7 +69,7 @@ const PrivacyPolicyPage = () => {
                 <ul>
                   <li><strong>Nombre de la empresa:</strong> Datelia</li>
                   <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a></li>
-                  <li><strong>Sitio web:</strong> <a href="https://datelia.com.ar" target="_blank" rel="noopener noreferrer">https://datelia.com.ar</a></li>
+                  <li><strong>Sitio web:</strong> <a href="https://www.datelia.com.ar" target="_blank" rel="noopener noreferrer">https://www.datelia.com.ar</a></li>
                 </ul>
 
                 <h3>2. ¿Qué información recopilamos?</h3>

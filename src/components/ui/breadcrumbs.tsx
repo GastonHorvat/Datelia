@@ -48,7 +48,7 @@ export function Breadcrumbs({ className, lastItemName }: BreadcrumbsProps) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Inicio",
-                "item": "https://datelia.com.ar"
+                "item": "https://www.datelia.com.ar"
             },
             ...segments.map((segment, index) => {
                 const isLast = index === segments.length - 1;
@@ -59,7 +59,7 @@ export function Breadcrumbs({ className, lastItemName }: BreadcrumbsProps) {
                     "@type": "ListItem",
                     "position": index + 2,
                     "name": name,
-                    "item": `https://datelia.com.ar${href}`
+                    "item": `https://www.datelia.com.ar${href}`
                 };
             })
         ]

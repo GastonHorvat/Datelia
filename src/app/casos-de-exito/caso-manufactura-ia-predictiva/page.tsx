@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Industria manufacturera reduce 30% stock de seguridad con IA predictiva de demanda. 25% menos capital inmovilizado y 20% más precisión en compras.',
     keywords: 'IA predictiva manufactura, optimización stock IA, demanda predictiva industria',
     alternates: {
-        canonical: 'https://datelia.com.ar/casos-de-exito/caso-manufactura-ia-predictiva',
+        canonical: 'https://www.datelia.com.ar/casos-de-exito/caso-manufactura-ia-predictiva',
     },
 };
 
