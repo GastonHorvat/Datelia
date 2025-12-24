@@ -306,7 +306,7 @@ export function ContactForm() {
                                     htmlFor="politicas"
                                     className="text-sm text-muted-foreground leading-tight"
                                 >
-                                    Acepto la <Link href="/politica-de-privacidad" className="text-primary hover:underline">Política de Privacidad</Link> y el procesamiento de mis datos para ser contactado.
+                                    Acepto la <Link href="/legal/politica-de-privacidad" className="text-primary hover:underline">Política de Privacidad</Link> y el procesamiento de mis datos para ser contactado.
                                 </label>
                             </div>
 
