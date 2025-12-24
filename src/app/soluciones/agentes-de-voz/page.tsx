@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Agentes de Voz con IA | Datelia',
     description: 'Automatiza llamadas y reduce no-shows hasta 40% con agentes de voz inteligentes.',
-    url: 'https://datelia.tech/soluciones/agentes-de-voz',
+    url: 'https://datelia.com.ar/soluciones/agentes-de-voz',
     type: 'website',
     images: [
       {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-agentes-voz.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/soluciones/agentes-de-voz',
+    canonical: 'https://datelia.com.ar/soluciones/agentes-de-voz',
   },
 };
 
@@ -59,7 +59,7 @@ const VoiceAgentsPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "Datelia",
-      "url": "https://datelia.tech"
+      "url": "https://datelia.com.ar"
     },
     "areaServed": {
       "@type": "Country",

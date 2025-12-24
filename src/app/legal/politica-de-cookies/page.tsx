@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Política de Cookies | Datelia',
     description: 'Información sobre el uso de cookies en el sitio web de Datelia.',
     alternates: {
-        canonical: 'https://datelia.tech/legal/politica-de-cookies',
+        canonical: 'https://datelia.com.ar/legal/politica-de-cookies',
     },
 };
 

@@ -25,8 +25,8 @@ const nextConfig: NextConfig = {
       // Forzar dominio sin www
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'www.datelia.tech' }],
-        destination: 'https://datelia.tech/:path*',
+        has: [{ type: 'host', value: 'www.datelia.com.ar' }],
+        destination: 'https://datelia.com.ar/:path*',
         permanent: true,
       },
       // Redirects de páginas legales antiguas a /legal/

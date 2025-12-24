@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Términos y Condiciones | Datelia',
     description: 'Términos y Condiciones de uso para los servicios y el sitio web de Datelia.',
     alternates: {
-        canonical: 'https://datelia.tech/legal/terminos-y-condiciones',
+        canonical: 'https://datelia.com.ar/legal/terminos-y-condiciones',
     },
 };
 
@@ -52,7 +52,7 @@ const TermsAndConditionsPage = () => {
               ">
                                 <h3>1. Aceptación de los Términos</h3>
                                 <p>
-                                    Bienvenido a Datelia. Al acceder y utilizar nuestro sitio web (datelia.tech) y nuestros servicios, aceptas cumplir y estar sujeto a los siguientes términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro sitio web ni nuestros servicios.
+                                    Bienvenido a Datelia. Al acceder y utilizar nuestro sitio web (datelia.com.ar) y nuestros servicios, aceptas cumplir y estar sujeto a los siguientes términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro sitio web ni nuestros servicios.
                                 </p>
 
                                 <h3>2. Descripción de los Servicios</h3>

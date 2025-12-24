@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Empresa agroindustrial libera 35 horas semanales digitalizando pedidos, stock y logística. Reducción del 80% en tareas repetitivas y 40% menos errores.',
     keywords: 'caso éxito agroindustria, automatización pedidos agrícola, portal pedidos IA, digitalización agroindustria',
     alternates: {
-        canonical: 'https://datelia.tech/casos-de-exito/caso-agroindustria-automatizacion-pedidos',
+        canonical: 'https://datelia.com.ar/casos-de-exito/caso-agroindustria-automatizacion-pedidos',
     },
 };
 

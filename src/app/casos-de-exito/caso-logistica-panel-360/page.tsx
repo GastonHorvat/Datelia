@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Empresa de logística centraliza operación con panel 360°. 85% menos tiempo en reportes, 35% más eficiencia operativa y 20% menos costos.',
     keywords: 'panel 360 logística, centralización operación IA, BI tiempo real logística',
     alternates: {
-        canonical: 'https://datelia.tech/casos-de-exito/caso-logistica-panel-360',
+        canonical: 'https://datelia.com.ar/casos-de-exito/caso-logistica-panel-360',
     },
 };
 

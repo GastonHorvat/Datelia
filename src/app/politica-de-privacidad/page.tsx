@@ -27,7 +27,7 @@ const PrivacyPolicyPage = () => {
       <section className="py-20 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
           <Card className="max-w-4xl mx-auto">
-            
+
             {/* --- Subsección: Cabecera de la Tarjeta --- */}
             <CardHeader>
               <CardTitle className="text-3xl font-headline">
@@ -37,7 +37,7 @@ const PrivacyPolicyPage = () => {
                 Última actualización: {currentDate}
               </p>
             </CardHeader>
-            
+
             {/* --- Subsección: Contenido Principal de la Tarjeta --- */}
             <CardContent>
 
@@ -52,7 +52,7 @@ const PrivacyPolicyPage = () => {
                 - `prose-strong:text-foreground`: Hace que el texto en negrita también resalte.
                 - `dark:prose-invert`: Lo mantenemos por si hay algún elemento que no anulemos explícitamente.
               */}
-                <div className="
+              <div className="
                   prose max-w-none 
                   text-muted-foreground 
                   prose-headings:text-foreground 
@@ -69,7 +69,7 @@ const PrivacyPolicyPage = () => {
                 <ul>
                   <li><strong>Nombre de la empresa:</strong> Datelia</li>
                   <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a></li>
-                  <li><strong>Sitio web:</strong> <a href="https://www.datelia.com.ar" target="_blank" rel="noopener noreferrer">https://www.datelia.com.ar</a></li>
+                  <li><strong>Sitio web:</strong> <a href="https://datelia.com.ar" target="_blank" rel="noopener noreferrer">https://datelia.com.ar</a></li>
                 </ul>
 
                 <h3>2. ¿Qué información recopilamos?</h3>

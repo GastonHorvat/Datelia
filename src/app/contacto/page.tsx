@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contacto | Datelia',
     description: 'Agenda una consultoría gratuita y descubre cómo la IA puede transformar tu negocio.',
-    url: 'https://datelia.tech/contacto',
+    url: 'https://datelia.com.ar/contacto',
     type: 'website',
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-contacto.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/contacto',
+    canonical: 'https://datelia.com.ar/contacto',
   },
 };
 

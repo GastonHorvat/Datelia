@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chatbots con IA para WhatsApp y Web | Datelia',
     description: 'Aumenta tus ventas hasta 40% con chatbots inteligentes. Atención automatizada 24/7 en WhatsApp, Web e Instagram.',
-    url: 'https://datelia.tech/soluciones/chatbots-inteligentes',
+    url: 'https://datelia.com.ar/soluciones/chatbots-inteligentes',
     type: 'website',
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-chatbots.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/soluciones/chatbots-inteligentes',
+    canonical: 'https://datelia.com.ar/soluciones/chatbots-inteligentes',
   },
 };
 
@@ -56,7 +56,7 @@ const ChatbotsPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "Datelia",
-      "url": "https://datelia.tech"
+      "url": "https://datelia.com.ar"
     },
     "areaServed": {
       "@type": "Country",

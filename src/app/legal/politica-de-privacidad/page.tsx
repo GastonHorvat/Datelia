@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Política de Privacidad | Datelia',
     description: 'Conoce cómo Datelia recopila, usa y protege tus datos personales. Tu privacidad y seguridad son nuestra prioridad.',
     alternates: {
-        canonical: 'https://datelia.tech/legal/politica-de-privacidad',
+        canonical: 'https://datelia.com.ar/legal/politica-de-privacidad',
     },
 };
 
@@ -58,7 +58,7 @@ const PrivacyPolicyPage = () => {
                                 <ul>
                                     <li><strong>Nombre de la empresa:</strong> Datelia</li>
                                     <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@datelia.com.ar">info@datelia.com.ar</a></li>
-                                    <li><strong>Sitio web:</strong> <a href="https://datelia.tech" target="_blank" rel="noopener noreferrer">https://datelia.tech</a></li>
+                                    <li><strong>Sitio web:</strong> <a href="https://datelia.com.ar" target="_blank" rel="noopener noreferrer">https://datelia.com.ar</a></li>
                                 </ul>
 
                                 <h3>2. ¿Qué información recopilamos?</h3>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Empresa de servicios reduce reclamos 60% con chatbot IA de postventa 24/7. 80% de consultas resueltas en menos de 30 segundos.',
     keywords: 'chatbot postventa servicios, automatización soporte IA, reducir reclamos chatbot',
     alternates: {
-        canonical: 'https://datelia.tech/casos-de-exito/caso-servicios-chatbot-postventa',
+        canonical: 'https://datelia.com.ar/casos-de-exito/caso-servicios-chatbot-postventa',
     },
 };
 

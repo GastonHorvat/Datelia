@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sobre Nosotros | Datelia',
     description: 'Conoce al equipo experto detrás de las soluciones de IA que transforman negocios.',
-    url: 'https://datelia.tech/sobre-nosotros',
+    url: 'https://datelia.com.ar/sobre-nosotros',
     type: 'website',
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: ['/images/og/og-sobre-nosotros.jpg'],
   },
   alternates: {
-    canonical: 'https://datelia.tech/sobre-nosotros',
+    canonical: 'https://datelia.com.ar/sobre-nosotros',
   },
 };
 

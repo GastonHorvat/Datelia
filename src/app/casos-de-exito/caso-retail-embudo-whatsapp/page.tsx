@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Red comercial aumenta 45% tasa de cierre con embudo unificado WhatsApp + Ads + CRM. 100% trazabilidad del embudo comercial.',
     keywords: 'embudo whatsapp crm, automatización comercial IA, trazabilidad embudo ventas',
     alternates: {
-        canonical: 'https://datelia.tech/casos-de-exito/caso-retail-embudo-whatsapp',
+        canonical: 'https://datelia.com.ar/casos-de-exito/caso-retail-embudo-whatsapp',
     },
 };
 
