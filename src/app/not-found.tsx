@@ -277,40 +277,65 @@ export default function NotFoundPage() {
         .p-404 { font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.6; margin-bottom: 30px; }
         .home-link-404 { display: inline-block; color: var(--primary-color-404); text-decoration: none; font-weight: bold; margin-top: 20px; padding: 10px 20px; border: 2px solid var(--primary-color-404); border-radius: 50px; transition: background-color 0.3s ease, color 0.3s ease; }
         .home-link-404:hover { background-color: var(--primary-color-404); color: var(--background-color-404); }
-        @media (max-width: 992px) { .game-section-404 { flex-direction: column; width: 100%; max-width: 450px; margin: 0 auto; } .game-info-404 { flex-direction: row; justify-content: space-around; align-items: center; } #next-piece-container { flex-grow: 1; } }
-        @media (max-width: 768px) { .container-404 { flex-direction: column; align-items: center; } .text-content-404, .game-section-404 { width: 100%; max-width: 450px; } .game-info-404 { flex-direction: column; } }
-        #tetris-canvas-container { width: 100%; max-width: 300px; margin: 0 auto; }
+        @media (max-width: 992px) { 
+          .game-section-404 { flex-direction: column; width: 100%; max-width: 350px; margin: 0 auto; } 
+          .game-info-404 { flex-direction: row; justify-content: space-around; align-items: center; padding: 10px; } 
+          #next-piece-container { flex-grow: 1; max-width: 120px; } 
+          #score-display, #high-score-display { font-size: 0.8em; padding: 5px; }
+        }
+        
+        @media (max-width: 768px) { 
+          .body-404 { padding-top: 100px; justify-content: flex-start; } /* Added padding for fixed header and alignment */
+          .container-404 { flex-direction: column; align-items: center; gap: 15px; padding: 15px; } 
+          .text-content-404, .game-section-404 { width: 100%; max-width: 100%; padding: 10px; } 
+          .game-info-404 { flex-direction: row; gap: 10px; } 
+          
+          /* Make Tetris smaller on mobile */
+          #tetris-canvas-container { max-width: 220px; } /* Reduced from 300px to fit screen */
+          
+          /* Hide desktop controls info on mobile */
+          .controls-info-404 { display: none; }
+          
+          /* Adjust headings */
+          .h1-404 { font-size: 2rem; }
+          .h2-404 { font-size: 1.2rem; }
+          .logo-container-404 { margin-bottom: 20px; display: none; } /* Hide duplicate logo on mobile if header already has it, or just reduce margin */
+        }
+        
+        #tetris-canvas-container { width: 100%; max-width: 300px; margin: 0 auto; transition: max-width 0.3s ease; }
         #tetris-canvas { display: block; max-width: 100%; height: auto; }
       
         /* Controles Móviles */
         .mobile-controls {
           display: none; /* Oculto por defecto en desktop */
           flex-direction: column;
-          gap: 15px;
-          margin-top: 20px;
+          gap: 10px;
+          margin-top: 10px;
           width: 100%;
-          max-width: 350px;
+          max-width: 280px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .control-row {
           display: flex;
           justify-content: center;
-          gap: 15px;
+          gap: 10px;
         }
 
         .control-btn {
-          background-color: var(--game-bg-404);
+          background-color: rgba(31, 41, 55, 0.9);
           border: 2px solid var(--primary-color-404);
           color: var(--primary-color-404);
-          border-radius: 12px;
-          width: 60px;
-          height: 60px;
-          font-size: 24px;
+          border-radius: 10px;
+          width: 50px; /* Smaller buttons */
+          height: 50px;
+          font-size: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          touch-action: manipulation; /* Mejora respuesta táctil */
+          touch-action: manipulation;
           user-select: none;
           transition: all 0.1s active;
           box-shadow: 0 4px 0 var(--border-color-404);
@@ -323,13 +348,12 @@ export default function NotFoundPage() {
         }
 
         .btn-large {
-          width: 135px; /* Botón más ancho para Drop */
+          width: 110px;
         }
 
         /* Mostrar controles en móviles y tablets */
         @media (max-width: 992px) {
           .mobile-controls { display: flex; }
-          .controls-info-404 { display: none; } /* Ocultar texto de teclado en móvil */
         }
       `}</style>
       <div className="body-404">
