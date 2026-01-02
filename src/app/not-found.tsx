@@ -18,6 +18,13 @@ export default function NotFoundPage() {
   const highScoreRef = useRef<HTMLSpanElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
 
+  // Mobile Control Refs
+  const btnLeftRef = useRef<HTMLButtonElement>(null);
+  const btnRightRef = useRef<HTMLButtonElement>(null);
+  const btnDownRef = useRef<HTMLButtonElement>(null);
+  const btnRotateRef = useRef<HTMLButtonElement>(null);
+  const btnDropRef = useRef<HTMLButtonElement>(null);
+
   // =======================================================================================
   // SECCIÓN 2: LÓGICA DEL JUEGO (DENTRO DE useEffect)
   // =======================================================================================
@@ -33,7 +40,7 @@ export default function NotFoundPage() {
       console.error("Error: Elementos del DOM para el juego no encontrados.");
       return; // Salimos del useEffect y no hacemos nada más.
     }
-    
+
     // Si pasamos la primera comprobación, asignamos las referencias a variables locales.
     const canvas = canvasRef.current;
     const nextCanvas = nextCanvasRef.current;
@@ -54,12 +61,12 @@ export default function NotFoundPage() {
     // --- Subsección: Ámbito Seguro del Juego ---
     // AHORA QUE SABEMOS QUE TODO EXISTE, DEFINIMOS TODA LA LÓGICA DEL JUEGO AQUÍ DENTRO.
     // Esto garantiza a TypeScript que `canvas`, `ctx`, etc., nunca serán `null`.
-    
+
     // -- Variables y Constantes --
     let block_w = 0, block_h = 0, board: number[][] = [], current_piece_shape: number[][], current_piece_type_idx = 0, next_piece_shape: number[][] | null = null, next_piece_type_idx = 0, current_x = 0, current_y = 0, lose = false, score = 0, next_block_size = 0;
     let intervalId: number | undefined;
     const COLS = 10, ROWS = 20, EMPTY = -1;
-    const pieces: number[][][][] = [[[[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]]], [[[1,0,0],[1,1,1],[0,0,0]]], [[[0,0,1],[1,1,1],[0,0,0]]], [[[1,1],[1,1]]], [[[0,1,1],[1,1,0],[0,0,0]]], [[[0,1,0],[1,1,1],[0,0,0]]], [[[1,1,0],[0,1,1],[0,0,0]]]];
+    const pieces: number[][][][] = [[[[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]]], [[[1, 0, 0], [1, 1, 1], [0, 0, 0]]], [[[0, 0, 1], [1, 1, 1], [0, 0, 0]]], [[[1, 1], [1, 1]]], [[[0, 1, 1], [1, 1, 0], [0, 0, 0]]], [[[0, 1, 0], [1, 1, 1], [0, 0, 0]]], [[[1, 1, 0], [0, 1, 1], [0, 0, 0]]]];
     const colors = ['cyan', 'blue', 'orange', 'yellow', 'green', 'purple', 'red'];
 
     // -- Funciones de Lógica del Juego --
@@ -84,16 +91,57 @@ export default function NotFoundPage() {
     }
     function freeze_piece() {
       for (let y = 0; y < current_piece_shape.length; ++y) for (let x = 0; x < current_piece_shape[y].length; ++x) if (current_piece_shape[y][x] && board[current_y + y]) board[current_y + y][current_x + x] = current_piece_type_idx;
-      clear_lines(); new_piece();
+      clear_lines();
     }
+
     function clear_lines() {
+      let linesToClear: number[] = [];
+      for (let y = ROWS - 1; y >= 0; --y) if (board[y].every(cell => cell !== EMPTY)) linesToClear.push(y);
+
+      if (linesToClear.length > 0) {
+        if (intervalId !== undefined) clearInterval(intervalId);
+
+        let step = 0;
+        const maxSteps = 6;
+        const anim = setInterval(() => {
+          step++;
+          if (!ctx) return;
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for (let y = 0; y < ROWS; ++y) {
+            for (let x = 0; x < COLS; ++x) {
+              if (linesToClear.includes(y)) {
+                // Flash Effect: White <-> Original Color
+                ctx.fillStyle = step % 2 === 0 ? '#ffffff' : colors[board[y][x]];
+                ctx.fillRect(block_w * x, block_h * y, block_w - 1, block_h - 1);
+              } else if (board[y][x] !== EMPTY) {
+                draw_block(ctx, x, y, board[y][x], block_w, block_h);
+              }
+            }
+          }
+
+          if (step >= maxSteps) {
+            clearInterval(anim);
+            finalize_clear();
+          }
+        }, 80);
+      } else {
+        new_piece();
+      }
+    }
+
+    function finalize_clear() {
       let lines = 0;
       for (let y = ROWS - 1; y >= 0; --y) if (board[y].every(cell => cell !== EMPTY)) { lines++; board.splice(y, 1); board.unshift(Array(COLS).fill(EMPTY)); y++; }
       if (lines > 0) { score += lines * 100 * lines; scoreElement.textContent = score.toString(); update_high_score(score); }
+
+      new_piece();
+      if (intervalId !== undefined) clearInterval(intervalId);
+      intervalId = window.setInterval(tick, 700);
     }
     function update_high_score(currentScore: number) { const stored = parseInt(localStorage.getItem('tetrisHighScore') || '0'); if (currentScore > stored) { localStorage.setItem('tetrisHighScore', currentScore.toString()); highScoreElement.textContent = currentScore.toLocaleString(); } }
     function rotate_piece(shape: number[][]) { return shape[0].map((_, colIndex) => shape.map(row => row[colIndex]).reverse()); }
-    
+
     // -- Funciones de Dibujado en Canvas --
     function draw_block(context: CanvasRenderingContext2D, x: number, y: number, colorIdx: number, bw: number, bh: number) { if (colorIdx === EMPTY) return; context.fillStyle = colors[colorIdx]; context.fillRect(bw * x, bh * y, bw - 1, bh - 1); }
     function draw_next_piece() {
@@ -109,7 +157,7 @@ export default function NotFoundPage() {
       for (let x = 0; x < COLS; ++x) for (let y = 0; y < ROWS; ++y) if (board[y][x] !== EMPTY) draw_block(ctx, x, y, board[y][x], block_w, block_h);
       for (let y = 0; y < current_piece_shape.length; ++y) for (let x = 0; x < current_piece_shape[y].length; ++x) if (current_piece_shape[y][x]) draw_block(ctx, current_x + x, current_y + y, current_piece_type_idx, block_w, block_h);
     }
-    
+
     // -- Funciones de Control del Juego --
     function tick() {
       if (!ctx) return;
@@ -132,19 +180,48 @@ export default function NotFoundPage() {
     function key_press(key_code: number) {
       if (lose && key_code === 82) { new_game(); return; }
       if (lose) return;
-      switch (key_code) { case 37: if (valid_move(-1, 0)) current_x--; break; case 39: if (valid_move(1, 0)) current_x++; break; case 40: if (valid_move(0, 1)) current_y++; break; case 38: const r = rotate_piece(current_piece_shape); if (valid_move(0, 0, r)) current_piece_shape = r; break; case 32: while(valid_move(0,1)) current_y++; tick(); break; }
+      switch (key_code) { case 37: if (valid_move(-1, 0)) current_x--; break; case 39: if (valid_move(1, 0)) current_x++; break; case 40: if (valid_move(0, 1)) current_y++; break; case 38: const r = rotate_piece(current_piece_shape); if (valid_move(0, 0, r)) current_piece_shape = r; break; case 32: while (valid_move(0, 1)) current_y++; tick(); break; }
       render();
     }
-    
+
     // --- Subsección: Setup Inicial y Event Listeners ---
     const containerWidth = tetrisContainer.offsetWidth; block_w = Math.floor(containerWidth / COLS); block_h = block_w;
     canvas.width = COLS * block_w; canvas.height = ROWS * block_h;
     next_block_size = Math.floor(block_w * 0.8) > 20 ? 15 : Math.floor(block_w * 0.8);
     nextCanvas.width = 4 * next_block_size; nextCanvas.height = 4 * next_block_size;
-    
+
+
     const handleKeyDown = (e: KeyboardEvent) => { if ([32, 37, 38, 39, 40, 82].includes(e.keyCode)) e.preventDefault(); key_press(e.keyCode); };
     document.addEventListener('keydown', handleKeyDown);
-    
+
+    // --- Mobile Controls Event Listeners ---
+    // Helper para añadir listeners de touch/click de forma segura
+    const addBtnListener = (ref: React.RefObject<HTMLButtonElement>, code: number) => {
+      const btn = ref.current;
+      if (!btn) return;
+
+      const handler = (e: MouseEvent | TouchEvent) => {
+        e.preventDefault(); // Evita comportamientos por defecto como selección o scroll
+        key_press(code);
+      };
+
+      // Usamos 'touchstart' para respuesta inmediata en móviles, y click para fallback
+      btn.addEventListener('touchstart', handler, { passive: false });
+      btn.addEventListener('click', handler);
+
+      return () => {
+        btn.removeEventListener('touchstart', handler);
+        btn.removeEventListener('click', handler);
+      };
+    };
+
+    const cleanupLeft = addBtnListener(btnLeftRef, 37);
+    const cleanupRight = addBtnListener(btnRightRef, 39);
+    const cleanupDown = addBtnListener(btnDownRef, 40);
+    const cleanupRotate = addBtnListener(btnRotateRef, 38);
+    const cleanupDrop = addBtnListener(btnDropRef, 32);
+
+
     new_game(); // Inicia el juego
 
     // --- Subsección: Limpieza del Componente ---
@@ -153,6 +230,12 @@ export default function NotFoundPage() {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       if (intervalId !== undefined) clearInterval(intervalId);
+
+      if (cleanupLeft) cleanupLeft();
+      if (cleanupRight) cleanupRight();
+      if (cleanupDown) cleanupDown();
+      if (cleanupRotate) cleanupRotate();
+      if (cleanupDrop) cleanupDrop();
     };
 
   }, []); // El array vacío `[]` asegura que esto se ejecute solo una vez.
@@ -168,7 +251,7 @@ export default function NotFoundPage() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
-      
+
       <style jsx global>{`
         :root { --primary-color-404: #facc15; --secondary-color-404: #9ca3af; --background-color-404: #111827; --text-color-404: #e5e7eb; --accent-color-404: #3b82f6; --game-bg-404: #1f2937; --border-color-404: #4b5563; }
         .body-404 { font-family: 'Roboto', sans-serif; background-color: var(--background-color-404); color: var(--text-color-404); margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; overflow-x: hidden; }
@@ -198,6 +281,56 @@ export default function NotFoundPage() {
         @media (max-width: 768px) { .container-404 { flex-direction: column; align-items: center; } .text-content-404, .game-section-404 { width: 100%; max-width: 450px; } .game-info-404 { flex-direction: column; } }
         #tetris-canvas-container { width: 100%; max-width: 300px; margin: 0 auto; }
         #tetris-canvas { display: block; max-width: 100%; height: auto; }
+      
+        /* Controles Móviles */
+        .mobile-controls {
+          display: none; /* Oculto por defecto en desktop */
+          flex-direction: column;
+          gap: 15px;
+          margin-top: 20px;
+          width: 100%;
+          max-width: 350px;
+        }
+
+        .control-row {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .control-btn {
+          background-color: var(--game-bg-404);
+          border: 2px solid var(--primary-color-404);
+          color: var(--primary-color-404);
+          border-radius: 12px;
+          width: 60px;
+          height: 60px;
+          font-size: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          touch-action: manipulation; /* Mejora respuesta táctil */
+          user-select: none;
+          transition: all 0.1s active;
+          box-shadow: 0 4px 0 var(--border-color-404);
+        }
+
+        .control-btn:active {
+          transform: translateY(4px);
+          box-shadow: none;
+          background-color: #374151;
+        }
+
+        .btn-large {
+          width: 135px; /* Botón más ancho para Drop */
+        }
+
+        /* Mostrar controles en móviles y tablets */
+        @media (max-width: 992px) {
+          .mobile-controls { display: flex; }
+          .controls-info-404 { display: none; } /* Ocultar texto de teclado en móvil */
+        }
       `}</style>
       <div className="body-404">
         <main>
@@ -221,6 +354,22 @@ export default function NotFoundPage() {
                 <div id="tetris-canvas-container" ref={canvasContainerRef}>
                   <canvas id="tetris-canvas" ref={canvasRef}></canvas>
                 </div>
+
+                {/* Controles para Móvil */}
+                <div className="mobile-controls">
+                  <div className="control-row">
+                    <button className="control-btn" ref={btnRotateRef} aria-label="Rotar">↻</button>
+                  </div>
+                  <div className="control-row">
+                    <button className="control-btn" ref={btnLeftRef} aria-label="Izquierda">←</button>
+                    <button className="control-btn" ref={btnDownRef} aria-label="Bajar">↓</button>
+                    <button className="control-btn" ref={btnRightRef} aria-label="Derecha">→</button>
+                  </div>
+                  <div className="control-row">
+                    <button className="control-btn btn-large" ref={btnDropRef} aria-label="Caída Rápida">DROP</button>
+                  </div>
+                </div>
+
                 <div className="controls-info-404">
                   Usa las <strong>teclas de flecha</strong> para mover y rotar. <br />
                   <strong>Espacio</strong> para caída rápida.
