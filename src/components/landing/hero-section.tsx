@@ -21,7 +21,7 @@ export function HeroSection() {
           Soluciones de Inteligencia Artificial para Automatizar tu Negocio
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
-          Libera el potencial oculto de tu empresa con automatización inteligente que genera resultados.
+          Eficiencia operativa real con automatización e IA.
         </p>
         <div className="mt-8 text-base text-gray-400 max-w-2xl mx-auto">
           <p>Aumentamos tu ROI operativo y liberamos hasta un 40% del tiempo de tu equipo, eliminando cuellos de botella e implementando eficiencia.</p>
