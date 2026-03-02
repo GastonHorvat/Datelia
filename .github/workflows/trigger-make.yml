@@ -1,0 +1,22 @@
+name: Trigger Make Scenario (Bi-monthly)
+
+on:
+  schedule:
+    # Se ejecuta a las 09:00 UTC los días 11 y 26 de cada mes
+    - cron: '0 9 11,26 * *'
+  workflow_dispatch: # Mantiene el botón para ejecutar MANUALMENTE cuando quieras testear
+
+jobs:
+  trigger_webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Random delay (Para evitar exactitud)
+        # Genera un retraso aleatorio de entre 1 y 1800 segundos (30 minutos)
+        run: |
+          DELAY=$(( ( RANDOM % 1800 )  + 1 ))
+          echo "Esperando $DELAY segundos antes de llamar al Webhook..."
+          sleep $DELAY
+
+      - name: Call Make Webhook
+        run: |
+          curl -X POST "${{ secrets.MAKE_WEBHOOK_URL }}"

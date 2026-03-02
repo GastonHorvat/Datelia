@@ -17,21 +17,21 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
       </div>
       <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-4xl">
-        <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 pb-4">
-          Soluciones de Inteligencia Artificial para Automatizar tu Negocio
+        <h1 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 pb-2">
+          La mayoría de las empresas ejecuta sin arquitectura
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
-          Eficiencia operativa real.
-        </p>
-        <div className="mt-8 text-base text-gray-400 max-w-2xl mx-auto">
-          <p>Aumentamos tu ROI operativo y liberamos hasta un 40% del tiempo de tu equipo, eliminando cuellos de botella e implementando eficiencia.</p>
+        <h2 className="mt-4 text-xl font-headline font-semibold text-gray-100 sm:text-2xl md:text-3xl leading-snug">
+          Diseñamos cómo opera su empresa mediante el estándar D.O.A.™ de Diseño Operativo Agéntico.
+        </h2>
+        <div className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p>Intervenimos fricción estructural real, conectamos sistemas, ordenamos flujos críticos y aplicamos inteligencia únicamente donde genera valor económico tangible.</p>
         </div>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg">
-            <Link href="/soluciones">Descubre cómo transformamos tu negocio</Link>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Link href="/soluciones">Evaluación estructural sin costo</Link>
           </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link href="/casos-de-exito">Ver Casos de Éxito</Link>
+          <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+            <Link href="#arquitectura">Explorar modelo D.O.A.™</Link>
           </Button>
         </div>
       </div>

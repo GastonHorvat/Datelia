@@ -1,20 +1,22 @@
 import { HeroSection } from "@/components/landing/hero-section";
-//import { ClientsSection } from "@/components/landing/clients-section";
 import { ProblemSolutionSection } from "@/components/landing/problem-solution-section";
-import { ServicesSection } from "@/components/landing/services-section";
+import { ValuePropositionSection } from "@/components/landing/value-proposition-section";
+import { ArchitectureSection } from "@/components/landing/architecture-section";
+import { ResultsSection } from "@/components/landing/results-section";
 import { TestimonialSection } from "@/components/landing/testimonial-section";
+import { BlogSection } from "@/components/landing/blog-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Layout } from "@/components/layout";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Datelia | Soluciones de IA y Automatización para Empresas',
-  description: 'Automatiza tu negocio con IA. Chatbots inteligentes, agentes de voz y soluciones a medida que aumentan tu ROI hasta 40%. Consultoría gratuita disponible.',
-  keywords: 'automatización empresarial, IA para empresas, chatbots inteligentes Argentina, agentes de voz IA, soluciones de inteligencia artificial, automatización de procesos',
+  title: 'Datelia | Arquitectura de Ejecución y Diseño Operativo Agéntico (D.O.A.™)',
+  description: 'Diseñamos cómo opera su empresa mediante el estándar D.O.A.™ de Diseño Operativo Agéntico. Intervenimos arquitectura operativa, conectamos sistemas y eliminamos fricción estructural.',
+  keywords: 'Eficiencia operativa, Arquitectura operativa, IA en logística, Diseño Operativo Agéntico, D.O.A., Arquitectura de ejecución, automatización inteligente, ingeniería operativa',
   openGraph: {
-    title: 'Datelia | Automatización con IA que Genera Resultados',
-    description: 'Libera hasta 40% del tiempo de tu equipo con automatización inteligente. Chatbots, agentes de voz y soluciones de IA a medida.',
+    title: 'Datelia | Arquitectura de Ejecución y Diseño Operativo Agéntico',
+    description: 'Diseñamos cómo opera su empresa mediante el estándar D.O.A.™. No automatizamos tareas, intervenimos arquitectura.',
     url: 'https://www.datelia.com.ar',
     type: 'website',
     images: [
@@ -22,14 +24,14 @@ export const metadata: Metadata = {
         url: '/images/og/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Datelia - Soluciones de Inteligencia Artificial para Automatizar tu Negocio',
+        alt: 'Datelia - Arquitectura de Ejecución y Diseño Operativo Agéntico',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Datelia | Automatización con IA que Genera Resultados',
-    description: 'Libera hasta 40% del tiempo de tu equipo con automatización inteligente.',
+    title: 'Datelia | Arquitectura de Ejecución y Diseño Operativo Agéntico',
+    description: 'Diseñamos cómo opera su empresa mediante el estándar D.O.A.™.',
     images: ['/images/og/og-home.jpg'],
   },
   alternates: {
@@ -42,10 +44,12 @@ export default function Home() {
     <Layout>
       <main className="flex-1">
         <HeroSection />
-        {/* <ClientsSection /> */}
         <ProblemSolutionSection />
-        <ServicesSection />
+        <ValuePropositionSection />
+        <ArchitectureSection />
+        <ResultsSection />
         <TestimonialSection />
+        <BlogSection />
         <FaqSection />
         <CtaSection />
       </main>

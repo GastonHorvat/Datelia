@@ -1,5 +1,3 @@
-// src/app/blog/page.tsx
-
 import { Layout } from '@/components/layout';
 import { supabase } from '@/lib/supabaseClient';
 import { Post } from '@/types/blog';
@@ -7,6 +5,13 @@ import { FeaturedPostCard } from '@/components/blog/FeaturedPostCard';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
 import { Pagination } from '@/components/ui/Pagination';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | Datelia - Insights sobre Arquitectura de Ejecución e IA',
+  description: 'Explora nuestros artículos sobre eficiencia operativa, arquitectura de ejecución, IA en logística y cómo el estándar D.O.A.™ está transformando empresas.',
+  keywords: 'Eficiencia operativa, Arquitectura operativa, IA en logística, automatización inteligente, gestión de procesos, ingeniería operativa, Datelia insights',
+};
 
 export const revalidate = 3600; // Revalidar cada hora
 
