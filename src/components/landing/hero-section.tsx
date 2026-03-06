@@ -28,7 +28,13 @@ export function HeroSection() {
         </div>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link href="/soluciones">Evaluación estructural sin costo</Link>
+            <a
+              href="https://calendly.com/jimenagarciapinto-datelia/datelia-consultoria-gratuita/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Evaluación estructural sin costo
+            </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
             <Link href="#arquitectura">Explorar modelo D.O.A.™</Link>
