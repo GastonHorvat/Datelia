@@ -9,13 +9,13 @@ export function TestimonialSection() {
       name: t("t1_name"),
       role: t("t1_role"),
       quote: t("t1_quote"),
-      image: "/images/jimena.jpg"
+      image: "/images/Jime.png"
     },
     {
       name: t("t2_name"),
       role: t("t2_role"),
       quote: t("t2_quote"),
-      image: "/images/cto.jpg"
+      image: "/images/Gas.png"
     }
   ];
 
