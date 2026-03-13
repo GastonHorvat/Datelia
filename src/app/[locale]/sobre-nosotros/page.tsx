@@ -51,7 +51,7 @@ const AboutUsPage = () => {
             <div className="flex flex-col items-center text-center space-y-6 group">
               <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-xl transition-transform group-hover:scale-[1.02]">
                 <Image
-                  src="/images/Jime.png"
+                  src="/images/jime.jpg"
                   alt="Jimena"
                   fill
                   className="object-cover"

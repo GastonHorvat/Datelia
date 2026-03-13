@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -35,6 +35,8 @@ export function Header() {
 
   const t = useTranslations("navigation");
 
+  const router = useRouter();
+
   const changeLanguage = (newLocale: Locale) => {
     // Switch the pathname locale manually. Next.js App Router will handle the rest.
     const segments = pathname.split('/');
@@ -43,7 +45,7 @@ export function Header() {
     } else {
       segments.splice(1, 0, newLocale);
     }
-    window.location.href = segments.join('/');
+    router.push(segments.join('/'));
   }
 
   const navLinks = [

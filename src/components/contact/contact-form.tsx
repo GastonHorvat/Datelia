@@ -17,6 +17,7 @@ export function ContactForm() {
     const [formData, setFormData] = useState({
         empresa: "",
         cantidadEmpleados: "",
+        facturacion: "",
         ecosistema: "",
         desafio: "",
         nombre: "",
@@ -30,6 +31,13 @@ export function ContactForm() {
         { value: "51-200", label: "51-200" },
         { value: "201-500", label: "201-500" },
         { value: "500+", label: "500+" },
+    ];
+
+    const revenueRanges = [
+        { value: "range_1", label: t('revenue.range_1') },
+        { value: "range_2", label: t('revenue.range_2') },
+        { value: "range_3", label: t('revenue.range_3') },
+        { value: "range_4", label: t('revenue.range_4') },
     ];
 
     const ecosystemOptions = [
@@ -56,7 +64,7 @@ export function ContactForm() {
     };
 
     const nextStep = () => {
-        if (step === 1 && (!formData.empresa || !formData.cantidadEmpleados)) {
+        if (step === 1 && (!formData.empresa || !formData.cantidadEmpleados || !formData.facturacion)) {
             setErrorMessage(t('errors.step1'));
             return;
         }
@@ -109,7 +117,7 @@ export function ContactForm() {
     if (status === "success") {
         return (
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}>
-                <Card className="max-w-2xl mx-auto mt-8 border-primary/20 bg-primary/5">
+                <Card className="max-w-2xl mx-auto mt-8 border-primary/20 bg-primary/5 text-slate-900">
                     <CardContent className="pt-8 pb-8 text-center space-y-4">
                         <div className="flex justify-center mb-6">
                             <CheckCircle className="h-20 w-20 text-primary" />
@@ -178,7 +186,7 @@ export function ContactForm() {
                                                 placeholder={t('step1.org_placeholder')}
                                                 value={formData.empresa}
                                                 onChange={handleInputChange}
-                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg"
+                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg md:text-lg autofill-light"
                                             />
                                         </div>
                                         <div className="space-y-2">
@@ -188,11 +196,30 @@ export function ContactForm() {
                                                 value={formData.cantidadEmpleados}
                                                 onValueChange={(value) => handleSelectChange("cantidadEmpleados", value)}
                                             >
-                                                <SelectTrigger className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg">
+                                                <SelectTrigger className="bg-white border-slate-200 text-slate-900 focus:ring-primary focus-visible:ring-primary h-12 text-lg md:text-lg">
                                                     <SelectValue placeholder={t('step1.employees_placeholder')} />
                                                 </SelectTrigger>
                                                 <SelectContent className="bg-white border-slate-200 text-slate-900">
                                                     {employeeRanges.map((range) => (
+                                                        <SelectItem key={range.value} value={range.value}>
+                                                            {range.label}
+                                                        </SelectItem>
+                                                    ))}
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <Label htmlFor="facturacion">{t('revenue.label')}</Label>
+                                            <Select
+                                                name="facturacion"
+                                                value={formData.facturacion}
+                                                onValueChange={(value) => handleSelectChange("facturacion", value)}
+                                            >
+                                                <SelectTrigger className="bg-white border-slate-200 text-slate-900 focus:ring-primary focus-visible:ring-primary h-12 text-lg md:text-lg">
+                                                    <SelectValue placeholder={t('revenue.placeholder')} />
+                                                </SelectTrigger>
+                                                <SelectContent className="bg-white border-slate-200 text-slate-900">
+                                                    {revenueRanges.map((range) => (
                                                         <SelectItem key={range.value} value={range.value}>
                                                             {range.label}
                                                         </SelectItem>
@@ -230,7 +257,7 @@ export function ContactForm() {
                                                 value={formData.ecosistema}
                                                 onValueChange={(value) => handleSelectChange("ecosistema", value)}
                                             >
-                                                <SelectTrigger className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg">
+                                                <SelectTrigger className="bg-white border-slate-200 text-slate-900 focus:ring-primary focus-visible:ring-primary h-12 text-lg md:text-lg">
                                                     <SelectValue placeholder={t('step2.ecosystem_placeholder')} />
                                                 </SelectTrigger>
                                                 <SelectContent className="bg-white border-slate-200 text-slate-900">
@@ -248,7 +275,7 @@ export function ContactForm() {
                                                 id="desafio"
                                                 name="desafio"
                                                 placeholder={t('step2.friction_placeholder')}
-                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary min-h-[120px] resize-none text-md p-4"
+                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary min-h-[120px] resize-none text-lg md:text-lg p-4 autofill-light"
                                                 value={formData.desafio}
                                                 onChange={handleInputChange}
                                             />
@@ -287,7 +314,7 @@ export function ContactForm() {
                                                 placeholder={t('step3.full_name_placeholder')}
                                                 value={formData.nombre}
                                                 onChange={handleInputChange}
-                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg"
+                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg md:text-lg autofill-light"
                                             />
                                         </div>
                                         <div className="space-y-2">
@@ -298,7 +325,7 @@ export function ContactForm() {
                                                 placeholder={t('step3.role_placeholder')}
                                                 value={formData.cargo}
                                                 onChange={handleInputChange}
-                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg"
+                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg md:text-lg autofill-light"
                                             />
                                         </div>
                                         <div className="space-y-2">
@@ -310,7 +337,7 @@ export function ContactForm() {
                                                 placeholder={t('step3.email_placeholder')}
                                                 value={formData.email}
                                                 onChange={handleInputChange}
-                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg"
+                                                className="bg-white border-slate-200 text-slate-900 focus-visible:ring-primary h-12 text-lg md:text-lg autofill-light"
                                             />
                                         </div>
                                     </div>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -28,7 +27,7 @@ export function TestimonialSection() {
             <div key={i} className="relative p-8 rounded-3xl bg-card border border-primary/20 shadow-xl">
               <Quote className="h-10 w-10 text-primary/50 mb-4" />
               <blockquote className="text-xl font-medium leading-relaxed italic mb-8 text-white">
-                "{t.quote}"
+                &quot;{t.quote}&quot;
               </blockquote>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">

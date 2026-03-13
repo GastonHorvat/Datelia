@@ -11,13 +11,13 @@
     "case_studies": "Casos de Éxito",
     "news": "Noticias",
     "about_us": "Sobre Nosotros",
-    "chatbots": "Chatbots Inteligentes Multicanal"
+    "chatbots": "Sistemas Agénticos de Respuesta"
   },
   "hero": {
     "title": "Las empresas no fallan por falta de estrategia.",
     "subtitle": "Fallan por falta de arquitectura en la ejecución.",
     "description": "Diseñamos y desplegamos Arquitectura Agéntica Gobernada (Modelo propio D.O.A.™) para grupos empresariales complejos.",
-    "cta": "Solicitar Evaluación Estructural",
+    "cta": "Evaluación Estructural Sin Costo",
     "secondary_cta": "Descubrir Modelo D.O.A.™"
   },
   "enterprise_thesis": {
@@ -83,7 +83,7 @@
       "success_cases": "Casos de Éxito",
       "about_us": "Sobre Nosotros",
       "contact": "Contacto",
-      "request_demo": "Solicitar Discovery",
+      "request_demo": "Evaluación Estructural",
       "blog": "Noticias",
       "privacy": "Privacidad",
       "voice_agents": "Agentes de Voz",
@@ -142,7 +142,7 @@
   "cta_section": {
     "title": "Identifique su Deuda Operativa",
     "description": "Es hora de dejar de apagar incendios y comenzar a gobernar su arquitectura de ejecución. Solicite una evaluación profunda con nuestros Senior Partners.",
-    "button": "Agendar Discovery Estructural"
+    "button": "Evaluación Estructural Sin Costo"
   },
   "faq": {
     "title": "Objeciones Estructurales",
@@ -182,14 +182,14 @@
     },
     "solutions": {
       "chatbots": {
-        "title": "Chatbots Inteligentes Multicanal",
-        "description": "Transforma tu atención al cliente y tu proceso de ventas. Implementamos chatbots en WhatsApp, Web e Instagram que operan 24/7, capturando leads y resolviendo dudas para que tu equipo se enfoque en cerrar tratos.",
+        "title": "Sistemas Agénticos de Respuesta",
+        "description": "Transforma tu arquitectura de atención y ventas. Implementamos sistemas de respuesta autónoma en WhatsApp y Web que operan bajo reglas corporativas, integrándose a su ERP para una ejecución impecable.",
         "benefits": [
-          "Aumento de la captación de leads.",
-          "Disponibilidad 24/7.",
-          "Reducción de costos de soporte."
+          "Eliminación de latencia en la respuesta.",
+          "Gobernanza sobre canales de comunicación.",
+          "Reducción de Deuda Operativa en front-office."
         ],
-        "cta": "Descubrir Solución de Chatbots"
+        "cta": "Descubrir Arquitectura de Respuesta"
       },
       "voice_agents": {
         "title": "Agentes de Voz para Agendamiento",
@@ -378,6 +378,14 @@
       "submit": "Enviar Aplicación",
       "processing": "Procesando..."
     },
+    "revenue": {
+      "label": "Nivel de Facturación Anual *",
+      "placeholder": "Selecciona el rango de facturación",
+      "range_1": "< $1M USD",
+      "range_2": "$1M - $10M USD",
+      "range_3": "$10M - $50M USD",
+      "range_4": "> $50M USD"
+    },
     "ecosystems": {
       "hubspot": "HubSpot / Otros CRM",
       "custom": "Desarrollo in-house / A medida",
@@ -420,57 +428,57 @@
       { "title": "Libera a tu Equipo Humano", "desc": "Tu personal puede enfocarse en tareas de mayor valor, como la fidelización de clientes." },
       { "title": "Sincronización Perfecta", "desc": "Se integra de forma nativa con Google Calendar y otros sistemas para una gestión sin errores." }
     ],
-    "use_cases_title": "Perfecto para negocios que dependen de una agenda",
+    "use_cases_title": "Intervenciones en Sectores con Alta Complejidad",
     "use_cases": [
-      "Clínicas Médicas y Dentales", "Talleres Mecánicos", "Salones de Belleza y Spas",
-      "Consultorios Profesionales", "Inmobiliarias", "Centros de Fisioterapia", "y más..."
+      "Centros de Salud y Clínicas", "Logística y Distribución Multi-Sede", "Empresas de Servicios B2B",
+      "Consultoras de Gran Escala", "Real Estate y Desarrolladoras", "Centros de Atención al Ciudadano", "Holdings con Unidades Geográficas Dispersas"
     ],
     "testimonial": {
-      "quote": "\"El agente de voz se paga solo. Hemos recuperado unas 15 horas de trabajo administrativo a la semana y las citas olvidadas casi han desaparecido. Increíble.\"",
-      "author": "Carolina Méndez",
+      "quote": "\"El agente de voz liberó nuestra infraestructura de comunicaciones. Hemos recuperado 15 horas de coordinación administrativa por sede a la semana. La arquitectura es sólida.\"",
+      "author": "Laura Herrera",
       "role": "Directora de Operaciones"
     },
     "final_cta": {
-      "title": "¿Quieres escuchar a tu nuevo asistente en acción?",
-      "description": "Calcula cuánto podrías ahorrar o solicita una llamada de demostración. Verás lo sorprendentemente humano y eficiente que puede sonar el futuro.",
-      "button_saving": "Calcular mi Ahorro",
-      "button_demo": "Solicitar Llamada de Demo"
+      "title": "¿Desea evaluar el impacto en su arquitectura?",
+      "description": "Solicite una sesión de auditoría para identificar cómo un agente de voz puede mitigar sus riesgos de ejecución.",
+      "button_saving": "Consultoría Técnica",
+      "button_demo": "Evaluación Estructural"
     }
   },
   "chatbots_page": {
-    "title": "Conversaciones que Convierten, 24/7.",
-    "subtitle": "Implementa chatbots en WhatsApp, Web e Instagram que capturan leads, resuelven dudas y venden por ti, incluso mientras duermes.",
-    "cta_demo": "Solicitar Demo",
-    "problem_title": "¿Te suena familiar este escenario?",
+    "title": "Arquitectura de Respuesta Agéntica.",
+    "subtitle": "Implemente sistemas que capturan, procesan y ejecutan respuestas bajo gobernanza, mitigando el riesgo de silos de información en canales digitales.",
+    "cta_demo": "Evaluación Estructural",
+    "problem_title": "Riesgos de una Ejecución Fragmentada",
     "problems": [
-      { "title": "Leads sin Atender", "desc": "Valiosos prospectos que llegan fuera de tu horario laboral se quedan fríos." },
-      { "title": "Equipo de Ventas Saturado", "desc": "Tu equipo invierte demasiado tiempo calificando en lugar de cerrar tratos." },
-      { "title": "Consultas Repetitivas", "desc": "Las mismas preguntas frecuentes saturan tus canales y agotan a tu equipo." },
-      { "title": "Experiencia Lenta", "desc": "Una atención al cliente lenta e impersonal que daña tu reputación." }
+      { "title": "Silos de Información", "desc": "Consultas críticas que caen en canales no auditados ni integrados." },
+      { "title": "Estructura de Respuesta Débil", "desc": "Su equipo invierte recursos senior en ruteo táctico en lugar de diseño estratégico." },
+      { "title": "Fricción Operativa Acumulada", "desc": "Las consultas repetitivas saturan la infraestructura y degradan la calidad del despliegue." },
+      { "title": "Inconsistencia Estructural", "desc": "Una atención lenta que refleja fallas profundas en la arquitectura de ejecución." }
     ],
-    "benefits_title": "La Solución: Un Chatbot que Trabaja para tu ROI",
+    "benefits_title": "Gobernanza y Eficiencia en Cada Nodo",
     "benefits": [
-      { "title": "Aumento de Conversión", "desc": "Califica leads al instante y los dirige al agente correcto, o cierra ventas simples directamente." },
-      { "title": "Reducción de Costos", "desc": "Automatiza hasta el 80% de las consultas, liberando a tu equipo para casos que importan." },
-      { "title": "Presencia Multicanal", "desc": "Atiende a tus clientes en Web, WhatsApp, e Instagram con una experiencia consistente." },
-      { "title": "Inteligencia de Negocio", "desc": "Recopila datos valiosos de cada interacción para entender mejor a tus clientes." }
+      { "title": "Sincronización con ERP", "desc": "Los agentes leen y escriben directamente en sus sistemas Core bajo reglas SOC2." },
+      { "title": "Reducción de Deuda Operativa", "desc": "Automatiza el ruteo y la primera capa de intervención, liberando capacidad instalada." },
+      { "title": "Trazabilidad Total", "desc": "Cada interacción queda registrada en su centro de control para auditoría constante." },
+      { "title": "Diseño Escalable", "desc": "Una arquitectura modular que crece junto con la complejidad de sus operaciones." }
     ],
-    "process_title": "Un Proceso Transparente y Eficaz",
+    "process_title": "Intervención Estratégica",
     "process_steps": [
-      { "title": "Análisis y Estrategia", "desc": "Entendemos tus objetivos comerciales y diseñamos los flujos de conversación para maximizar los resultados." },
-      { "title": "Desarrollo e Integración", "desc": "Construimos y conectamos el chatbot con tus sistemas actuales (CRM, calendarios, etc.)." },
-      { "title": "Entrenamiento y Puesta en Marcha", "desc": "Entrenamos la IA con tus datos para que responda con la voz y el conocimiento de tu marca." },
-      { "title": "Optimización Continua", "desc": "Monitoreamos su rendimiento y lo mejoramos constantemente para asegurar que siga generando valor." }
+      { "title": "Assessment de Fricción", "desc": "Identificamos los cuellos de botella en sus canales actuales y diseñamos el mapa de intervención." },
+      { "title": "Integración Arquitectónica", "desc": "Conectamos los sistemas de respuesta a su infraestructura ERP/CRM existente." },
+      { "title": "Despliegue Gobernado", "desc": "Configuramos los guardrails y el modelo de decisión para asegurar una ejecución auditable." },
+      { "title": "Optimización Estructural", "desc": "Monitoreo de latencia y ajuste fino de la lógica agéntica para maximizar el ROI." }
     ],
     "testimonial": {
-      "quote": "\"Pasamos de responder en horas a hacerlo en segundos, y nuestras ventas desde WhatsApp aumentaron un 40% en los primeros tres meses. El chatbot se pagó solo.\"",
-      "author": "Martín Rojas",
-      "role": "Head of Growth"
+      "quote": "\"Transformamos un canal caótico en una unidad de ejecución gobernada. El riesgo operativo se redujo drásticamente en los primeros 90 días.\"",
+      "author": "Gerente de Tecnología",
+      "role": "Holding Industrial"
     },
     "final_cta": {
-      "title": "¿Listo para automatizar tus conversaciones?",
-      "description": "Agenda una demo gratuita y te mostraremos en vivo cómo un chatbot puede revolucionar tu captación de clientes y tu soporte desde el primer día.",
-      "button": "Solicitar mi Demo Gratuita"
+      "title": "¿Su arquitectura está lista para la ejecución agéntica?",
+      "description": "Hablemos de cómo integrar sistemas de respuesta gobernados en su estructura actual.",
+      "button": "Evaluación Estructural Sin Costo"
     }
   },
   "metadata": {

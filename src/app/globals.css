@@ -79,3 +79,14 @@ input:-webkit-autofill:active {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
+
+/* Light themed autofill override for white cards/forms */
+.autofill-light:-webkit-autofill,
+.autofill-light:-webkit-autofill:hover,
+.autofill-light:-webkit-autofill:focus,
+.autofill-light:-webkit-autofill:active {
+  -webkit-background-clip: padding-box;
+  -webkit-text-fill-color: #0f172a !important; /* slate-900 */
+  box-shadow: inset 0 0 0 1000px #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

@@ -18,7 +18,7 @@ export function ValuePropositionSection() {
                             No automatizamos tareas. Intervenimos arquitectura.
                         </h2>
                         <h3 className="text-xl font-headline font-semibold text-foreground/90 italic">
-                            "La tecnología sola no corrige el desorden estructural. Lo acelera."
+                            &quot;La tecnología sola no corrige el desorden estructural. Lo acelera.&quot;
                         </h3>
                         <p className="text-foreground/70 text-lg font-bold mt-8 pt-4 border-t border-border">
                             No sumamos herramientas. Diseñamos ejecución gobernada.

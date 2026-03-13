@@ -4,7 +4,7 @@ export type Locale = typeof locales[number];
 
 // Placeholder for translation dictionaries. 
 // In the future, this can be replaced by next-intl or i18next
-const dictionaries: Record<Locale, () => Promise<any>> = {
+const dictionaries: Record<Locale, () => Promise<Record<string, unknown>>> = {
   es: () => import('@/locales/es.json').then((module) => module.default),
   en: () => import('@/locales/en.json').then((module) => module.default),
   pt: () => import('@/locales/pt.json').then((module) => module.default),

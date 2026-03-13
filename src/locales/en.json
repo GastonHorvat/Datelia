@@ -11,13 +11,13 @@
     "case_studies": "Case Studies",
     "news": "News",
     "about_us": "About Us",
-    "chatbots": "Multichannel Intelligent Chatbots"
+    "chatbots": "Agentic Response Systems"
   },
   "hero": {
     "title": "Companies don't fail from lack of strategy.",
     "subtitle": "They fail from lack of execution architecture.",
     "description": "We design and deploy Governed Agentic Architecture (Proprietary D.O.A.™ Model) for complex enterprise groups.",
-    "cta": "Request Structural Evaluation",
+    "cta": "Free Structural Evaluation",
     "secondary_cta": "Discover D.O.A.™ Model"
   },
   "enterprise_thesis": {
@@ -74,7 +74,7 @@
       "success_cases": "Success Cases",
       "about_us": "About Us",
       "contact": "Contact",
-      "request_demo": "Request Discovery",
+      "request_demo": "Structural Evaluation",
       "blog": "News",
       "privacy": "Privacy",
       "voice_agents": "Voice Agents",
@@ -91,14 +91,14 @@
     },
     "solutions": {
       "chatbots": {
-        "title": "Multichannel Intelligent Chatbots",
-        "description": "Transform your customer service and sales process. We implement chatbots on WhatsApp, Web, and Instagram that operate 24/7, capturing leads and resolving doubts so your team can focus on closing deals.",
+        "title": "Agentic Response Systems",
+        "description": "Transform your service and sales architecture. We implement autonomous response systems on WhatsApp and Web that operate under corporate rules, integrating with your ERP for flawless execution.",
         "benefits": [
-          "Increased lead capture.",
-          "24/7 availability.",
-          "Support cost reduction."
+          "Elimination of response latency.",
+          "Governance over communication channels.",
+          "Front-office operational debt reduction."
         ],
-        "cta": "Discover Chatbot Solutions"
+        "cta": "Discover Response Architecture"
       },
       "voice_agents": {
         "title": "Voice Agents for Scheduling",
@@ -154,7 +154,7 @@
   "cta_section": {
     "title": "Identify your Operational Debt",
     "description": "It's time to stop putting out fires and start governing your execution architecture. Request a deep evaluation with our Senior Partners.",
-    "button": "Schedule Structural Discovery"
+    "button": "Free Structural Evaluation"
   },
   "faq": {
     "title": "Structural Objections",
@@ -352,6 +352,14 @@
       "submit": "Submit Application",
       "processing": "Processing..."
     },
+    "revenue": {
+      "label": "Annual Revenue Level *",
+      "placeholder": "Select your revenue range",
+      "range_1": "< $1M USD",
+      "range_2": "$1M - $10M USD",
+      "range_3": "$10M - $50M USD",
+      "range_4": "> $50M USD"
+    },
     "ecosystems": {
       "hubspot": "HubSpot / Other CRMs",
       "custom": "In-house / Custom Development",
@@ -376,75 +384,75 @@
     }
   },
   "voice_agents_page": {
-    "title": "Your Agenda Fills Itself, by Voice.",
-    "subtitle": "Our intelligent voice agent manages, confirms, and reschedules appointments by phone with a natural human voice, freeing up your team forever.",
+    "title": "Your Agenda Fills Itself, Globally.",
+    "subtitle": "Our intelligent voice agent manages, confirms, and reschedules appointments by phone with a natural human voice, integrated into your corporate architecture.",
     "cta_demo": "Watch Demo",
-    "problems_title": "Is this your business's daily reality?",
+    "problems_title": "Is this your structural reality?",
     "problems": [
-      "Your reception staff spends hours on the phone instead of attending to the customers in front of them.",
-      "You lose significant revenue due to a high rate of \"no-shows\" (unattended appointments).",
-      "Customers complain about not being able to contact you outside business hours to book or cancel.",
-      "The manual appointment confirmation process is tedious, time-consuming, and easy to forget."
+      "Fragmented scheduling infrastructure across multiple locations.",
+      "Revenue leakage due to unoptimized appointment governance (no-shows).",
+      "Operational load on senior staff for low-value coordination tasks.",
+      "High synchronization latency between phone interactions and the core ERP."
     ],
-    "benefits_title": "An Assistant that Optimizes your Time and Money",
-    "benefits_subtitle": "This is not an answering machine. It is another member of your team, 100% focused on efficiency.",
+    "benefits_title": "Governance and Efficiency in Every Call",
+    "benefits_subtitle": "This is not an answering machine. It is an autonomous execution node.",
     "benefits": [
-      { "title": "24/7 Scheduling", "desc": "Capture appointments even at night or on weekends. Your business never stops working." },
-      { "title": "Drastic Reduction in No-Shows", "desc": "Makes proactive calls and reminders, achieving up to 40% fewer absences." },
-      { "title": "Free up your Human Team", "desc": "Your staff can focus on higher-value tasks, such as customer loyalty." },
-      { "title": "Perfect Synchronization", "desc": "Integrates natively with Google Calendar and other systems for error-free management." }
+      { "title": "24/7 Global Scheduling", "desc": "Capture and orchestrate appointments across time zones under governed rules." },
+      { "title": "Reduction in Structural Risk", "desc": "Eliminate human error in confirmation, reducing idle capacity by up to 40%." },
+      { "title": "Free up Human Capital", "desc": "Redirect your talent to strategic design and customer success, not coordination." },
+      { "title": "Native ERP Integration", "desc": "Bidirectional synchronization with your system of record for absolute traceability." }
     ],
-    "use_cases_title": "Perfect for businesses that depend on a schedule",
+    "use_cases_title": "High-Complexity Sector Interventions",
     "use_cases": [
-      "Medical and Dental Clinics", "Mechanic Workshops", "Beauty Salons and Spas",
-      "Professional Offices", "Real Estate", "Physiotherapy Centers", "and more..."
+      "Clinics and Health Centers", "Multi-site Logistics and Distribution", "B2B Service Firms",
+      "Large-scale Consultancies", "Real Estate and Developers", "Citizen Service Centers", "Holdings with Dispersed Geographic Units"
     ],
     "testimonial": {
-      "quote": "\"The voice agent pays for itself. We've reclaimed about 15 hours of administrative work a week and forgotten appointments have almost disappeared. Incredible.\"",
-      "author": "Carolina Méndez",
+      "quote": "\"The voice agent liberated our communications infrastructure. We have reclaimed 15 hours of administrative coordination per site weekly. The architecture is solid.\"",
+      "author": "Laura Herrera",
       "role": "Operations Director"
     },
     "final_cta": {
-      "title": "Want to hear your new assistant in action?",
-      "description": "Calculate how much you could save or request a demo call. You'll see how surprisingly human and efficient the future can sound.",
-      "button_saving": "Calculate my Savings",
-      "button_demo": "Request Demo Call"
+      "title": "Evaluate the impact on your architecture?",
+      "description": "Request an audit session to identify how a voice agent can mitigate your execution risks.",
+      "button_saving": "Technical Consulting",
+      "button_demo": "Structural Evaluation"
     }
   },
   "chatbots_page": {
-    "title": "Conversations that Convert, 24/7.",
-    "subtitle": "Implement chatbots on WhatsApp, Web, and Instagram that capture leads, resolve doubts, and sell for you, even while you sleep.",
-    "cta_demo": "Request Demo",
-    "problem_title": "Does this scenario sound familiar?",
+    "title": "Agentic Response Architecture.",
+    "subtitle": "Deploy systems that capture, process, and execute responses under governance, mitigating the risk of information silos in digital channels.",
+    "cta_demo": "Structural Evaluation",
+    "problem_title": "Risks of Fragmented Execution",
     "problems": [
-      { "title": "Unattended Leads", "desc": "Valuable prospects arriving outside business hours go cold." },
-      { "title": "Overwhelmed Sales Team", "desc": "Your team spends too much time qualifying instead of closing deals." },
-      { "title": "Repetitive Inquiries", "desc": "The same FAQs saturate your channels and exhaust your team." },
-      { "title": "Slow Experience", "desc": "Slow and impersonal customer service that damages your reputation." }
+      { "title": "Information Silos", "desc": "Critical inquiries falling into non-audited and non-integrated channels." },
+      { "title": "Weak Response Structure", "desc": "Your team invests senior resources in tactical routing instead of strategic design." },
+      { "title": "Accumulated Operational Friction", "desc": "Repetitive inquiries saturate infrastructure and degrade deployment quality." },
+      { "title": "Structural Inconsistency", "desc": "Slow attention reflecting deep failures in the execution architecture." }
     ],
-    "benefits_title": "The Solution: A Chatbot that Works for your ROI",
+    "benefits_title": "Governance and Efficiency in Every Node",
     "benefits": [
-      { "title": "Increased Conversion", "desc": "Qualifies leads instantly and directs them to the right agent, or closes simple sales directly." },
-      { "title": "Cost Reduction", "desc": "Automates up to 80% of inquiries, freeing your team for cases that matter." },
-      { "title": "Multichannel Presence", "desc": "Attend to your customers on Web, WhatsApp, and Instagram with a consistent experience." },
-      { "title": "Business Intelligence", "desc": "Collect valuable data from every interaction to better understand your customers." }
+      { "title": "ERP Synchronization", "desc": "Agents read and write directly to your core systems under SOC2 rules." },
+      { "title": "Operational Debt Reduction", "desc": "Automates routing and the first intervention layer, freeing up installed capacity." },
+      { "title": "Full Traceability", "desc": "Every interaction is recorded in your control center for constant auditing." },
+      { "title": "Scalable Design", "desc": "A modular architecture that grows alongside the complexity of your operations." }
     ],
-    "process_title": "A Transparent and Effective Process",
+    "process_title": "Strategic Intervention",
     "process_steps": [
-      { "title": "Analysis and Strategy", "desc": "We understand your business goals and design conversation flows to maximize results." },
-      { "title": "Development and Integration", "desc": "We build and connect the chatbot with your current systems (CRM, calendars, etc.)." },
-      { "title": "Training and Launch", "desc": "We train the AI with your data so it responds with your brand's voice and knowledge." },
-      { "title": "Continuous Optimization", "desc": "We monitor its performance and constantly improve it to ensure it continues to generate value." }
+      { "title": "Friction Assessment", "desc": "We identify bottlenecks in your current channels and design the intervention map." },
+      { "title": "Architectural Integration", "desc": "We connect response systems to your existing ERP/CRM infrastructure." },
+      { "title": "Governed Deployment", "desc": "We configure guardrails and decision models to ensure auditable execution." },
+      { "title": "Structural Optimization", "desc": "Latency monitoring and fine-tuning of agentic logic to maximize ROI." }
     ],
     "testimonial": {
-      "quote": "\"We went from responding in hours to doing it in seconds, and our sales from WhatsApp increased by 40% in the first three months. The chatbot paid for itself.\"",
-      "author": "Martín Rojas",
-      "role": "Head of Growth"
+      "quote": "\"We transformed a chaotic channel into a governed execution unit. Operational risk was drastically reduced in the first 90 days.\"",
+      "author": "Technology Manager",
+      "role": "Industrial Holding"
     },
     "final_cta": {
-      "title": "Ready to automate your conversations?",
-      "description": "Schedule a free demo and we'll show you live how a chatbot can revolutionize your customer acquisition and support from day one.",
-      "button": "Request my Free Demo"
+      "title": "Is your architecture ready for agentic execution?",
+      "description": "Let's talk about integrating governed response systems into your current structure.",
+      "button": "Free Structural Evaluation"
     }
   },
   "metadata": {

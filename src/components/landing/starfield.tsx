@@ -17,7 +17,7 @@ export function Starfield() {
 
   useEffect(() => {
     // Generate stars only on the client to prevent hydration mismatch
-    const generatedStars = Array.from({ length: 80 }).map((_, i) => ({
+    setStars(() => Array.from({ length: 80 }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -26,8 +26,7 @@ export function Starfield() {
       duration: Math.random() * 3 + 2,
       // Random delay to offset the blinking
       delay: Math.random() * 5,
-    }));
-    setStars(generatedStars);
+    })));
   }, []);
 
   return (
