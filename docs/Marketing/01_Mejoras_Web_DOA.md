@@ -45,7 +45,7 @@ El comprador corporativo B2B/Enterprise necesita mitigar el riesgo de contratar 
 
 ## 5. Diagramación Ideal de la Homepage (Flow de Conversión Enterprise)
 
-### Qué ELIMINAR ❌
+### Qué ELIMINAR ❌...
 1. **BlogSection Genérica:** Eliminar cualquier contenido tipo tutorial o "marketing de IA".
 2. **Casos de Uso "Pequeños" (Ej. Talleres Mecánicos):** Eliminar referencias a negocios locales de tipo táctico.
 3. **Sección de "Calculadora de Ahorro Rápido" (Micro):** Descartada. Nuestro comprador no busca un ahorro de $10 USD de Zapier, busca mitigar el riesgo de una operación millonaria escalando mal.
