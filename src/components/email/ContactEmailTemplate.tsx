@@ -4,39 +4,40 @@ import React from 'react';
 
 interface ContactEmailProps {
   nombre: string;
+  cargo: string;
   email: string;
-  telefono: string;
-  website?: string;
-  empresa?: string;
+  empresa: string;
   cantidadEmpleados: string;
-  sector: string[];
-  mensaje: string;
-  howFound: string[];
+  ecosistema: string;
+  desafio: string;
 }
 
 export const ContactEmailTemplate: React.FC<Readonly<ContactEmailProps>> = ({
   nombre,
+  cargo,
   email,
-  telefono,
-  website,
   empresa,
   cantidadEmpleados,
-  sector,
-  mensaje,
-  howFound,
+  ecosistema,
+  desafio,
 }) => (
-  <div>
-    <h1>Nueva consulta desde el formulario de contacto</h1>
+  <div style={{ fontFamily: 'sans-serif', lineHeight: '1.5' }}>
+    <h1 style={{ borderBottom: '1px solid #eee', paddingBottom: '10px' }}>Nueva Aplicación D.O.A.™: {empresa}</h1>
+    
+    <h2>1. Dimensión Operativa</h2>
+    <p><strong>Empresa:</strong> {empresa}</p>
+    <p><strong>Volumen Humano:</strong> {cantidadEmpleados}</p>
+
+    <h2>2. Deuda Operativa</h2>
+    <p><strong>Ecosistema Principal Activo:</strong> {ecosistema}</p>
+    <p><strong>Desafío Estructural (Fricción):</strong></p>
+    <blockquote style={{ background: '#f9f9f9', padding: '15px', borderLeft: '4px solid #ccc', margin: '10px 0' }}>
+      {desafio}
+    </blockquote>
+    
+    <h2>3. Datos del C-Level / Director</h2>
     <p><strong>Nombre:</strong> {nombre}</p>
-    <p><strong>Email:</strong> {email}</p>
-    <p><strong>Teléfono:</strong> {telefono}</p>
-    <p><strong>Website:</strong> {website ? website : 'No especificado'}</p>
-    <p><strong>Empresa:</strong> {empresa ? empresa : 'No especificada'}</p>
-    <p><strong>Cantidad de empleados:</strong> {cantidadEmpleados}</p>
-    <p><strong>Sector(es):</strong> {sector.join(', ')}</p>
-    <p><strong>Cómo nos encontró:</strong> {howFound.join(', ')}</p>
-    <hr />
-    <h2>Mensaje:</h2>
-    <p>{mensaje}</p>
+    <p><strong>Cargo:</strong> {cargo}</p>
+    <p><strong>Email Corporativo:</strong> {email}</p>
   </div>
 );

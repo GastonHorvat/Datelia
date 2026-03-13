@@ -1,0 +1,456 @@
+{
+  "navigation": {
+    "home": "Início",
+    "solutions": "Soluções",
+    "voice_agents": "Agentes de Voz para Agendamento",
+    "all_solutions": "Ver Todas as Soluções",
+    "manifesto": "Manifesto",
+    "live_events": "Eventos ao Vivo",
+    "contact": "Contato",
+    "book_audit": "Avaliação Estrutural Gratuita",
+    "case_studies": "Casos de Sucesso",
+    "news": "Notícias",
+    "about_us": "Sobre Nós",
+    "chatbots": "Chatbots Inteligentes Multicanal"
+  },
+  "hero": {
+    "title": "As empresas não falham por falta de estratégia.",
+    "subtitle": "Falham por falta de arquitetura na execução.",
+    "description": "Desenhamos e implementamos Arquitetura Agêntica Governada (Modelo próprio D.O.A.™) para grupos empresariais complexos.",
+    "cta": "Solicitar Avaliação Estrutural",
+    "secondary_cta": "Descobrir Modelo D.O.A.™"
+  },
+  "enterprise_thesis": {
+    "badge": "Nossa Tese Operacional",
+    "quote_1": "\"A execução não se delega a ferramentas. ",
+    "quote_2": "Ela se projeta.\"",
+    "paragraph_1": "O atrito operacional é normalizado em grandes grupos empresariais. A dependência de pessoas-chave torna-se invisível. Automatizar tarefas isoladas sem mudar a arquitetura estrutural apenas amplifica e acelera o caos.",
+    "paragraph_strong": "Desenhar a execução é governar o crescimento."
+  },
+  "architecture": {
+    "title": "Arquitetura Agêntica Governada",
+    "subtitle": "Operar com agentes não significa adicionar bots isolados. Significa estruturar unidades operacionais autônomas sob regras explícitas, integradas aos sistemas existentes e com rastreabilidade auditável.",
+    "card1_title": "Um Agente D.O.A.™ pode:",
+    "card1_items": [
+      "Executar validações cruzadas entre ERPs",
+      "Classificar e rotear informações não estruturadas",
+      "Detectar desvios e disparar alertas escalonados",
+      "Orquestrar sistemas satélite (Legacy/SaaS)",
+      "Registrar decisões com audit trail",
+      "Auxiliar humana-máquina em processos críticos"
+    ],
+    "card1_quote": "\"A inteligência é aplicada apenas quando classificar, validar, prever ou responder gera valor econômico estrutural.\"",
+    "card2_title": "O Padrão D.O.A.™",
+    "card2_subtitle": "Design Operacional Agêntico (D.O.A.™) é a nossa metodologia de intervenção.",
+    "card2_desc": "Não otimizamos tarefas dispersas. Desenhamos a arquitetura operacional.",
+    "card2_items": [
+      { "title": "Diagnóstico estrutural", "desc": "Mapeamento profundo de atritos e gargalos transversais." },
+      { "title": "Arquitetura agêntica", "desc": "Design de unidades autônomas governadas e papéis humano-máquina." },
+      { "title": "Orquestração", "desc": "Centro de decisão, observabilidade técnica e controle de fluxos multiplataforma." }
+    ]
+  },
+  "erp_integration": {
+    "title": "Ecossistema de Nós D.O.A.™",
+    "description": "A arquitetura não substitui os sistemas corporativos que operam seu faturamento e gestão. Ela os unifica, eliminando a camada de erro e atrito humano."
+  },
+  "testimonials": {
+    "t1_name": "Jimena Garcia Pinto",
+    "t1_role": "Founder & Partnerships",
+    "t1_quote": "As empresas não falham por falta de estratégia. Falham por falta de estrutura na execução. O atrito é normalizado... Desenhar a execução é governar o crescimento.",
+    "t2_name": "Gaston Horvat",
+    "t2_role": "Founder & CTO",
+    "t2_quote": "Na Datelia desenhamos arquitetura de execução. A engenharia operacional não se trata de ferramentas, mas de como a execução flui dentro da organização... Nossa arquitetura se apoia em integrações via APIs, regras explícitas, logs auditáveis, modularidade e segurança."
+  },
+  "footer": {
+    "description": "Firma Boutique de Engenharia Operacional (D.O.A.™). Transformamos a dívida operacional de grandes grupos em arquitetura de execução agéntica governada.",
+    "headings": {
+      "navigation": "Navegação",
+      "resources": "Recursos",
+      "contact": "Contato"
+    },
+    "links": {
+      "home": "Início",
+      "solutions": "Soluções",
+      "success_cases": "Casos de Sucesso",
+      "about_us": "Sobre Nós",
+      "contact": "Contato",
+      "request_demo": "Solicitar Discovery",
+      "blog": "Notícias",
+      "privacy": "Privacidade",
+      "voice_agents": "Agentes de Voz",
+      "all_solutions": "Todas as Soluções"
+    },
+    "rights": "Todos os derechos reservados.",
+    "privacy_policy": "Política de Privacidade",
+    "terms_conditions": "Termos e Condições"
+  },
+  "solutions_page": {
+    "hero": {
+      "title": "Soluções de IA que Impulsionam seu Negócio",
+      "subtitle": "Além da tecnologia, criamos soluções que resolvem problemas reais. Nosso enfoque é simples: entender seu desafio e aplicar a IA correta para gerar eficiência, crescimento e um ROI mensurável."
+    },
+    "solutions": {
+      "chatbots": {
+        "title": "Chatbots Inteligentes Multicanal",
+        "description": "Transforme seu atendimento ao cliente e seu processo de vendas. Implementamos chatbots no WhatsApp, Web e Instagram que operam 24/7, capturando leads e resolvendo dúvidas para que sua equipe se foque em fechar negócios.",
+        "benefits": [
+          "Aumento da captação de leads.",
+          "Disponibilidade 24/7.",
+          "Redução de custos de suporte."
+        ],
+        "cta": "Descobrir Solução de Chatbots"
+      },
+      "voice_agents": {
+        "title": "Agentes de Voz para Agendamento",
+        "description": "Elimine a carga do agendamento telefônico. Nosso agente de voz com IA gerencia, confirma e reagenda consultas com uma voz natural e humana, integrando-se perfeitamente com seu calendário.",
+        "benefits": [
+          "Horas administrativas economizadas.",
+          "Redução drástica de no-shows.",
+          "Melhora da experiência do cliente."
+        ],
+        "cta": "Descobrir Agentes de Voz"
+      },
+      "custom_ia": {
+        "title": "Soluções de IA sob Medida",
+        "description": "Seu desafio não se encaixa em um molde? Perfeito. Nosso lema é \"implementar resultados\", e isso muitas vezes significa construir algo único. Analisamos seus processos e desenvolvemos uma solução personalizada.",
+        "benefits": [
+          "Solução 100% adaptada ao seu negócio.",
+          "Otimização de processos únicos.",
+          "Máximo impacto no ROI."
+        ],
+        "cta": "Contatar para uma Análise"
+      }
+    }
+  },
+  "problem_solution": {
+    "title": "O Problema vs. A Solução",
+    "subtitle": "Entender o obstáculo é o primeiro passo para superá-lo. É assim que transformamos fricção em crescimento.",
+    "problem": {
+      "badge": "O Problema",
+      "title": "O que está freando o crescimento da minha empresa hoje?",
+      "p1": "O que limita o crescimento geralmente não é o mercado, mas a operação interna: processos manuais, informações dispersas e pouca visibilidade em tempo real. Isso faz com que cada nova sede, cliente ou unidade operativa exija mais trabalho, mais pessoal e mais coordenação.",
+      "strong": "Nesse cenário, escalar se torna lento, caro e insustentável.",
+      "p2": "A Datelia resolve esse gargalo automatizando tarefas repetitivas, integrando informações críticas em um único painel e padronizando a forma como todas as áreas da empresa trabalham.",
+      "italic": "O resultado: menos carga operacional, mais rastreabilidade e uma operação que cresce sem fricção."
+    },
+    "solution": {
+      "badge": "A Solução Datelia",
+      "title": "O que exatamente a Datelia faz para resolver esses problemas?",
+      "p1": "Aplicamos uma abordagem comprovada que combina automação, IA e Business Intelligence para ordenar, acelerar e tornar a operação mais eficiente.",
+      "p2": "Automatizamos turnos, relatórios, entradas de dados, acompanhamento de clientes e controles internos. Centralizamos a informação em um painel único e desenhamos fluxos padronizados que eliminam erros e duplicações.",
+      "roi": "Em experiências semelhantes, as empresas alcançam um ROI próximo a 3× nos primeiros 60 dias, com uma redução significativa de tarefas manuais e decisões mais rápidas e confiáveis."
+    },
+    "mvp": {
+      "title": "O que acontece depois do MVP?",
+      "p1": "Depois do MVP, vêm duas etapas fundamentais para garantir a melhoria contínua:",
+      "list_1": "Escalonamento por áreas (administração, vendas, logística, pós-venda, operações).",
+      "list_2": "Dashboards de BI em tempo real para garantir rastreabilidade e decisões mais precisas.",
+      "p2": "Além disso, oferecemos suporte contínuo, melhorias evolutivas e treinamento interno para que a solução cresça junto com a empresa."
+    }
+  },
+  "target_audience": {
+    "title": "O Filtro Arquitetônico",
+    "description": "A Datelia é uma firma de alto rendimento. Nossa Arquitetura de Execução (D.O.A.™) não é uma solução genérica, foi desenhada para resolver riscos estruturais de nível diretivo.",
+    "is_for_title": "Desenhado Para",
+    "is_for": [
+      { "title": "Holdings e Grupos Empresariais" },
+      { "title": "Organizações com ERP Ativo" },
+      { "title": "Empresas com múltiplas linhas de negócio" },
+      { "title": "Instituições com complexidade estrutural" }
+    ],
+    "is_for_item_desc": "Suportam grande latência e atrito entre departamentos e filiais.",
+    "is_not_title": "Não Somos",
+    "is_not": [
+      { "title": "Provedores de Software \"OOTB\"", "desc": "Não vendemos licenças SaaS isoladas (\"Out-of-the-Box\") esperando que o cliente adapte seus processos à ferramenta." },
+      { "title": "Soluções Micro e Funcionais", "desc": "Se você procura um bot básico de WhatsApp para um comércio local, nosso serviço terá muito atrito arquitetônico." },
+      { "title": "Automatizadores Táticos Rápidos", "desc": "Rejeitamos patches de curto prazo. Nosso foco é uma intervenção estrutural profunda e de longo prazo." }
+    ]
+  },
+  "live_events": {
+    "badge": "Ciclo de Palestras Abertas",
+    "title": "Arquitetura de Execução no",
+    "title_highlight": "Setor Industrial",
+    "description": "Como governar a execução em grupos com múltiplas fábricas operacionais? Junte-se à nossa próxima edição mensal onde discutiremos riscos estruturais invisíveis e o modelo D.O.A. aplicado à sua empresa.",
+    "date": "Sexta-feira 28, final do mês, 11:00 AM (ART)",
+    "audience": "Exclusivo para Diretores e Sócios",
+    "agenda_title": "Garanta seu lugar",
+    "agenda_desc": "Vagas limitadas para garantir profunda interatividade no Q&A final.",
+    "cta": "Inscrever-se Gratuitamente"
+  },
+  "cta_section": {
+    "title": "Identifique sua Dívida Operacional",
+    "description": "É hora de parar de apagar incêndios e começar a governar sua arquitetura de execução. Solicite uma avaliação profunda com nossos Senior Partners.",
+    "button": "Agendar Discovery Estrutural"
+  },
+  "faq": {
+    "title": "Objeções Estruturais",
+    "description": "Respostas focadas em segurança, conformidade e integração arquitetônica para equipes de diretoria e gestores de TI.",
+    "q1": "Como é a intervenção? Qual é o processo D.O.A.?",
+    "a1": {
+      "intro": "Aplicamos o framework D.O.A.™ em três estágios estruturados:",
+      "step1_title": "1. Discovery Estrutural (Assessment)",
+      "step1_desc": "Mapeamos e auditamos os fluxos críticos da empresa. Identificamos latência corporativa, pontos de decisão frágeis e calculamos a Dívida Operacional. Desenhamos a arquitetura agêntica sem alterar a operação atual.",
+      "step2_title": "2. Orquestração e MVP Arquitetônico",
+      "step2_desc": "Implementamos a primeira camada de agentes governados e integramos conectores com seus ERPs (SAP, Salesforce, etc). Testamos o fluxo de ponta a ponta em um ambiente controlado (Shadow Mode) antes da adoção total.",
+      "step3_title": "3. Escalonamento e Governance",
+      "step3_desc": "Estendemos a arquitetura para o restante da holding. É entregue um Governance Board onde sua diretoria tem controle absoluto e visibilidade das decisões tomadas pelos agentes orquestrados."
+    },
+    "q2": "Vocês substituem nosso ERP ou sistemas Core?",
+    "a2": {
+      "badge": "Categoricamente Não.",
+      "p1": "A Datelia desenha a arquitetura de orquestração sobre seus sistemas atuais. Integramo-nos nativamente por meio de APIs seguras ao seu ERP, CRM ou bancos de dados Legacy.",
+      "p2": "Os agentes D.O.A.™ atuam como conectores inteligentes que leem, processam e escrevem em seus sistemas, respeitando todas as suas regras corporativas de acesso atuais."
+    },
+    "q3": "Que nível de Governance e Segurança vocês aplicam?",
+    "a3": {
+      "p1": "Nossa arquitetura foi desenhada para padrões do tipo SOC2 e conta com rastreabilidade total.",
+      "p2": "Cada agente D.O.A. opera sob \"guardrails\" (limites) estritos pré-aprovados pelo cliente. Decisões que envolvem movimentações financeiras ou mudanças de alto risco podem ser configuradas como implementações \"Human-in-the-Loop\", exigindo autorização de um gerente antes da execução.",
+      "p2_strong": "Sua empresa nunca perde a soberania sobre seus dados ou processos-chave."
+    },
+    "q4": "Quanto tempo demora uma intervenção base?",
+    "a4": {
+      "p1": "No nível Enterprise, o modelo é normalmente implementado em janelas de 12 a 16 semanas até ter o primeiro nó arquitetônico integrado e em produção real.",
+      "p2": "O \"Discovery Estrutural\" ocupa as primeiras 3-4 semanas, sendo o marco fundamental mais crítico, onde validamos as hipóteses de risco operacional e desenhamos o mapa de orquestração."
+    }
+  },
+  "about_us": {
+    "hero": {
+      "title": "Somos uma Equipe de Especialistas, Obcecados por Resultados.",
+      "subtitle": "Na Datelia, combinamos excelência técnica com visão estratégica de negócios. Não apenas implementamos IA; implementamos crescimento."
+    },
+    "leadership": {
+      "title": "Liderança",
+      "jimena": {
+        "title": "Founder & Diretora de Parcerias",
+        "bio": "Com uma visão estratégica centrada no cliente, lidera o crescimento e as alianças da Datelia, garantindo que cada solução não seja apenas inovadora, mas também gere sucesso tangível para nossos parceiros."
+      },
+      "gaston": {
+        "title": "Founder & Diretor de Tecnologia",
+        "bio": "É o arquiteto técnico por trás das nossas soluções. Sua paixão é transformar ideias complexas em sistemas de IA robustos, escaláveis e seguros que impulsam a eficiência e a transformação digital."
+      }
+    },
+    "philosophy": {
+      "title": "Nossa Filosofia",
+      "p1": {
+        "title": "Resultados Acima de Tudo",
+        "desc": "Nosso sucesso é medido pelo sucesso de nossos clientes. ROI, economia de tempo e eficiência são as métricas que nos impulsionam."
+      },
+      "p2": {
+        "title": "Inovação com Propósito",
+        "desc": "Exploramos as novas fronteiras da IA, mas apenas aplicamos tecnologias que resolvem problemas reais e têm um caso de negócio sólido."
+      },
+      "p3": {
+        "title": "Colaboração e Transparência",
+        "desc": "Trabalhamos como uma extensão da sua equipe. Acreditamos em comunicação aberta e um processo claro do início ao fim."
+      }
+    },
+    "cta": {
+      "title": "Pronto para trabalhar conosco?",
+      "subtitle": "Se você busca um parceiro tecnológico que entenda seu negócio e fale sua língua, estamos aqui.",
+      "button": "Vamos conversar"
+    },
+    "sectors_section": {
+      "title": "Setores que Impulsionamos",
+      "subtitle": "Nossa metodologia aplica-se a qualquer empresa que tenha processos manuais, informações dispersas ou necessidade de escalar com ordem.",
+      "footer": "A solução é desenhada sob medida de acordo com a maturidade digital e os objetivos de cada empresa.",
+      "sectors": {
+        "industry": "Indústria e Manufatura",
+        "construction": "Construção e Obras",
+        "logistics": "Distribuição e Logística",
+        "retail": "Varejo e Consumo de Massa",
+        "real_estate": "Real Estate e Incorporadoras",
+        "education": "Educação",
+        "services": "Serviços Profissionais",
+        "public": "Setor Público e Organizações"
+      }
+    }
+  },
+  "case_studies_page": {
+    "hero": {
+      "title": "Resultados Reais, Não Promessas.",
+      "subtitle": "Descubra como transformamos negócios como o seu, implementando soluções de IA que geram impacto mensurável e ROI tangível."
+    },
+    "categories": {
+      "retail": "Varejo",
+      "health": "Saúde",
+      "logistics": "Logística",
+      "construction": "Construção",
+      "agro": "Agronegócio",
+      "services": "Serviços"
+    },
+    "gallery": {
+      "title": "A Evidência do Nosso Trabalho",
+      "subtitle": "Cada caso representa um desafio superado e uma meta alcançada, destacando nosso compromisso com resultados."
+    },
+    "cases": {
+      "retail": {
+        "title": "Empresa de Varejo Aumenta Conversão em 35% com Chatbot Inteligente",
+        "summary": "Implementamos um chatbot multicanal que automatizou 80% das dúvidas de suporte e otimizou a captura e qualificação de leads 24/7.",
+        "metrics": ["+35% Conversão", "-50% Suporte", "ROI 6 meses"]
+      },
+      "health": {
+        "title": "Clínica Líder Reduz \"No-Shows\" em 40% com Agente de Voz IA",
+        "summary": "Nosso agente de voz cuidou da confirmação proativa de consultas, liberando 15 horas semanais da equipe administrativa.",
+        "metrics": ["-40% No-Shows", "+15 h/semana", "+95% Satis."]
+      },
+      "logistics": {
+        "title": "Empresa de Logística Optimiza Cadeia com IA sob Medida",
+        "summary": "Solução personalizada que analisa dados em tempo real para prever gargalos e reduzir custos operacionais em 22%.",
+        "metrics": ["-22% Custos", "+30% Precisão", "Automatizado"]
+      },
+      "construction": {
+         "title": "Empresa de Construção Reduz Erros em 70% com IA",
+         "summary": "Unificação de obra e administração. A IA interpreta áudios e fotos de mestres de obras, atualizando custos sem carga manual.",
+         "metrics": ["-70% Erros", "3× Velocidade", "ROI 90 dias"]
+      },
+      "agro": {
+         "title": "Empresa Agroindustrial Libera 35 Horas Semanais",
+         "summary": "Digitalização total de pedidos e logística. Portal inteligente que processa pedidos e valida estoque sem planilhas.",
+         "metrics": ["-80% Repetitivo", "+35 h/semana", "Sem WhatsApp"]
+      },
+      "services": {
+         "title": "Empresa de Serviços Reduz Reclamações em 60%",
+         "summary": "Chatbot de pós-venda que responde FAQs e gerencia reclamações em tempo real, derivando casos complexos.",
+         "metrics": ["-60% Reclamos", "80% <30s", "-50% Custo"]
+      }
+    },
+    "cta": "Ler Caso de Sucesso"
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Discovery Estrutural",
+      "subtitle": "Nem todas as operações qualificam para Arquitetura Agêntica.",
+      "description": "Por favor, complete este breve formulário de qualificação. Se sua estrutura conta com a escala e maturidade necessária, um arquiteto da Datelia entrará em contato para agendar a avaliação."
+    }
+  },
+  "contact_form": {
+    "step1": {
+      "title": "Passo 1: Dimensão Operativa",
+      "subtitle": "Para desenhar a arquitetura, primeiro precisamos entender o terreno.",
+      "org_name": "Nome da Organização *",
+      "org_placeholder": "Ex: Datelia Corp",
+      "employees": "Volume Humano (Funcionários) *",
+      "employees_placeholder": "Selecione a escala"
+    },
+    "step2": {
+      "title": "Passo 2: Dívida Operacional",
+      "subtitle": "Qual é o estado atual dos seus sistemas?",
+      "ecosystem": "Ecossistema Principal Ativo *",
+      "ecosystem_placeholder": "Ex: Usamos SAP e um CRM interno",
+      "friction": "Identifique sua principal fricção ou objetivo estrutural *",
+      "friction_placeholder": "Ex: Temos equipes de 50 pessoas inserindo dados manualmente entre o ERP e o Excel..."
+    },
+    "step3": {
+      "title": "Passo 3: C-Level / Diretor",
+      "subtitle": "Dados da pessoa responsável por liderar a avaliação (Diretores ou Gerentes).",
+      "full_name": "Nome Completo *",
+      "full_name_placeholder": "Seu nome e sobrenome",
+      "role": "Cargo / Função na Empresa *",
+      "role_placeholder": "Ex: COO, Diretor de TI, Gerente de Operações",
+      "email": "E-mail Corporativo *",
+      "email_placeholder": "nome@suaempresa.com",
+      "submit": "Enviar Inscrição",
+      "processing": "Processando..."
+    },
+    "ecosystems": {
+      "hubspot": "HubSpot / Outros CRMs",
+      "custom": "Desenvolvimento in-house / Sob medida",
+      "multi": "Múltiplas plataformas (Fragmentado)"
+    },
+    "common": {
+      "next": "Próximo",
+      "back": "Voltar",
+      "define_contact": "Definir Contato"
+    },
+    "errors": {
+      "step1": "Por favor, preencha os campos obrigatórios para continuar.",
+      "step2": "Por favor, detalhe seu ecossistema e desafio operacional.",
+      "step3": "Por favor, preencha seus dados de contato.",
+      "submit_error": "Houve um erro ao enviar o formulário.",
+      "connection_error": "Erro de conexão. Verifique sua internet e tente novamente."
+    },
+    "success": {
+      "title": "Inscrição Recebida",
+      "message": "Obrigado pelo seu interesse, {name}. Recebemos o perfil da {company}.",
+      "next_steps": "Analisaremos sua arquitetura operacional atual e, se você se qualificar para o modelo D.O.A.™, um arquiteto entrará em contato pelo seu e-mail {email} nas próximas 48 horas úteis para agendar sua Avaliação Estrutural."
+    }
+  },
+  "voice_agents_page": {
+    "title": "Sua Agenda se Enche Sozinha, por Voz.",
+    "subtitle": "Nosso agente de voz inteligente gerencia, confirma e reagenda consultas por telefone com uma voz humana e natural, liberando sua equipe para sempre.",
+    "cta_demo": "Ver Demo",
+    "problems_title": "Esta é a realidade diária do seu negócio?",
+    "problems": [
+      "Sua equipe de recepção passa horas ao telefone em vez de atender os clientes à sua frente.",
+      "Você perde receitas significativas devido a uma alta taxa de \"no-shows\" (consultas não assistidas).",
+      "Clientes reclamam de não conseguir entrar em contato fora do horário comercial para agendar ou cancelar.",
+      "O processo manual de confirmação de consultas é tedioso, consome tempo e é fácil de esquecer."
+    ],
+    "benefits_title": "Um Assistente que Otimiza seu Tempo e Dinheiro",
+    "benefits_subtitle": "Isso não é uma secretária eletrônica. É um membro a mais da sua equipe, focado 100% na eficiência.",
+    "benefits": [
+      { "title": "Agendamento 24/7", "desc": "Capture consultas mesmo à noite ou nos fins de semana. Seu negócio nunca para de funcionar." },
+      { "title": "Redução Drástica de No-Shows", "desc": "Realiza chamadas e lembretes proativos, alcançando até 40% menos ausências." },
+      { "title": "Libere sua Equipe Humana", "desc": "Sua equipe pode se concentrar em tarefas de maior valor, como a fidelização de clientes." },
+      { "title": "Sincronização Perfecta", "desc": "Integra-se de forma nativa com Google Calendar e outros sistemas para uma gestão sem erros." }
+    ],
+    "use_cases_title": "Perfeito para negócios que dependem de uma agenda",
+    "use_cases": [
+      "Clínicas Médicas e Dentais", "Oficinas Mecânicas", "Salões de Beleza e Spas",
+      "Consultórios Profissionais", "Imobiliárias", "Centros de Fisioterapia", "e mais..."
+    ],
+    "testimonial": {
+      "quote": "\"O agente de voz se paga sozinho. Recuperamos cerca de 15 horas de trabalho administrativo por semana e as consultas esquecidas quase desapareceram. Incrível.\"",
+      "author": "Carolina Méndez",
+      "role": "Diretora de Operações"
+    },
+    "final_cta": {
+      "title": "Quer ouvir seu novo assistente em ação?",
+      "description": "Calcule quanto você poderia economizar ou solicite uma chamada de demonstração. Você verá quão surpreendentemente humano e eficiente o futuro pode soar.",
+      "button_saving": "Calcular minha Economia",
+      "button_demo": "Solicitar Chamada de Demo"
+    }
+  },
+  "chatbots_page": {
+    "title": "Conversas que Convertem, 24/7.",
+    "subtitle": "Implemente chatbots no WhatsApp, Web e Instagram que capturam leads, resolvem dúvidas e vendem por você, mesmo enquanto você dorme.",
+    "cta_demo": "Solicitar Demo",
+    "problem_title": "Este cenário soa familiar?",
+    "problems": [
+      { "title": "Leads sem Atendimento", "desc": "Prospectos valiosos que chegam fora do horário comercial acabam esfriando." },
+      { "title": "Equipe de Vendas Saturada", "desc": "Sua equipe investe muito tempo qualificando em vez de fechar negócios." },
+      { "title": "Consultas Repetitivas", "desc": "As mesmas perguntas frequentes saturam seus canais e esgotam sua equipe." },
+      { "title": "Experiência Lenta", "desc": "Um atendimento ao cliente lento e impessoal que prejudica sua reputação." }
+    ],
+    "benefits_title": "A Solução: Um Chatbot que Trabalha para seu ROI",
+    "benefits": [
+      { "title": "Aumento de Conversão", "desc": "Qualifica leads instantaneamente e os direciona ao agente correto, ou fecha vendas simples diretamente." },
+      { "title": "Redução de Costos", "desc": "Automatiza até 80% das consultas, liberando sua equipe para casos que importam." },
+      { "title": "Presença Multicanal", "desc": "Atenda seus clientes na Web, WhatsApp e Instagram com uma experiência consistente." },
+      { "title": "Inteligência de Negócio", "desc": "Colete dados valiosos de cada interação para entender melhor seus clientes." }
+    ],
+    "process_title": "Um Processo Transparente e Eficaz",
+    "process_steps": [
+      { "title": "Análise e Estratégia", "desc": "Entendemos seus objetivos comerciais e desenhamos os fluxos de conversa para maximizar os resultados." },
+      { "title": "Desenvolvimento e Integração", "desc": "Construímos e conectamos o chatbot com seus sistemas atuais (CRM, calendários, etc.)." },
+      { "title": "Treinamento e Implementação", "desc": "Treinamos a IA com seus dados para que responda com a voz e o conhecimento da sua marca." },
+      { "title": "Otimização Contínua", "desc": "Monitoramos seu desempenho e o melhoramos constantemente para garantir que continue gerando valor." }
+    ],
+    "testimonial": {
+      "quote": "\"Passamos de responder em horas para segundos, e nossas vendas pelo WhatsApp aumentaram 40% nos primeiros três meses. O chatbot se pagou sozinho.\"",
+      "author": "Martín Rojas",
+      "role": "Head of Growth"
+    },
+    "final_cta": {
+      "title": "Pronto para automatizar suas conversas?",
+      "description": "Agende uma demo gratuita e mostraremos ao vivo como um chatbot pode revolucionar sua captação de clientes e seu suporte desde el primer día.",
+      "button": "Solicitar minha Demo Gratuita"
+    }
+  },
+  "metadata": {
+    "title": "Datelia | Firma Boutique de Engenharia Operacional (D.O.A.™)",
+    "description": "As empresas não falham por falta de estratégia, falham por falta de arquitetura na execução. Desenhamos e implementamos Arquitetura Agêntica Governada.",
+    "keywords": "Eficiência operacional, Arquitetura operacional, IA corporativa, Design Operacional Agêntico, D.O.A., arquitetura de execução, Holdings"
+  }
+}
+

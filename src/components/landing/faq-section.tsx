@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
     Accordion,
     AccordionContent,
@@ -6,120 +10,70 @@ import {
 } from "@/components/ui/accordion";
 
 export function FaqSection() {
+    const t = useTranslations("faq");
+
     const faqs = [
         {
-            question: "¿Cómo lo hacen? ¿Cuál es el proceso?",
+            question: t("q1"),
             answer: (
                 <div className="space-y-4">
-                    <p>Lo hacemos en tres pasos simples y de bajo riesgo:</p>
+                    <p>{t("a1.intro")}</p>
                     <ul className="list-none space-y-4 pl-2">
                         <li>
-                            <strong className="text-primary block mb-1">1. Discovery</strong>
-                            Analizamos cómo trabajan hoy, medimos el impacto real de los cuellos de botella y priorizamos qué automatizar primero. No se cambia nada aún: solo entendemos, cuantificamos y proyectamos el ROI.
+                            <strong className="text-primary block mb-1">{t("a1.step1_title")}</strong>
+                            {t("a1.step1_desc")}
                         </li>
                         <li>
-                            <strong className="text-primary block mb-1">2. MVP funcional</strong>
-                            En pocas semanas desarrollamos una primera versión completamente operativa. Automatizamos los flujos críticos (turnos, reportes, pedidos, seguimiento, notificaciones) e integramos la información en un panel único. Se valida el impacto real desde el primer mes.
+                            <strong className="text-primary block mb-1">{t("a1.step2_title")}</strong>
+                            {t("a1.step2_desc")}
                         </li>
                         <li>
-                            <strong className="text-primary block mb-1">3. Escalado</strong>
-                            Una vez comprobado el valor, ampliamos la solución al resto de las áreas o unidades de negocio. Todo sin frenar la operación ni reemplazar los sistemas actuales.
+                            <strong className="text-primary block mb-1">{t("a1.step3_title")}</strong>
+                            {t("a1.step3_desc")}
                         </li>
                     </ul>
                 </div>
             ),
         },
         {
-            question: "¿Necesitan que cambiemos nuestros sistemas actuales?",
+            question: t("q2"),
             answer: (
                 <div className="space-y-2">
-                    <p className="font-semibold text-primary">No.</p>
+                    <p className="font-semibold text-primary">{t("a2.badge")}</p>
                     <p>
-                        Datelia se integra con lo que ya usan: ERPs, planillas, WhatsApp, e-mail, CRMs, sistemas de gestión u otros softwares internos.
+                        {t("a2.p1")}
                     </p>
                     <p>
-                        La implementación es incremental y sin fricción. Nuestra filosofía: la tecnología debe adaptarse a la empresa, no al revés.
+                        {t("a2.p2")}
                     </p>
                 </div>
             ),
         },
         {
-            question: "¿En cuánto tiempo vemos resultados?",
-            answer: (
-                <div className="space-y-2">
-                    <p className="font-semibold text-primary">Los resultados se ven en semanas.</p>
-                    <p>
-                        El MVP funcional suele estar listo en un plazo corto y permite medir reducción de tiempos, disminución de errores y mejora en trazabilidad desde el primer mes.
-                    </p>
-                    <p>
-                        Luego, se escala progresivamente sin afectar la operación diaria.
-                    </p>
-                </div>
-            ),
-        },
-        {
-            question: "¿Qué nivel de retorno podemos esperar?",
-            answer: (
-                <div className="space-y-4">
-                    <p>En proyectos similares, las empresas obtuvieron:</p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <li className="flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                            <span>3× ROI en 60 a 90 días</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                            <span>-40% a -70% menos carga administrativa</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                            <span>Decisiones 10× más rápidas con BI</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                            <span>Respuestas a clientes en menos de 2 minutos</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                            <span>Eliminación de errores por tareas manuales</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                            <span>+15 a +20 horas semanales liberadas por área</span>
-                        </li>
-                    </ul>
-                    <p className="text-sm text-muted-foreground mt-2">
-                        El ROI se estima desde el Discovery y se valida en el MVP.
-                    </p>
-                </div>
-            ),
-        },
-        {
-            question: "¿Qué necesitamos aportar de nuestro lado?",
-            answer: (
-                <div className="space-y-2">
-                    <p className="font-semibold text-primary">Muy poco.</p>
-                    <p>
-                        Solo un referente por área para entender cómo trabajan hoy y acceso a los flujos básicos: turnos, reportes, pedidos, comunicación, planillas o sistemas operativos.
-                    </p>
-                    <p>
-                        Ustedes validan prioridades y nosotros nos encargamos del resto: diseño, desarrollo, integración, pruebas e implementación.
-                    </p>
-                </div>
-            ),
-        },
-        {
-            question: "¿Es seguro? ¿Cómo manejan nuestros datos?",
+            question: t("q3"),
             answer: (
                 <div className="space-y-2">
                     <p>
-                        Todo proyecto incluye NDA, acceso controlado, encriptación de datos, servidores certificados y auditoría de usuarios.
+                        {t("a3.p1")}
                     </p>
                     <p>
-                        Trabajamos bajo estándares internacionales y, cuando se requiere, incorporamos especialistas en ciberseguridad del ecosistema tecnológico y académico.
+                        {t("a3.p2")}
                     </p>
                     <p className="font-semibold text-primary">
-                        La información del cliente sigue siendo siempre del cliente.
+                        {t("a3.p2_strong")}
+                    </p>
+                </div>
+            ),
+        },
+        {
+            question: t("q4"),
+            answer: (
+                <div className="space-y-2">
+                    <p>
+                        {t("a4.p1")}
+                    </p>
+                    <p>
+                        {t("a4.p2")}
                     </p>
                 </div>
             ),
@@ -127,29 +81,41 @@ export function FaqSection() {
     ];
 
     return (
-        <section id="faq" className="py-20 sm:py-28 bg-background">
-            <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl mb-4">
-                        Preguntas Frecuentes
+        <section id="faq" className="py-24 sm:py-32 bg-background relative overflow-hidden">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">
+                        {t("title")}
                     </h2>
-                    <p className="text-lg text-muted-foreground">
-                        Resolvemos tus dudas sobre cómo implementamos IA en tu negocio.
+                    <p className="text-lg text-muted-foreground mx-auto max-w-2xl">
+                        {t("description")}
                     </p>
-                </div>
+                </motion.div>
 
-                <Accordion type="single" collapsible className="w-full">
-                    {faqs.map((faq, index) => (
-                        <AccordionItem key={index} value={`item-${index}`}>
-                            <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary transition-colors">
-                                {faq.question}
-                            </AccordionTrigger>
-                            <AccordionContent className="text-muted-foreground text-base leading-relaxed">
-                                {faq.answer}
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                >
+                    <Accordion type="single" collapsible className="w-full">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem key={index} value={`item-${index}`} className="border-b border-border/60 py-2">
+                                <AccordionTrigger className="text-left text-lg font-medium hover:text-primary hover:no-underline transition-colors py-4">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="text-muted-foreground text-base leading-relaxed pt-2 pb-6">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </motion.div>
             </div>
         </section>
     );

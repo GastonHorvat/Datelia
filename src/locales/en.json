@@ -1,0 +1,456 @@
+{
+  "navigation": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "voice_agents": "Voice Agents for Scheduling",
+    "all_solutions": "All Solutions",
+    "manifesto": "Manifesto",
+    "live_events": "Live Events",
+    "contact": "Contact",
+    "book_audit": "Free Structural Evaluation",
+    "case_studies": "Case Studies",
+    "news": "News",
+    "about_us": "About Us",
+    "chatbots": "Multichannel Intelligent Chatbots"
+  },
+  "hero": {
+    "title": "Companies don't fail from lack of strategy.",
+    "subtitle": "They fail from lack of execution architecture.",
+    "description": "We design and deploy Governed Agentic Architecture (Proprietary D.O.A.™ Model) for complex enterprise groups.",
+    "cta": "Request Structural Evaluation",
+    "secondary_cta": "Discover D.O.A.™ Model"
+  },
+  "enterprise_thesis": {
+    "badge": "Our Operational Thesis",
+    "quote_1": "\"Execution cannot be delegated to tools. ",
+    "quote_2": "It must be designed.\"",
+    "paragraph_1": "Operational friction is normalized in large enterprise groups. Dependency on key individuals becomes invisible. Automating isolated tasks without changing the structural architecture only amplifies and accelerates chaos.",
+    "paragraph_strong": "Designing execution means governing growth."
+  },
+  "architecture": {
+    "title": "Governed Agentic Architecture",
+    "subtitle": "Operating with agents doesn't mean adding isolated bots. It means structuring autonomous operational units under explicit rules, integrated into existing systems with auditable traceability.",
+    "card1_title": "A D.O.A.™ Agent can:",
+    "card1_items": [
+      "Execute cross-validations between ERPs",
+      "Classify and route unstructured information",
+      "Detect deviations and trigger escalated alerts",
+      "Orchestrate satellite systems (Legacy/SaaS)",
+      "Log decisions with audit trail",
+      "Assist human-in-the-loop on critical processes"
+    ],
+    "card1_quote": "\"Intelligence is applied solely when classifying, validating, predicting, or responding generates structural economic value.\"",
+    "card2_title": "The D.O.A.™ Standard",
+    "card2_subtitle": "Agentic Operational Design (D.O.A.™) is our intervention methodology.",
+    "card2_desc": "We don't optimize scattered tasks. We design operational architecture.",
+    "card2_items": [
+      { "title": "Structural diagnosis", "desc": "Deep mapping of friction and cross-departmental bottlenecks." },
+      { "title": "Agentic architecture", "desc": "Design of governed autonomous units and human-in-the-loop roles." },
+      { "title": "Orchestration", "desc": "Decision center, technical observability, and cross-platform workflow control." }
+    ]
+  },
+  "erp_integration": {
+    "title": "D.O.A.™ Node Ecosystem",
+    "description": "The architecture does not replace the corporate systems operating your billing and management. It unifies them, eliminating the layer of human error and friction."
+  },
+  "testimonials": {
+    "t1_name": "Jimena Garcia Pinto",
+    "t1_role": "Founder & Partnerships",
+    "t1_quote": "Companies don't fail from lack of strategy. They fail from lack of execution architecture. Friction becomes normalized... Designing execution means governing growth.",
+    "t2_name": "Gaston Horvat",
+    "t2_role": "Founder & CTO",
+    "t2_quote": "At Datelia, we design execution architecture. Operational engineering is not about tools, but how execution flows within the organization... Our architecture relies on API integrations, explicit rules, auditable logs, modularity, and security."
+  },
+  "footer": {
+    "description": "Operational Engineering Boutique Firm (D.O.A.™). We transform the operational debt of large groups into governed agentic execution architecture.",
+    "headings": {
+      "navigation": "Navigation",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "links": {
+      "home": "Home",
+      "solutions": "Solutions",
+      "success_cases": "Success Cases",
+      "about_us": "About Us",
+      "contact": "Contact",
+      "request_demo": "Request Discovery",
+      "blog": "News",
+      "privacy": "Privacy",
+      "voice_agents": "Voice Agents",
+      "all_solutions": "All Solutions"
+    },
+    "rights": "All rights reserved.",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms and Conditions"
+  },
+  "solutions_page": {
+    "hero": {
+      "title": "AI Solutions that Drive Your Business",
+      "subtitle": "Beyond technology, we create solutions that solve real problems. Our approach is simple: understand your challenge and apply the right AI to generate efficiency, growth, and a measurable ROI."
+    },
+    "solutions": {
+      "chatbots": {
+        "title": "Multichannel Intelligent Chatbots",
+        "description": "Transform your customer service and sales process. We implement chatbots on WhatsApp, Web, and Instagram that operate 24/7, capturing leads and resolving doubts so your team can focus on closing deals.",
+        "benefits": [
+          "Increased lead capture.",
+          "24/7 availability.",
+          "Support cost reduction."
+        ],
+        "cta": "Discover Chatbot Solutions"
+      },
+      "voice_agents": {
+        "title": "Voice Agents for Scheduling",
+        "description": "Eliminate the burden of phone scheduling. Our AI voice agent manages, confirms, and reschedules appointments with a natural and human voice, integrating perfectly with your calendar.",
+        "benefits": [
+          "Administrative hours saved.",
+          "Drastic reduction in no-shows.",
+          "Improved customer experience."
+        ],
+        "cta": "Discover Voice Agents"
+      },
+      "custom_ia": {
+        "title": "Custom AI Solutions",
+        "description": "Does your challenge not fit into a mold? Perfect. Our motto is \"implement results\", and that often means building something unique. We analyze your processes and develop a personalized solution.",
+        "benefits": [
+          "100% adapted solution to your business.",
+          "Optimization of unique processes.",
+          "Maximum impact on ROI."
+        ],
+        "cta": "Contact for an Analysis"
+      }
+    }
+  },
+  "target_audience": {
+    "title": "The Architectural Filter",
+    "description": "Datelia is a high-performance firm. Our Execution Architecture (D.O.A.™) is not a generic solution; it is designed to resolve structural risks at the board level.",
+    "is_for_title": "Designed For",
+    "is_for": [
+      { "title": "Holdings and Enterprise Groups" },
+      { "title": "Organizations with Active ERPs" },
+      { "title": "Companies with multiple business lines" },
+      { "title": "Institutions with structural complexity" }
+    ],
+    "is_for_item_desc": "Supporting high latency and friction between departments and branches.",
+    "is_not_title": "We Are Not",
+    "is_not": [
+      { "title": "\"OOTB\" Software Providers", "desc": "We don’t sell isolated SaaS licenses expecting clients to adapt processes to the tool." },
+      { "title": "Micro and Functional Solutions", "desc": "If you are looking for a basic WhatsApp bot for a local storefront, our service will carry too much architectural friction." },
+      { "title": "Fast Tactical Automators", "desc": "We reject short-term patches. Our approach is a deep, long-term structural intervention." }
+    ]
+  },
+  "live_events": {
+    "badge": "Open Talk Series",
+    "title": "Execution Architecture in the",
+    "title_highlight": "Industrial Sector",
+    "description": "How to govern execution in groups with multiple factories? Join our next monthly edition where we will discuss invisible structural risks and the D.O.A. model applied to your company.",
+    "date": "Month-end Friday 28, 11:00 AM (ART)",
+    "audience": "Exclusive for Directors and Partners",
+    "agenda_title": "Book your spot",
+    "agenda_desc": "Limited seats to ensure deep interactivity during the final Q&A.",
+    "cta": "Register Free of Charge"
+  },
+  "cta_section": {
+    "title": "Identify your Operational Debt",
+    "description": "It's time to stop putting out fires and start governing your execution architecture. Request a deep evaluation with our Senior Partners.",
+    "button": "Schedule Structural Discovery"
+  },
+  "faq": {
+    "title": "Structural Objections",
+    "description": "Answers focused on security, compliance, and architectural integration for board members and IT managers.",
+    "q1": "How is the intervention? What is the D.O.A. process?",
+    "a1": {
+      "intro": "We apply the D.O.A.™ framework in three structured stages:",
+      "step1_title": "1. Structural Discovery (Assessment)",
+      "step1_desc": "We map and audit the company's critical flows. We identify corporate latency, fragile decision points, and calculate Operational Debt. We design the agentic architecture without altering current operations.",
+      "step2_title": "2. Orchestration and Architectural MVP",
+      "step2_desc": "We deploy the first layer of governed agents and integrate connectors with your ERPs (SAP, Salesforce, etc). We test the end-to-end flow in a controlled environment (Shadow Mode) before full adoption.",
+      "step3_title": "3. Scaling and Governance",
+      "step3_desc": "We extend the architecture to the rest of the holding. A Governance Board is delivered where your board has absolute control and visibility of the decisions being made by the orchestrated agents."
+    },
+    "q2": "Do you replace our ERP or Core systems?",
+    "a2": {
+      "badge": "Categorically No.",
+      "p1": "Datelia designs the orchestration architecture on top of your current systems. We integrate natively via secure APIs to your ERP, CRM, or Legacy databases.",
+      "p2": "D.O.A.™ agents act as intelligent connectors that read, process, and write to your systems, respecting all your current corporate access rules."
+    },
+    "q3": "What level of Governance and Security do you apply?",
+    "a3": {
+      "p1": "Our architecture is designed for SOC2-type standards and features full traceability.",
+      "p2": "Each D.O.A. agent operates under strict client pre-approved \"guardrails\" (limits). Decisions involving financial movements or high-risk changes can be configured as \"Human-in-the-Loop\" deployments, requiring authorization from a manager before execution.",
+      "p2_strong": "Your company never loses sovereignty over its data or key processes."
+    },
+    "q4": "How long does a base intervention take?",
+    "a4": {
+      "p1": "At the Enterprise level, the model is usually implemented in windows of 12 to 16 weeks until the first architectural node is integrated and in actual production.",
+      "p2": "The \"Structural Discovery\" takes the first 3-4 weeks, being the most critical foundational milestone where we validate operational risk hypotheses and design the orchestration map."
+    }
+  },
+  "problem_solution": {
+    "title": "The Problem vs. The Solution",
+    "subtitle": "Understanding the obstacle is the first step to overcoming it. This is how we transform friction into growth.",
+    "problem": {
+      "badge": "The Problem",
+      "title": "What is holding back my company's growth today?",
+      "p1": "What limits growth is usually not the market, but the internal operation: manual processes, scattered information, and little real-time visibility. This mean that each new branch, customer, or operational unit requires more work, more staff, and more coordination.",
+      "strong": "In that scenario, scaling becomes slow, expensive, and unsustainable.",
+      "p2": "Datelia solves that bottleneck by automating repetitive tasks, integrating critical information into a single panel, and standardizing the way all areas of the company work.",
+      "italic": "The result: less operational load, more traceability, and an operation that grows without friction."
+    },
+    "solution": {
+      "badge": "The Datelia Solution",
+      "title": "What exactly does Datelia do to solve these problems?",
+      "p1": "We apply a proven approach that combines automation, AI, and Business Intelligence to organize, accelerate, and make the operation more efficient.",
+      "p2": "We automate shifts, reports, data entry, customer follow-up, and internal controls. We centralize information in a single dashboard and design standardized flows that eliminate errors and duplications.",
+      "roi": "In similar experiences, companies achieve an ROI close to 3× in the first 60 days, with a significant reduction in manual tasks and faster, more reliable decisions."
+    },
+    "mvp": {
+      "title": "What happens after the MVP?",
+      "p1": "After the MVP, two key stages follow to ensure continuous improvement:",
+      "list_1": "Scaling by areas (administration, sales, logistics, after-sales, operations).",
+      "list_2": "Real-time BI dashboards to ensure traceability and more precise decisions.",
+      "p2": "In addition, we provide continuous support, evolutionary improvements, and internal training so that the solution grows along with the company."
+    }
+  },
+  "about_us": {
+    "hero": {
+      "title": "We are a Team of Experts, Obsessed with Results.",
+      "subtitle": "At Datelia, we combine technical excellence with strategic business vision. We don't just implement AI; we implement growth."
+    },
+    "leadership": {
+      "title": "Leadership",
+      "jimena": {
+        "title": "Founder & Partnerships Director",
+        "bio": "With a client-centric strategic vision, she leads Datelia's growth and alliances, ensuring each solution is not only innovative but also generates tangible success for our partners."
+      },
+      "gaston": {
+        "title": "Founder & CTO",
+        "bio": "He is the technical architect behind our solutions. His passion is transforming complex ideas into robust, scalable, and secure AI systems that drive efficiency and digital transformation."
+      }
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "p1": {
+        "title": "Results Above All",
+        "desc": "Our success is measured by our clients' success. ROI, time savings, and efficiency are the metrics that drive us."
+      },
+      "p2": {
+        "title": "Purposeful Innovation",
+        "desc": "We explore new AI frontiers, but only apply technologies that solve real problems and have a solid business case."
+      },
+      "p3": {
+        "title": "Collaboration and Transparency",
+        "desc": "We work as an extension of your team. We believe in open communication and a clear process from start to finish."
+      }
+    },
+    "cta": {
+      "title": "Ready to work with us?",
+      "subtitle": "If you are looking for a technology partner that understands your business and speaks your language, we are here.",
+      "button": "Let's talk"
+    },
+    "sectors_section": {
+      "title": "Sectors We Empower",
+      "subtitle": "Our methodology applies to any company with manual processes, dispersed information, or a need to scale with order.",
+      "footer": "The solution is custom-designed according to the digital maturity and objectives of each company.",
+      "sectors": {
+        "industry": "Industry and Manufacturing",
+        "construction": "Construction and Works",
+        "logistics": "Distribution and Logistics",
+        "retail": "Retail and Consumer Goods",
+        "real_estate": "Real Estate and Developers",
+        "education": "Education",
+        "services": "Professional Services",
+        "public": "Public Sector and Organizations"
+      }
+    }
+  },
+  "case_studies_page": {
+    "hero": {
+      "title": "Real Results, Not Promises.",
+      "subtitle": "Discover how we have transformed businesses like yours, implementing AI solutions that generate measurable impact and tangible ROI."
+    },
+    "categories": {
+      "retail": "Retail",
+      "health": "Health",
+      "logistics": "Logistics",
+      "construction": "Construction",
+      "agro": "Agribusiness",
+      "services": "Services"
+    },
+    "gallery": {
+      "title": "The Evidence of Our Work",
+      "subtitle": "Each case represents a challenge overcome and a goal achieved, highlighting our commitment to results."
+    },
+    "cases": {
+      "retail": {
+        "title": "Retail Company Increases Conversion by 35% with Intelligent Chatbot",
+        "summary": "We implemented a multichannel chatbot that automated 80% of support queries and optimized 24/7 lead capture and qualification.",
+        "metrics": ["+35% Conversion", "-50% Support", "6-month ROI"]
+      },
+      "health": {
+        "title": "Leading Clinic Reduces \"No-Shows\" by 40% with AI Voice Agent",
+        "summary": "Our voice agent handled proactive appointment confirmation, freeing up 15 weekly hours for administrative staff.",
+        "metrics": ["-40% No-Shows", "+15 h/week", "+95% Satis."]
+      },
+      "logistics": {
+        "title": "Logistics Company Optimizes Supply Chain with Custom AI",
+        "summary": "Custom solution analyzing real-time data to predict bottlenecks and reduce operational costs by 22%.",
+        "metrics": ["-22% Costs", "+30% Accuracy", "Automated"]
+      },
+      "construction": {
+         "title": "Construction Company Reduces Errors by 70% with AI",
+         "summary": "Unification of work site and administration. AI interprets site manager audio and photos, updating costs without manual entry.",
+         "metrics": ["-70% Errors", "3× Speed", "90-day ROI"]
+      },
+      "agro": {
+         "title": "Agribusiness Frees Up 35 Weekly Hours",
+         "summary": "Total digitalization of orders and logistics. Intelligent portal processes orders and validates stock without spreadsheets.",
+         "metrics": ["-80% Repetitive", "+35 h/week", "No WhatsApp"]
+      },
+      "services": {
+         "title": "Service Company Reduces Claims by 60%",
+         "summary": "After-sales chatbot responding to FAQs and managing claims in real-time, escalating complex cases.",
+         "metrics": ["-60% Claims", "80% <30s", "-50% Cost"]
+      }
+    },
+    "cta": "Read Case Study"
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Structural Discovery",
+      "subtitle": "Not all operations qualify for Agentic Architecture.",
+      "description": "Please complete this short qualification form. If your structure has the necessary scale and maturity, a Datelia architect will contact you to schedule an evaluation."
+    }
+  },
+  "contact_form": {
+    "step1": {
+      "title": "Step 1: Operational Dimension",
+      "subtitle": "To design architecture, we first need to understand the terrain.",
+      "org_name": "Organization Name *",
+      "org_placeholder": "e.g., Datelia Corp",
+      "employees": "Human Volume (Employees) *",
+      "employees_placeholder": "Select the scale"
+    },
+    "step2": {
+      "title": "Step 2: Operational Debt",
+      "subtitle": "What is the current state of your systems?",
+      "ecosystem": "Primary Active Ecosystem *",
+      "ecosystem_placeholder": "e.g., We use SAP and an in-house CRM",
+      "friction": "Identify your main friction or structural goal *",
+      "friction_placeholder": "e.g., We have teams of 50 people manually dumping data between ERP and Excel..."
+    },
+    "step3": {
+      "title": "Step 3: C-Level / Director",
+      "subtitle": "Details of the person responsible for leading the assessment (Directors or Managers).",
+      "full_name": "Full Name *",
+      "full_name_placeholder": "Your first and last name",
+      "role": "Job Title / Role in the Company *",
+      "role_placeholder": "e.g., COO, IT Director, Operations Manager",
+      "email": "Corporate Email *",
+      "email_placeholder": "name@yourcompany.com",
+      "submit": "Submit Application",
+      "processing": "Processing..."
+    },
+    "ecosystems": {
+      "hubspot": "HubSpot / Other CRMs",
+      "custom": "In-house / Custom Development",
+      "multi": "Multiple platforms (Fragmented)"
+    },
+    "common": {
+      "next": "Next",
+      "back": "Back",
+      "define_contact": "Define Contact"
+    },
+    "errors": {
+      "step1": "Please complete the required fields to continue.",
+      "step2": "Please detail your ecosystem and operational challenge.",
+      "step3": "Please complete your contact details.",
+      "submit_error": "There was an error submitting the form.",
+      "connection_error": "Connection error. Check your internet and try again."
+    },
+    "success": {
+      "title": "Application Received",
+      "message": "Thank you for your interest, {name}. We have received the profile for {company}.",
+      "next_steps": "We will analyze your current operational architecture and, if you qualify for the D.O.A.™ model, an architect will contact you at {email} within the next 48 business hours to schedule your Structural Assessment."
+    }
+  },
+  "voice_agents_page": {
+    "title": "Your Agenda Fills Itself, by Voice.",
+    "subtitle": "Our intelligent voice agent manages, confirms, and reschedules appointments by phone with a natural human voice, freeing up your team forever.",
+    "cta_demo": "Watch Demo",
+    "problems_title": "Is this your business's daily reality?",
+    "problems": [
+      "Your reception staff spends hours on the phone instead of attending to the customers in front of them.",
+      "You lose significant revenue due to a high rate of \"no-shows\" (unattended appointments).",
+      "Customers complain about not being able to contact you outside business hours to book or cancel.",
+      "The manual appointment confirmation process is tedious, time-consuming, and easy to forget."
+    ],
+    "benefits_title": "An Assistant that Optimizes your Time and Money",
+    "benefits_subtitle": "This is not an answering machine. It is another member of your team, 100% focused on efficiency.",
+    "benefits": [
+      { "title": "24/7 Scheduling", "desc": "Capture appointments even at night or on weekends. Your business never stops working." },
+      { "title": "Drastic Reduction in No-Shows", "desc": "Makes proactive calls and reminders, achieving up to 40% fewer absences." },
+      { "title": "Free up your Human Team", "desc": "Your staff can focus on higher-value tasks, such as customer loyalty." },
+      { "title": "Perfect Synchronization", "desc": "Integrates natively with Google Calendar and other systems for error-free management." }
+    ],
+    "use_cases_title": "Perfect for businesses that depend on a schedule",
+    "use_cases": [
+      "Medical and Dental Clinics", "Mechanic Workshops", "Beauty Salons and Spas",
+      "Professional Offices", "Real Estate", "Physiotherapy Centers", "and more..."
+    ],
+    "testimonial": {
+      "quote": "\"The voice agent pays for itself. We've reclaimed about 15 hours of administrative work a week and forgotten appointments have almost disappeared. Incredible.\"",
+      "author": "Carolina Méndez",
+      "role": "Operations Director"
+    },
+    "final_cta": {
+      "title": "Want to hear your new assistant in action?",
+      "description": "Calculate how much you could save or request a demo call. You'll see how surprisingly human and efficient the future can sound.",
+      "button_saving": "Calculate my Savings",
+      "button_demo": "Request Demo Call"
+    }
+  },
+  "chatbots_page": {
+    "title": "Conversations that Convert, 24/7.",
+    "subtitle": "Implement chatbots on WhatsApp, Web, and Instagram that capture leads, resolve doubts, and sell for you, even while you sleep.",
+    "cta_demo": "Request Demo",
+    "problem_title": "Does this scenario sound familiar?",
+    "problems": [
+      { "title": "Unattended Leads", "desc": "Valuable prospects arriving outside business hours go cold." },
+      { "title": "Overwhelmed Sales Team", "desc": "Your team spends too much time qualifying instead of closing deals." },
+      { "title": "Repetitive Inquiries", "desc": "The same FAQs saturate your channels and exhaust your team." },
+      { "title": "Slow Experience", "desc": "Slow and impersonal customer service that damages your reputation." }
+    ],
+    "benefits_title": "The Solution: A Chatbot that Works for your ROI",
+    "benefits": [
+      { "title": "Increased Conversion", "desc": "Qualifies leads instantly and directs them to the right agent, or closes simple sales directly." },
+      { "title": "Cost Reduction", "desc": "Automates up to 80% of inquiries, freeing your team for cases that matter." },
+      { "title": "Multichannel Presence", "desc": "Attend to your customers on Web, WhatsApp, and Instagram with a consistent experience." },
+      { "title": "Business Intelligence", "desc": "Collect valuable data from every interaction to better understand your customers." }
+    ],
+    "process_title": "A Transparent and Effective Process",
+    "process_steps": [
+      { "title": "Analysis and Strategy", "desc": "We understand your business goals and design conversation flows to maximize results." },
+      { "title": "Development and Integration", "desc": "We build and connect the chatbot with your current systems (CRM, calendars, etc.)." },
+      { "title": "Training and Launch", "desc": "We train the AI with your data so it responds with your brand's voice and knowledge." },
+      { "title": "Continuous Optimization", "desc": "We monitor its performance and constantly improve it to ensure it continues to generate value." }
+    ],
+    "testimonial": {
+      "quote": "\"We went from responding in hours to doing it in seconds, and our sales from WhatsApp increased by 40% in the first three months. The chatbot paid for itself.\"",
+      "author": "Martín Rojas",
+      "role": "Head of Growth"
+    },
+    "final_cta": {
+      "title": "Ready to automate your conversations?",
+      "description": "Schedule a free demo and we'll show you live how a chatbot can revolutionize your customer acquisition and support from day one.",
+      "button": "Request my Free Demo"
+    }
+  },
+  "metadata": {
+    "title": "Datelia | Boutique Engineering Firm (D.O.A.™)",
+    "description": "Companies don't fail for lack of strategy, they fail for lack of execution architecture. We design and deploy Governed Agentic Architecture.",
+    "keywords": "Operational efficiency, Operational architecture, Corporate AI, Agentic Operational Design, D.O.A., Execution architecture, Holdings"
+  }
+}
+

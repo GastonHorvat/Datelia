@@ -1,18 +1,21 @@
 import Image from "next/image";
 import { Quote } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function TestimonialSection() {
+  const t = useTranslations("testimonials");
+
   const testimonials = [
     {
-      name: "Jimena Garcia Pinto",
-      role: "Founder & Partnerships",
-      quote: "Las empresas no fallan por falta de estrategia. Fallan por falta de estructura en la ejecución. La fricción se normaliza... Diseñar la ejecución es gobernar el crecimiento.",
+      name: t("t1_name"),
+      role: t("t1_role"),
+      quote: t("t1_quote"),
       image: "/images/jimena.jpg"
     },
     {
-      name: "Founder & CTO",
-      role: "Datelia",
-      quote: "En Datelia diseñamos arquitectura de ejecución. La ingeniería operativa no se trata de herramientas, sino de cómo fluye la ejecución dentro de la organización... Nuestra arquitectura se apoya en integraciones vía APIs, reglas explícitas, logs auditables, modularidad y seguridad.",
+      name: t("t2_name"),
+      role: t("t2_role"),
+      quote: t("t2_quote"),
       image: "/images/cto.jpg"
     }
   ];

@@ -11,16 +11,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown } from "lucide-react";
+import { Globe, Menu, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { locales, defaultLocale, Locale } from "@/lib/i18n";
+import { useTranslations, useLocale } from "next-intl";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const currentLocale = useLocale() as Locale;
   
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
+  const isHomePage = pathname === '/' || pathname === `/${currentLocale}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,27 +33,39 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const t = useTranslations("navigation");
+
+  const changeLanguage = (newLocale: Locale) => {
+    // Switch the pathname locale manually. Next.js App Router will handle the rest.
+    const segments = pathname.split('/');
+    if (locales.includes(segments[1] as Locale)) {
+      segments[1] = newLocale;
+    } else {
+      segments.splice(1, 0, newLocale);
+    }
+    window.location.href = segments.join('/');
+  }
+
   const navLinks = [
-    { href: "/", label: "Inicio" },
+    { href: `/${currentLocale}`, label: t("home") },
     {
-      label: "Soluciones",
-      href: "/soluciones",
+      label: t("solutions"),
+      href: `/${currentLocale}/soluciones`,
       dropdown: [
-        { href: "/soluciones/chatbots-inteligentes", label: "Chatbots Inteligentes Multicanal" },
-        { href: "/soluciones/agentes-de-voz", label: "Agentes de Voz para Agendamiento" },
-        { href: "/soluciones", label: "Ver Todas las Soluciones" },
+        { href: `/${currentLocale}/soluciones/chatbots-inteligentes`, label: t("chatbots") },
+        { href: `/${currentLocale}/soluciones/agentes-de-voz`, label: t("voice_agents") },
+        { href: `/${currentLocale}/soluciones`, label: t("all_solutions") },
       ],
     },
-    { href: "/casos-de-exito", label: "Casos de Éxito" },
-    { href: "/blog", label: "Noticias" },
-    { href: "/sobre-nosotros", label: "Sobre Nosotros" },
-    { href: "/contacto", label: "Contacto" },
+    { href: `/${currentLocale}/casos-de-exito`, label: t("case_studies") },
+    { href: `/${currentLocale}/blog`, label: t("news") },
+    { href: `/${currentLocale}/sobre-nosotros`, label: t("about_us") },
+    { href: `/${currentLocale}/contacto`, label: t("contact") },
   ];
 
-  // LA CORRECCIÓN CLAVE ESTÁ AQUÍ
   const linkColor = isScrolled || !isHomePage 
-    ? "text-foreground/80" // Texto oscuro para fondos claros (por defecto)
-    : "text-white/90";      // Texto BLANCO para fondo transparente sobre hero oscuro
+    ? "text-foreground/80" 
+    : "text-white/90";      
 
   const headerBackground = isScrolled || !isHomePage 
     ? "bg-background/95 shadow-md backdrop-blur-sm"
@@ -59,16 +74,17 @@ export function Header() {
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", headerBackground)}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center">
+        <Link href={`/${currentLocale}`} className="flex items-center">
           <Image
             src="/images/logo.png"
             alt="Logo de Datelia"
             width={110}
             height={36}
+            style={{ width: "auto", height: "auto" }}
             priority
           />
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => {
             if (link.dropdown) {
               return (
@@ -99,11 +115,28 @@ export function Header() {
             );
           })}
         </nav>
-        <div className="hidden md:block">
+        
+        <div className="hidden md:flex items-center gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger className={cn("flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary", linkColor)}>
+              <Globe className="w-4 h-4" />
+              {currentLocale.toUpperCase()}
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {locales.map((loc) => (
+                <DropdownMenuItem key={loc} onClick={() => changeLanguage(loc)}>
+                  {loc === 'es' ? 'Español' : loc === 'en' ? 'English' : 'Português'}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Button asChild>
-            <Link href="/contacto">Agendar Consultoría</Link>
+            <Link href={`/${currentLocale}/contacto`}>{t("book_audit")}</Link>
           </Button>
         </div>
+
+        {/* Mobile Nav */}
         <div className="md:hidden">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
@@ -114,12 +147,13 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
-                <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+                <Link href={`/${currentLocale}`} className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                   <Image
                     src="/images/logo.png"
                     alt="Logo de Datelia"
                     width={110}
                     height={36}
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </Link>
                 <nav className="flex flex-col gap-4">
@@ -155,8 +189,22 @@ export function Header() {
                     );
                   })}
                 </nav>
+                
+                {/* Mobile Language Selector */}
+                <div className="flex gap-4 mt-2">
+                  {locales.map((loc) => (
+                     <button
+                        key={loc}
+                        onClick={() => { changeLanguage(loc); setIsMenuOpen(false); }}
+                        className={cn("text-sm font-medium", currentLocale === loc ? "text-primary underline" : "text-muted-foreground")}
+                     >
+                       {loc.toUpperCase()}
+                     </button>
+                  ))}
+                </div>
+
                 <Button asChild size="lg" className="w-full mt-4">
-                  <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>Agendar Consultoría</Link>
+                  <Link href={`/${currentLocale}/contacto`} onClick={() => setIsMenuOpen(false)}>{t("book_audit")}</Link>
                 </Button>
               </div>
             </SheetContent>

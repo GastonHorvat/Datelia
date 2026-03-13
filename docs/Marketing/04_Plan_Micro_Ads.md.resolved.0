@@ -1,0 +1,54 @@
+# 04 - Plan de Pauta (Ads) Micro-Nicho: Retargeting y Captura de Intención
+
+Usando las capacidades analíticas de los agentes de Ads recién instalados, este es el plan para ejecutar publicidad pagada B2B con presupuestos muy ajustados (Bootstrapping Ads), evitando la quema de dinero en audiencias frías amplias.
+
+## Principio Básico: No pagar por atención genérica
+
+Como agencia especializada en Arquitectura D.O.A., el término "IA para empresas" está quemado, contaminado por charlatanes de automatizaciones simples, y el Costo por Clic (CPC) es altísimo. Nuestro dinero debe ir solo a:
+1. Gente que ya sabe quiénes somos (**Retargeting**).
+2. Gente buscando solucionar un problema hiper-específico ("Dolor que sangra").
+
+---
+
+## 1. El Pilar: "Omnipresencia" de Retargeting (Presupuesto $3-$5 USD diarios)
+
+La decisión de compra para una intervención arquitectónica en una empresa toma entre 3 semanas y 3 meses. El prospecto **no comprará la primera vez que visite datelia.com.ar**. Tenemos que recordarle que existimos permanentemente.
+
+### Acción (Meta Ads / LinkedIn Ads):
+*   **Audiencia:** Configurar el Pixel/CAPI en la web (y en las páginas de soluciones individuales) y crear una audiencia de *"Visitantes del sitio web en los últimos 90 días"*.
+*   **Estrategia "Saco de Boxeo" de Creencias:** Los anuncios de retargeting no deben decir "Compra Datelia". Deben derribar objeciones o educar sobre D.O.A.
+    *   *Ad 1 (Fricción):* "Poner un chatbot en un flujo de operaciones desordenado, solo automatiza el caos. Requiere Arquitectura D.O.A.".
+    *   *Ad 2 (Caso de estudio):* Un video del Agente de Voz agendando un turno complejo en tiempo real. 
+    *   *Ad 3 (Prueba Social):* Testimonio en video de un cliente ahorrando horas.
+
+## 2. Campañas de Búsqueda Google Ads de "Alta Intención" (Micro-Nicho)
+
+El tráfico de Google (Search) debe capturar al decisor técnico o al director comercial exactamente en el momento de desesperación.
+
+### Acción (Google Ads):
+*   **Las Palabras Clave (Long Tail):**
+    *   ❌ No apostar por: `agencia de ia`, `que es inteligencia artificial`, `automatizacion de tareas`.
+    *   ✅ Apostar por (Ejemplos médicos): `software confirmacion ausentismo pacientes turnos`, `bot llamada telefonica para turnos`, `como conectar api whatsapp ventas crm`. (Son nichos muy baratos).
+*   **Los Anuncios (Copywriting Textual):**
+    *   *Título:* ¿Cansado de los Turnos Olvidados?
+    *   *Subtítulo:* Agente de Voz IA conectado a tu Agenda real. No más ausencias.
+    *   *Aterrizaje:* Mandarlo directamente a la página específica de la solución (`/soluciones/agentes-de-voz`), NUNCA a la home genérica.
+
+## 3. Amplificación B2B Económica en LinkedIn (Thought Leadership)
+
+La publicidad B2B real en LinkedIn para Lead Gen es extremadamente cara ($15-$30 USD por Clic). Cuando el presupuesto es ajustado, se usa el modo "Thought Leadership Ad" (Impulso de publicación).
+
+### Acción (LinkedIn Ads):
+*   En lugar de crear anuncios comerciales de aspecto gráfico tradicional, Gastón o Jimena hacen una publicación nativa "muy valiosa" (Ej: Un organigrama en carrusel de cómo luce una estructura D.O.A. vs una Estructura manual B2B).
+*   Desde el Campaign Manager se usa esa misma publicación personal y se inyecta dinero ("Boost") solo segmentando para:
+    *   **Cargo:** COO, Operations Manager, Director Médico, General Manager.
+    *   **Ubicación:** Inicialmente CABA, GBA (o foco en NOA para ser reyes locales primero).
+    *   **Tamaño Empresa:** +10 empleados a 200 empleados (El target que sufre desórdenes operativos que puede pagar un rediseño de arquitectura).
+
+## Secuencia Recomendada a 30 Días
+
+1. **Día 1-7:** Levantar Pixeles en `datelia.com.ar`. Configurar analíticas y públicos. Asegurar que las Lead Pages están listas con sus Lead Magnets (Calculadora D.O.A.).
+2. **Día 8-15:** Activar Campaña Retargeting Omnipresente (Meta/Li) con 3 creatividades diferentes que atacan las ineficiencias clásicas vs la solución D.O.A. Presupuesto mínimo necesario para mantener recordación.
+3. **Día 15-30:** Lanzar 1 micro-campaña de Búsqueda enfocada en 1 sola solución estrella (ej. Agentes de Voz para Clínicas) con 10/15 palabras clave hiper-específicas de alta intención de compra.
+
+*Nota:* Dado que ahora Datelia cuenta con los **"Claude Ads Skills"** instalados, el día que desees lanzar cualquier de estas campañas, puedes utilizar `/ads google` o `/ads meta` para auditar exactamente la implementación o `/ads budget` y solicitarle al propio Agente publicitario que diseñe los anuncios (Ad Copies) basándose en las plantillas y reglas ya instaladas en su memoria.

@@ -1,3 +1,5 @@
+"use client";
+
 import {
     Factory,
     HardHat,
@@ -9,17 +11,20 @@ import {
     Landmark
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 export function SectorsSection() {
+    const t = useTranslations("about_us.sectors_section");
+
     const sectors = [
-        { name: "Industria y manufactura", icon: Factory },
-        { name: "Construcción y obras", icon: HardHat },
-        { name: "Distribución y logística", icon: Truck },
-        { name: "Comercio y consumo masivo", icon: ShoppingBag },
-        { name: "Real estate y desarrolladoras", icon: Building2 },
-        { name: "Educación", icon: GraduationCap },
-        { name: "Servicios profesionales", icon: Briefcase },
-        { name: "Sector público y organizaciones", icon: Landmark },
+        { name: t("sectors.industry"), icon: Factory },
+        { name: t("sectors.construction"), icon: HardHat },
+        { name: t("sectors.logistics"), icon: Truck },
+        { name: t("sectors.retail"), icon: ShoppingBag },
+        { name: t("sectors.real_estate"), icon: Building2 },
+        { name: t("sectors.education"), icon: GraduationCap },
+        { name: t("sectors.services"), icon: Briefcase },
+        { name: t("sectors.public"), icon: Landmark },
     ];
 
     return (
@@ -27,10 +32,10 @@ export function SectorsSection() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl mb-4">
-                        Sectores que Potenciamos
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Nuestra metodología aplica a cualquier empresa que tenga procesos manuales, información dispersa o necesidad de escalar con orden.
+                        {t("subtitle")}
                     </p>
                 </div>
 
@@ -52,7 +57,7 @@ export function SectorsSection() {
 
                 <div className="text-center max-w-2xl mx-auto bg-background p-6 rounded-lg border border-border/50 shadow-sm">
                     <p className="text-lg font-medium text-foreground">
-                        La solución se diseña a medida según la madurez digital y los objetivos de cada empresa.
+                        {t("footer")}
                     </p>
                 </div>
             </div>

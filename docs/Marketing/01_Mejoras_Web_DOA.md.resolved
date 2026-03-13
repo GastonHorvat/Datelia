@@ -1,0 +1,54 @@
+# 01 - Mejoras Web: Posicionamiento como Referentes en D.O.A.™ y Optimización de Procesos
+
+Este documento detalla los accionables directos sobre la web (`datelia.com.ar`) para alejar la marca del concepto comoditizado de "agencia que hace chatbots" y elevarla a una **Consultora de Arquitectura y Diseño Operativo Agéntico (D.O.A.™)**.
+
+## 1. Evolución del Copywriting (Mensaje Central)
+
+El usuario que llega a la web debe entender en 5 segundos que no vendemos "herramientas", sino "Sistemas de Trabajo".
+
+### Accionables en la Home ([/src/app/page.tsx](file:///d:/Proyectos/Datelia/src/app/page.tsx)):
+*   **Hero Section - Título (H1):** Mantener el impacto estructural. 
+    *   *Sugerencia:* "No automatizamos tareas. Intervenimos la Arquitectura de tu Empresa."
+*   **Hero Section - Subtítulo (H2):** Debe conectar el D.O.A. con el dolor del cliente.
+    *   *Sugerencia:* "Diseñamos y desplegamos sistemas de agentes de IA (D.O.A.™) que eliminan la fricción operativa, conectan tus herramientas actuales y gobiernan tus procesos más críticos sin intervención humana."
+*   **Reemplazar menciones a "Bot" o "Chatbot":** Cambiar esta terminología en todo el sitio por "Agentes Especializados", "Sistemas de Gobernanza", "Nodos de Ejecución".
+
+## 2. Los CTAs (Call to Actions) y el Lead Capture
+
+Si somos expertos en optimizar procesos, nuestro proceso de captación debe reflejarlo. "Ver Demo" es genérico. 
+
+### Accionables:
+*   **CTA Principal (Botones primarios):** Cambiar a **"Solicitar Auditoría de Fricción Gratuita"** o **"Analizar mi Arquitectura Operativa"**.
+*   **Lead Magnet Nivel C-Suite:** 
+    *   Crear la **"Calculadora de Fricción Operativa"**. Una herramienta interactiva donde el usuario pone el tamaño de su equipo y horas dedicadas a tareas repetitivas/movimiento de datos, y Datelia le calcula el "Costo de la Deuda Operativa" anual.
+*   **El Agente Inbound (Practicar lo que se predica):**
+    *   Poner un Agente de Voz/Texto embebido en la web cuya instrucción principal sea cualificar al lead (tamaño de empresa, cuello de botella principal) y agendar la llamada en Calendly automáticamente. Debe presentarse como: *"Soy el Agente de Cualificación Interna de Datelia. ¿Qué proceso de tu empresa se está rompiendo hoy?"*
+
+## 3. Re-Estructuración de "Soluciones"
+
+La página de Agentes de Voz (`/soluciones/agentes-de-voz`) es buena para tráfico de fondo de embudo, pero debe enmarcarse dentro del framework D.O.A.
+
+### Accionables:
+*   **Contexto D.O.A. en Soluciones Individuales:** Empezar cada página de solución explicando que ese Agente es *solo un nodo* dentro de una arquitectura mayor. 
+    *   *Ejemplo para Agentes de Voz:* "Un agente de voz aislado es solo un teléfono que habla. Un agente de voz gobernado por D.O.A.™ actualiza tu CRM, notifica a los médicos por Slack, valida seguros médicos y reasigna turnos cancelados en tiempo real."
+*   **Sección de "Antes y Después" Visual:** Implementar diagramas (SVG o Mermaid) en las landing pages.
+    *   *Visual Antes:* Equipo humano rodeado de Excel, WhatsApp, Calendarios rotos y flechas rojas cruzadas (Gestión Reactiva).
+    *   *Visual Después:* Flujo limpio, Agente de Voz en el centro, conectando limpiamente con las herramientas sin intervención humana (Ejecución Gobernada).
+
+## 4. Estrategia de Autoridad y SEO (El Pilar de Conocimiento)
+
+Para ser el "dueño" del término D.O.A., Datelia tiene que definirlo públicamente.
+
+### Accionables:
+*   **Crear el `/manifiesto-doa` o `/framework-doa`:** Esta página debe ser la "Biblia" de Datelia. Explicar por qué añadir herramientas SaaS sin cambiar la arquitectura solo acelera el desorden. Explicar los pilares del D.O.A. (Orquestación, Conexión, Trazabilidad, Gobernabilidad).
+*   **Cambiar el enfoque del Blog / Casos de Estudio:**
+    *   *Actual/Típico:* "Implementamos un chatbot de pacientes para Clínica X".
+    *   *Enfoque D.O.A.:* "Rediseño de la Arquitectura de Ingresos (D.O.A.) en Clínica X: De 30 horas administrativas a 0 intervención humana en la confirmación de turnos."
+
+## 5. Trust Indicators (Indicadores de Confianza B2B)
+
+El comprador corporativo B2B/Enterprise necesita mitigación de riesgo táctico.
+
+### Accionables:
+*   **Sección de "Integraciones Nativas":** Mostrar los logotipos de herramientas empresariales. "Tus Agentes D.O.A.™ se conectan nativamente con tus sistemas diarios". Mostrar Hubspot, Salesforce, Google Workspace, SAP (si aplica), Slack, Trello, etc. Mostrar que no se trata de reemplazar el software del cliente, sino de gobernarlo.
+*   **Sección de "Cumplimiento y Seguridad":** Añadir una mini-sección sobre cómo los agentes manejan los datos (ej: anonimización, SOC2 compliance de las LLMs base, no usar datos del cliente para entrenar modelos públicos). Esto es crucial para sector Salud/Legal/Finanzas.

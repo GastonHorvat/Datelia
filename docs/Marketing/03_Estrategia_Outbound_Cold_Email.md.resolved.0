@@ -1,0 +1,52 @@
+# 03 - Estrategia Outbound B2B: El "Diagnóstico de Fricción"
+
+Este documento cubre tácticas proactivas (Outbound / Cold Email / DMs) de bajo costo para generar reuniones de ventas cualificadas con CEOs, Directores de Operaciones (COOs) y Dueños de PyMEs de más de 10 empleados.
+
+## 1. Principios del Cold Outreach para Datelia
+
+El error común es "Hola, somos una agencia de IA, te vendemos un bot". El dueño de la PyME recibe 10 de esos mails a la semana. Nuestro enfoque debe ser consultivo y arquitectónico.
+
+Vendes la **Auditoría / Diagnóstico**, no el producto final.
+
+## 2. Segmentación Hiper-Específica
+
+No dispares a todos. Selecciona 1 Nicho por mes para tener un mensaje híper-relevante.
+
+### Ejemplo - Mes 1: Clínicas Privadas (Medianas)
+*   **Cargo objetivo:** Director Médico, Gerente de Operaciones, Dueño.
+*   **Dolor Específico:** Altos 'no-shows' (ausencias) a turnos asignados por WhatsApp/Teléfono manualmente y recepcionistas colapsadas.
+
+### Ejemplo - Mes 2: Estudios Contables y Jurídicos
+*   **Cargo objetivo:** Socio Ejecutivo, Managing Partner.
+*   **Dolor Específico:** Horas facturables perdidas persiguiendo documentación de clientes, carga de datos repetitiva entre correos y el sistema de gestión.
+
+## 3. Scripts de Contacto (Framework "El Elefante en la Sala")
+
+### El Mensaje Inbound en LinkedIn DMs / Cold Email
+
+**Asunto / Hook:** Pregunta directa sobre el dolor operativo.
+*(Asunto Cold Email: Sobre los turnos vacíos en [Nombre Clínica])*
+
+**Estructura del Email (Corto, Menos de 75 palabras):**
+
+> **Desencadenante (Contexto):** "Hola [Nombre], vi en LinkedIn que dirigen múltiples sucursales de [Nombre de Empresa]."
+> 
+> **La Fricción (El problema sin exagerar):** "Por lo general, cuando las operaciones escalan así, gestionar los turnos manualmente por WhatsApp y teléfono genera un cuello de botella en recepción y un alto índice de ausencias ('no-shows' del 15% al 30%)."
+>
+> **La Solución D.O.A. (Soft Pitch):** "En Datelia desarrollamos una Arquitectura Agéntica de Voz (D.O.A.™) que se conecta a su ERP actual, llama y persigue al paciente, y libera o confirma el turno automáticamente."
+>
+> **Call to Action de Muy Baja Fricción:** "Tenemos un video de 3 minutos mapeando cómo fluye esta arquitectura en una clínica real. ¿Te interesa que te mande el link?"
+
+*(Si dicen que sí, le pasas el video que termina con un CTA a agendar en tu Calendly).*
+
+## 4. Herramientas Low-Cost 
+
+*   **Apollo.io:** Para extraer prospectos (emails corporativos B2B y perfiles de LinkedIn). La versión gratuita o de bajo costo rinde mucho para campañas muy dirigidas de 10-20 contactos al día.
+*   **Loom (Versión Gratuita):** Grabar las "Mini-Demos de Arquitectura". Un video personalizado de 2 minutos que diga "Hola Gastón de Clínica X, estuve viendo la web..." convierte 5x veces más que texto plano.
+*   **Pipedrive, Hubspot Free o Notion:** Un CRM es obligatorio. Cualquier Lead que muestre interés debe entrar al embudo de seguimiento y no salir nunca hasta que compre o pida no recibir más info.
+
+## 5. Estrategia de los "Primeros Dominós" (Early Adopters)
+
+Si aún no tienen un portafolio robusto demostrando el impacto del D.O.A. en grandes marcas:
+
+*   **Táctica del Implementador Beta:** Ofrecer la arquitectura inicial "al costo" (solo pagos de APIs de IA + pequeño setup) a 3 empresas muy respetadas a cambio del permiso de grabar el "Antes y Después" operativo en sus oficinas y convertirlo en el Caso de Estudio insignia. Esa inversión rinde infinitamente mejor que pagar publicidad.

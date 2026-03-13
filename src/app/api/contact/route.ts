@@ -1,4 +1,4 @@
-// src/app/api/contact/route.tsx
+// src/app/api/contact/route.ts
 
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
@@ -19,19 +19,17 @@ export async function POST(request: Request) {
       // ===================================================================
       
       to: ['info@datelia.com.ar'], // El email que recibirá la consulta. Puede ser el mismo o diferente.
-      subject: `Nueva consulta de ${body.nombre} desde la web`,
+      subject: `Nuevo Application D.O.A. de ${body.empresa} (${body.nombre})`,
 
       // Pasamos los datos al componente de la plantilla del email
       react: ContactEmailTemplate({ 
         nombre: body.nombre,
+        cargo: body.cargo,
         email: body.email,
-        telefono: body.telefono,
-        website: body.website,
         empresa: body.empresa,
         cantidadEmpleados: body.cantidadEmpleados,
-        sector: body.sector,
-        mensaje: body.mensaje,
-        howFound: body.howFound,
+        ecosistema: body.ecosistema,
+        desafio: body.desafio,
        }),
     });
 
