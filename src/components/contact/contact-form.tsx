@@ -53,6 +53,7 @@ export function ContactForm() {
 
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
+    const [leadId, setLeadId] = useState<string | null>(null);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -60,17 +61,44 @@ export function ContactForm() {
     };
 
     const handleSelectChange = (name: string, value: string) => {
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        const actualValue = value;
+        setFormData((prev) => ({ ...prev, [name]: actualValue }));
     };
 
-    const nextStep = () => {
-        if (step === 1 && (!formData.empresa || !formData.cantidadEmpleados || !formData.facturacion)) {
-            setErrorMessage(t('errors.step1'));
-            return;
+    const syncLeadData = async (currentStep: number) => {
+        try {
+            const response = await fetch("/api/discovery", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    leadId,
+                    step: currentStep,
+                    data: formData
+                }),
+            });
+            const result = await response.json();
+            if (result.leadId) {
+                setLeadId(result.leadId);
+            }
+        } catch (error) {
+            console.error("Error syncing lead data:", error);
         }
-        if (step === 2 && (!formData.ecosistema || !formData.desafio)) {
-            setErrorMessage(t('errors.step2'));
-            return;
+    };
+
+    const nextStep = async () => {
+        if (step === 1) {
+            if (!formData.empresa || !formData.cantidadEmpleados || !formData.facturacion) {
+                setErrorMessage(t('errors.step1'));
+                return;
+            }
+            await syncLeadData(1);
+        }
+        if (step === 2) {
+            if (!formData.ecosistema || !formData.desafio) {
+                setErrorMessage(t('errors.step2'));
+                return;
+            }
+            await syncLeadData(2);
         }
         setErrorMessage("");
         setStep((s) => s + 1);
@@ -93,6 +121,10 @@ export function ContactForm() {
         setErrorMessage("");
 
         try {
+            // Final sync for Step 3
+            await syncLeadData(3);
+
+            // Trigger Resend email notification
             const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
