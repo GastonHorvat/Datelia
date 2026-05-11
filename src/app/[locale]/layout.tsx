@@ -90,48 +90,62 @@ export default async function RootLayout(props: {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Datelia",
-              "description": "Soluciones de IA y Automatización para Empresas",
-              "url": "https://www.datelia.com.ar",
-              "logo": "https://www.datelia.com.ar/images/logo.png",
-              "sameAs": [
-                "https://www.linkedin.com/company/datelia/"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+54-387-585-8088",
-                "contactType": "customer service",
-                "areaServed": "AR",
-                "availableLanguage": ["Spanish", "English"]
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Buenos Aires",
-                "addressCountry": "AR"
-              },
-              "service": [
+              __html: JSON.stringify([
                 {
-                  "@type": "Service",
-                  "name": "Chatbots Inteligentes",
-                  "description": "Automatización de atención al cliente con chatbots inteligentes para WhatsApp, Web e Instagram"
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  "name": "Datelia",
+                  "alternateName": "Datelia IA",
+                  "description": "Firma boutique de Ingeniería Operativa y soluciones de IA en Argentina.",
+                  "url": "https://www.datelia.com.ar",
+                  "logo": "https://www.datelia.com.ar/images/logo.png",
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+54-387-585-8088",
+                    "contactType": "customer service",
+                    "areaServed": "AR",
+                    "availableLanguage": ["Spanish", "English"]
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/datelia/"
+                  ]
                 },
                 {
-                  "@type": "Service",
-                  "name": "Agentes de Voz",
-                  "description": "Agentes de voz con IA para agendamiento automático de citas y gestión telefónica"
-                },
-                {
-                  "@type": "Service",
-                  "name": "Soluciones de IA a Medida",
-                  "description": "Desarrollo de soluciones personalizadas de inteligencia artificial para empresas"
+                  "@context": "https://schema.org",
+                  "@type": "LocalBusiness",
+                  "name": "Datelia",
+                  "image": "https://www.datelia.com.ar/images/logo.png",
+                  "@id": "https://www.datelia.com.ar",
+                  "url": "https://www.datelia.com.ar",
+                  "telephone": "+543875858088",
+                  "priceRange": "$$$",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Buenos Aires",
+                    "addressRegion": "CABA",
+                    "addressCountry": "AR"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -34.6037,
+                    "longitude": -58.3816
+                  },
+                  "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
                 }
-              ]
-            })
-          }}
-        />
+              ])
+            }}
+          />
       </head>
       <body className={`${poppins.variable} font-body antialiased`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>

@@ -85,6 +85,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li><Link href={`/${locale}`} className="hover:text-primary transition-colors">{t("links.home")}</Link></li>
               <li><Link href={`/${locale}/soluciones`} className="hover:text-primary transition-colors">{t("links.solutions")}</Link></li>
+              <li><Link href={`/${locale}/soluciones/chatbots-inteligentes`} className="hover:text-primary transition-colors ml-4">• {t("links.chatbots") || "Chatbots"}</Link></li>
+              <li><Link href={`/${locale}/soluciones/agentes-de-voz`} className="hover:text-primary transition-colors ml-4">• {t("links.voice_agents") || "Voice Agents"}</Link></li>
               <li><Link href={`/${locale}/casos-de-exito`} className="hover:text-primary transition-colors">{t("links.success_cases")}</Link></li>
               <li><Link href={`/${locale}/sobre-nosotros`} className="hover:text-primary transition-colors">{t("links.about_us")}</Link></li>
               <li><Link href={`/${locale}/contacto`} className="hover:text-primary transition-colors">{t("links.contact")}</Link></li>

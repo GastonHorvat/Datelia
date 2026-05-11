@@ -62,7 +62,7 @@
     "t2_quote": "At Datelia, we design execution architecture. Operational engineering is not about tools, but how execution flows within the organization... Our architecture relies on API integrations, explicit rules, auditable logs, modularity, and security."
   },
   "footer": {
-    "description": "Operational Engineering Boutique Firm (D.O.A.™). We transform the operational debt of large groups into governed agentic execution architecture.",
+    "description": "Operational Engineering & AI Solutions Boutique Firm (D.O.A.™) based in Argentina. We architect governed execution systems for complex enterprise groups.",
     "headings": {
       "navigation": "Navigation",
       "resources": "Resources",
@@ -78,6 +78,7 @@
       "blog": "News",
       "privacy": "Privacy",
       "voice_agents": "Voice Agents",
+      "chatbots": "AI Chatbots",
       "all_solutions": "All Solutions"
     },
     "rights": "All rights reserved.",
@@ -456,9 +457,9 @@
     }
   },
   "metadata": {
-    "title": "Datelia | Boutique Engineering Firm (D.O.A.™)",
-    "description": "Companies don't fail for lack of strategy, they fail for lack of execution architecture. We design and deploy Governed Agentic Architecture.",
-    "keywords": "Operational efficiency, Operational architecture, Corporate AI, Agentic Operational Design, D.O.A., Execution architecture, Holdings"
+    "title": "Datelia | Operational Engineering & AI Solutions in Argentina",
+    "description": "Boutique Engineering firm in Buenos Aires. We design and deploy Governed Agentic Architecture (D.O.A.™) for complex enterprise groups in Argentina and Latin America.",
+    "keywords": "Operational engineering Argentina, AI consulting Buenos Aires, Agentic architecture, D.O.A., Business automation, Enterprise AI"
   }
 }
 

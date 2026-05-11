@@ -59,8 +59,11 @@ export function HeroSection() {
            transition={{ duration: 0.8 }}
            className="space-y-6"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 pb-2 leading-tight">
-            {t("title")}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white pb-2 leading-tight">
+            <span className="sr-only">Datelia | Ingeniería Operativa y Soluciones de IA en Argentina. </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400">
+              {t("title")}
+            </span>
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-200 leading-snug max-w-3xl mx-auto">
             {t("subtitle")}

@@ -9,7 +9,10 @@ export default createMiddleware({
   defaultLocale,
   
   // optionally toggle locale prefixing
-  localePrefix: 'as-needed' // Removes prefix for default locale (e.g., /es -> /)
+  localePrefix: 'as-needed', // Removes prefix for default locale (e.g., /es -> /)
+
+  // Disable browser detection to avoid redirection to /en for local users
+  localeDetection: false
 });
 
 export const config = {

@@ -1,19 +1,19 @@
 import React from 'react';
 // CORRECCIÓN 1: Se importa 'Header' con llaves {}
 import { Header } from '../components/landing/header'; 
-// CORRECCIÓN 2: Se importa 'Footer' con llaves {}
 import { Footer } from '../components/landing/footer';
+import { Breadcrumbs } from './ui/breadcrumbs';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-// CORRECCIÓN 3: Se añade 'export' para que este componente pueda ser importado en otras páginas
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main>{children}</main>
+      <Breadcrumbs />
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );

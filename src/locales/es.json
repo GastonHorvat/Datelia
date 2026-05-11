@@ -71,7 +71,7 @@
     "t2_quote": "En Datelia diseñamos arquitectura de ejecución. La ingeniería operativa no se trata de herramientas, sino de cómo fluye la ejecución dentro de la organización... Nuestra arquitectura se apoya en integraciones vía APIs, reglas explícitas, logs auditables, modularidad y seguridad."
   },
   "footer": {
-    "description": "Firma Boutique de Ingeniería Operativa (D.O.A.™). Transformamos la deuda operativa de grandes grupos en arquitectura de ejecución agéntica gobernada.",
+    "description": "Firma Boutique de Ingeniería Operativa y Soluciones de IA en Argentina - Modelo D.O.A.™. Maximizamos la eficiencia operativa de holdings corporativos.",
     "headings": {
       "navigation": "Navegación",
       "resources": "Recursos",
@@ -87,6 +87,7 @@
       "blog": "Noticias",
       "privacy": "Privacidad",
       "voice_agents": "Agentes de Voz",
+      "chatbots": "Chatbots IA",
       "all_solutions": "Todas las Soluciones"
     },
     "rights": "Todos los derechos reservados.",
@@ -482,8 +483,8 @@
     }
   },
   "metadata": {
-    "title": "Datelia | Firma Boutique de Ingeniería Operativa (D.O.A.™)",
-    "description": "Las empresas no fallan por falta de estrategia, fallan por falta de arquitectura en la ejecución. Diseñamos y desplegamos Arquitectura Agéntica Gobernada.",
-    "keywords": "Eficiencia operativa, Arquitectura operativa, IA corporativa, Diseño Operativo Agéntico, D.O.A., Arquitectura de ejecución, Holdings"
+    "title": "Datelia | Ingeniería Operativa y Soluciones de IA en Argentina",
+    "description": "Firma boutique de Ingeniería Operativa en Buenos Aires. Diseñamos Arquitectura Agéntica Gobernada (D.O.A.™) para automatizar procesos complejos en locales y holdings.",
+    "keywords": "Ingeniería operativa Buenos Aires, Consultoría IA Argentina, Eficiencia operativa, Automatización de procesos, Agentes de voz IA, Chatbots inteligentes, D.O.A., Datelia"
   }
 }
