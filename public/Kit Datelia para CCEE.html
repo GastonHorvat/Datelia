@@ -442,6 +442,41 @@ hr.rule{border:none;border-top:1px solid var(--rule);margin:48px 0;}
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* ─── SCROLL TO TOP (MOBILE ONLY) ─── */
+.scroll-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-top-btn:active {
+  transform: scale(0.95);
+}
+@media(max-width:768px) {
+  .scroll-top-btn {
+    display: flex;
+  }
+}
 </style>
 </head>
 <body>
@@ -1430,6 +1465,25 @@ async function handleFormSubmit(event) {
 function triggerDownload(type) {
   alert('Iniciando descarga de ' + (type === 'presentacion' ? 'la presentación' : 'la guía de implementación') + '... (Próximamente disponible el archivo final)');
 }
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }
+});
 </script>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Volver arriba">↑</button>
+
 </body>
 </html>
