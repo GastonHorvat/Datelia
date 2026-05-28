@@ -1,0 +1,427 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img "datelia" [ref=e7]
+      - generic [ref=e9]: Eficiencia Contable Inteligente · 2026
+    - generic [ref=e10]: ⚡ Kit avanzado — Nivel profesional
+    - heading "Claude para profesionales en CCEE" [level=1] [ref=e11]:
+      - text: Claude para
+      - text: profesionales en
+      - emphasis [ref=e12]: CCEE
+    - generic [ref=e13]: Comandos de control, técnicas anti-alucinación y prompts reales para el trabajo contable, administrativo y de auditoría. Sin teoría. Sin genérico.
+    - generic [ref=e14]:
+      - generic [ref=e15]: ⚠️
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Regla de oro antes de empezar:"
+        - text: Claude es un asistente de redacción y análisis, no una base de datos normativa. Para criterios impositivos, números de resolución y fechas exactas, siempre verificá en la fuente oficial. Esta guía te enseña a usarlo sin que alucine.
+  - generic [ref=e19]:
+    - link "Comandos de control" [ref=e20] [cursor=pointer]:
+      - /url: "#comandos"
+    - link "Anti-alucinación" [ref=e21] [cursor=pointer]:
+      - /url: "#alucinacion"
+    - link "Documentos" [ref=e22] [cursor=pointer]:
+      - /url: "#documentos"
+    - link "Redacción" [ref=e23] [cursor=pointer]:
+      - /url: "#redaccion"
+    - link "Normativa" [ref=e24] [cursor=pointer]:
+      - /url: "#normativa"
+    - link "Clientes" [ref=e25] [cursor=pointer]:
+      - /url: "#clientes"
+    - link "Avanzado" [ref=e26] [cursor=pointer]:
+      - /url: "#avanzado"
+    - link "Cadena de prompts" [ref=e27] [cursor=pointer]:
+      - /url: "#cadena"
+  - generic [ref=e29]:
+    - generic [ref=e30]: Antes del prompt
+    - generic [ref=e31]: Comandos de control
+    - generic [ref=e32]: Se escriben al inicio o al final del prompt. Cambian radicalmente el formato, tono y tipo de respuesta que obtenés. Probá combinarlos.
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Tono
+          - generic [ref=e37]: /human
+          - generic [ref=e38]: Elimina el tono robótico. El texto suena escrito por una persona real, no por una IA.
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - text: Usalo cuando el resultado va a leerlo un cliente o directivo.
+            - code [ref=e41]: /human — Redactá una nota al proveedor explicando el retraso en el pago.
+          - generic [ref=e42]: ▸ Al inicio
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: Variantes
+          - generic [ref=e46]: Alt 3
+          - generic [ref=e47]: Pedí 3 versiones distintas del mismo resultado. Elegís la que mejor se adapta.
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - text: Ideal para asuntos de mail, titulares de informe, argumentos de descargo.
+            - code [ref=e50]: Alt 3 — Dame tres versiones del párrafo de conclusión, con distintos niveles de formalidad.
+          - generic [ref=e51]: ▸ Al inicio
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: Foco
+          - generic [ref=e55]: Kill critic
+          - generic [ref=e56]: Le indica que omita los disclaimers, advertencias y aclaraciones automáticas de IA. Va directo al contenido.
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - text: Cuando ya sabés los riesgos y no necesitás que te los recuerde cada vez.
+            - code [ref=e59]: Kill critic — Redactá el dictamen sin agregar advertencias sobre la naturaleza de la IA.
+          - generic [ref=e60]: ▸ Al inicio
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: Verificación
+          - generic [ref=e64]: Think step by step
+          - generic [ref=e65]: Le pedís que razone en voz alta antes de responder. Reduce errores en análisis complejos.
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - text: Imprescindible para análisis de variaciones, evaluación de riesgo o armado de descargos.
+            - code [ref=e68]: Think step by step — Analizá las diferencias entre estos dos balances.
+          - generic [ref=e69]: ▸ Al inicio
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: Formato
+          - generic [ref=e73]: Sin preámbulo
+          - generic [ref=e74]: Salta la introducción genérica y va directo al contenido que pediste. Ahorra tiempo de lectura.
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - text: Para cuando sabés lo que pedís y no necesitás que Claude te explique qué va a hacer.
+            - code [ref=e77]: Sin preámbulo — Dame el borrador del informe directamente.
+          - generic [ref=e78]: ▸ Al inicio
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: Crítica
+          - generic [ref=e82]: Devil's advocate
+          - generic [ref=e83]: Le pedís que encuentre los puntos débiles de tu argumento, documento o propuesta. Ideal antes de presentar.
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - text: Antes de entregar un informe importante o responder a una fiscalización.
+            - code [ref=e86]: Devil's advocate — ¿Qué objeciones podría hacer AFIP a este descargo?
+          - generic [ref=e87]: ▸ Al inicio o al final
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: Confiabilidad
+          - generic [ref=e91]: Solo con lo que te di
+          - generic [ref=e92]: Le instruís que base su respuesta únicamente en el material que le proporcionaste. No inventa datos externos.
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - text: Crítico cuando analizás documentos reales y no querés que complete con suposiciones.
+            - code [ref=e95]: Respondé solo con lo que está en el contrato que te pegué. Si algo no está, decí "no surge del documento".
+          - generic [ref=e96]: ▸ Al final del prompt
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: Profundidad
+          - generic [ref=e100]: Verificá internamente
+          - generic [ref=e101]: Antes de responder, le pedís que revise su propio razonamiento. Atrapa contradicciones y errores lógicos.
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - text: Para análisis donde un error de razonamiento podría pasar desapercibido.
+            - code [ref=e104]: Antes de responder, verificá internamente si tu análisis es consistente. Luego respondé.
+          - generic [ref=e105]: ▸ Al final del prompt
+  - generic [ref=e107]:
+    - generic [ref=e108]: El riesgo más importante
+    - generic [ref=e109]: Cómo evitar que Claude alucine
+    - generic [ref=e110]: En el sector contable, una alucinación no es un error de redacción. Puede ser un número de resolución inventado, un criterio fiscal incorrecto o una fecha que no existe. Esto es lo que tenés que saber.
+    - paragraph [ref=e112]:
+      - strong [ref=e113]: ¿Qué es una alucinación en este contexto?
+      - text: Claude genera texto plausible, no verdadero. Puede inventar el número de una resolución AFIP que suena real pero no existe, citar un artículo de la ley con el número equivocado, o afirmar un criterio impositivo que fue actualizado y él no sabe. Esto no es un bug — es cómo funciona el modelo. Tu trabajo es saberlo y trabajar en consecuencia.
+    - generic [ref=e114]:
+      - generic [ref=e115]:
+        - generic [ref=e116]: 🔴 Señales de alerta
+        - generic [ref=e117]:
+          - generic [ref=e118]: ⚠ Cita artículos o resoluciones sin que vos le hayas dado el texto
+          - generic [ref=e119]: ⚠ Da porcentajes o montos exactos de umbrales fiscales
+          - generic [ref=e120]: ⚠ Menciona plazos específicos en días o fechas de vigencia
+          - generic [ref=e121]: ⚠ Usa frases como "según la normativa vigente" sin que tengas el documento
+          - generic [ref=e122]: ⚠ Responde con mucha seguridad sobre algo que vos no le proporcionaste
+      - generic [ref=e123]:
+        - generic [ref=e124]: 🟢 Lo que sí es confiable
+        - generic [ref=e125]:
+          - generic [ref=e126]: ✓ Análisis de texto que VOS le pegaste
+          - generic [ref=e127]: ✓ Redacción, estructura y formato de documentos
+          - generic [ref=e128]: ✓ Identificar inconsistencias lógicas en lo que le pasaste
+          - generic [ref=e129]: ✓ Comparar dos documentos que vos le proporcionaste
+          - generic [ref=e130]: ✓ Reformular, traducir o mejorar textos propios
+    - generic [ref=e131]:
+      - generic [ref=e132]:
+        - generic [ref=e133]: "1"
+        - generic [ref=e134]:
+          - generic [ref=e135]: Limitá la fuente desde el inicio
+          - generic [ref=e136]:
+            - text: "Al final de cualquier prompt sobre normativa agregá:"
+            - code [ref=e137]: Basate exclusivamente en el texto que te proporcioné. Si necesitás información que no está, decilo explícitamente con "no surge del material aportado".
+      - generic [ref=e138]:
+        - generic [ref=e139]: "2"
+        - generic [ref=e140]:
+          - generic [ref=e141]: Pedile que separe hechos de interpretaciones
+          - generic [ref=e142]:
+            - text: "Agregá al final:"
+            - code [ref=e143]: "En tu respuesta, separar claramente: (a) lo que dice literalmente el documento y (b) tu interpretación o análisis."
+            - text: Así sabés exactamente qué viene de la fuente y qué es razonamiento del modelo.
+      - generic [ref=e144]:
+        - generic [ref=e145]: "3"
+        - generic [ref=e146]:
+          - generic [ref=e147]: Preguntá por el nivel de confianza
+          - generic [ref=e148]:
+            - text: "Al final de cualquier respuesta técnica, escribí:"
+            - code [ref=e149]: ¿Qué partes de tu respuesta tienen menor certeza? Señalalas explícitamente.
+            - text: Claude es honesto cuando le preguntás directamente.
+      - generic [ref=e150]:
+        - generic [ref=e151]: "4"
+        - generic [ref=e152]:
+          - generic [ref=e153]: "Para normativa: usá Claude como estructura, no como fuente"
+          - generic [ref=e154]: "Flujo correcto: (1) Buscás vos la resolución en AFIP o BCRA, (2) pegás el texto en Claude, (3) le pedís que lo analice. Claude estructura y explica. Vos aportás la fuente. Así no hay alucinación posible."
+  - generic [ref=e156]:
+    - generic [ref=e157]: Prompts avanzados
+    - generic [ref=e158]: Análisis de documentos
+    - generic [ref=e159]: Estados financieros, contratos, actas, convenios. Siempre pasale el texto — nunca le pidas que reconstruya algo de memoria.
+    - generic [ref=e160]:
+      - generic [ref=e161]:
+        - generic [ref=e162]: 📊
+        - generic [ref=e163]:
+          - generic [ref=e164]: Lectura de estados contables
+          - generic [ref=e165]: Análisis de balance, ratios, señales de alerta
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: Diagnóstico rápido de un balance
+              - generic [ref=e171]:
+                - generic [ref=e172]: Avanzado
+                - generic [ref=e173]: Empresa · Estudio · Auditoría
+            - button "Copiar" [ref=e174] [cursor=pointer]
+          - generic [ref=e175]: "Think step by step — Solo con lo que te di. Analizá el siguiente estado de resultados / balance. Necesito: 1. Tres señales positivas y tres señales de alerta que surgen de los números 2. Ratios clave: liquidez corriente, endeudamiento, rentabilidad sobre patrimonio 3. Comparación de márgenes entre períodos si hay más de uno 4. Una sola pregunta que le harías al dueño antes de tomar cualquier decisión Si algún dato no está disponible para calcular un ratio, decilo. No inventes valores. [PEGÁ AQUÍ LOS DATOS DEL BALANCE O ESTADO DE RESULTADOS]"
+          - generic [ref=e176]:
+            - generic [ref=e177]: ⚠️
+            - generic [ref=e178]:
+              - strong [ref=e179]: "Importante:"
+              - text: si el balance está en PDF, copiá los datos en texto plano o como tabla. Claude no puede leer imágenes de PDFs escaneados.
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]: Síntesis de acta de directorio / reunión
+              - generic [ref=e184]:
+                - generic [ref=e185]: Intermedio
+                - generic [ref=e186]: Empresa · Organismo público
+            - button "Copiar" [ref=e187] [cursor=pointer]
+          - generic [ref=e188]: "Sin preámbulo — Solo con lo que te di. Leé el siguiente texto de acta / minuta y producí: 1. Resumen ejecutivo en máximo 5 líneas 2. Decisiones formales adoptadas (solo las que constan explícitamente) 3. Compromisos con responsable y plazo si figuran 4. Temas pendientes o sin resolución 5. Puntos que requieren validación legal o contable No agregues información que no esté en el texto. [PEGÁ AQUÍ EL TEXTO DEL ACTA]"
+          - generic [ref=e189]:
+            - generic [ref=e190]: 💡
+            - generic [ref=e191]: Funciona igual para actas de directorio, reuniones de socios, minutas de comité o registros de inspección.
+  - generic [ref=e193]:
+    - generic [ref=e194]: Prompts avanzados
+    - generic [ref=e195]: Redacción profesional
+    - generic [ref=e196]:
+      - text: Dictámenes, descargos, informes de gestión,
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]: Descargo ante fiscalización o intimación
+              - generic [ref=e202]:
+                - generic [ref=e203]: Avanzado
+                - generic [ref=e204]: Estudio · Empresa · Organismo
+            - button "Copiar" [ref=e205] [cursor=pointer]
+          - generic [ref=e206]: "Think step by step — Kill critic. Redactá un descargo formal ante la siguiente situación: Organismo que intima: [AFIP / AGIP / RENTAS / otro] Motivo: [DESCRIBÍ QUÉ SE IMPUTA] Argumentos a favor: [LISTÁ LOS ARGUMENTOS QUE TENÉS] Documentación disponible: [QUÉ DOCUMENTOS EXISTEN] Resultado buscado: [NULIDAD / REDUCCIÓN / PLAN DE PAGO / etc.] El descargo debe: comenzar reconociendo la recepción, presentar los hechos objetivamente, argumentar con base en los documentos disponibles (no en normativa que yo no te haya dado), concluir con una solicitud concreta. Tono formal."
+          - generic [ref=e207]:
+            - generic [ref=e208]: ⚠️
+            - generic [ref=e209]:
+              - strong [ref=e210]: "Regla crítica:"
+              - text: no le pidas que cite artículos de leyes de memoria. Pegale vos el texto normativo relevante y que lo use como fuente. Así el argumento es sólido.
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]: Informe de gestión mensual para directorio
+              - generic [ref=e215]:
+                - generic [ref=e216]: Intermedio
+                - generic [ref=e217]: Empresa · Consultoría
+            - button "Copiar" [ref=e218] [cursor=pointer]
+          - generic [ref=e219]: "/human — Sin preámbulo. Redactá un informe de gestión mensual para directorio. Los datos son: Período: [MES / TRIMESTRE] Empresa / área: [NOMBRE] Indicadores del período: [PEGÁ AQUÍ LOS NÚMEROS: ventas, costos, márgenes, comparativo] Desviaciones importantes: — [DESVIACIÓN 1 Y SU CAUSA] — [DESVIACIÓN 2 Y SU CAUSA] Acciones en curso: — [ACCIÓN 1] Estructura: resumen ejecutivo 3 líneas, análisis de resultados, explicación de desvíos, próximos pasos. Tono ejecutivo. Sin paja."
+          - generic [ref=e220]:
+            - generic [ref=e221]: 💡
+            - generic [ref=e222]:
+              - text: "Después del borrador, podés pedirle:"
+              - emphasis [ref=e223]: "\"Reformulá el párrafo de desvíos para que suene menos defensivo\""
+              - text: o
+              - emphasis [ref=e224]: "\"Alt 3 — dame tres versiones del resumen ejecutivo\""
+              - text: .
+      - text: "ciones en curso: — [ACCIÓN 1] Estructura: resumen ejecutivo 3 líneas, análisis de resultados, explicación de desvíos, próximos pasos. Tono ejecutivo. Sin paja."
+    - generic [ref=e225]:
+      - generic [ref=e226]: 💡
+      - generic [ref=e227]:
+        - text: "Después del borrador, podés pedirle:"
+        - emphasis [ref=e228]: "\"Reformulá el párrafo de desvíos para que suene menos defensivo\""
+        - text: o
+        - emphasis [ref=e229]: "\"Alt 3 — dame tres versiones del resumen ejecutivo\""
+        - text: .
+  - generic [ref=e231]:
+    - generic [ref=e232]: Prompts avanzados
+    - generic [ref=e233]: Consultas técnicas y normativas
+    - generic [ref=e234]: "La regla aquí es siempre la misma: vos traés la fuente, Claude analiza. Nunca al revés."
+    - generic [ref=e235]:
+      - generic [ref=e236]:
+        - generic [ref=e237]: 🔎
+        - generic [ref=e238]:
+          - generic [ref=e239]: Análisis normativo con fuente propia
+          - generic [ref=e240]: AFIP, BCRA, resoluciones técnicas, legislación laboral, normativa provincial
+      - generic [ref=e241]:
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - generic [ref=e244]:
+              - generic [ref=e245]: Análisis de resolución o normativa (fuente provista)
+              - generic [ref=e246]:
+                - generic [ref=e247]: Avanzado
+                - generic [ref=e248]: Todo perfil
+            - button "Copiar" [ref=e249] [cursor=pointer]
+          - generic [ref=e250]: "Think step by step — Solo con lo que te di. Leé la siguiente resolución / normativa y respondé: 1. ¿Qué establece en términos concretos y operativos? 2. ¿A qué sujetos aplica? ¿Hay excepciones? 3. ¿Qué obligaciones genera y en qué plazos? 4. ¿Qué cambia respecto a la situación anterior? 5. Tres preguntas que un profesional debería hacerse antes de aplicar esta norma Separar claramente: (a) lo que dice el texto y (b) tu interpretación. Si algo no está en el texto, decí \"no surge del material aportado\". [PEGÁ AQUÍ EL TEXTO DE LA RESOLUCIÓN]"
+          - generic [ref=e251]:
+            - generic [ref=e252]: 💡
+            - generic [ref=e253]:
+              - text: "Fuentes recomendadas para copiar el texto:"
+              - strong [ref=e254]: infoleg.gob.ar
+              - text: (leyes nacionales),
+              - strong [ref=e255]: afip.gob.ar
+              - text: (RG),
+              - strong [ref=e256]: bcra.gob.ar
+              - text: (comunicaciones). Copiás el texto oficial y se lo pegás a Claude.
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: Evaluación de riesgo de un nuevo cliente
+              - generic [ref=e261]:
+                - generic [ref=e262]: Avanzado
+                - generic [ref=e263]: Estudio · Consultoría
+            - button "Copiar" [ref=e264] [cursor=pointer]
+          - generic [ref=e265]: "Think step by step — Devil's advocate. Estoy evaluando tomar como cliente a esta empresa: Rubro: [ACTIVIDAD] Facturación estimada: [RANGO] Situación fiscal conocida: [LO QUE TE CONTARON] Historial: [ALGO QUE SEPAS] Trabajo solicitado: [AUDITORÍA / ASESORAMIENTO / LIQUIDACIONES / etc.] Necesito: (1) señales de alerta que surgen de esta info, (2) preguntas que debo hacerle antes de firmar, (3) documentación a pedir para conocer su situación real, (4) riesgos profesionales y reputacionales. Solo con lo que te di."
+          - generic [ref=e266]:
+            - generic [ref=e267]: 💡
+            - generic [ref=e268]:
+              - text: El comando
+              - emphasis [ref=e269]: Devil's advocate
+              - text: acá hace que Claude adopte una postura crítica en lugar de optimista. Ideal para que no te cuente solo lo que querés escuchar.
+  - generic [ref=e271]:
+    - generic [ref=e272]: Prompts avanzados
+    - generic [ref=e273]: Gestión de clientes
+    - generic [ref=e274]: Comunicaciones difíciles, respuestas técnicas, situaciones complejas. Vos ponés el criterio, Claude lo convierte en comunicación profesional.
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e277]: 💬
+        - generic [ref=e278]:
+          - generic [ref=e279]: Comunicaciones de alta sensibilidad
+          - generic [ref=e280]: Malas noticias, situaciones irregulares, comunicación con organismos
+      - generic [ref=e282]:
+        - generic [ref=e283]:
+          - generic [ref=e284]:
+            - generic [ref=e285]: Comunicar una situación fiscal o legal delicada
+            - generic [ref=e286]:
+              - generic [ref=e287]: Intermedio
+              - generic [ref=e288]: Estudio · Consultoría
+          - button "Copiar" [ref=e289] [cursor=pointer]
+        - generic [ref=e290]: "/human — Alt 3. Situación a comunicar: [DESCRIBÍ CON PRECISIÓN] El cliente debe entender al terminar de leer: — Qué pasó — Qué impacto tiene (económico / legal / operativo) — Qué tiene que hacer él — Qué hacemos nosotros Lo que NO quiero transmitir: [alarma / culpa / incertidumbre / etc.] Perfil del cliente: [larga data / nuevo / conflictivo / muy técnico / etc.] Dame tres versiones: una formal, una directa y cercana, una intermedia."
+        - generic [ref=e291]:
+          - generic [ref=e292]: 💡
+          - generic [ref=e293]:
+            - text: El
+            - emphasis [ref=e294]: Alt 3
+            - text: "acá es clave: elegís la versión que mejor se adapta al cliente específico, en lugar de editar un solo texto genérico."
+  - generic [ref=e296]:
+    - generic [ref=e297]: Nivel experto
+    - generic [ref=e298]: Prompts de alto valor
+    - generic [ref=e299]: Para casos donde el trabajo tiene alta complejidad o alto impacto. Requieren que vos le proporciones buen contexto.
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - generic [ref=e302]: ⚡
+        - generic [ref=e303]:
+          - generic [ref=e304]: Análisis complejos
+          - generic [ref=e305]: Due diligence, variaciones presupuestarias, análisis de nómina, cash flow
+      - generic [ref=e306]:
+        - generic [ref=e307]:
+          - generic [ref=e308]:
+            - generic [ref=e309]:
+              - generic [ref=e310]: Análisis de variación presupuestaria
+              - generic [ref=e311]:
+                - generic [ref=e312]: Avanzado
+                - generic [ref=e313]: Empresa · Organismo público
+            - button "Copiar" [ref=e314] [cursor=pointer]
+          - generic [ref=e315]: "Think step by step — Solo con lo que te di — Sin preámbulo. Analizá las variaciones entre presupuesto y ejecución real. Para cada desvío mayor a [X%]: 1. Calculá desvío en valor absoluto y porcentual 2. Clasificalo como favorable o desfavorable 3. Dos hipótesis de causa (basadas solo en los datos que te doy) 4. Qué info adicional necesitarías para confirmar la causa Al final: ranking top 3 de mayor impacto y una conclusión de una línea. [PEGÁ AQUÍ LA TABLA PRESUPUESTO vs REAL]"
+          - generic [ref=e316]:
+            - generic [ref=e317]: 💡
+            - generic [ref=e318]: Podés pegar la tabla directamente desde Excel como texto con Tab como separador. Claude la interpreta correctamente.
+        - generic [ref=e319]:
+          - generic [ref=e320]:
+            - generic [ref=e321]:
+              - generic [ref=e322]: Due diligence documental express
+              - generic [ref=e323]:
+                - generic [ref=e324]: Avanzado
+                - generic [ref=e325]: Estudio · Empresa · Auditoría
+            - button "Copiar" [ref=e326] [cursor=pointer]
+          - generic [ref=e327]: "Think step by step — Devil's advocate — Solo con lo que te di. Revisión preliminar de documentación de [EMPRESA / OPERACIÓN]. Identificá: 1. Inconsistencias internas entre documentos 2. Documentación faltante según lo que surge de lo disponible 3. Cláusulas o situaciones de riesgo para [comprador / vendedor / inversor] 4. Tres preguntas que cambiarían el análisis Por orden de relevancia. Solo con lo que está en los textos adjuntos. DOCUMENTO 1 — [TIPO]: [TEXTO] DOCUMENTO 2 — [TIPO]: [TEXTO]"
+          - generic [ref=e328]:
+            - generic [ref=e329]: 💡
+            - generic [ref=e330]: Podés agregar hasta 6–8 documentos en la misma conversación. Si son muy largos, hacelo en tandas y pedile que "acumule" los hallazgos.
+        - generic [ref=e331]:
+          - generic [ref=e332]:
+            - generic [ref=e333]:
+              - generic [ref=e334]: Revisión de liquidación de sueldos con datos reales
+              - generic [ref=e335]:
+                - generic [ref=e336]: Avanzado
+                - generic [ref=e337]: Empresa · Consultoría RRHH
+            - button "Copiar" [ref=e338] [cursor=pointer]
+          - generic [ref=e339]: "Think step by step — Solo con lo que te di. Revisá esta liquidación de sueldos e identificá: 1. Errores aritméticos (verificá los cálculos con los datos provistos) 2. Conceptos mal aplicados según la categoría (basate solo en lo que te doy) 3. Diferencias entre lo liquidado y lo que debería percibir 4. Clasificación remunerativo / no remunerativo Si falta un dato para verificar, señalalo. CCT: [número o descripción — pegá el artículo si lo tenés] Categoría: [CATEGORÍA] Liquidación: [PEGÁ CONCEPTOS Y MONTOS]"
+          - generic [ref=e340]:
+            - generic [ref=e341]: ⚠️
+            - generic [ref=e342]:
+              - strong [ref=e343]: "Crítico:"
+              - text: Claude puede verificar aritmética y lógica, pero no conoce actualizaciones salariales recientes. Para montos de escalas y aumentos, verificá siempre con la fuente del sindicato o el CCT oficial.
+  - generic [ref=e345]:
+    - generic [ref=e346]: Técnica avanzada
+    - generic [ref=e347]: Cadena de prompts
+    - generic [ref=e348]: El mayor error es pedir todo en un solo prompt. Los mejores resultados se obtienen encadenando. Claude recuerda todo lo que pasó en la conversación.
+    - generic [ref=e349]:
+      - generic [ref=e350]:
+        - generic [ref=e352]: "1"
+        - generic [ref=e354]:
+          - generic [ref=e355]: Contexto y rol
+          - generic [ref=e356]:
+            - text: "Empezá siempre con:"
+            - code [ref=e357]: Sos un asistente especializado en trabajo contable y administrativo. Vamos a trabajar en [TAREA]. Te voy a ir pasando información por partes.
+            - text: Esto calibra toda la conversación.
+      - generic [ref=e358]:
+        - generic [ref=e360]: "2"
+        - generic [ref=e362]:
+          - generic [ref=e363]: Material en partes
+          - generic [ref=e364]:
+            - text: "Si tenés mucho texto, mandalo en bloques:"
+            - code [ref=e365]: Este es el primer documento. No respondas nada todavía, solo confirmá que lo recibiste.
+            - text: "Luego:"
+            - code [ref=e366]: Este es el segundo. Ahora sí, analizá ambos en conjunto.
+      - generic [ref=e367]:
+        - generic [ref=e369]: "3"
+        - generic [ref=e371]:
+          - generic [ref=e372]: Primer borrador
+          - generic [ref=e373]: Pedí el output inicial. Leélo completo. Identificá qué está bien y qué no. No empieces una nueva conversación — seguí en la misma.
+      - generic [ref=e374]:
+        - generic [ref=e376]: "4"
+        - generic [ref=e378]:
+          - generic [ref=e379]: Correcciones quirúrgicas
+          - generic [ref=e380]:
+            - text: "En lugar de \"rehacé todo\", usá:"
+            - code [ref=e381]: El punto 2 no es preciso porque [RAZÓN]. Mantenlo todo igual y modificá solo ese punto considerando que [INFO NUEVA].
+      - generic [ref=e382]:
+        - generic [ref=e384]: "5"
+        - generic [ref=e385]:
+          - generic [ref=e386]: Verificación final
+          - generic [ref=e387]:
+            - text: "Antes de usar el resultado:"
+            - code [ref=e388]: Devil's advocate — Revisá lo que escribiste. ¿Hay alguna inconsistencia, afirmación débil o dato que no puedas sostener con lo que te di?
+  - generic [ref=e390]:
+    - generic [ref=e391]:
+      - generic [ref=e392]:
+        - img "datelia" [ref=e395]
+        - generic [ref=e396]: Diseñamos cómo operan las empresas. Automatización, IA aplicada y Business Intelligence para negocios que quieren crecer con control real.
+      - generic [ref=e397]:
+        - generic [ref=e398]: ¿El problema es más profundo?
+        - generic [ref=e399]: Cuando lo que necesitan tus clientes va más allá de prompts — procesos rotos, información dispersa, dependencia de personas clave — ahí trabajamos nosotros.
+        - link "datelia.com.ar →" [ref=e400] [cursor=pointer]:
+          - /url: https://datelia.com.ar
+    - generic [ref=e401]:
+      - generic [ref=e402]: SENTIDO COMÚN S.R.L. · Salta, Argentina
+      - generic [ref=e403]: Guía de uso libre para profesionales en CCEE
