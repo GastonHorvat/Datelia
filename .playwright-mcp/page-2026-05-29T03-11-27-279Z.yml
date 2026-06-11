@@ -1,0 +1,21 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - heading "Asset Inventory" [level=2] [ref=e10]
+    - paragraph [ref=e13]: No assets discovered yet. Start chatting to add them.
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - img [ref=e17]
+        - heading "Asset Discovery Agent" [level=1] [ref=e20]
+      - generic [ref=e21]: "Thread: user_kbv5d"
+    - generic [ref=e23]: Hello! I'm here to help you list your assets for the discovery process. Can you describe the properties, accounts, or other assets you and your spouse have?
+    - generic [ref=e24]:
+      - textbox "Type your message here..." [ref=e25]
+      - button "Audio" [ref=e26] [cursor=pointer]:
+        - img [ref=e27]
+        - generic [ref=e30]: Audio
+      - button "Send" [ref=e31] [cursor=pointer]:
+        - text: Send
+        - img [ref=e32]
