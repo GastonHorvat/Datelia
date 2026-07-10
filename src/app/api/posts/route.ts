@@ -133,3 +133,105 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
+
+export async function DELETE(request: Request) {
+  try {
+    // 1. Validar la API Key de escritura
+    const apiKey = request.headers.get('x-api-key');
+    const expectedKey = process.env.API_WRITE_KEY;
+
+    if (!expectedKey || apiKey !== expectedKey) {
+      return NextResponse.json({ error: 'Unauthorized: Invalid or missing API key' }, { status: 401 });
+    }
+
+    // 2. Validar configuración de Supabase Admin
+    if (!isSupabaseAdminConfigured()) {
+      console.error('SUPABASE_SERVICE_ROLE_KEY is not properly configured in the environment');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+    }
+
+    // 3. Obtener id o slug de query params o del body JSON
+    const { searchParams } = new URL(request.url);
+    let id = searchParams.get('id');
+    let slug = searchParams.get('slug');
+
+    if (!id && !slug) {
+      try {
+        const body = await request.json();
+        id = body?.id;
+        slug = body?.slug;
+      } catch (e) {
+        // Ignorar error de JSON si no hay body
+      }
+    }
+
+    if (!id && !slug) {
+      return NextResponse.json(
+        { error: 'You must provide either an "id" (UUID) or a "slug" to delete the post.' },
+        { status: 400 }
+      );
+    }
+
+    let postId = id;
+
+    // 4. Si se provee slug pero no ID, buscar el ID en la BD
+    if (!postId && slug) {
+      const { data: post, error: fetchError } = await supabaseAdmin
+        .from('posts')
+        .select('id')
+        .eq('slug', slug)
+        .single();
+
+      if (fetchError || !post) {
+        return NextResponse.json({ error: `Post with slug "${slug}" not found` }, { status: 404 });
+      }
+      postId = post.id;
+    }
+
+    // 5. Eliminar asociaciones en post_tags primero (evita errores de clave foránea)
+    const { error: tagsDeleteError } = await supabaseAdmin
+      .from('post_tags')
+      .delete()
+      .eq('post_id', postId);
+
+    if (tagsDeleteError) {
+      console.error('Error deleting post tags:', tagsDeleteError);
+      return NextResponse.json(
+        { error: `Database error removing post associations: ${tagsDeleteError.message}` },
+        { status: 500 }
+      );
+    }
+
+    // 6. Eliminar el post en la tabla posts
+    const { data: deletedPosts, error: postDeleteError } = await supabaseAdmin
+      .from('posts')
+      .delete()
+      .eq('id', postId)
+      .select();
+
+    if (postDeleteError) {
+      console.error('Error deleting post:', postDeleteError);
+      return NextResponse.json(
+        { error: `Database error removing post: ${postDeleteError.message}` },
+        { status: 500 }
+      );
+    }
+
+    if (!deletedPosts || deletedPosts.length === 0) {
+      return NextResponse.json({ error: 'Post not found or already deleted' }, { status: 404 });
+    }
+
+    return NextResponse.json(
+      {
+        message: 'Post deleted successfully',
+        deleted_post: deletedPosts[0],
+      },
+      { status: 200 }
+    );
+
+  } catch (error: any) {
+    console.error('Unexpected error in DELETE /api/posts:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}
+
