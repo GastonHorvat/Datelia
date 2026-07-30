@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import '../globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { poppins } from '../fonts';
@@ -146,6 +147,15 @@ export default async function RootLayout(props: {
               ])
             }}
           />
+        {/* Umami Analytics (privacy-first, cookieless). Se activa solo si las envs existen. */}
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            src={process.env.NEXT_PUBLIC_UMAMI_SRC || 'https://cloud.umami.is/script.js'}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            data-domains="datelia.com.ar,www.datelia.com.ar"
+            strategy="afterInteractive"
+          />
+        )}
       </head>
       <body className={`${poppins.variable} font-body antialiased`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
