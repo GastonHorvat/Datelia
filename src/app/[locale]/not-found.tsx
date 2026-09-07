@@ -95,7 +95,7 @@ export default function NotFoundPage() {
     }
 
     function clear_lines() {
-      let linesToClear: number[] = [];
+      const linesToClear: number[] = [];
       for (let y = ROWS - 1; y >= 0; --y) if (board[y].every(cell => cell !== EMPTY)) linesToClear.push(y);
 
       if (linesToClear.length > 0) {
