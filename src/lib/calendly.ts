@@ -45,12 +45,16 @@ export interface CalendlyInviteeCreatedPayload {
 }
 
 // --- Polling (plan free, sin webhooks) ---
+//
+// No hace falta que todos estén en la misma organización de Calendly: leer
+// eventos agendados funciona en el plan free por cuenta individual. Cada
+// persona genera su propio token (sin costo) y se consulta cada cuenta por
+// separado, filtrando por su propio usuario en vez de por organización.
 
-const PAT = process.env.CALENDLY_PAT!;
 const API = "https://api.calendly.com";
 
-async function calendlyApi(path: string) {
-  const res = await fetch(`${API}${path}`, { headers: { Authorization: `Bearer ${PAT}` } });
+async function calendlyApi(pat: string, path: string) {
+  const res = await fetch(`${API}${path}`, { headers: { Authorization: `Bearer ${pat}` } });
   if (!res.ok) throw new Error(`Calendly API ${res.status}: ${await res.text()}`);
   return res.json();
 }
@@ -68,7 +72,10 @@ export interface CalendlyEventWithInvitees {
   invitees: CalendlyInvitee[];
 }
 
-export async function listRecentBookings(organizationUri: string, lookbackDays: number): Promise<CalendlyEventWithInvitees[]> {
+export async function listRecentBookings(pat: string, lookbackDays: number): Promise<CalendlyEventWithInvitees[]> {
+  const me = await calendlyApi(pat, "/users/me");
+  const userUri: string = me.resource.uri;
+
   const minStartTime = new Date(Date.now() - lookbackDays * 24 * 60 * 60 * 1000).toISOString();
   const maxStartTime = new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString();
 
@@ -77,7 +84,7 @@ export async function listRecentBookings(organizationUri: string, lookbackDays: 
 
   do {
     const qs = new URLSearchParams({
-      organization: organizationUri,
+      user: userUri,
       status: "active",
       min_start_time: minStartTime,
       max_start_time: maxStartTime,
@@ -85,7 +92,7 @@ export async function listRecentBookings(organizationUri: string, lookbackDays: 
       count: "100",
       ...(nextPageToken ? { page_token: nextPageToken } : {}),
     });
-    const page = await calendlyApi(`/scheduled_events?${qs}`);
+    const page = await calendlyApi(pat, `/scheduled_events?${qs}`);
     events.push(...page.collection);
     nextPageToken = page.pagination?.next_page_token || null;
   } while (nextPageToken);
@@ -93,7 +100,7 @@ export async function listRecentBookings(organizationUri: string, lookbackDays: 
   const results: CalendlyEventWithInvitees[] = [];
   for (const event of events) {
     const eventUuid = event.uri.split("/").pop();
-    const inviteesPage = await calendlyApi(`/scheduled_events/${eventUuid}/invitees?count=100`);
+    const inviteesPage = await calendlyApi(pat, `/scheduled_events/${eventUuid}/invitees?count=100`);
     const invitees: CalendlyInvitee[] = inviteesPage.collection.map((i: { uri: string; name: string; email: string; questions_and_answers: { question: string; answer: string }[] }) => ({
       uri: i.uri,
       name: i.name,

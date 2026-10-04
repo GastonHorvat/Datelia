@@ -12,8 +12,16 @@ import { listRecentBookings } from '@/lib/calendly';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const NOTIFY_EMAILS = ['gas@datelia.com.ar', 'jimenagarciapinto@datelia.com.ar', 'info@datelia.com.ar'];
-const ORGANIZATION_URI = 'https://api.calendly.com/organizations/5ce9147d-7a7d-4166-a229-a3c1ac93afc6';
 const LOOKBACK_DAYS = 3; // margen de sobra para no perder ninguna si un día falla el cron
+
+// Cada cuenta de Calendly es gratis y propia de cada persona -- no hace
+// falta pagar un plan de equipo para que las dos entren al mismo CRM.
+// Agregar a alguien más es: que genere su propio token (gratis, mismos
+// pasos que Gastón) y sumar su variable de entorno acá.
+const ACCOUNTS: { pat: string; label: string }[] = [
+  { pat: process.env.CALENDLY_PAT!, label: 'Gastón' },
+  ...(process.env.CALENDLY_PAT_JIMENA ? [{ pat: process.env.CALENDLY_PAT_JIMENA, label: 'Jimena' }] : []),
+];
 
 export async function GET(request: Request) {
   const authHeader = request.headers.get('authorization');
@@ -21,48 +29,50 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'No autorizado.' }, { status: 401 });
   }
 
-  const events = await listRecentBookings(ORGANIZATION_URI, LOOKBACK_DAYS);
-
   let nuevos = 0;
 
-  for (const event of events) {
-    for (const invitee of event.invitees) {
-      if (await calendlyLeadExists(invitee.uri)) continue;
+  for (const account of ACCOUNTS) {
+    const events = await listRecentBookings(account.pat, LOOKBACK_DAYS);
 
-      let crmStatus: 'created' | 'failed' = 'failed';
-      let crmUrl: string | undefined;
+    for (const event of events) {
+      for (const invitee of event.invitees) {
+        if (await calendlyLeadExists(invitee.uri)) continue;
 
-      try {
-        const lead = await createCalendlyLead({
-          inviteeUri: invitee.uri,
-          nombre: invitee.name,
-          email: invitee.email,
-          tituloEvento: event.name,
-          horaInicio: event.start_time,
-          preguntasYRespuestas: invitee.questions_and_answers,
+        let crmStatus: 'created' | 'failed' = 'failed';
+        let crmUrl: string | undefined;
+
+        try {
+          const lead = await createCalendlyLead({
+            inviteeUri: invitee.uri,
+            nombre: invitee.name,
+            email: invitee.email,
+            tituloEvento: event.name,
+            horaInicio: event.start_time,
+            preguntasYRespuestas: invitee.questions_and_answers,
+          });
+          crmStatus = 'created';
+          crmUrl = lead.url;
+        } catch (odooError) {
+          console.error('Error creando lead de Calendly en Odoo:', odooError);
+        }
+
+        const fecha = new Date(event.start_time).toLocaleString('es-AR', {
+          dateStyle: 'full',
+          timeStyle: 'short',
+          timeZone: 'America/Argentina/Buenos_Aires',
         });
-        crmStatus = 'created';
-        crmUrl = lead.url;
-      } catch (odooError) {
-        console.error('Error creando lead de Calendly en Odoo:', odooError);
+
+        await resend.emails.send({
+          from: 'Datelia <info@datelia.com.ar>',
+          to: NOTIFY_EMAILS,
+          subject: crmStatus === 'created'
+            ? `Nueva reunión agendada: ${invitee.name}`
+            : `⚠️ Nueva reunión agendada: ${invitee.name} — revisar, no se cargó solo en el CRM`,
+          react: CalendlyEmailTemplate({ nombre: invitee.name, email: invitee.email, tituloEvento: event.name, fecha, crmStatus, crmUrl }),
+        });
+
+        nuevos++;
       }
-
-      const fecha = new Date(event.start_time).toLocaleString('es-AR', {
-        dateStyle: 'full',
-        timeStyle: 'short',
-        timeZone: 'America/Argentina/Buenos_Aires',
-      });
-
-      await resend.emails.send({
-        from: 'Datelia <info@datelia.com.ar>',
-        to: NOTIFY_EMAILS,
-        subject: crmStatus === 'created'
-          ? `Nueva reunión agendada: ${invitee.name}`
-          : `⚠️ Nueva reunión agendada: ${invitee.name} — revisar, no se cargó solo en el CRM`,
-        react: CalendlyEmailTemplate({ nombre: invitee.name, email: invitee.email, tituloEvento: event.name, fecha, crmStatus, crmUrl }),
-      });
-
-      nuevos++;
     }
   }
 
