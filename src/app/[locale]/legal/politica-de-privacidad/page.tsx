@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Layout } from '@/components/layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Política de Privacidad | Datelia',
@@ -23,7 +22,6 @@ const PrivacyPolicyPage = () => {
         <Layout>
             <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12">
                 <div className="container mx-auto px-4 flex flex-col items-center">
-                    <Breadcrumbs className="mb-6" />
                     <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-center">
                         Política de Privacidad
                     </h1>

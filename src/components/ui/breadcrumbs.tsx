@@ -10,10 +10,15 @@ import { locales } from '@/lib/i18n';
 // Mapa para traducir slugs a nombres legibles
 const routeNameMap: Record<string, string> = {
     'soluciones': 'Soluciones',
-    'chatbots-inteligentes': 'Chatbots Inteligentes',
-    'agentes-de-voz': 'Agentes de Voz',
+    'rendicion-de-gastos': 'Rendición de Gastos',
+    'pedidos-y-presupuestos': 'Pedidos y Presupuestos',
+    'facturas-y-proveedores': 'Facturas y Proveedores',
+    'tableros-de-gestion': 'Tableros de Gestión',
     'blog': 'Blog',
-    'casos-de-exito': 'Casos de Éxito',
+    'casos': 'Casos',
+    'cedsa': 'CEDSA',
+    'la-francisca': 'La Francisca',
+    'la-tablada': 'La Tablada',
     'sobre-nosotros': 'Sobre Nosotros',
     'contacto': 'Contacto',
     'categoria': 'Categoría',

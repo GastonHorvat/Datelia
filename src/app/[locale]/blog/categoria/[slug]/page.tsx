@@ -8,7 +8,6 @@ import { supabase } from '@/lib/supabaseClient';
 import { Post } from '@/types/blog';
 import { notFound } from 'next/navigation';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 // =======================================================================================
 // SECCIÓN 2: OBTENCIÓN DE DATOS POR CATEGORÍA
@@ -78,11 +77,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const { posts, categoryName, error } = await getPostsByCategory(slug);
 
   return (
-    <Layout>
+    <Layout breadcrumbLastItemName={categoryName}>
       {/* --- Encabezado de la Página de Categoría --- */}
       <section className="bg-accent text-accent-foreground pt-28 pb-12 text-center">
         <div className="container mx-auto px-4 flex flex-col items-center">
-          <Breadcrumbs className="mb-6" lastItemName={categoryName} />
           <p className="text-primary font-semibold mb-2">Categoría</p>
           <h1 className="text-4xl md:text-5xl font-headline font-bold">
             {categoryName}

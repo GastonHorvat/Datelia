@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { Layout } from '@/components/layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Términos y Condiciones | Datelia',
@@ -22,7 +21,6 @@ const TermsAndConditionsPage = () => {
         <Layout>
             <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12">
                 <div className="container mx-auto px-4 flex flex-col items-center">
-                    <Breadcrumbs className="mb-6" />
                     <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-center">
                         Términos y Condiciones
                     </h1>
@@ -59,7 +57,7 @@ const TermsAndConditionsPage = () => {
 
                                 <h3>2. Descripción de los Servicios</h3>
                                 <p>
-                                    Datelia proporciona servicios de consultoría, diseño e implementación de soluciones de Inteligencia Artificial para empresas, incluyendo pero no limitado a: arquitectura agéntica gobernada bajo metodología D.O.A.™, desarrollo de chatbots inteligentes, agentes de voz y automatización de procesos. Las especificaciones, alcances, plazos y condiciones económicas de cada servicio se detallarán en una propuesta o contrato suscripto por separado entre las partes.
+                                    Datelia proporciona servicios de consultoría, diseño e implementación de soluciones de automatización administrativa con Inteligencia Artificial para empresas, incluyendo pero no limitado a: rendición de gastos, pedidos y presupuestos, procesamiento de facturas y listas de proveedores, y tableros de gestión. Las especificaciones, alcances, plazos y condiciones económicas de cada servicio se detallarán en una propuesta o contrato suscripto por separado entre las partes.
                                 </p>
 
                                 <h3>3. Uso del Sitio Web</h3>
