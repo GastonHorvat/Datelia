@@ -57,6 +57,13 @@ function escapeHtml(text: string): string {
     .replace(/>/g, "&gt;");
 }
 
+async function createLead(fields: Record<string, unknown>): Promise<{ id: number; url: string }> {
+  const id: number = await executeKw("crm.lead", "create", [
+    { team_id: WEB_TEAM_ID, user_id: WEB_SALESPERSON_ID, medium_id: WEBSITE_MEDIUM_ID, ...fields },
+  ]);
+  return { id, url: `${ODOO_URL}/web#model=crm.lead&id=${id}&view_type=form` };
+}
+
 export interface WebLeadInput {
   nombre: string;
   empresa: string;
@@ -69,20 +76,51 @@ export async function createCrmLead(lead: WebLeadInput): Promise<{ id: number; u
   const isEmail = /\S+@\S+\.\S+/.test(lead.contacto);
   const sourceId = await findOrCreateUtmSource(lead.sourceLabel);
 
-  const id: number = await executeKw("crm.lead", "create", [
-    {
-      name: `[Web] ${lead.empresa}`,
-      partner_name: lead.empresa,
-      contact_name: lead.nombre,
-      email_from: isEmail ? lead.contacto : false,
-      phone: isEmail ? false : lead.contacto,
-      description: `<p><strong>Tarea a automatizar:</strong> ${escapeHtml(lead.tarea)}</p><p><strong>Contacto (tal cual lo escribió):</strong> ${escapeHtml(lead.contacto)}</p>`,
-      team_id: WEB_TEAM_ID,
-      user_id: WEB_SALESPERSON_ID,
-      medium_id: WEBSITE_MEDIUM_ID,
-      source_id: sourceId,
-    },
-  ]);
+  return createLead({
+    name: `[Web] ${lead.empresa}`,
+    partner_name: lead.empresa,
+    contact_name: lead.nombre,
+    email_from: isEmail ? lead.contacto : false,
+    phone: isEmail ? false : lead.contacto,
+    description: `<p><strong>Tarea a automatizar:</strong> ${escapeHtml(lead.tarea)}</p><p><strong>Contacto (tal cual lo escribió):</strong> ${escapeHtml(lead.contacto)}</p>`,
+    source_id: sourceId,
+  });
+}
 
-  return { id, url: `${ODOO_URL}/web#model=crm.lead&id=${id}&view_type=form` };
+export interface CalendlyLeadInput {
+  inviteeUri: string; // identificador único del invitado en Calendly, para no duplicar
+  nombre: string;
+  email: string;
+  tituloEvento: string; // nombre del tipo de evento agendado
+  horaInicio: string; // ISO
+  preguntasYRespuestas: { question: string; answer: string }[];
+}
+
+// El marcador queda en la descripción del lead; buscarlo es cómo sabemos
+// si un invitee de Calendly ya se cargó, sin necesitar una base de datos aparte.
+function calendlyMarker(inviteeUri: string): string {
+  return `<!-- calendly:${inviteeUri} -->`;
+}
+
+export async function calendlyLeadExists(inviteeUri: string): Promise<boolean> {
+  const marker = calendlyMarker(inviteeUri);
+  const existing = await executeKw("crm.lead", "search_read", [[["description", "like", marker]]], { fields: ["id"], limit: 1 });
+  return existing.length > 0;
+}
+
+export async function createCalendlyLead(lead: CalendlyLeadInput): Promise<{ id: number; url: string }> {
+  const sourceId = await findOrCreateUtmSource("Calendly");
+  const fecha = new Date(lead.horaInicio).toLocaleString("es-AR", { dateStyle: "full", timeStyle: "short", timeZone: "America/Argentina/Buenos_Aires" });
+
+  const qa = lead.preguntasYRespuestas
+    .map((q) => `<p><strong>${escapeHtml(q.question)}:</strong> ${escapeHtml(q.answer)}</p>`)
+    .join("");
+
+  return createLead({
+    name: `[Calendly] ${lead.nombre}`,
+    contact_name: lead.nombre,
+    email_from: lead.email,
+    description: `<p><strong>Agendó:</strong> ${escapeHtml(lead.tituloEvento)} — ${fecha}</p>${qa}${calendlyMarker(lead.inviteeUri)}`,
+    source_id: sourceId,
+  });
 }
