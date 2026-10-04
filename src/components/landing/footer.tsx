@@ -86,10 +86,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li><Link href={`/${locale}`} className="hover:text-primary transition-colors">{t("links.home")}</Link></li>
               <li><Link href={`/${locale}/soluciones`} className="hover:text-primary transition-colors">{t("links.solutions")}</Link></li>
-              <li><Link href={`/${locale}/soluciones/chatbots-inteligentes`} className="hover:text-primary transition-colors ml-4">• {tNav("chatbots")}</Link></li>
-              <li><Link href={`/${locale}/soluciones/agentes-de-voz`} className="hover:text-primary transition-colors ml-4">• {tNav("voice_agents")}</Link></li>
-              <li><Link href={`/${locale}/soluciones`} className="hover:text-primary transition-colors ml-4">• {tNav("all_solutions")}</Link></li>
-              <li><Link href={`/${locale}/casos-de-exito`} className="hover:text-primary transition-colors">{t("links.success_cases")}</Link></li>
+              <li><Link href={`/${locale}/soluciones/rendicion-de-gastos`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_rendicion")}</Link></li>
+              <li><Link href={`/${locale}/soluciones/pedidos-y-presupuestos`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_pedidos")}</Link></li>
+              <li><Link href={`/${locale}/soluciones/facturas-y-proveedores`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_facturas")}</Link></li>
+              <li><Link href={`/${locale}/soluciones/tableros-de-gestion`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_tableros")}</Link></li>
+              <li><Link href={`/${locale}/casos`} className="hover:text-primary transition-colors">{t("links.success_cases")}</Link></li>
               <li><Link href={`/${locale}/blog`} className="hover:text-primary transition-colors">{t("links.blog")}</Link></li>
               <li><Link href={`/${locale}/sobre-nosotros`} className="hover:text-primary transition-colors">{t("links.about_us")}</Link></li>
               <li><Link href={`/${locale}/contacto`} className="hover:text-primary transition-colors">{t("links.contact")}</Link></li>

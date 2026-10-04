@@ -54,14 +54,17 @@ export function Header() {
       label: t("solutions"),
       href: `/${currentLocale}/soluciones`,
       dropdown: [
-        { href: `/${currentLocale}/soluciones/chatbots-inteligentes`, label: t("chatbots") },
-        { href: `/${currentLocale}/soluciones/agentes-de-voz`, label: t("voice_agents") },
+        { href: `/${currentLocale}/soluciones/rendicion-de-gastos`, label: t("sol_rendicion") },
+        { href: `/${currentLocale}/soluciones/pedidos-y-presupuestos`, label: t("sol_pedidos") },
+        { href: `/${currentLocale}/soluciones/facturas-y-proveedores`, label: t("sol_facturas") },
+        { href: `/${currentLocale}/soluciones/tableros-de-gestion`, label: t("sol_tableros") },
         { href: `/${currentLocale}/soluciones`, label: t("all_solutions") },
       ],
     },
-    { href: `/${currentLocale}/casos-de-exito`, label: t("case_studies") },
-    { href: `/${currentLocale}/blog`, label: t("news") },
+    { href: `/${currentLocale}/casos`, label: t("cases") },
+    { href: `/${currentLocale}#como-trabajamos`, label: t("how_we_work") },
     { href: `/${currentLocale}/sobre-nosotros`, label: t("about_us") },
+    { href: `/${currentLocale}/blog`, label: t("news") },
     { href: `/${currentLocale}/contacto`, label: t("contact") },
   ];
 

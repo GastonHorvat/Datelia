@@ -2,16 +2,17 @@
   "navigation": {
     "home": "Início",
     "solutions": "Soluções",
-    "voice_agents": "Agentes de Voz para Agendamento",
-    "all_solutions": "Ver Todas as Soluções",
-    "manifesto": "Manifesto",
-    "live_events": "Eventos ao Vivo",
+    "sol_rendicion": "Prestação de despesas",
+    "sol_pedidos": "Pedidos e orçamentos",
+    "sol_facturas": "Faturas e fornecedores",
+    "sol_tableros": "Painéis de gestão",
+    "all_solutions": "Ver todas as soluções",
+    "cases": "Casos",
+    "how_we_work": "Como trabalhamos",
     "contact": "Contato",
-    "book_audit": "Avaliação Estrutural Gratuita",
-    "case_studies": "Casos de Sucesso",
-    "news": "Notícias",
-    "about_us": "Sobre Nós",
-    "chatbots": "Sistemas Agênticos de Resposta"
+    "book_audit": "Agende um diagnóstico",
+    "news": "Blog",
+    "about_us": "Sobre Nós"
   },
   "hero": {
     "title": "As empresas não falham por falta de estratégia.",
@@ -50,8 +51,8 @@
     ]
   },
   "erp_integration": {
-    "title": "Ecossistema de Nós D.O.A.™",
-    "description": "A arquitetura não substitui os sistemas corporativos que operam seu faturamento e gestão. Ela os unifica, eliminando a camada de erro e atrito humano."
+    "title": "Nos integramos com o que você já usa",
+    "description": "Não substituímos seu ERP nem seus sistemas. Nos conectamos a eles para automatizar sem que sua equipe mude onde trabalha."
   },
   "testimonials": {
     "t1_name": "Jimena Garcia Pinto",
@@ -62,7 +63,7 @@
     "t2_quote": "Na Datelia desenhamos arquitetura de execução. A engenharia operacional não se trata de ferramentas, mas de como a execução flui dentro da organização... Nossa arquitetura se apoia em integrações via APIs, regras explícitas, logs auditáveis, modularidade e segurança."
   },
   "footer": {
-    "description": "Firma Boutique de Engenharia Operacional (D.O.A.™). Transformamos a dívida operacional de grandes grupos em arquitetura de execução agéntica governada.",
+    "description": "Automatizamos o trabalho administrativo que hoje é feito manualmente: pedidos, prestação de despesas, listas de preços de fornecedores e relatórios, com IA conectada ao seu ERP.",
     "headings": {
       "navigation": "Navegação",
       "resources": "Recursos",
@@ -71,11 +72,11 @@
     "links": {
       "home": "Início",
       "solutions": "Soluções",
-      "success_cases": "Casos de Sucesso",
+      "success_cases": "Casos",
       "about_us": "Sobre Nós",
       "contact": "Contato",
-      "request_demo": "Avaliação Estrutural",
-      "blog": "Notícias",
+      "request_demo": "Agende um diagnóstico",
+      "blog": "Blog",
       "privacy": "Privacidade",
       "terms": "Termos e Condições",
       "voice_agents": "Agentes de Voz",
@@ -85,43 +86,32 @@
     "privacy_policy": "Política de Privacidade",
     "terms_conditions": "Termos e Condições"
   },
-  "solutions_page": {
+  "solutions_overview": {
     "hero": {
-      "title": "Soluções de IA que Impulsionam seu Negócio",
-      "subtitle": "Além da tecnologia, criamos soluções que resolvem problemas reais. Nosso enfoque é simples: entender seu desafio e aplicar a IA correta para gerar eficiência, crescimento e um ROI mensurável."
+      "title": "O que automatizamos",
+      "subtitle": "Quatro problemas que vemos repetidamente em empresas de médio porte, e como os resolvemos. Se o seu caso for diferente, também resolvemos: fazemos soluções sob medida."
     },
-    "solutions": {
-      "chatbots": {
-        "title": "Sistemas Agênticos de Resposta",
-        "description": "Transforme sua arquitetura de atendimento e vendas. Implementamos sistemas de resposta autônoma no WhatsApp e Web que operam sob regras corporativas, integrando-se ao seu ERP para uma execução impecável.",
-        "benefits": [
-          "Eliminação de latência na resposta.",
-          "Governance sobre canais de comunicação.",
-          "Redução de Dívida Operacional no front-office."
-        ],
-        "cta": "Descobrir Arquitetura de Resposta"
+    "cards": {
+      "rendicion": {
+        "title": "Prestação de despesas e fundo fixo",
+        "description": "Os comprovantes são enviados pelo celular. A IA lê os recibos, valida as regras e a Tesouraria só aprova as exceções."
       },
-      "voice_agents": {
-        "title": "Agentes de Voz para Agendamento",
-        "description": "Elimine a carga do agendamento telefônico. Nosso agente de voz com IA gerencia, confirma e reagenda consultas com uma voz natural e humana, integrando-se perfeitamente com seu calendário.",
-        "benefits": [
-          "Horas administrativas economizadas.",
-          "Redução drástica de no-shows.",
-          "Melhora da experiência do cliente."
-        ],
-        "cta": "Descobrir Agentes de Voz"
+      "pedidos": {
+        "title": "Pedidos e orçamentos automáticos",
+        "description": "Os pedidos que chegam por WhatsApp, e-mail ou um portal viram orçamentos ou pedidos lançados no seu ERP, com aprovação humana."
       },
-      "custom_ia": {
-        "title": "Soluções de IA sob Medida",
-        "description": "Seu desafio não se encaixa em um molde? Perfeito. Nosso lema é \"implementar resultados\", e isso muitas vezes significa construir algo único. Analisamos seus processos e desenvolvemos uma solução personalizada.",
-        "benefits": [
-          "Solução 100% adaptada ao seu negócio.",
-          "Otimização de processos únicos.",
-          "Máximo impacto no ROI."
-        ],
-        "cta": "Contatar para uma Análise"
+      "facturas": {
+        "title": "Faturas e listas de fornecedores",
+        "description": "As faturas e listas de preços de centenas de fornecedores são processadas sozinhas a partir do e-mail. Avisamos quando algo aumenta mais do que o normal."
+      },
+      "tableros": {
+        "title": "Painéis de gestão",
+        "description": "Vendas, custos, fornecedores e desempenho comercial em um único painel, atualizado sozinho. Sem pedir uma planilha a ninguém."
       }
-    }
+    },
+    "see_more": "Saiba mais",
+    "not_listed": "Seu problema não está na lista? Resolvemos igual. Muitas vezes o que parece único se parece com algo que já fizemos.",
+    "cta_button": "Agende um diagnóstico"
   },
   "problem_solution": {
     "title": "O Problema vs. A Solução",
@@ -179,40 +169,74 @@
     "cta": "Inscrever-se Gratuitamente"
   },
   "cta_section": {
-    "title": "Identifique sua Dívida Operacional",
-    "description": "É hora de parar de apagar incêndios e começar a governar sua arquitetura de execução. Solicite uma avaliação profunda conosco.",
-    "button": "Avaliação Estrutural Gratuita"
+    "title": "Que tarefa você gostaria de nunca mais fazer manualmente?",
+    "description": "Conte para a gente em uma conversa de 45 minutos. Sem custo e sem compromisso.",
+    "button": "Agende seu diagnóstico"
   },
   "faq": {
-    "title": "Objeções Estruturais",
-    "description": "Respostas focadas em segurança, conformidade e integração arquitetônica para equipes de diretoria e gestores de TI.",
-    "q1": "Como é a intervenção? Qual é o processo D.O.A.?",
-    "a1": {
-      "intro": "Aplicamos o framework D.O.A.™ em três estágios estruturados:",
-      "step1_title": "1. Discovery Estrutural (Assessment)",
-      "step1_desc": "Mapeamos e auditamos os fluxos críticos da empresa. Identificamos latência corporativa, pontos de decisão frágeis e calculamos a Dívida Operacional. Desenhamos a arquitetura agêntica sem alterar a operação atual.",
-      "step2_title": "2. Orquestração e MVP Arquitetônico",
-      "step2_desc": "Implementamos a primeira camada de agentes governados e integramos conectores com seus ERPs (SAP, Salesforce, etc). Testamos o fluxo de ponta a ponta em um ambiente controlado (Shadow Mode) antes da adoção total.",
-      "step3_title": "3. Escalonamento e Governance",
-      "step3_desc": "Estendemos a arquitetura para o restante da holding. É entregue um Governance Board onde sua diretoria tem controle absoluto e visibilidade das decisões tomadas pelos agentes orquestrados."
-    },
-    "q2": "Vocês substituem nosso ERP ou sistemas Core?",
-    "a2": {
-      "badge": "Categoricamente Não.",
-      "p1": "A Datelia desenha a arquitetura de orquestração sobre seus sistemas atuais. Integramo-nos nativamente por meio de APIs seguras ao seu ERP, CRM ou bancos de dados Legacy.",
-      "p2": "Os agentes D.O.A.™ atuam como conectores inteligentes que leem, processam e escrevem em seus sistemas, respeitando todas as suas regras corporativas de acesso atuais."
-    },
-    "q3": "Que nível de Governance e Segurança vocês aplicam?",
-    "a3": {
-      "p1": "Nossa arquitetura conta com rastreabilidade total: cada ação fica registrada e é auditável.",
-      "p2": "Cada agente D.O.A. opera sob \"guardrails\" (limites) estritos pré-aprovados pelo cliente. Decisões que envolvem movimentações financeiras ou mudanças de alto risco podem ser configuradas como implementações \"Human-in-the-Loop\", exigindo autorização de um gerente antes da execução.",
-      "p2_strong": "Sua empresa nunca perde a soberania sobre seus dados ou processos-chave."
-    },
-    "q4": "Quanto tempo demora uma intervenção base?",
-    "a4": {
-      "p1": "No nível Enterprise, o modelo é normalmente implementado em janelas de 12 a 16 semanas até ter o primeiro nó arquitetônico integrado e em produção real.",
-      "p2": "O \"Discovery Estrutural\" ocupa as primeiras 3-4 semanas, sendo o marco fundamental mais crítico, onde validamos as hipóteses de risco operacional e desenhamos o mapa de orquestração."
-    }
+    "title": "Perguntas frequentes",
+    "items": [
+      { "q": "Preciso trocar meu ERP ou meus sistemas?", "a": "Não. Nos integramos com o que você já usa. Se seu sistema não tem integração, trabalhamos com arquivos ou planilhas." },
+      { "q": "Quanto tempo leva um projeto?", "a": "A primeira etapa costuma estar funcionando em 6 a 10 semanas. Projetos maiores são divididos em etapas para você ver resultados rápido." },
+      { "q": "Quanto custa?", "a": "Depende do escopo, mas trabalhamos com preço fechado por etapa: você sabe quanto vai pagar antes de começar." },
+      { "q": "O que acontece se a IA errar?", "a": "Por isso tudo passa por aprovação humana. A IA monta o rascunho e sua equipe valida. Além disso, o sistema aprende com cada correção." },
+      { "q": "O que acontece com meus dados?", "a": "Seus dados são seus. Usamos bancos de dados próprios de cada cliente, backups diários e acessos restritos." },
+      { "q": "Minha equipe vai conseguir usar?", "a": "Sim. Projetamos pensando em quem usa todos os dias, treinamos e damos suporte. Se algo não for usado, ajustamos." }
+    ]
+  },
+  "home_hero": {
+    "title": "Automatizamos o trabalho administrativo que hoje é feito manualmente.",
+    "subtitle": "Pedidos, prestação de despesas, listas de preços de fornecedores, orçamentos e relatórios. Com inteligência artificial conectada ao seu ERP e às suas planilhas, sem trocar os sistemas que você já usa.",
+    "cta_primary": "Agende um diagnóstico gratuito",
+    "cta_secondary": "Ver casos reais",
+    "note": "45 minutos por videochamada. Dizemos o que vale a pena automatizar primeiro, mesmo que você não trabalhe com a gente.",
+    "erp_label": "ERP atualizado"
+  },
+  "home_trust": {
+    "rating_text": "no Clutch: avaliações verificadas de nossos clientes",
+    "clutch_link_label": "Ver no Clutch",
+    "clients_label": "Clientes"
+  },
+  "home_problems": {
+    "title": "Alguma dessas situações é familiar?",
+    "items": [
+      "A Tesouraria perde dias conferindo prestações de contas e comprovantes em planilhas.",
+      "Os pedidos chegam por WhatsApp, e-mail e telefone, e alguém os lança manualmente no sistema de novo.",
+      "Atualizar as listas de preços dos fornecedores leva semanas, e sempre escapa algum aumento.",
+      "Montar um orçamento leva horas e depende de uma única pessoa.",
+      "Para saber como está o mês, é preciso pedir a alguém para montar uma planilha."
+    ],
+    "closing": "Se alguma dessas situações é familiar, dá para automatizar. Já fizemos isso em empresas como a sua."
+  },
+  "home_solutions": {
+    "title": "O que automatizamos",
+    "subtitle": "Soluções sob medida, mas sobre problemas que já resolvemos antes. Você não começa do zero.",
+    "cta_button": "Ver todas as soluções"
+  },
+  "home_cases": {
+    "title": "Casos reais, com nome e sobrenome",
+    "subtitle": "Poucos, mas verificáveis. Você pode perguntar a eles mesmo."
+  },
+  "home_testimonials": {
+    "title": "O que nossos clientes dizem"
+  },
+  "home_how_we_work": {
+    "title": "Como trabalhamos",
+    "steps": [
+      { "title": "Diagnóstico gratuito (45 min)", "desc": "Você conta como trabalha hoje. Dizemos o que vale a pena automatizar primeiro e o que não vale a pena." },
+      { "title": "Levantamento", "desc": "Sentamos com sua equipe e mapeamos o processo em detalhe. Apresentamos a proposta em uma reunião, com escopo, prazos e preço fechado." },
+      { "title": "Implementação por etapas", "desc": "Entregamos em etapas curtas, com marcos claros. Sua equipe testa e valida antes de seguir. Treinamos quem vai usar." },
+      { "title": "Suporte e melhoria contínua", "desc": "Uma mensalidade cobre suporte, ajustes e melhorias. O sistema cresce com sua empresa." }
+    ]
+  },
+  "home_why_us": {
+    "title": "Por que trabalhar com a gente",
+    "points": [
+      { "title": "30 anos em projetos de software", "desc": "Gastón liderou projetos para empresas como Globant e Cognizant antes de fundar a Datelia. Sabemos gerenciar projetos, não só programar." },
+      { "title": "Não substituímos seu ERP", "desc": "Nos conectamos ao que você já usa: Odoo, Paljet, Google Sheets, e-mail, WhatsApp. Sua equipe continua trabalhando onde já trabalha." },
+      { "title": "A IA propõe, sua equipe decide", "desc": "Cada sistema tem aprovações, alertas e registro de quem fez o quê. Nada importante sai sem que uma pessoa valide." },
+      { "title": "Nos importamos que seja usado", "desc": "Treinamos a equipe e acompanhamos os primeiros meses. Uma ferramenta que ninguém usa não serve." }
+    ]
   },
   "about_us": {
     "hero": {
@@ -266,10 +290,10 @@
       }
     }
   },
-  "case_studies_page": {
+  "casos_page": {
     "hero": {
-      "title": "Resultados verificados no Clutch",
-      "subtitle": "Estamos preparando o detalhe dos nossos casos reais. Enquanto isso, estas são as avaliações verificadas de clientes no Clutch."
+      "title": "Casos reais",
+      "subtitle": "Poucos, mas reais. Todos os clientes que aparecem aqui aceitaram ser mencionados. Dois deles deixaram sua avaliação verificada no Clutch."
     },
     "testimonials": [
       {
@@ -283,7 +307,190 @@
         "source": "Avaliação verificada no Clutch"
       }
     ],
-    "clutch_link": "Ver avaliações no Clutch"
+    "clutch_link": "Ver avaliações no Clutch",
+    "cases_title": "Nossos casos",
+    "cta_label": "Ver caso"
+  },
+  "case_names": {
+    "cedsa": "CEDSA",
+    "la_francisca": "La Francisca",
+    "la_tablada": "La Tablada"
+  },
+  "caso_cedsa": {
+    "title": "CEDSA: controle automático de prestação de contas",
+    "summary": "Controle automático das prestações de contas de representantes do interior. Chega de planilhas, chegaram os alertas.",
+    "ficha": "Instituição de ensino · Salta, Argentina · 51-200 funcionários · Projeto 2025",
+    "starting_point_label": "O ponto de partida",
+    "starting_point": "Os representantes do interior prestavam contas de pagamentos em dinheiro com planilhas de Excel. A Tesouraria conferia manualmente contra o sistema de gestão, uma a uma. À medida que as unidades de gestão cresciam, o controle se tornava impossível e os erros eram detectados tarde.",
+    "what_we_did_label": "O que fizemos",
+    "what_we_did": [
+      "Um formulário web seguro para cada representante enviar suas prestações de contas.",
+      "Uma base histórica centralizada.",
+      "Regras automáticas que detectam irregularidades e avisam por e-mail.",
+      "Integração direta com o sistema de gestão da CEDSA.",
+      "Um painel de conciliação para a Tesouraria."
+    ],
+    "result_label": "Resultado",
+    "result": "O processo passou de planilhas e controles manuais para um fluxo centralizado e automático.",
+    "quote": "O que nos impressionou foi como entenderam um problema operacional concreto e criaram uma solução prática.",
+    "quote_author": "Executivo da CEDSA",
+    "quote_source": "Avaliação verificada no Clutch",
+    "tech_label": "Tecnologia",
+    "tech": "Formulário web · Banco de dados · Motor de regras · Integração com o sistema de gestão · Painel",
+    "cta": "Tem um problema parecido? Agende um diagnóstico"
+  },
+  "caso_la_francisca": {
+    "title": "La Francisca: pedidos, despesas e gestão conectados ao Odoo",
+    "summary": "Portal de pedidos, prestação de despesas com leitura de recibos e painel de gestão, tudo conectado ao Odoo.",
+    "ficha": "Projeto 2025-2026",
+    "starting_point_label": "O ponto de partida",
+    "starting_point": "Os pedidos de venda e os romaneios de consignação eram transcritos manualmente no sistema. As faturas de fornecedores chegavam por e-mail e eram lançadas uma a uma. As prestações de despesas dos motoristas eram em papel. A informação para planejar compras estava espalhada.",
+    "what_we_did_label": "O que fizemos, em 3 etapas",
+    "what_we_did": [
+      { "title": "Portal de pedidos", "desc": "Lançamento estruturado de pedidos e romaneios, faturas de fornecedores lidas automaticamente por e-mail, integração com Odoo e TELI." },
+      { "title": "Prestação de despesas", "desc": "App web para celular que funciona sem conexão, leitura de recibos com IA, painel de aprovação para a Tesouraria e custos por rota e transportadora." },
+      { "title": "Painel de gestão", "desc": "Visão unificada de vendas e fornecedores, com previsão de demanda e sugestões de compra." }
+    ],
+    "result_label": "Resultado",
+    "result": "Pedidos, prestações de despesas e faturas de fornecedores deixaram de ser transcritos manualmente e passaram a um fluxo centralizado conectado ao Odoo.",
+    "tech_label": "Tecnologia",
+    "tech": "Odoo (API) · TELI · IA para leitura de documentos · App web · BI",
+    "cta": "Tem um problema parecido? Agende um diagnóstico"
+  },
+  "caso_la_tablada": {
+    "title": "La Tablada: 300 fornecedores e orçamentos em minutos",
+    "summary": "Listas de 300 fornecedores processadas automaticamente e orçamentos montados a partir de um áudio do Telegram.",
+    "ficha": "Distribuição comercial, setor de construção · Salta, Argentina · 11-50 funcionários · Projeto em andamento (2026)",
+    "starting_point_label": "O ponto de partida",
+    "starting_point": "A La Tablada recebe listas de preços de cerca de 300 fornecedores, cada uma em um formato diferente. Atualizar custos e montar orçamentos era manual, lento e dependia de poucas pessoas. Os aumentos eram detectados tarde e os descontos eram concedidos sem controle centralizado.",
+    "what_we_did_label": "O que fizemos",
+    "what_we_did": [
+      "Recepção automática de listas por e-mail, com leitura de PDF e Excel.",
+      "Relação de códigos de produto que aprende com cada correção da equipe.",
+      "Alertas de aumentos críticos e bloqueio de orçamentos que exigem aprovação.",
+      "Um bot do Telegram para os vendedores pedirem orçamentos com um áudio, uma foto ou uma mensagem.",
+      "Um painel de aprovação e PDFs com a marca da La Tablada.",
+      "Um painel para a diretoria: orçamentos, descontos por vendedor e fornecedores com mais aumentos."
+    ],
+    "next_stage_label": "Próxima etapa",
+    "next_stage": "WhatsApp, lançamento direto de pedidos no ERP Paljet e painéis de inteligência comercial.",
+    "result_label": "Resultado",
+    "result": "O processamento das listas de 300 fornecedores e o cálculo de orçamentos deixaram de depender de poucas pessoas conferindo planilhas manualmente.",
+    "quote": "O que mais nos impressionou foi sua capacidade de combinar IA com os controles que uma operação comercial real exige.",
+    "quote_author": "Oscar Molina, La Tablada",
+    "quote_source": "Avaliação verificada no Clutch",
+    "tech_label": "Tecnologia",
+    "tech": "PostgreSQL · IA para documentos e áudio · Telegram · App web · Gerador de PDF · Paljet (próxima etapa)",
+    "cta": "Tem um problema parecido? Agende um diagnóstico"
+  },
+  "sol_rendicion": {
+    "hero": {
+      "title": "Prestação de despesas sem planilhas nem cobranças",
+      "subtitle": "Sua equipe envia os comprovantes pelo celular. A IA os lê, os valida e a Tesouraria só revisa o que não fecha."
+    },
+    "problem_label": "O problema",
+    "problem": "As prestações de contas chegam em papel, por foto ou em planilhas, cada uma em um formato diferente. A Tesouraria passa dias conferindo contra o sistema, e os erros ou irregularidades são detectados tarde, quando são detectados. Quanto mais filiais ou representantes, pior.",
+    "steps_title": "Como resolvemos",
+    "steps": [
+      "O colaborador fotografa o comprovante pelo celular, mesmo sem conexão.",
+      "A IA lê o comprovante e preenche os dados.",
+      "O sistema aplica as regras de controle que você define (valores, duplicidades, categorias, prazos).",
+      "A Tesouraria aprova em um painel e só olha as exceções.",
+      "Tudo fica registrado e pode ser visto em um painel por pessoa, filial ou rota."
+    ],
+    "includes_title": "O que inclui",
+    "includes": [
+      "App web para celular (funciona sem conexão)",
+      "Leitura automática de comprovantes com IA",
+      "Regras de controle e alertas por e-mail",
+      "Painel de aprovação para a Tesouraria",
+      "Histórico e painel de custos",
+      "Integração com seu sistema contábil ou ERP (ex. Odoo)"
+    ],
+    "related_cases_title": "Casos relacionados",
+    "cta_title": "Sua equipe perde dias conferindo prestações de contas?",
+    "cta_button": "Agende um diagnóstico"
+  },
+  "sol_pedidos": {
+    "hero": {
+      "title": "Pedidos e orçamentos que se montam sozinhos",
+      "subtitle": "Seus clientes e vendedores enviam o pedido como for mais fácil: um áudio, uma foto, uma mensagem. O sistema transforma em orçamento ou em pedido lançado no seu ERP."
+    },
+    "problem_label": "O problema",
+    "problem": "Os pedidos chegam por WhatsApp, e-mail, telefone e planilhas. Alguém os transcreve manualmente no sistema, com erros de produto, quantidade ou preço. Montar um orçamento leva horas e depende de quem conhece os preços.",
+    "steps_title": "Como resolvemos",
+    "steps": [
+      "O pedido entra pelo canal que você escolher: portal web, WhatsApp, Telegram ou e-mail.",
+      "A IA identifica cliente, produtos e quantidades, mesmo vindo em um áudio ou uma foto.",
+      "Um rascunho é montado com os preços e margens vigentes.",
+      "Um vendedor revisa e aprova. Se houver um desconto fora do permitido, a diretoria aprova.",
+      "Sai o PDF com sua marca ou o pedido é lançado direto no ERP."
+    ],
+    "includes_title": "O que inclui",
+    "includes": [
+      "Recepção de pedidos multicanal (texto, áudio, foto)",
+      "Identificação de produtos (aprende com cada correção)",
+      "Regras de preços, margens e descontos",
+      "Painel de aprovação",
+      "PDF de orçamento com sua marca",
+      "Lançamento no ERP (Odoo, Paljet e outros com integração disponível)"
+    ],
+    "related_cases_title": "Casos relacionados",
+    "cta_title": "Os pedidos da sua empresa entram por 3 canais diferentes?",
+    "cta_button": "Agende um diagnóstico"
+  },
+  "sol_facturas": {
+    "hero": {
+      "title": "Listas de preços e faturas de fornecedores, processadas sozinhas",
+      "subtitle": "Você recebe centenas de listas e faturas por e-mail, em PDF ou Excel. Nós as lemos, organizamos e avisamos quando algo não fecha."
+    },
+    "problem_label": "O problema",
+    "problem": "Cada fornecedor envia sua lista em um formato e códigos próprios. Atualizar preços é um trabalho de semanas, os aumentos são detectados tarde e as faturas são lançadas manualmente no sistema.",
+    "steps_title": "Como resolvemos",
+    "steps": [
+      "Uma caixa de e-mail recebe as listas e faturas.",
+      "A IA extrai os dados de PDFs e Excel.",
+      "O sistema relaciona os produtos do fornecedor com os seus e aprende com cada correção.",
+      "Se um preço aumenta mais do que o definido, chega um alerta.",
+      "Fica o histórico de preços por fornecedor, e as faturas passam como rascunho para o ERP."
+    ],
+    "includes_title": "O que inclui",
+    "includes": [
+      "Caixa de recepção automática",
+      "Leitura de PDF e Excel",
+      "Relação de códigos de produto que aprende com o uso",
+      "Alertas de aumentos e desvios",
+      "Histórico de preços por fornecedor",
+      "Rascunho de fatura no ERP"
+    ],
+    "related_cases_title": "Casos relacionados",
+    "cta_title": "Atualizar preços de fornecedores leva semanas?",
+    "cta_button": "Agende um diagnóstico"
+  },
+  "sol_tableros": {
+    "hero": {
+      "title": "Toda a sua empresa em um painel",
+      "subtitle": "Vendas, custos, fornecedores e desempenho comercial, atualizados sozinhos. Para decidir com dados, não com intuição."
+    },
+    "problem_label": "O problema",
+    "problem": "A informação está espalhada entre o ERP, as planilhas e o e-mail. Para ter um número é preciso pedir a alguém, e quando chega já está desatualizado.",
+    "steps_title": "Como resolvemos",
+    "steps": [
+      "Conectamos suas fontes: ERP, planilhas, sistemas próprios.",
+      "Unificamos e limpamos os dados.",
+      "Montamos painéis com os indicadores que você realmente acompanha.",
+      "Eles se atualizam sozinhos. Se precisar, somamos previsão de demanda e sugestões de compra."
+    ],
+    "includes_title": "O que inclui",
+    "includes": [
+      "Conectores aos seus sistemas",
+      "Painéis (Looker Studio, Power BI ou sob medida)",
+      "Indicadores definidos com a diretoria",
+      "Opcional: previsão de demanda e sugestões de compra"
+    ],
+    "related_cases_title": "Casos relacionados",
+    "cta_title": "Para saber um número, você tem que pedir uma planilha a alguém?",
+    "cta_button": "Agende um diagnóstico"
   },
   "contact_page": {
     "hero": {

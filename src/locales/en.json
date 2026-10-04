@@ -2,16 +2,17 @@
   "navigation": {
     "home": "Home",
     "solutions": "Solutions",
-    "voice_agents": "Voice Agents for Scheduling",
-    "all_solutions": "All Solutions",
-    "manifesto": "Manifesto",
-    "live_events": "Live Events",
+    "sol_rendicion": "Expense reports",
+    "sol_pedidos": "Orders and quotes",
+    "sol_facturas": "Invoices and suppliers",
+    "sol_tableros": "Management dashboards",
+    "all_solutions": "See all solutions",
+    "cases": "Case studies",
+    "how_we_work": "How we work",
     "contact": "Contact",
-    "book_audit": "Free Structural Evaluation",
-    "case_studies": "Case Studies",
-    "news": "News",
-    "about_us": "About Us",
-    "chatbots": "Agentic Response Systems"
+    "book_audit": "Book a diagnostic call",
+    "news": "Blog",
+    "about_us": "About Us"
   },
   "hero": {
     "title": "Companies don't fail from lack of strategy.",
@@ -50,8 +51,8 @@
     ]
   },
   "erp_integration": {
-    "title": "D.O.A.™ Node Ecosystem",
-    "description": "The architecture does not replace the corporate systems operating your billing and management. It unifies them, eliminating the layer of human error and friction."
+    "title": "We integrate with what you already use",
+    "description": "We don't replace your ERP or your systems. We connect to them to automate without making your team change where they work."
   },
   "testimonials": {
     "t1_name": "Jimena Garcia Pinto",
@@ -62,7 +63,7 @@
     "t2_quote": "At Datelia, we design execution architecture. Operational engineering is not about tools, but how execution flows within the organization... Our architecture relies on API integrations, explicit rules, auditable logs, modularity, and security."
   },
   "footer": {
-    "description": "Operational Engineering & AI Solutions Boutique Firm (D.O.A.™) based in Argentina. We architect governed execution systems for complex enterprise groups.",
+    "description": "We automate the administrative work that's still done by hand: orders, expense reports, supplier price lists, and reports, with AI connected to your ERP.",
     "headings": {
       "navigation": "Navigation",
       "resources": "Resources",
@@ -71,11 +72,11 @@
     "links": {
       "home": "Home",
       "solutions": "Solutions",
-      "success_cases": "Success Cases",
+      "success_cases": "Case Studies",
       "about_us": "About Us",
       "contact": "Contact",
-      "request_demo": "Structural Evaluation",
-      "blog": "News",
+      "request_demo": "Book a diagnostic call",
+      "blog": "Blog",
       "privacy": "Privacy",
       "terms": "Terms & Conditions",
       "voice_agents": "Voice Agents",
@@ -86,43 +87,32 @@
     "privacy_policy": "Privacy Policy",
     "terms_conditions": "Terms and Conditions"
   },
-  "solutions_page": {
+  "solutions_overview": {
     "hero": {
-      "title": "AI Solutions that Drive Your Business",
-      "subtitle": "Beyond technology, we create solutions that solve real problems. Our approach is simple: understand your challenge and apply the right AI to generate efficiency, growth, and a measurable ROI."
+      "title": "What we automate",
+      "subtitle": "Four problems we see over and over in mid-sized companies, and how we solve them. If your case is different, we handle that too: we build solutions tailored to your business."
     },
-    "solutions": {
-      "chatbots": {
-        "title": "Agentic Response Systems",
-        "description": "Transform your service and sales architecture. We implement autonomous response systems on WhatsApp and Web that operate under corporate rules, integrating with your ERP for flawless execution.",
-        "benefits": [
-          "Elimination of response latency.",
-          "Governance over communication channels.",
-          "Front-office operational debt reduction."
-        ],
-        "cta": "Discover Response Architecture"
+    "cards": {
+      "rendicion": {
+        "title": "Expense reports and petty cash",
+        "description": "Receipts are uploaded from the phone. AI reads the tickets, validates the rules, and Treasury only approves the exceptions."
       },
-      "voice_agents": {
-        "title": "Voice Agents for Scheduling",
-        "description": "Eliminate the burden of phone scheduling. Our AI voice agent manages, confirms, and reschedules appointments with a natural and human voice, integrating perfectly with your calendar.",
-        "benefits": [
-          "Administrative hours saved.",
-          "Drastic reduction in no-shows.",
-          "Improved customer experience."
-        ],
-        "cta": "Discover Voice Agents"
+      "pedidos": {
+        "title": "Automated orders and quotes",
+        "description": "Orders coming in via WhatsApp, email, or a portal turn into quotes or orders loaded into your ERP, with human approval."
       },
-      "custom_ia": {
-        "title": "Custom AI Solutions",
-        "description": "Does your challenge not fit into a mold? Perfect. Our motto is \"implement results\", and that often means building something unique. We analyze your processes and develop a personalized solution.",
-        "benefits": [
-          "100% adapted solution to your business.",
-          "Optimization of unique processes.",
-          "Maximum impact on ROI."
-        ],
-        "cta": "Contact for an Analysis"
+      "facturas": {
+        "title": "Supplier invoices and price lists",
+        "description": "Invoices and price lists from hundreds of suppliers are processed automatically from email. We flag it when something increases more than usual."
+      },
+      "tableros": {
+        "title": "Management dashboards",
+        "description": "Sales, costs, suppliers, and sales performance in a single dashboard that updates itself. No need to ask anyone for a spreadsheet."
       }
-    }
+    },
+    "see_more": "Learn more",
+    "not_listed": "Your problem isn't on this list? We handle that too. What looks unique often resembles something we've already solved.",
+    "cta_button": "Book a diagnostic call"
   },
   "target_audience": {
     "title": "The Architectural Filter",
@@ -154,40 +144,74 @@
     "cta": "Register Free of Charge"
   },
   "cta_section": {
-    "title": "Identify your Operational Debt",
-    "description": "It's time to stop putting out fires and start governing your execution architecture. Request a deep evaluation with us.",
-    "button": "Free Structural Evaluation"
+    "title": "What task would you love to never do by hand again?",
+    "description": "Tell us about it in a 45-minute call. No cost, no commitment.",
+    "button": "Book your diagnostic call"
   },
   "faq": {
-    "title": "Structural Objections",
-    "description": "Answers focused on security, compliance, and architectural integration for board members and IT managers.",
-    "q1": "How is the intervention? What is the D.O.A. process?",
-    "a1": {
-      "intro": "We apply the D.O.A.™ framework in three structured stages:",
-      "step1_title": "1. Structural Discovery (Assessment)",
-      "step1_desc": "We map and audit the company's critical flows. We identify corporate latency, fragile decision points, and calculate Operational Debt. We design the agentic architecture without altering current operations.",
-      "step2_title": "2. Orchestration and Architectural MVP",
-      "step2_desc": "We deploy the first layer of governed agents and integrate connectors with your ERPs (SAP, Salesforce, etc). We test the end-to-end flow in a controlled environment (Shadow Mode) before full adoption.",
-      "step3_title": "3. Scaling and Governance",
-      "step3_desc": "We extend the architecture to the rest of the holding. A Governance Board is delivered where your board has absolute control and visibility of the decisions being made by the orchestrated agents."
-    },
-    "q2": "Do you replace our ERP or Core systems?",
-    "a2": {
-      "badge": "Categorically No.",
-      "p1": "Datelia designs the orchestration architecture on top of your current systems. We integrate natively via secure APIs to your ERP, CRM, or Legacy databases.",
-      "p2": "D.O.A.™ agents act as intelligent connectors that read, process, and write to your systems, respecting all your current corporate access rules."
-    },
-    "q3": "What level of Governance and Security do you apply?",
-    "a3": {
-      "p1": "Our architecture features full traceability: every action is logged and auditable.",
-      "p2": "Each D.O.A. agent operates under strict client pre-approved \"guardrails\" (limits). Decisions involving financial movements or high-risk changes can be configured as \"Human-in-the-Loop\" deployments, requiring authorization from a manager before execution.",
-      "p2_strong": "Your company never loses sovereignty over its data or key processes."
-    },
-    "q4": "How long does a base intervention take?",
-    "a4": {
-      "p1": "At the Enterprise level, the model is usually implemented in windows of 12 to 16 weeks until the first architectural node is integrated and in actual production.",
-      "p2": "The \"Structural Discovery\" takes the first 3-4 weeks, being the most critical foundational milestone where we validate operational risk hypotheses and design the orchestration map."
-    }
+    "title": "Frequently asked questions",
+    "items": [
+      { "q": "Do I have to change my ERP or systems?", "a": "No. We integrate with what you already use. If your system has no integration, we work with files or spreadsheets." },
+      { "q": "How long does a project take?", "a": "The first stage is usually up and running in 6 to 10 weeks. Bigger projects are split into stages so you see results fast." },
+      { "q": "How much does it cost?", "a": "It depends on scope, but we work with a fixed price per stage: you know what you'll pay before starting." },
+      { "q": "What happens if the AI gets something wrong?", "a": "That's why everything goes through human approval. The AI builds the draft and your team validates it. The system also learns from every correction." },
+      { "q": "What happens with my data?", "a": "Your data is yours. We use per-client databases, daily backups, and restricted access." },
+      { "q": "Will my team be able to use it?", "a": "Yes. We design for the people who use it every day, train them, and provide support. If something doesn't get used, we adjust it." }
+    ]
+  },
+  "home_hero": {
+    "title": "We automate the administrative work still done by hand.",
+    "subtitle": "Orders, expense reports, supplier price lists, quotes, and reports. With AI connected to your ERP and spreadsheets, without changing the systems you already use.",
+    "cta_primary": "Book a free diagnostic call",
+    "cta_secondary": "See real case studies",
+    "note": "45 minutes by video call. We tell you what's worth automating first, even if you don't end up working with us.",
+    "erp_label": "ERP up to date"
+  },
+  "home_trust": {
+    "rating_text": "on Clutch: verified client reviews",
+    "clutch_link_label": "See on Clutch",
+    "clients_label": "Clients"
+  },
+  "home_problems": {
+    "title": "Does any of this sound familiar?",
+    "items": [
+      "Treasury loses days reconciling expense reports and receipts in Excel.",
+      "Orders come in via WhatsApp, email, and phone, and someone re-enters them into the system by hand.",
+      "Updating supplier price lists takes weeks, and an increase always slips through.",
+      "Building a quote takes hours and depends on one single person.",
+      "To know how the month is going, someone has to be asked to build a spreadsheet."
+    ],
+    "closing": "If any of this sounds familiar, it can be automated. We've already done it for companies like yours."
+  },
+  "home_solutions": {
+    "title": "What we automate",
+    "subtitle": "Solutions tailored to you, built on problems we've already solved before. You're not starting from zero.",
+    "cta_button": "See all solutions"
+  },
+  "home_cases": {
+    "title": "Real case studies, with real names",
+    "subtitle": "Few, but verifiable. You can ask them yourself."
+  },
+  "home_testimonials": {
+    "title": "What our clients say"
+  },
+  "home_how_we_work": {
+    "title": "How we work",
+    "steps": [
+      { "title": "Free diagnostic call (45 min)", "desc": "You tell us how you work today. We tell you what's worth automating first and what isn't worth it." },
+      { "title": "Discovery", "desc": "We sit down with your team and map the process in detail. We present the proposal in a meeting, with scope, timeline, and a fixed price." },
+      { "title": "Phased implementation", "desc": "We deliver in short stages with clear milestones. Your team tests and validates before moving forward. We train whoever will use it." },
+      { "title": "Support and continuous improvement", "desc": "A monthly plan covers support, adjustments, and improvements. The system grows with your company." }
+    ]
+  },
+  "home_why_us": {
+    "title": "Why work with us",
+    "points": [
+      { "title": "30 years building software projects", "desc": "Gastón led projects for companies like Globant and Cognizant before founding Datelia. We know how to manage projects, not just write code." },
+      { "title": "We don't replace your ERP", "desc": "We connect to what you already use: Odoo, Paljet, Google Sheets, email, WhatsApp. Your team keeps working where they already work." },
+      { "title": "AI proposes, your team decides", "desc": "Every system has approvals, alerts, and a record of who did what. Nothing important ships without a person validating it." },
+      { "title": "We care that it actually gets used", "desc": "We train the team and stay close for the first few months. A tool nobody uses is worthless." }
+    ]
   },
   "problem_solution": {
     "title": "The Problem vs. The Solution",
@@ -267,10 +291,10 @@
       }
     }
   },
-  "case_studies_page": {
+  "casos_page": {
     "hero": {
-      "title": "Verified results on Clutch",
-      "subtitle": "We're preparing the full detail of our real case studies. In the meantime, here are verified client reviews from Clutch."
+      "title": "Real case studies",
+      "subtitle": "Few, but real. Every client featured here agreed to be named. Two of them left a verified review on Clutch."
     },
     "testimonials": [
       {
@@ -284,7 +308,190 @@
         "source": "Verified review on Clutch"
       }
     ],
-    "clutch_link": "See reviews on Clutch"
+    "clutch_link": "See reviews on Clutch",
+    "cases_title": "Our case studies",
+    "cta_label": "See case study"
+  },
+  "case_names": {
+    "cedsa": "CEDSA",
+    "la_francisca": "La Francisca",
+    "la_tablada": "La Tablada"
+  },
+  "caso_cedsa": {
+    "title": "CEDSA: automatic control of payment reports",
+    "summary": "Automatic control of payment reports from field representatives. No more spreadsheets, hello alerts.",
+    "ficha": "Educational institution · Salta, Argentina · 51-200 employees · 2025 project",
+    "starting_point_label": "The starting point",
+    "starting_point": "Field representatives reported cash payments using Excel spreadsheets. Treasury had to reconcile them one by one against the management system by hand. As the number of units grew, control became unmanageable and errors were caught late.",
+    "what_we_did_label": "What we did",
+    "what_we_did": [
+      "A secure web form for each representative to submit their reports.",
+      "A centralized historical database.",
+      "Automatic rules that flag irregularities and alert by email.",
+      "Direct integration with CEDSA's management system.",
+      "A reconciliation dashboard for Treasury."
+    ],
+    "result_label": "Result",
+    "result": "The process went from spreadsheets and manual checks to a centralized, automatic flow.",
+    "quote": "What impressed us was Datelia's understanding of a specific operational problem and creating a practical solution.",
+    "quote_author": "CEDSA Executive",
+    "quote_source": "Verified review on Clutch",
+    "tech_label": "Technology",
+    "tech": "Web form · Database · Rules engine · Management system integration · Dashboard",
+    "cta": "Facing a similar problem? Book a diagnostic call"
+  },
+  "caso_la_francisca": {
+    "title": "La Francisca: orders, expenses and management connected to Odoo",
+    "summary": "Order portal, expense reporting with receipt scanning, and a management dashboard, all connected to Odoo.",
+    "ficha": "2025-2026 project",
+    "starting_point_label": "The starting point",
+    "starting_point": "Sales orders and consignment notes were transcribed into the system by hand. Supplier invoices arrived by email and were entered one by one. Driver expense reports were on paper. Information for purchase planning was scattered across tools.",
+    "what_we_did_label": "What we did, in 3 stages",
+    "what_we_did": [
+      { "title": "Order portal", "desc": "Structured order and delivery-note entry, supplier invoices read automatically from email, integration with Odoo and TELI." },
+      { "title": "Expense reporting", "desc": "Offline-capable mobile web app, AI receipt scanning, an approval panel for Treasury, and costs broken down by route and carrier." },
+      { "title": "Management dashboard", "desc": "A unified view of sales and suppliers, with demand forecasting and purchase suggestions." }
+    ],
+    "result_label": "Result",
+    "result": "Orders, expense reports, and supplier invoices stopped being transcribed by hand and moved into a centralized flow connected to Odoo.",
+    "tech_label": "Technology",
+    "tech": "Odoo (API) · TELI · Document-reading AI · Web app · BI",
+    "cta": "Facing a similar problem? Book a diagnostic call"
+  },
+  "caso_la_tablada": {
+    "title": "La Tablada: 300 suppliers and quotes in minutes",
+    "summary": "Price lists from 300 suppliers processed automatically, and quotes built from a Telegram voice note.",
+    "ficha": "Commercial distribution, construction sector · Salta, Argentina · 11-50 employees · Ongoing project (2026)",
+    "starting_point_label": "The starting point",
+    "starting_point": "La Tablada receives price lists from around 300 suppliers, each in its own format. Updating costs and building quotes was manual, slow, and depended on a handful of people. Price increases were caught late and discounts were granted with no centralized control.",
+    "what_we_did_label": "What we did",
+    "what_we_did": [
+      "Automatic email intake of price lists, reading PDF and Excel.",
+      "Product-code matching that learns from every correction the team makes.",
+      "Alerts for critical price increases and holds on quotes that need approval.",
+      "A Telegram bot so sales reps can request quotes with a voice note, a photo, or a message.",
+      "An approval panel and PDFs branded for La Tablada.",
+      "A dashboard for management: quotes, discounts by rep, and suppliers with the most increases."
+    ],
+    "next_stage_label": "Next stage",
+    "next_stage": "WhatsApp, direct order entry into the Paljet ERP, and commercial intelligence dashboards.",
+    "result_label": "Result",
+    "result": "Processing price lists from 300 suppliers and building quotes stopped depending on a few people checking spreadsheets by hand.",
+    "quote": "What impressed us most was their ability to combine AI with the controls required by a real commercial operation.",
+    "quote_author": "Oscar Molina, La Tablada",
+    "quote_source": "Verified review on Clutch",
+    "tech_label": "Technology",
+    "tech": "PostgreSQL · Document and voice AI · Telegram · Web app · PDF generator · Paljet (next stage)",
+    "cta": "Facing a similar problem? Book a diagnostic call"
+  },
+  "sol_rendicion": {
+    "hero": {
+      "title": "Expense reports without spreadsheets or chasing receipts",
+      "subtitle": "Your team uploads receipts from their phone. AI reads and validates them, and Treasury only reviews what doesn't add up."
+    },
+    "problem_label": "The problem",
+    "problem": "Expense reports arrive on paper, as photos, or in spreadsheets, each in a different format. Treasury spends days reconciling them against the system, and errors or irregularities are caught late, if at all. The more branches or representatives, the worse it gets.",
+    "steps_title": "How we solve it",
+    "steps": [
+      "The employee photographs the receipt from their phone, even offline.",
+      "AI reads the receipt and fills in the data.",
+      "The system applies the control rules you define (amounts, duplicates, categories, deadlines).",
+      "Treasury approves from a panel and only looks at the exceptions.",
+      "Everything is logged and visible on a dashboard by person, branch, or route."
+    ],
+    "includes_title": "What's included",
+    "includes": [
+      "Offline-capable mobile web app",
+      "Automatic AI receipt reading",
+      "Control rules and email alerts",
+      "Approval panel for Treasury",
+      "Cost history and dashboard",
+      "Integration with your accounting system or ERP (e.g. Odoo)"
+    ],
+    "related_cases_title": "Related case studies",
+    "cta_title": "Does your team lose days reconciling expense reports?",
+    "cta_button": "Book a diagnostic call"
+  },
+  "sol_pedidos": {
+    "hero": {
+      "title": "Orders and quotes that build themselves",
+      "subtitle": "Your customers and sales reps send orders however is convenient: a voice note, a photo, a message. The system turns it into a quote or an order loaded into your ERP."
+    },
+    "problem_label": "The problem",
+    "problem": "Orders come in through WhatsApp, email, phone calls, and spreadsheets. Someone transcribes them into the system by hand, with errors in products, quantities, or prices. Building a quote takes hours and depends on whoever knows the current prices.",
+    "steps_title": "How we solve it",
+    "steps": [
+      "The order comes in through whatever channel you choose: web portal, WhatsApp, Telegram, or email.",
+      "AI identifies the customer, products, and quantities, even from a voice note or a photo.",
+      "A draft is built using current prices and margins.",
+      "A sales rep reviews and approves it. Discounts outside policy go to management for approval.",
+      "A branded PDF quote goes out, or the order is loaded directly into your ERP."
+    ],
+    "includes_title": "What's included",
+    "includes": [
+      "Multichannel order intake (text, voice, photo)",
+      "Product identification that learns from every correction",
+      "Pricing, margin, and discount rules",
+      "Approval panel",
+      "Branded quote PDF",
+      "ERP integration (Odoo, Paljet, and others available)"
+    ],
+    "related_cases_title": "Related case studies",
+    "cta_title": "Do orders come in through 3 different channels?",
+    "cta_button": "Book a diagnostic call"
+  },
+  "sol_facturas": {
+    "hero": {
+      "title": "Supplier price lists and invoices, processed automatically",
+      "subtitle": "You receive hundreds of price lists and invoices by email, as PDF or Excel. We read them, organize them, and flag anything that doesn't add up."
+    },
+    "problem_label": "The problem",
+    "problem": "Every supplier sends their list in their own format and codes. Updating prices takes weeks, increases are caught late, and invoices are entered into the system by hand.",
+    "steps_title": "How we solve it",
+    "steps": [
+      "A dedicated inbox receives the price lists and invoices.",
+      "AI extracts the data from PDF and Excel files.",
+      "The system matches the supplier's products to yours and learns from every correction.",
+      "If a price increases beyond what you defined, you get an alert.",
+      "A price history is kept per supplier, and invoices move to your ERP as drafts."
+    ],
+    "includes_title": "What's included",
+    "includes": [
+      "Automatic intake inbox",
+      "PDF and Excel reading",
+      "Product-code matching that learns with use",
+      "Alerts for increases and deviations",
+      "Price history by supplier",
+      "Invoice draft in your ERP"
+    ],
+    "related_cases_title": "Related case studies",
+    "cta_title": "Does updating supplier prices take you weeks?",
+    "cta_button": "Book a diagnostic call"
+  },
+  "sol_tableros": {
+    "hero": {
+      "title": "Your whole company in one dashboard",
+      "subtitle": "Sales, costs, suppliers, and sales performance, updated automatically. Decide with data, not gut feeling."
+    },
+    "problem_label": "The problem",
+    "problem": "Information is scattered across the ERP, spreadsheets, and email. Getting a single number means asking someone for it, and by the time it arrives it's already outdated.",
+    "steps_title": "How we solve it",
+    "steps": [
+      "We connect your sources: ERP, spreadsheets, in-house systems.",
+      "We unify and clean the data.",
+      "We build dashboards around the indicators you actually look at.",
+      "They update automatically. If needed, we add demand forecasting and purchase suggestions."
+    ],
+    "includes_title": "What's included",
+    "includes": [
+      "Connectors to your systems",
+      "Dashboards (Looker Studio, Power BI, or custom-built)",
+      "Indicators defined with management",
+      "Optional: demand forecasting and purchase suggestions"
+    ],
+    "related_cases_title": "Related case studies",
+    "cta_title": "Do you have to ask someone for a spreadsheet just to get one number?",
+    "cta_button": "Book a diagnostic call"
   },
   "contact_page": {
     "hero": {

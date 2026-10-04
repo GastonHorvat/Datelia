@@ -1,8 +1,12 @@
 import { HeroSection } from "@/components/landing/hero-section";
-import { EnterpriseThesisSection } from "@/components/landing/enterprise-thesis-section";
-import { TargetAudienceFilter } from "@/components/landing/target-audience-filter";
-import { ArchitectureSection } from "@/components/landing/architecture-section";
+import { TrustBarSection } from "@/components/landing/trust-bar-section";
 import { ErpIntegrationSection } from "@/components/landing/erp-integration-section";
+import { ProblemsSection } from "@/components/landing/problems-section";
+import { HomeSolutionsSection } from "@/components/landing/home-solutions-section";
+import { HomeCasesSection } from "@/components/landing/home-cases-section";
+import { HomeTestimonialsSection } from "@/components/landing/home-testimonials-section";
+import { HowWeWorkSection } from "@/components/landing/how-we-work-section";
+import { WhyUsSection } from "@/components/landing/why-us-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Layout } from "@/components/layout";
@@ -51,10 +55,14 @@ export default function Home() {
     <Layout>
       <main className="flex-1">
         <HeroSection />
-        <EnterpriseThesisSection />
-        <TargetAudienceFilter />
-        <ArchitectureSection />
+        <TrustBarSection />
         <ErpIntegrationSection />
+        <ProblemsSection />
+        <HomeSolutionsSection />
+        <HomeCasesSection />
+        <HomeTestimonialsSection />
+        <HowWeWorkSection />
+        <WhyUsSection />
         <FaqSection />
         <CtaSection />
       </main>

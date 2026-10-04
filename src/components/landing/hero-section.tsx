@@ -1,81 +1,103 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Starfield } from "./starfield";
+import { ArrowRight, MessageCircle, FileSpreadsheet, Mail, Sparkles, CheckCircle2 } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 
 export function HeroSection() {
-  const t = useTranslations("hero");
+  const tHome = useTranslations("home_hero");
   const locale = useLocale();
+  const shouldReduceMotion = useReducedMotion();
+  const dur = (d: number) => (shouldReduceMotion ? 0 : d);
+
+  const inputCards = [
+    { icon: MessageCircle, rotate: -6, delay: 0 },
+    { icon: Mail, rotate: 4, delay: 0.15 },
+    { icon: FileSpreadsheet, rotate: -3, delay: 0.3 },
+  ];
 
   return (
-    <section id="inicio" className="relative w-full flex items-center justify-center text-center text-white pt-32 pb-24 overflow-hidden">
-      {/* Background: solid gradient (reemplaza la foto de stock mientras se consigue una captura real de producto) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-accent/20">
-        <Starfield />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
-      </div>
+    <section id="inicio" className="relative w-full overflow-hidden bg-background pt-28 pb-16 md:pt-32 md:pb-24">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
 
-      {/* Floating Elements for Dynamism */}
-      <motion.div 
-        className="absolute top-1/4 left-[10%] w-64 h-64 bg-primary/20 rounded-full blur-[100px]"
-        animate={{ 
-          y: [-20, 20, -20],
-          opacity: [0.5, 0.8, 0.5]
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-      
-      <motion.div 
-        className="absolute bottom-1/4 right-[10%] w-80 h-80 bg-blue-500/10 rounded-full blur-[120px]"
-        animate={{ 
-          y: [20, -20, 20],
-          x: [10, -10, 10],
-          opacity: [0.3, 0.6, 0.3]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      />
+      <div className="container relative z-10 mx-auto px-4 md:px-6 max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          {/* Texto */}
+          <div className="text-center lg:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: dur(0.5) }}
+              className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.1] text-foreground"
+            >
+              {tHome("title")}
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: dur(0.5), delay: dur(0.1) }}
+              className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0"
+            >
+              {tHome("subtitle")}
+            </motion.p>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-5xl">
-        <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8 }}
-           className="space-y-6"
-        >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white pb-2 leading-tight">
-            <span className="sr-only">Datelia | Ingeniería Operativa y Soluciones de IA en Argentina. </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400">
-              {t("title")}
-            </span>
-          </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-200 leading-snug max-w-3xl mx-auto">
-            {t("subtitle")}
-          </h2>
-          <div className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed mt-4">
-            <p className="font-semibold text-gray-300">{t("description")}</p>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: dur(0.5), delay: dur(0.2) }}
+              className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+            >
+              <Button asChild size="lg" className="h-12 px-7 group">
+                <Link href={`/${locale}/contacto`}>
+                  {tHome("cta_primary")}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="h-12 px-7">
+                <Link href={`/${locale}/casos`}>{tHome("cta_secondary")}</Link>
+              </Button>
+            </motion.div>
+
+            <p className="mt-4 text-sm text-muted-foreground/80">{tHome("note")}</p>
           </div>
-        </motion.div>
 
-        <motion.div 
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.3 }}
-           className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          {/* CTA Link to Contact Page */}
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 h-12 group transition-all duration-300 hover:scale-[1.02]">
-            <Link href={`/${locale}/contacto`}>
-              {t("cta")} <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="text-white border-white/40 hover:bg-white hover:text-black bg-white/5 backdrop-blur-md h-12 px-8 transition-all duration-300 hover:scale-[1.02]">
-            <Link href="#arquitectura">{t("secondary_cta")}</Link>
-          </Button>
-        </motion.div>
+          {/* Gráfico: caos de canales -> IA -> ERP ordenado (no es una captura real, es una ilustración) */}
+          <div className="relative h-[320px] sm:h-[380px] hidden lg:block" aria-hidden="true">
+            {inputCards.map(({ icon: Icon, rotate, delay }, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1, rotate }}
+                transition={{ duration: dur(0.4), delay: dur(0.3 + delay) }}
+                className="absolute flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-card shadow-sm"
+                style={{ left: `${10 + i * 8}%`, top: `${10 + i * 28}%` }}
+              >
+                <Icon className="h-6 w-6 text-muted-foreground" />
+              </motion.div>
+            ))}
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: dur(0.5), delay: dur(0.5) }}
+              className="absolute left-[38%] top-[38%] flex h-20 w-20 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/30"
+            >
+              <Sparkles className="h-8 w-8 text-primary-foreground" />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: dur(0.5), delay: dur(0.7) }}
+              className="absolute right-[6%] top-[42%] flex items-center gap-3 rounded-2xl border border-primary/20 bg-card px-5 py-4 shadow-md"
+            >
+              <CheckCircle2 className="h-6 w-6 text-primary shrink-0" />
+              <span className="text-sm font-medium text-foreground">{tHome("erp_label")}</span>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
