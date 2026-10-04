@@ -46,7 +46,7 @@ export function HomeSolutionsSection() {
         </div>
 
         <div className="text-center mt-10">
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="bg-background text-foreground hover:bg-background/90 hover:text-foreground">
             <Link href={`/${locale}/soluciones`}>{t("cta_button")}</Link>
           </Button>
         </div>
