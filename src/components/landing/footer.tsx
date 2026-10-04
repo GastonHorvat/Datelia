@@ -5,137 +5,100 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig } from "@/config/site";
 import { useTranslations, useLocale } from "next-intl";
+import { Linkedin, Mail, Phone } from 'lucide-react';
 
-// CORRECCIÓN: Se añade el icono de Facebook
-import { Linkedin, Mail, Phone, Instagram, Twitter, Facebook } from 'lucide-react';
-
-// --- SECCIÓN DE DATOS: Editando aquí puedes cambiar el contenido del footer fácilmente ---
 const currentYear = new Date().getFullYear();
 const companyName = "Datelia";
-const logoSrc = "/images/logo.png";
-const logoAlt = "Logo de Datelia";
 
-// CORRECCIÓN: Se añade el objeto de Facebook a la lista
 const socialLinks = [
   { name: 'LinkedIn', href: "https://www.linkedin.com/company/datelia/", icon: Linkedin },
-  // { name: 'Twitter', href: "#", icon: Twitter }, // Reemplaza '#' con tu URL real
-  // { name: 'Instagram', href: "#", icon: Instagram }, // Reemplaza '#' con tu URL real
-  // { name: 'Facebook', href: "#", icon: Facebook }, // Reemplaza '#' con tu URL real
 ];
 
 const contactInfo = {
   email: "info@datelia.com.ar",
-  // CORRECCIÓN: Se eliminó el carácter invisible \u202c al final de la línea.
   phone: "+54 387 585-8088",
-  address: "Buenos Aires, Argentina",
 };
 
-// --- COMPONENTE DEL FOOTER ---
+const NAV_LINKS = [
+  { key: 'home', href: '' },
+  { key: 'solutions', href: '/soluciones' },
+  { key: 'success_cases', href: '/casos' },
+  { key: 'about_us', href: '/sobre-nosotros' },
+  { key: 'blog', href: '/blog' },
+  { key: 'contact', href: '/contacto' },
+] as const;
+
 export function Footer() {
   const t = useTranslations("footer");
-  const tNav = useTranslations("navigation");
   const locale = useLocale();
 
   return (
-    <footer className="relative bg-card text-muted-foreground overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <Image 
-          src="/images/footer_bk.png" 
-          alt="Fondo Abstracto" 
-          fill 
-          className="object-cover object-bottom"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-      </div>
-
-      <div className="container relative z-10 mx-auto px-4 md:px-6 py-16">
-
-        {/* --- CORRECCIÓN: Grid de 5 columnas en desktop (lg) --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-
-          {/* --- Columna 1: Logo, Descripción y Redes Sociales (ocupa 1 columna) --- */}
-          <div className="space-y-4">
+    <footer className="bg-background text-foreground border-t border-foreground/10">
+      <div className="container mx-auto px-4 md:px-6 py-10">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+          {/* Logo + descripción + social */}
+          <div className="space-y-3 max-w-sm">
             <Link href={`/${locale}`} className="inline-block">
-              <Image src={logoSrc} alt={logoAlt} width={120} height={40} />
+              <Image src="/images/logo.png" alt="Logo de Datelia" width={110} height={36} />
             </Link>
-            <p className="text-sm max-w-xs">
-              {t("description")}
-            </p>
-            <div className="flex gap-4 pt-2">
+            <p className="text-sm text-foreground/70">{t("description")}</p>
+            <div className="flex gap-3 pt-1">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
-                  <Link key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}
-                    className="text-muted-foreground hover:text-primary transition-colors">
-                    <div className="w-10 h-10 flex items-center justify-center border border-border rounded-full hover:border-primary">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                  </Link>
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/20 text-foreground/70 hover:border-primary hover:text-primary transition-colors"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
                 );
               })}
             </div>
           </div>
 
-          {/* --- CORRECCIÓN: Columna 2: Espaciador Vacío (visible solo en desktop) --- */}
-          <div className="hidden lg:block"></div>
+          {/* Navegación compacta, un solo nivel (el header ya tiene el detalle de Soluciones) */}
+          <nav aria-label={t("headings.navigation")} className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:justify-end md:max-w-xs">
+            {NAV_LINKS.map(({ key, href }) => (
+              <Link
+                key={key}
+                href={`/${locale}${href}`}
+                className="text-foreground/70 hover:text-primary transition-colors"
+              >
+                {t(`links.${key}`)}
+              </Link>
+            ))}
+          </nav>
 
-          {/* --- Columna 3: Navegación --- */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">{t("headings.navigation")}</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href={`/${locale}`} className="hover:text-primary transition-colors">{t("links.home")}</Link></li>
-              <li><Link href={`/${locale}/soluciones`} className="hover:text-primary transition-colors">{t("links.solutions")}</Link></li>
-              <li><Link href={`/${locale}/soluciones/rendicion-de-gastos`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_rendicion")}</Link></li>
-              <li><Link href={`/${locale}/soluciones/pedidos-y-presupuestos`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_pedidos")}</Link></li>
-              <li><Link href={`/${locale}/soluciones/facturas-y-proveedores`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_facturas")}</Link></li>
-              <li><Link href={`/${locale}/soluciones/tableros-de-gestion`} className="hover:text-primary transition-colors ml-4">• {tNav("sol_tableros")}</Link></li>
-              <li><Link href={`/${locale}/casos`} className="hover:text-primary transition-colors">{t("links.success_cases")}</Link></li>
-              <li><Link href={`/${locale}/blog`} className="hover:text-primary transition-colors">{t("links.blog")}</Link></li>
-              <li><Link href={`/${locale}/sobre-nosotros`} className="hover:text-primary transition-colors">{t("links.about_us")}</Link></li>
-              <li><Link href={`/${locale}/contacto`} className="hover:text-primary transition-colors">{t("links.contact")}</Link></li>
-            </ul>
+          {/* Contacto */}
+          <div className="space-y-2 text-sm">
+            <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors">
+              <Mail className="h-4 w-4 shrink-0" />
+              {contactInfo.email}
+            </a>
+            <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors">
+              <Phone className="h-4 w-4 shrink-0" />
+              {contactInfo.phone}
+            </a>
+            <a
+              href={siteConfig.links.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-primary font-medium hover:underline"
+            >
+              {t("links.request_demo")}
+            </a>
           </div>
-
-          {/* --- Columna 4: Recursos --- */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">{t("headings.resources")}</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href={siteConfig.links.calendly} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  {t("links.request_demo")}
-                </a>
-              </li>
-              <li><Link href={`/${locale}/legal/politica-de-privacidad`} className="hover:text-primary transition-colors">{t("links.privacy")}</Link></li>
-              <li><Link href={`/${locale}/legal/terminos-y-condiciones`} className="hover:text-primary transition-colors">{t("links.terms")}</Link></li>
-            </ul>
-          </div>
-
-          {/* --- Columna 5: Contacto --- */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">{t("headings.contact")}</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 mt-1 flex-shrink-0" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-primary transition-colors">{contactInfo.email}</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 mt-1 flex-shrink-0" />
-                <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">{contactInfo.phone}</a>
-              </li>
-            </ul>
-          </div>
-
         </div>
 
-        {/* --- Barra Inferior del Footer --- */}
-        {/* CORRECCIÓN: Se usa border-t-2 para una línea más gruesa */}
-        <div className="border-t-2 border-border/50 pt-8 mt-8 flex flex-col-reverse md:flex-row justify-between items-center text-sm">
-          <p className="text-muted-foreground mt-4 md:mt-0">
-            © {currentYear} {companyName}. {t("rights")}
-          </p>
-          {/* CORRECCIÓN: Se usan Links para las páginas legales */}
-          <div className="flex flex-col sm:flex-row items-center gap-x-6 gap-y-2">
+        {/* Barra inferior */}
+        <div className="border-t border-foreground/10 mt-8 pt-6 flex flex-col-reverse sm:flex-row justify-between items-center gap-3 text-xs text-foreground/60">
+          <p>© {currentYear} {companyName}. {t("rights")} · Salta, Argentina</p>
+          <div className="flex items-center gap-x-5">
             <Link href={`/${locale}/legal/politica-de-privacidad`} className="hover:text-primary transition-colors">{t("privacy_policy")}</Link>
             <Link href={`/${locale}/legal/terminos-y-condiciones`} className="hover:text-primary transition-colors">{t("terms_conditions")}</Link>
           </div>
