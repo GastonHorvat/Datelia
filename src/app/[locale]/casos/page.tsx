@@ -1,12 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-// Componentes de tu UI y Layout
 import { Layout } from '@/components/layout';
-import { Card, CardContent } from '@/components/ui/card';
-import { Quote } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Quote, ArrowRight } from 'lucide-react';
 import { SectorsSection } from '@/components/case-studies/sectors-section';
 import { CtaSection } from '@/components/landing/cta-section';
 
@@ -14,7 +14,7 @@ const CLUTCH_PROFILE_URL = 'https://clutch.co/profile/datelia';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
-  const t = await getTranslations({ locale: params.locale, namespace: 'case_studies_page.hero' });
+  const t = await getTranslations({ locale: params.locale, namespace: 'casos_page.hero' });
 
   return {
     title: `${t('title')} | Datelia`,
@@ -22,8 +22,10 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
   };
 }
 
-const CaseStudiesPage = () => {
-  const t = useTranslations('case_studies_page');
+const CasosPage = () => {
+  const t = useTranslations('casos_page');
+  const tCaseNames = useTranslations('case_names');
+  const locale = useLocale();
 
   const testimonials = [0, 1].map((i) => ({
     quote: t(`testimonials.${i}.quote`),
@@ -31,9 +33,21 @@ const CaseStudiesPage = () => {
     source: t(`testimonials.${i}.source`),
   }));
 
+  // useTranslations no acepta namespace dinámico por caso, así que cada
+  // resumen se busca directo contra su propio namespace caso_*.
+  const tCedsa = useTranslations('caso_cedsa');
+  const tFrancisca = useTranslations('caso_la_francisca');
+  const tTablada = useTranslations('caso_la_tablada');
+
+  const cases = [
+    { slug: 'cedsa', name: tCaseNames('cedsa'), summary: tCedsa('summary') },
+    { slug: 'la-francisca', name: tCaseNames('la_francisca'), summary: tFrancisca('summary') },
+    { slug: 'la-tablada', name: tCaseNames('la_tablada'), summary: tTablada('summary') },
+  ];
+
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="bg-accent text-accent-foreground pt-32 pb-8 sm:pt-32 sm:pb-12 text-center">
         <div className="container mx-auto px-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
@@ -45,8 +59,8 @@ const CaseStudiesPage = () => {
         </div>
       </section>
 
-      {/* Clutch Testimonials (interino, hasta publicar los casos reales con permiso de los clientes) */}
-      <section className="py-20 sm:py-24 bg-background">
+      {/* Clutch Testimonials */}
+      <section className="py-16 sm:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial) => (
@@ -69,7 +83,7 @@ const CaseStudiesPage = () => {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-8">
             <a
               href={CLUTCH_PROFILE_URL}
               target="_blank"
@@ -78,6 +92,35 @@ const CaseStudiesPage = () => {
             >
               {t('clutch_link')} →
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Cards */}
+      <section className="py-16 sm:py-20 bg-accent text-accent-foreground">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-headline font-bold text-center mb-12">
+            {t('cases_title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {cases.map((c) => (
+              <Link href={`/${locale}/casos/${c.slug}`} key={c.slug} className="block group h-full">
+                <Card className="h-full flex flex-col bg-background hover:border-primary transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{c.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{c.summary}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <div className="flex items-center font-semibold text-primary">
+                      <span>{t('cta_label')}</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </CardFooter>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -91,4 +134,4 @@ const CaseStudiesPage = () => {
   );
 };
 
-export default CaseStudiesPage;
+export default CasosPage;
