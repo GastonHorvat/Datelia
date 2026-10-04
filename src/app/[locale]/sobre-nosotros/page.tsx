@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { useTranslations, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -20,19 +21,10 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
   };
 }
 
-// Mientras no haya fotos profesionales reales, un placeholder con iniciales
-// en vez de imágenes genéricas o inventadas.
-function PersonAvatar({ name }: { name: string }) {
-  const initials = name
-    .split(' ')
-    .map((w) => w[0])
-    .join('')
-    .slice(0, 2)
-    .toUpperCase();
-
+function PersonPhoto({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="relative w-40 h-40 rounded-2xl overflow-hidden shadow-xl bg-primary/10 flex items-center justify-center">
-      <span className="text-4xl font-headline font-bold text-primary">{initials}</span>
+    <div className="relative w-40 h-40 rounded-2xl overflow-hidden shadow-xl">
+      <Image src={src} alt={alt} fill className="object-cover" />
     </div>
   );
 }
@@ -64,7 +56,7 @@ const AboutUsPage = () => {
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* Gastón */}
             <div className="flex flex-col items-center text-center space-y-5">
-              <PersonAvatar name={t('leadership.gaston.full_name')} />
+              <PersonPhoto src="/images/Gas.png" alt={t('leadership.gaston.full_name')} />
               <div className="space-y-1">
                 <h3 className="text-xl font-headline font-bold">{t('leadership.gaston.full_name')}</h3>
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs">
@@ -78,7 +70,7 @@ const AboutUsPage = () => {
 
             {/* Jimena */}
             <div className="flex flex-col items-center text-center space-y-5">
-              <PersonAvatar name={t('leadership.jimena.full_name')} />
+              <PersonPhoto src="/images/Jime.png" alt={t('leadership.jimena.full_name')} />
               <div className="space-y-1">
                 <h3 className="text-xl font-headline font-bold">{t('leadership.jimena.full_name')}</h3>
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs">
