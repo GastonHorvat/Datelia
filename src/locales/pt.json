@@ -139,7 +139,7 @@
       "title": "O que exatamente a Datelia faz para resolver esses problemas?",
       "p1": "Aplicamos uma abordagem comprovada que combina automação, IA e Business Intelligence para ordenar, acelerar e tornar a operação mais eficiente.",
       "p2": "Automatizamos turnos, relatórios, entradas de dados, acompanhamento de clientes e controles internos. Centralizamos a informação em um painel único e desenhamos fluxos padronizados que eliminam erros e duplicações.",
-      "roi": "Em experiências semelhantes, as empresas alcançam um ROI próximo a 3× nos primeiros 60 dias, com uma redução significativa de tarefas manuais e decisões mais rápidas e confiáveis."
+      "roi": "A automação reduz as tarefas manuais desde as primeiras semanas de uso e acelera a tomada de decisão em toda a operação."
     },
     "mvp": {
       "title": "O que acontece depois do MVP?",
@@ -180,7 +180,7 @@
   },
   "cta_section": {
     "title": "Identifique sua Dívida Operacional",
-    "description": "É hora de parar de apagar incêndios e começar a governar sua arquitetura de execução. Solicite uma avaliação profunda com nossos Senior Partners.",
+    "description": "É hora de parar de apagar incêndios e começar a governar sua arquitetura de execução. Solicite uma avaliação profunda conosco.",
     "button": "Avaliação Estrutural Gratuita"
   },
   "faq": {
@@ -204,7 +204,7 @@
     },
     "q3": "Que nível de Governance e Segurança vocês aplicam?",
     "a3": {
-      "p1": "Nossa arquitetura foi desenhada para padrões do tipo SOC2 e conta com rastreabilidade total.",
+      "p1": "Nossa arquitetura conta com rastreabilidade total: cada ação fica registrada e é auditável.",
       "p2": "Cada agente D.O.A. opera sob \"guardrails\" (limites) estritos pré-aprovados pelo cliente. Decisões que envolvem movimentações financeiras ou mudanças de alto risco podem ser configuradas como implementações \"Human-in-the-Loop\", exigindo autorização de um gerente antes da execução.",
       "p2_strong": "Sua empresa nunca perde a soberania sobre seus dados ou processos-chave."
     },
@@ -268,54 +268,22 @@
   },
   "case_studies_page": {
     "hero": {
-      "title": "Resultados Reais, Não Promessas.",
-      "subtitle": "Descubra como transformamos negócios como o seu, implementando soluções de IA que geram impacto mensurável e ROI tangível."
+      "title": "Resultados verificados no Clutch",
+      "subtitle": "Estamos preparando o detalhe dos nossos casos reais. Enquanto isso, estas são as avaliações verificadas de clientes no Clutch."
     },
-    "categories": {
-      "retail": "Varejo",
-      "health": "Saúde",
-      "logistics": "Logística",
-      "construction": "Construção",
-      "agro": "Agronegócio",
-      "services": "Serviços"
-    },
-    "gallery": {
-      "title": "A Evidência do Nosso Trabalho",
-      "subtitle": "Cada caso representa um desafio superado e uma meta alcançada, destacando nosso compromisso com resultados."
-    },
-    "cases": {
-      "retail": {
-        "title": "Empresa de Varejo Aumenta Conversão em 35% com Chatbot Inteligente",
-        "summary": "Implementamos um chatbot multicanal que automatizou 80% das dúvidas de suporte e otimizou a captura e qualificação de leads 24/7.",
-        "metrics": ["+35% Conversão", "-50% Suporte", "ROI 6 meses"]
+    "testimonials": [
+      {
+        "quote": "O que nos impressionou foi como entenderam um problema operacional concreto e criaram uma solução prática.",
+        "author": "Executivo da CEDSA",
+        "source": "Avaliação verificada no Clutch"
       },
-      "health": {
-        "title": "Clínica Líder Reduz \"No-Shows\" em 40% com Agente de Voz IA",
-        "summary": "Nosso agente de voz cuidou da confirmação proativa de consultas, liberando 15 horas semanais da equipe administrativa.",
-        "metrics": ["-40% No-Shows", "+15 h/semana", "+95% Satis."]
-      },
-      "logistics": {
-        "title": "Empresa de Logística Optimiza Cadeia com IA sob Medida",
-        "summary": "Solução personalizada que analisa dados em tempo real para prever gargalos e reduzir custos operacionais em 22%.",
-        "metrics": ["-22% Custos", "+30% Precisão", "Automatizado"]
-      },
-      "construction": {
-         "title": "Empresa de Construção Reduz Erros em 70% com IA",
-         "summary": "Unificação de obra e administração. A IA interpreta áudios e fotos de mestres de obras, atualizando custos sem carga manual.",
-         "metrics": ["-70% Erros", "3× Velocidade", "ROI 90 dias"]
-      },
-      "agro": {
-         "title": "Empresa Agroindustrial Libera 35 Horas Semanais",
-         "summary": "Digitalização total de pedidos e logística. Portal inteligente que processa pedidos e valida estoque sem planilhas.",
-         "metrics": ["-80% Repetitivo", "+35 h/semana", "Sem WhatsApp"]
-      },
-      "services": {
-         "title": "Empresa de Serviços Reduz Reclamações em 60%",
-         "summary": "Chatbot de pós-venda que responde FAQs e gerencia reclamações em tempo real, derivando casos complexos.",
-         "metrics": ["-60% Reclamos", "80% <30s", "-50% Custo"]
+      {
+        "quote": "O que mais nos impressionou foi sua capacidade de combinar IA com os controles que uma operação comercial real exige.",
+        "author": "Oscar Molina, La Tablada",
+        "source": "Avaliação verificada no Clutch"
       }
-    },
-    "cta": "Ler Caso de Sucesso"
+    ],
+    "clutch_link": "Ver avaliações no Clutch"
   },
   "contact_page": {
     "hero": {
@@ -433,7 +401,7 @@
     ],
     "benefits_title": "Governance e Eficiência em Cada Nó",
     "benefits": [
-      { "title": "Sincronização com ERP", "desc": "Os agentes leem e escrevem diretamente em seus sistemas Core sob regras SOC2." },
+      { "title": "Sincronização com ERP", "desc": "Os agentes leem e escrevem diretamente em seus sistemas Core sob as regras de acesso que você define." },
       { "title": "Redução de Dívida Operacional", "desc": "Automatiza o roteamento e a primeira camada de intervenção, liberando capacidade instalada." },
       { "title": "Rastreabilidade Total", "desc": "Cada interação fica registrada no seu centro de controle para auditoria constante." },
       { "title": "Design Escalável", "desc": "Uma arquitetura modular que cresce junto com a complexidade das suas operações." }

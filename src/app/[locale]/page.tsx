@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { EnterpriseThesisSection } from "@/components/landing/enterprise-thesis-section";
 import { TargetAudienceFilter } from "@/components/landing/target-audience-filter";
 import { ArchitectureSection } from "@/components/landing/architecture-section";
-import { LiveEventsSection } from "@/components/landing/live-events-section";
 import { ErpIntegrationSection } from "@/components/landing/erp-integration-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
@@ -55,7 +54,6 @@ export default function Home() {
         <EnterpriseThesisSection />
         <TargetAudienceFilter />
         <ArchitectureSection />
-        <LiveEventsSection />
         <ErpIntegrationSection />
         <FaqSection />
         <CtaSection />

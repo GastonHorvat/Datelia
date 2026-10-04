@@ -143,7 +143,7 @@
   },
   "cta_section": {
     "title": "Identifique su Deuda Operativa",
-    "description": "Es hora de dejar de apagar incendios y comenzar a gobernar su arquitectura de ejecución. Solicite una evaluación profunda con nuestros Senior Partners.",
+    "description": "Es hora de dejar de apagar incendios y comenzar a gobernar su arquitectura de ejecución. Solicite una evaluación profunda con nosotros.",
     "button": "Evaluación Estructural Sin Costo"
   },
   "faq": {
@@ -167,7 +167,7 @@
     },
     "q3": "¿Qué nivel de Governance y Seguridad aplican?",
     "a3": {
-      "p1": "Nuestra arquitectura está diseñada para estándares de tipo SOC2 y cuenta con trazabilidad total.",
+      "p1": "Nuestra arquitectura cuenta con trazabilidad total: cada acción queda registrada y es auditable.",
       "p2": "Cada agente D.O.A. opera bajo \"guardrails\" (límites) estrictos pre-aprobados por el cliente. Las decisiones que implican movimientos financieros o cambios de alto riesgo pueden configurarse como despliegues \"Human-in-the-Loop\", requiriendo autorización de un gerente antes de ejecutarse.",
       "p2_strong": "Su empresa nunca pierde la soberanía sobre sus datos ni procesos clave."
     },
@@ -231,7 +231,7 @@
       "title": "¿Qué hace exactamente Datelia para resolver esos problemas?",
       "p1": "Aplicamos un enfoque probado que combina automatización, IA y Business Intelligence para ordenar, acelerar y hacer más eficiente la operación.",
       "p2": "Automatizamos turnos, reportes, cargas de datos, seguimiento de clientes y controles internos. Centralizamos la información en un tablero único y diseñamos flujos estandarizados que eliminan errores y duplicaciones.",
-      "roi": "En experiencias similares, las empresas logran un ROI cercano a 3× en los primeros 60 días, con una reducción significativa de tareas manuales y decisiones más rápidas y confiables."
+      "roi": "La automatización reduce tareas manuales desde las primeras semanas de uso y acelera la toma de decisiones en toda la operación."
     },
     "mvp": {
       "title": "¿Qué pasa después del MVP?",
@@ -295,54 +295,22 @@
   },
   "case_studies_page": {
     "hero": {
-      "title": "Resultados Reales, No Promesas.",
-      "subtitle": "Descubre cómo hemos transformado negocios como el tuyo, implementando soluciones de IA que generan un impacto medible y un ROI tangible."
+      "title": "Resultados verificados en Clutch",
+      "subtitle": "Estamos preparando el detalle de nuestros casos reales. Mientras tanto, estas son las reviews verificadas de clientes en Clutch."
     },
-    "categories": {
-      "retail": "Retail",
-      "health": "Salud",
-      "logistics": "Logística",
-      "construction": "Construcción",
-      "agro": "Agroindustria",
-      "services": "Servicios"
-    },
-    "gallery": {
-      "title": "La Evidencia de Nuestro Trabajo",
-      "subtitle": "Cada caso representa un desafío superado y una meta alcanzada, subrayando nuestro compromiso con los resultados."
-    },
-    "cases": {
-      "retail": {
-        "title": "Empresa de Retail Aumenta su Conversión en un 35% con un Chatbot Inteligente",
-        "summary": "Implementamos un chatbot multicanal que no solo automatizó el 80% de las consultas de soporte, sino que también optimizó la captación y calificación de leads 24/7.",
-        "metrics": ["+35% Conversión", "-50% Soporte", "ROI 6 meses"]
+    "testimonials": [
+      {
+        "quote": "Lo que nos impresionó fue cómo entendieron un problema operativo concreto y crearon una solución práctica.",
+        "author": "Ejecutivo de CEDSA",
+        "source": "Review verificada en Clutch"
       },
-      "health": {
-        "title": "Clínica Líder Reduce sus \"No-Shows\" en un 40% con un Agente de Voz IA",
-        "summary": "Nuestro agente de voz se encargó de la confirmación proactiva de citas, liberando 15 horas semanales del personal administrativo.",
-        "metrics": ["-40% No-Shows", "+15 h/semana", "+95% Satis."]
-      },
-      "logistics": {
-        "title": "Empresa de Logística Optimiza su Cadena con IA a Medida",
-        "summary": "Solución personalizada que analiza datos en tiempo real para predecir cuellos de botella y reducir costos operativos.",
-        "metrics": ["-22% Costos", "+30% Precisión", "Automatizado"]
-      },
-      "construction": {
-         "title": "Empresa de Construcción Reduce Errores en un 70% con IA",
-         "summary": "Unificación de obra y administración. La IA interpreta audios y fotos de jefes de obra, actualizando costos sin carga manual.",
-         "metrics": ["-70% Errores", "3× Velocidad", "ROI 90 días"]
-      },
-      "agro": {
-         "title": "Empresa Agroindustrial Libera 35 Horas Semanales",
-         "summary": "Digitalización total de pedidos y logística. Portal inteligente que procesa pedidos y valida stock sin planillas.",
-         "metrics": ["-80% Repetitivo", "+35 h/semana", "Sin WhatsApp"]
-      },
-      "services": {
-         "title": "Empresa de Servicios Reduce Reclamos en un 60%",
-         "summary": "Chatbot de postventa que responde FAQs y gestiona reclamos en tiempo real, derivando casos complejos.",
-         "metrics": ["-60% Reclamos", "80% <30s", "-50% Costo"]
+      {
+        "quote": "Lo que más nos impresionó fue su capacidad de combinar la IA con los controles que necesita una operación comercial real.",
+        "author": "Oscar Molina, La Tablada",
+        "source": "Review verificada en Clutch"
       }
-    },
-    "cta": "Leer Caso de Éxito"
+    ],
+    "clutch_link": "Ver reviews en Clutch"
   },
   "contact_page": {
     "hero": {
@@ -460,7 +428,7 @@
     ],
     "benefits_title": "Gobernanza y Eficiencia en Cada Nodo",
     "benefits": [
-      { "title": "Sincronización con ERP", "desc": "Los agentes leen y escriben directamente en sus sistemas Core bajo reglas SOC2." },
+      { "title": "Sincronización con ERP", "desc": "Los agentes leen y escriben directamente en sus sistemas Core bajo las reglas de acceso que usted define." },
       { "title": "Reducción de Deuda Operativa", "desc": "Automatiza el ruteo y la primera capa de intervención, liberando capacidad instalada." },
       { "title": "Trazabilidad Total", "desc": "Cada interacción queda registrada en su centro de control para auditoría constante." },
       { "title": "Diseño Escalable", "desc": "Una arquitectura modular que crece junto con la complejidad de sus operaciones." }
@@ -485,7 +453,7 @@
   },
   "metadata": {
     "title": "Datelia | Ingeniería Operativa y Soluciones de IA en Argentina",
-    "description": "Firma boutique de Ingeniería Operativa en Buenos Aires. Diseñamos Arquitectura Agéntica Gobernada (D.O.A.™) para automatizar procesos complejos en locales y holdings.",
-    "keywords": "Ingeniería operativa Buenos Aires, Consultoría IA Argentina, Eficiencia operativa, Automatización de procesos, Agentes de voz IA, Chatbots inteligentes, D.O.A., Datelia"
+    "description": "Firma boutique de Ingeniería Operativa en Salta. Diseñamos Arquitectura Agéntica Gobernada (D.O.A.™) para automatizar procesos complejos en locales y holdings.",
+    "keywords": "Ingeniería operativa Salta, Consultoría IA Argentina, Eficiencia operativa, Automatización de procesos, Agentes de voz IA, Chatbots inteligentes, D.O.A., Datelia"
   }
 }

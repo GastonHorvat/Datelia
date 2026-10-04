@@ -155,7 +155,7 @@
   },
   "cta_section": {
     "title": "Identify your Operational Debt",
-    "description": "It's time to stop putting out fires and start governing your execution architecture. Request a deep evaluation with our Senior Partners.",
+    "description": "It's time to stop putting out fires and start governing your execution architecture. Request a deep evaluation with us.",
     "button": "Free Structural Evaluation"
   },
   "faq": {
@@ -179,7 +179,7 @@
     },
     "q3": "What level of Governance and Security do you apply?",
     "a3": {
-      "p1": "Our architecture is designed for SOC2-type standards and features full traceability.",
+      "p1": "Our architecture features full traceability: every action is logged and auditable.",
       "p2": "Each D.O.A. agent operates under strict client pre-approved \"guardrails\" (limits). Decisions involving financial movements or high-risk changes can be configured as \"Human-in-the-Loop\" deployments, requiring authorization from a manager before execution.",
       "p2_strong": "Your company never loses sovereignty over its data or key processes."
     },
@@ -205,7 +205,7 @@
       "title": "What exactly does Datelia do to solve these problems?",
       "p1": "We apply a proven approach that combines automation, AI, and Business Intelligence to organize, accelerate, and make the operation more efficient.",
       "p2": "We automate shifts, reports, data entry, customer follow-up, and internal controls. We centralize information in a single dashboard and design standardized flows that eliminate errors and duplications.",
-      "roi": "In similar experiences, companies achieve an ROI close to 3× in the first 60 days, with a significant reduction in manual tasks and faster, more reliable decisions."
+      "roi": "Automation reduces manual tasks from the first few weeks of use and speeds up decision-making across the whole operation."
     },
     "mvp": {
       "title": "What happens after the MVP?",
@@ -269,54 +269,22 @@
   },
   "case_studies_page": {
     "hero": {
-      "title": "Real Results, Not Promises.",
-      "subtitle": "Discover how we have transformed businesses like yours, implementing AI solutions that generate measurable impact and tangible ROI."
+      "title": "Verified results on Clutch",
+      "subtitle": "We're preparing the full detail of our real case studies. In the meantime, here are verified client reviews from Clutch."
     },
-    "categories": {
-      "retail": "Retail",
-      "health": "Health",
-      "logistics": "Logistics",
-      "construction": "Construction",
-      "agro": "Agribusiness",
-      "services": "Services"
-    },
-    "gallery": {
-      "title": "The Evidence of Our Work",
-      "subtitle": "Each case represents a challenge overcome and a goal achieved, highlighting our commitment to results."
-    },
-    "cases": {
-      "retail": {
-        "title": "Retail Company Increases Conversion by 35% with Intelligent Chatbot",
-        "summary": "We implemented a multichannel chatbot that automated 80% of support queries and optimized 24/7 lead capture and qualification.",
-        "metrics": ["+35% Conversion", "-50% Support", "6-month ROI"]
+    "testimonials": [
+      {
+        "quote": "What impressed us was Datelia's understanding of a specific operational problem and creating a practical solution.",
+        "author": "CEDSA Executive",
+        "source": "Verified review on Clutch"
       },
-      "health": {
-        "title": "Leading Clinic Reduces \"No-Shows\" by 40% with AI Voice Agent",
-        "summary": "Our voice agent handled proactive appointment confirmation, freeing up 15 weekly hours for administrative staff.",
-        "metrics": ["-40% No-Shows", "+15 h/week", "+95% Satis."]
-      },
-      "logistics": {
-        "title": "Logistics Company Optimizes Supply Chain with Custom AI",
-        "summary": "Custom solution analyzing real-time data to predict bottlenecks and reduce operational costs by 22%.",
-        "metrics": ["-22% Costs", "+30% Accuracy", "Automated"]
-      },
-      "construction": {
-         "title": "Construction Company Reduces Errors by 70% with AI",
-         "summary": "Unification of work site and administration. AI interprets site manager audio and photos, updating costs without manual entry.",
-         "metrics": ["-70% Errors", "3× Speed", "90-day ROI"]
-      },
-      "agro": {
-         "title": "Agribusiness Frees Up 35 Weekly Hours",
-         "summary": "Total digitalization of orders and logistics. Intelligent portal processes orders and validates stock without spreadsheets.",
-         "metrics": ["-80% Repetitive", "+35 h/week", "No WhatsApp"]
-      },
-      "services": {
-         "title": "Service Company Reduces Claims by 60%",
-         "summary": "After-sales chatbot responding to FAQs and managing claims in real-time, escalating complex cases.",
-         "metrics": ["-60% Claims", "80% <30s", "-50% Cost"]
+      {
+        "quote": "What impressed us most was their ability to combine AI with the controls required by a real commercial operation.",
+        "author": "Oscar Molina, La Tablada",
+        "source": "Verified review on Clutch"
       }
-    },
-    "cta": "Read Case Study"
+    ],
+    "clutch_link": "See reviews on Clutch"
   },
   "contact_page": {
     "hero": {
@@ -434,7 +402,7 @@
     ],
     "benefits_title": "Governance and Efficiency in Every Node",
     "benefits": [
-      { "title": "ERP Synchronization", "desc": "Agents read and write directly to your core systems under SOC2 rules." },
+      { "title": "ERP Synchronization", "desc": "Agents read and write directly to your core systems under the access rules you define." },
       { "title": "Operational Debt Reduction", "desc": "Automates routing and the first intervention layer, freeing up installed capacity." },
       { "title": "Full Traceability", "desc": "Every interaction is recorded in your control center for constant auditing." },
       { "title": "Scalable Design", "desc": "A modular architecture that grows alongside the complexity of your operations." }
@@ -459,8 +427,8 @@
   },
   "metadata": {
     "title": "Datelia | Operational Engineering & AI Solutions in Argentina",
-    "description": "Boutique Engineering firm in Buenos Aires. We design and deploy Governed Agentic Architecture (D.O.A.™) for complex enterprise groups in Argentina and Latin America.",
-    "keywords": "Operational engineering Argentina, AI consulting Buenos Aires, Agentic architecture, D.O.A., Business automation, Enterprise AI"
+    "description": "Boutique Engineering firm in Salta, Argentina. We design and deploy Governed Agentic Architecture (D.O.A.™) for complex enterprise groups in Argentina and Latin America.",
+    "keywords": "Operational engineering Argentina, AI consulting Salta, Agentic architecture, D.O.A., Business automation, Enterprise AI"
   }
 }
 

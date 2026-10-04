@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -14,23 +13,11 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative w-full flex items-center justify-center text-center text-white pt-32 pb-24 overflow-hidden">
-      {/* Animated Zooming Background */}
-      <motion.div 
-        className="absolute inset-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 10, ease: "easeOut" }}
-      >
-        <Image
-          src="/images/nasa.jpg"
-          alt="Fondo tecnológico de arquitectura empresarial"
-          fill
-          className="object-cover opacity-20"
-          priority
-        />
+      {/* Background: solid gradient (reemplaza la foto de stock mientras se consigue una captura real de producto) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-accent/20">
         <Starfield />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
-      </motion.div>
+      </div>
 
       {/* Floating Elements for Dynamism */}
       <motion.div 

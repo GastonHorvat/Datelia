@@ -45,6 +45,28 @@ const nextConfig: NextConfig = {
         destination: '/legal/politica-de-cookies',
         permanent: true,
       },
+
+      // Baja de la capacitación CCEE (terminada) - 301 a home, en los 3 idiomas
+      {
+        source: '/ccee',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/CCEE',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/en/ccee',
+        destination: '/en',
+        permanent: true,
+      },
+      {
+        source: '/pt/ccee',
+        destination: '/pt',
+        permanent: true,
+      },
     ];
   },
 };
