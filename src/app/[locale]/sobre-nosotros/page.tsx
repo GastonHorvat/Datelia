@@ -56,7 +56,7 @@ const AboutUsPage = () => {
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* Gastón */}
             <div className="flex flex-col items-center text-center space-y-5">
-              <PersonPhoto src="/images/Gas.png" alt={t('leadership.gaston.full_name')} />
+              <PersonPhoto src="/images/Gas2.jpeg" alt={t('leadership.gaston.full_name')} />
               <div className="space-y-1">
                 <h3 className="text-xl font-headline font-bold">{t('leadership.gaston.full_name')}</h3>
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs">
@@ -70,7 +70,7 @@ const AboutUsPage = () => {
 
             {/* Jimena */}
             <div className="flex flex-col items-center text-center space-y-5">
-              <PersonPhoto src="/images/Jime.png" alt={t('leadership.jimena.full_name')} />
+              <PersonPhoto src="/images/Jime2.jpeg" alt={t('leadership.jimena.full_name')} />
               <div className="space-y-1">
                 <h3 className="text-xl font-headline font-bold">{t('leadership.jimena.full_name')}</h3>
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs">

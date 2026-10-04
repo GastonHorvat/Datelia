@@ -117,7 +117,7 @@
   },
   "home_cases": {
     "title": "Real case studies, with real names",
-    "subtitle": "Few, but verifiable. You can ask them yourself."
+    "subtitle": "Verifiable. You can ask them yourself."
   },
   "home_testimonials": {
     "title": "What our clients say"
@@ -148,9 +148,9 @@
     "leadership": {
       "title": "Who we are",
       "jimena": {
-        "full_name": "Jimena",
-        "title": "Co-founder · Head of Business & Partnerships",
-        "bio": "Leads Datelia's business relationships and partnerships, staying close to every client from the first conversation."
+        "full_name": "Jimena García Pinto",
+        "title": "Co-founder · Head of Partnerships",
+        "bio": "Jimena was CEO of CEDSA for 8 years, where she drove the adoption of educational technology and automated operational processes. Before that, she founded and ran her own e-learning and communications companies. At Datelia she leads business relationships and partnerships, staying close to every client from the first conversation."
       },
       "gaston": {
         "full_name": "Gastón Horvat",
