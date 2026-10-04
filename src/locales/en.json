@@ -241,39 +241,41 @@
   },
   "about_us": {
     "hero": {
-      "title": "We are a Team of Experts, Obsessed with Results.",
-      "subtitle": "At Datelia, we combine technical excellence with strategic business vision. We don't just implement AI; we implement growth."
+      "title": "We are Datelia",
+      "subtitle": "A small company by design: the people you talk to in the first call are the same ones who design and support your project."
     },
     "leadership": {
-      "title": "Leadership",
+      "title": "Who we are",
       "jimena": {
-        "title": "Founder & Partnerships Director",
-        "bio": "With a client-centric strategic vision, she leads Datelia's growth and alliances, ensuring each solution is not only innovative but also generates tangible success for our partners."
+        "full_name": "Jimena",
+        "title": "Co-founder · Head of Business & Partnerships",
+        "bio": "Leads Datelia's business relationships and partnerships, staying close to every client from the first conversation."
       },
       "gaston": {
-        "title": "Founder & CTO",
-        "bio": "He is the technical architect behind our solutions. His passion is transforming complex ideas into robust, scalable, and secure AI systems that drive efficiency and digital transformation."
+        "full_name": "Gastón Horvat",
+        "title": "Co-founder · CTO",
+        "bio": "Gastón has worked in software development for 30 years. He led projects for companies like Globant and Cognizant. At Datelia he designs every solution and makes sure it works in the client's real operation, not just in a demo."
       }
     },
     "philosophy": {
-      "title": "Our Philosophy",
+      "title": "How we work",
       "p1": {
-        "title": "Results Above All",
-        "desc": "Our success is measured by our clients' success. ROI, time savings, and efficiency are the metrics that drive us."
+        "title": "Real over flashy.",
+        "desc": "We propose what will actually get used, even if it's smaller in scope."
       },
       "p2": {
-        "title": "Purposeful Innovation",
-        "desc": "We explore new AI frontiers, but only apply technologies that solve real problems and have a solid business case."
+        "title": "Fixed price, clear stages.",
+        "desc": "You know what you'll get, when, and how much it costs."
       },
       "p3": {
-        "title": "Collaboration and Transparency",
-        "desc": "We work as an extension of your team. We believe in open communication and a clear process from start to finish."
+        "title": "We stay.",
+        "desc": "The project doesn't end at delivery: we stay close and keep improving it."
       }
     },
     "cta": {
       "title": "Ready to work with us?",
-      "subtitle": "If you are looking for a technology partner that understands your business and speaks your language, we are here.",
-      "button": "Let's talk"
+      "subtitle": "Tell us what you'd like to automate. No cost, no commitment.",
+      "button": "Book a diagnostic call"
     },
     "sectors_section": {
       "title": "Sectors We Empower",
@@ -495,141 +497,35 @@
   },
   "contact_page": {
     "hero": {
-      "title": "Structural Discovery",
-      "subtitle": "Not all operations qualify for Agentic Architecture.",
-      "description": "Please complete this short qualification form. If your structure has the necessary scale and maturity, a Datelia architect will contact you to schedule an evaluation."
-    }
+      "title": "Let's talk",
+      "subtitle": "Pick a time for a 45-minute video call",
+      "description": "or write to us below. We reply the same day."
+    },
+    "calendly": {
+      "title": "Free diagnostic call · 45 min",
+      "description": "You tell us how you work today and we tell you what's worth automating first.",
+      "button": "Book on Calendly"
+    },
+    "or_divider": "or write to us",
+    "whatsapp_button": "Message us on WhatsApp"
   },
   "contact_form": {
-    "step1": {
-      "title": "Step 1: Operational Dimension",
-      "subtitle": "To design architecture, we first need to understand the terrain.",
-      "org_name": "Organization Name *",
-      "org_placeholder": "e.g., Datelia Corp",
-      "employees": "Human Volume (Employees) *",
-      "employees_placeholder": "Select the scale"
+    "fields": {
+      "nombre": "Name",
+      "empresa": "Company",
+      "contacto": "Email or WhatsApp",
+      "tarea": "What task would you like to stop doing by hand?"
     },
-    "step2": {
-      "title": "Step 2: Operational Debt",
-      "subtitle": "What is the current state of your systems?",
-      "ecosystem": "Primary Active Ecosystem *",
-      "ecosystem_placeholder": "e.g., We use SAP and an in-house CRM",
-      "friction": "Identify your main friction or structural goal *",
-      "friction_placeholder": "e.g., We have teams of 50 people manually dumping data between ERP and Excel..."
-    },
-    "step3": {
-      "title": "Step 3: C-Level / Director",
-      "subtitle": "Details of the person responsible for leading the assessment (Directors or Managers).",
-      "full_name": "Full Name *",
-      "full_name_placeholder": "Your first and last name",
-      "role": "Job Title / Role in the Company *",
-      "role_placeholder": "e.g., COO, IT Director, Operations Manager",
-      "email": "Corporate Email *",
-      "email_placeholder": "name@yourcompany.com",
-      "submit": "Submit Application",
-      "processing": "Processing..."
-    },
-    "revenue": {
-      "label": "Annual Revenue Level *",
-      "placeholder": "Select your revenue range",
-      "range_1": "< $1M USD",
-      "range_2": "$1M - $10M USD",
-      "range_3": "$10M - $50M USD",
-      "range_4": "> $50M USD"
-    },
-    "ecosystems": {
-      "hubspot": "HubSpot / Other CRMs",
-      "custom": "In-house / Custom Development",
-      "multi": "Multiple platforms (Fragmented)"
-    },
-    "common": {
-      "next": "Next",
-      "back": "Back",
-      "define_contact": "Define Contact"
-    },
+    "submit": "Send",
+    "sending": "Sending...",
     "errors": {
-      "step1": "Please complete the required fields to continue.",
-      "step2": "Please detail your ecosystem and operational challenge.",
-      "step3": "Please complete your contact details.",
+      "required": "Please fill in your name, company, and an email or WhatsApp.",
       "submit_error": "There was an error submitting the form.",
       "connection_error": "Connection error. Check your internet and try again."
     },
     "success": {
-      "title": "Application Received",
-      "message": "Thank you for your interest, {name}. We have received the profile for {company}.",
-      "next_steps": "We will analyze your current operational architecture and, if you qualify for the D.O.A.™ model, an architect will contact you at {email} within the next 48 business hours to schedule your Structural Assessment."
-    }
-  },
-  "voice_agents_page": {
-    "title": "Your Agenda Fills Itself, Globally.",
-    "subtitle": "Our intelligent voice agent manages, confirms, and reschedules appointments by phone with a natural human voice, integrated into your corporate architecture.",
-    "cta_demo": "Watch Demo",
-    "problems_title": "Is this your structural reality?",
-    "problems": [
-      "Fragmented scheduling infrastructure across multiple locations.",
-      "Revenue leakage due to unoptimized appointment governance (no-shows).",
-      "Operational load on senior staff for low-value coordination tasks.",
-      "High synchronization latency between phone interactions and the core ERP."
-    ],
-    "benefits_title": "Governance and Efficiency in Every Call",
-    "benefits_subtitle": "This is not an answering machine. It is an autonomous execution node.",
-    "benefits": [
-      { "title": "24/7 Global Scheduling", "desc": "Capture and orchestrate appointments across time zones under governed rules." },
-      { "title": "Reduction in Structural Risk", "desc": "Eliminate human error in confirmation, reducing idle capacity by up to 40%." },
-      { "title": "Free up Human Capital", "desc": "Redirect your talent to strategic design and customer success, not coordination." },
-      { "title": "Native ERP Integration", "desc": "Bidirectional synchronization with your system of record for absolute traceability." }
-    ],
-    "use_cases_title": "High-Complexity Sector Interventions",
-    "use_cases": [
-      "Clinics and Health Centers", "Multi-site Logistics and Distribution", "B2B Service Firms",
-      "Large-scale Consultancies", "Real Estate and Developers", "Citizen Service Centers", "Holdings with Dispersed Geographic Units"
-    ],
-    "testimonial": {
-      "quote": "\"The voice agent liberated our communications infrastructure. We have reclaimed 15 hours of administrative coordination per site weekly. The architecture is solid.\"",
-      "author": "Laura Herrera",
-      "role": "Operations Director"
-    },
-    "final_cta": {
-      "title": "Evaluate the impact on your architecture?",
-      "description": "Request an audit session to identify how a voice agent can mitigate your execution risks.",
-      "button_saving": "Technical Consulting",
-      "button_demo": "Structural Evaluation"
-    }
-  },
-  "chatbots_page": {
-    "title": "Agentic Response Architecture.",
-    "subtitle": "Deploy systems that capture, process, and execute responses under governance, mitigating the risk of information silos in digital channels.",
-    "cta_demo": "Structural Evaluation",
-    "problem_title": "Risks of Fragmented Execution",
-    "problems": [
-      { "title": "Information Silos", "desc": "Critical inquiries falling into non-audited and non-integrated channels." },
-      { "title": "Weak Response Structure", "desc": "Your team invests senior resources in tactical routing instead of strategic design." },
-      { "title": "Accumulated Operational Friction", "desc": "Repetitive inquiries saturate infrastructure and degrade deployment quality." },
-      { "title": "Structural Inconsistency", "desc": "Slow attention reflecting deep failures in the execution architecture." }
-    ],
-    "benefits_title": "Governance and Efficiency in Every Node",
-    "benefits": [
-      { "title": "ERP Synchronization", "desc": "Agents read and write directly to your core systems under the access rules you define." },
-      { "title": "Operational Debt Reduction", "desc": "Automates routing and the first intervention layer, freeing up installed capacity." },
-      { "title": "Full Traceability", "desc": "Every interaction is recorded in your control center for constant auditing." },
-      { "title": "Scalable Design", "desc": "A modular architecture that grows alongside the complexity of your operations." }
-    ],
-    "process_title": "Strategic Intervention",
-    "process_steps": [
-      { "title": "Friction Assessment", "desc": "We identify bottlenecks in your current channels and design the intervention map." },
-      { "title": "Architectural Integration", "desc": "We connect response systems to your existing ERP/CRM infrastructure." },
-      { "title": "Governed Deployment", "desc": "We configure guardrails and decision models to ensure auditable execution." },
-      { "title": "Structural Optimization", "desc": "Latency monitoring and fine-tuning of agentic logic to maximize ROI." }
-    ],
-    "testimonial": {
-      "quote": "\"We transformed a chaotic channel into a governed execution unit. Operational risk was drastically reduced in the first 90 days.\"",
-      "author": "Technology Manager",
-      "role": "Industrial Holding"
-    },
-    "final_cta": {
-      "title": "Is your architecture ready for agentic execution?",
-      "description": "Let's talk about integrating governed response systems into your current structure.",
-      "button": "Free Structural Evaluation"
+      "title": "Thank you!",
+      "message": "We'll write to you today."
     }
   },
   "metadata": {

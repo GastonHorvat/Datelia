@@ -240,39 +240,41 @@
   },
   "about_us": {
     "hero": {
-      "title": "Somos uma Equipe de Especialistas, Obcecados por Resultados.",
-      "subtitle": "Na Datelia, combinamos excelência técnica com visão estratégica de negócios. Não apenas implementamos IA; implementamos crescimento."
+      "title": "Somos a Datelia",
+      "subtitle": "Uma empresa pequena de propósito: quem te atende na primeira conversa é quem desenha e acompanha seu projeto."
     },
     "leadership": {
-      "title": "Liderança",
+      "title": "Quem somos",
       "jimena": {
-        "title": "Founder & Diretora de Parcerias",
-        "bio": "Com uma visão estratégica centrada no cliente, lidera o crescimento e as alianças da Datelia, garantindo que cada solução não seja apenas inovadora, mas também gere sucesso tangível para nossos parceiros."
+        "full_name": "Jimena",
+        "title": "Cofundadora · Diretora Comercial e de Parcerias",
+        "bio": "Lidera o relacionamento comercial e as parcerias da Datelia, acompanhando cada cliente desde a primeira conversa."
       },
       "gaston": {
-        "title": "Founder & Diretor de Tecnologia",
-        "bio": "É o arquiteto técnico por trás das nossas soluções. Sua paixão é transformar ideias complexas em sistemas de IA robustos, escaláveis e seguros que impulsam a eficiência e a transformação digital."
+        "full_name": "Gastón Horvat",
+        "title": "Cofundador · Diretor de Tecnologia",
+        "bio": "Gastón trabalha com desenvolvimento de software há 30 anos. Liderou projetos para empresas como Globant e Cognizant. Na Datelia, desenha cada solução e garante que funcione na operação real do cliente, não só em uma demonstração."
       }
     },
     "philosophy": {
-      "title": "Nossa Filosofia",
+      "title": "Como trabalhamos",
       "p1": {
-        "title": "Resultados Acima de Tudo",
-        "desc": "Nosso sucesso é medido pelo sucesso de nossos clientes. ROI, economia de tempo e eficiência são as métricas que nos impulsionam."
+        "title": "O real antes do vistoso.",
+        "desc": "Propomos o que realmente vai ser usado, mesmo que seja menor."
       },
       "p2": {
-        "title": "Inovação com Propósito",
-        "desc": "Exploramos as novas fronteiras da IA, mas apenas aplicamos tecnologias que resolvem problemas reais e têm um caso de negócio sólido."
+        "title": "Preço fechado e etapas claras.",
+        "desc": "Você sabe o que vai receber, quando e quanto custa."
       },
       "p3": {
-        "title": "Colaboração e Transparência",
-        "desc": "Trabalhamos como uma extensão da sua equipe. Acreditamos em comunicação aberta e um processo claro do início ao fim."
+        "title": "A gente fica.",
+        "desc": "O projeto não termina na entrega: acompanhamos e melhoramos continuamente."
       }
     },
     "cta": {
       "title": "Pronto para trabalhar conosco?",
-      "subtitle": "Se você busca um parceiro tecnológico que entenda seu negócio e fale sua língua, estamos aqui.",
-      "button": "Vamos conversar"
+      "subtitle": "Conte o que você gostaria de automatizar. Sem custo, sem compromisso.",
+      "button": "Agende um diagnóstico"
     },
     "sectors_section": {
       "title": "Setores que Impulsionamos",
@@ -494,141 +496,35 @@
   },
   "contact_page": {
     "hero": {
-      "title": "Discovery Estrutural",
-      "subtitle": "Nem todas as operações qualificam para Arquitetura Agêntica.",
-      "description": "Por favor, complete este breve formulário de qualificação. Se sua estrutura conta com a escala e maturidade necessária, um arquiteto da Datelia entrará em contato para agendar a avaliação."
-    }
+      "title": "Vamos conversar",
+      "subtitle": "Escolha um horário para uma videochamada de 45 minutos",
+      "description": "ou escreva para a gente abaixo. Respondemos no mesmo dia."
+    },
+    "calendly": {
+      "title": "Diagnóstico gratuito · 45 min",
+      "description": "Você conta como trabalha hoje e dizemos o que vale a pena automatizar primeiro.",
+      "button": "Agendar no Calendly"
+    },
+    "or_divider": "ou escreva para a gente",
+    "whatsapp_button": "Escrever pelo WhatsApp"
   },
   "contact_form": {
-    "step1": {
-      "title": "Passo 1: Dimensão Operativa",
-      "subtitle": "Para desenhar a arquitetura, primeiro precisamos entender o terreno.",
-      "org_name": "Nome da Organização *",
-      "org_placeholder": "Ex: Datelia Corp",
-      "employees": "Volume Humano (Funcionários) *",
-      "employees_placeholder": "Selecione a escala"
+    "fields": {
+      "nombre": "Nome",
+      "empresa": "Empresa",
+      "contacto": "Email ou WhatsApp",
+      "tarea": "Que tarefa você gostaria de parar de fazer manualmente?"
     },
-    "step2": {
-      "title": "Passo 2: Dívida Operacional",
-      "subtitle": "Qual é o estado atual dos seus sistemas?",
-      "ecosystem": "Ecossistema Principal Ativo *",
-      "ecosystem_placeholder": "Ex: Usamos SAP e um CRM interno",
-      "friction": "Identifique sua principal fricção ou objetivo estrutural *",
-      "friction_placeholder": "Ex: Temos equipes de 50 pessoas inserindo dados manualmente entre o ERP e o Excel..."
-    },
-    "step3": {
-      "title": "Passo 3: C-Level / Diretor",
-      "subtitle": "Dados da pessoa responsável por liderar a avaliação (Diretores ou Gerentes).",
-      "full_name": "Nome Completo *",
-      "full_name_placeholder": "Seu nome e sobrenome",
-      "role": "Cargo / Função na Empresa *",
-      "role_placeholder": "Ex: COO, Diretor de TI, Gerente de Operações",
-      "email": "E-mail Corporativo *",
-      "email_placeholder": "nome@suaempresa.com",
-      "submit": "Enviar Inscrição",
-      "processing": "Processando..."
-    },
-    "revenue": {
-      "label": "Nível de Faturamento Anual *",
-      "placeholder": "Selecione a faixa de faturamento",
-      "range_1": "< $1M USD",
-      "range_2": "$1M - $10M USD",
-      "range_3": "$10M - $50M USD",
-      "range_4": "> $50M USD"
-    },
-    "ecosystems": {
-      "hubspot": "HubSpot / Outros CRMs",
-      "custom": "Desenvolvimento in-house / Sob medida",
-      "multi": "Múltiplas plataformas (Fragmentado)"
-    },
-    "common": {
-      "next": "Próximo",
-      "back": "Voltar",
-      "define_contact": "Definir Contato"
-    },
+    "submit": "Enviar",
+    "sending": "Enviando...",
     "errors": {
-      "step1": "Por favor, preencha os campos obrigatórios para continuar.",
-      "step2": "Por favor, detalhe seu ecossistema e desafio operacional.",
-      "step3": "Por favor, preencha seus dados de contato.",
+      "required": "Por favor preencha nome, empresa e um email ou WhatsApp.",
       "submit_error": "Houve um erro ao enviar o formulário.",
       "connection_error": "Erro de conexão. Verifique sua internet e tente novamente."
     },
     "success": {
-      "title": "Inscrição Recebida",
-      "message": "Obrigado pelo seu interesse, {name}. Recebemos o perfil da {company}.",
-      "next_steps": "Analisaremos sua arquitetura operacional atual e, se você se qualificar para o modelo D.O.A.™, um arquiteto entrará em contato pelo seu e-mail {email} nas próximas 48 horas úteis para agendar sua Avaliação Estrutural."
-    }
-  },
-  "voice_agents_page": {
-    "title": "Sua Agenda se Enche Sozinha, Globalmente.",
-    "subtitle": "Nosso agente de voz inteligente gerencia, confirma e reagenda consultas por telefone com uma voz humana e natural, integrada à sua arquitetura corporativa.",
-    "cta_demo": "Ver Demo",
-    "problems_title": "Esta é a sua realidade estrutural?",
-    "problems": [
-      "Infraestrutura de agendamento fragmentada em múltiplas sedes.",
-      "Vazamento de receita devido à falta de governança nas consultas (no-shows).",
-      "Carga operacional em pessoal sênior para tarefas de coordenação de baixo valor.",
-      "Alta latência de sincronização entre as interações telefônicas e o ERP central."
-    ],
-    "benefits_title": "Governance e Eficiência em Cada Chamada",
-    "benefits_subtitle": "Isso não é uma secretária eletrônica. É um nó de execução autônomo.",
-    "benefits": [
-      { "title": "Agendamento Global 24/7", "desc": "Capture e orquestre consultas em diferentes fusos horários sob regras governadas." },
-      { "title": "Redução de Risco Estrutural", "desc": "Elimine o erro humano na confirmação, reduzindo a capacidade ociosa em até 40%." },
-      { "title": "Libere Capital Humano", "desc": "Redirecione seu talento para o design estratégico e sucesso do cliente, não para a coordenação." },
-      { "title": "Integração Nativa with ERP", "desc": "Sincronização bidirecional com seu sistema record para rastreabilidade absoluta." }
-    ],
-    "use_cases_title": "Intervenções em Setores de Alta Complexidade",
-    "use_cases": [
-      "Centros de Saúde e Clínicas", "Logística e Distribuição Multi-Sede", "Empresas de Serviços B2B",
-      "Consultorias de Grande Escala", "Real Estate e Incorporadoras", "Centros de Atendimento ao Cidadão", "Holdings com Unidades Geográficas Dispersas"
-    ],
-    "testimonial": {
-      "quote": "\"O agente de voz liberou nossa infraestrutura de comunicações. Recuperamos 15 horas de coordenação administrativa por sede semanalmente. A arquitetura é sólida.\"",
-      "author": "Laura Herrera",
-      "role": "Diretora de Operações"
-    },
-    "final_cta": {
-      "title": "Deseja avaliar o impacto na sua arquitetura?",
-      "description": "Solicite uma sessão de auditoria para identificar como um agente de voz pode mitigar seus riscos de execução.",
-      "button_saving": "Consultoria Técnica",
-      "button_demo": "Avaliação Estrutural"
-    }
-  },
-  "chatbots_page": {
-    "title": "Arquitetura de Resposta Agêntica.",
-    "subtitle": "Implemente sistemas que capturam, processam e executam respostas sob governança, mitigando o risco de silos de informação em canais digitais.",
-    "cta_demo": "Avaliação Estrutural",
-    "problem_title": "Riscos de uma Execução Fragmentada",
-    "problems": [
-      { "title": "Silos de Informação", "desc": "Consultas críticas que caem em canais não auditados nem integrados." },
-      { "title": "Estrutura de Resposta Fraca", "desc": "Sua equipe investe recursos sênior em roteamento tático em vez de design estratégico." },
-      { "title": "Fricção Operacional Acumulada", "desc": "As consultas repetitivas saturam a infraestrutura e degradam a qualidade do despliegue." },
-      { "title": "Inconsistência Estrutural", "desc": "Uma atenção lenta que reflete falhas profundas na arquitetura de execução." }
-    ],
-    "benefits_title": "Governance e Eficiência em Cada Nó",
-    "benefits": [
-      { "title": "Sincronização com ERP", "desc": "Os agentes leem e escrevem diretamente em seus sistemas Core sob as regras de acesso que você define." },
-      { "title": "Redução de Dívida Operacional", "desc": "Automatiza o roteamento e a primeira camada de intervenção, liberando capacidade instalada." },
-      { "title": "Rastreabilidade Total", "desc": "Cada interação fica registrada no seu centro de controle para auditoria constante." },
-      { "title": "Design Escalável", "desc": "Uma arquitetura modular que cresce junto com a complexidade das suas operações." }
-    ],
-    "process_title": "Intervenção Estratégica",
-    "process_steps": [
-      { "title": "Assessment de Fricção", "desc": "Identificamos os gargalos em seus canais atuais e desenhamos o mapa de intervenção." },
-      { "title": "Integração Arquitetônica", "desc": "Conectamos os sistemas de resposta à sua infraestrutura ERP/CRM existente." },
-      { "title": "Despliegue Governado", "desc": "Configuramos os guardrails e o modelo de decisão para garantir uma execução auditável." },
-      { "title": "Otimização Estrutural", "desc": "Monitoramento de latência e ajuste fino da lógica agêntica para maximizar o ROI." }
-    ],
-    "testimonial": {
-      "quote": "\"Transformamos um canal caótico em uma unidade de execução governada. O risco operacional foi reduzido drasticamente nos primeiros 90 dias.\"",
-      "author": "Gerente de Tecnologia",
-      "role": "Holding Industrial"
-    },
-    "final_cta": {
-      "title": "Sua arquitetura está pronta para a execução agêntica?",
-      "description": "Falemos sobre como integrar sistemas de resposta governados na sua estrutura atual.",
-      "button": "Avaliação Estrutural Gratuita"
+      "title": "Obrigado!",
+      "message": "Vamos te escrever ainda hoje."
     }
   },
   "metadata": {
