@@ -7,9 +7,9 @@ import { Pagination } from '@/components/ui/Pagination';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog | Datelia - Insights sobre Arquitectura de Ejecución e IA',
-  description: 'Explora nuestros artículos sobre eficiencia operativa, arquitectura de ejecución, IA en logística y cómo el estándar D.O.A.™ está transformando empresas.',
-  keywords: 'Eficiencia operativa, Arquitectura operativa, IA en logística, automatización inteligente, gestión de procesos, ingeniería operativa, Datelia insights',
+  title: 'Blog | Datelia - Automatización administrativa con IA',
+  description: 'Artículos sobre automatización de pedidos, rendiciones de gastos, facturas de proveedores y tableros de gestión con IA, basados en casos reales.',
+  keywords: 'Automatización administrativa, IA para empresas, rendición de gastos, pedidos y presupuestos, Datelia blog',
 };
 
 export const revalidate = 3600; // Revalidar cada hora

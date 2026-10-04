@@ -14,53 +14,9 @@
     "news": "Blog",
     "about_us": "About Us"
   },
-  "hero": {
-    "title": "Companies don't fail from lack of strategy.",
-    "subtitle": "They fail from lack of execution architecture.",
-    "description": "We design and deploy Governed Agentic Architecture (Proprietary D.O.A.™ Model) for complex enterprise groups.",
-    "cta": "Free Structural Evaluation",
-    "secondary_cta": "Discover D.O.A.™ Model"
-  },
-  "enterprise_thesis": {
-    "badge": "Our Operational Thesis",
-    "quote_1": "\"Execution cannot be delegated to tools. ",
-    "quote_2": "It must be designed.\"",
-    "paragraph_1": "Operational friction is normalized in large enterprise groups. Dependency on key individuals becomes invisible. Automating isolated tasks without changing the structural architecture only amplifies and accelerates chaos.",
-    "paragraph_strong": "Designing execution means governing growth."
-  },
-  "architecture": {
-    "title": "Governed Agentic Architecture",
-    "subtitle": "Operating with agents doesn't mean adding isolated bots. It means structuring autonomous operational units under explicit rules, integrated into existing systems with auditable traceability.",
-    "card1_title": "A D.O.A.™ Agent can:",
-    "card1_items": [
-      "Execute cross-validations between ERPs",
-      "Classify and route unstructured information",
-      "Detect deviations and trigger escalated alerts",
-      "Orchestrate satellite systems (Legacy/SaaS)",
-      "Log decisions with audit trail",
-      "Assist human-in-the-loop on critical processes"
-    ],
-    "card1_quote": "\"Intelligence is applied solely when classifying, validating, predicting, or responding generates structural economic value.\"",
-    "card2_title": "The D.O.A.™ Standard",
-    "card2_subtitle": "Agentic Operational Design (D.O.A.™) is our intervention methodology.",
-    "card2_desc": "We don't optimize scattered tasks. We design operational architecture.",
-    "card2_items": [
-      { "title": "Structural diagnosis", "desc": "Deep mapping of friction and cross-departmental bottlenecks." },
-      { "title": "Agentic architecture", "desc": "Design of governed autonomous units and human-in-the-loop roles." },
-      { "title": "Orchestration", "desc": "Decision center, technical observability, and cross-platform workflow control." }
-    ]
-  },
   "erp_integration": {
     "title": "We integrate with what you already use",
     "description": "We don't replace your ERP or your systems. We connect to them to automate without making your team change where they work."
-  },
-  "testimonials": {
-    "t1_name": "Jimena Garcia Pinto",
-    "t1_role": "Founder & Partnerships",
-    "t1_quote": "Companies don't fail from lack of strategy. They fail from lack of execution architecture. Friction becomes normalized... Designing execution means governing growth.",
-    "t2_name": "Gaston Horvat",
-    "t2_role": "Founder & CTO",
-    "t2_quote": "At Datelia, we design execution architecture. Operational engineering is not about tools, but how execution flows within the organization... Our architecture relies on API integrations, explicit rules, auditable logs, modularity, and security."
   },
   "footer": {
     "description": "We automate the administrative work that's still done by hand: orders, expense reports, supplier price lists, and reports, with AI connected to your ERP.",
@@ -113,35 +69,6 @@
     "see_more": "Learn more",
     "not_listed": "Your problem isn't on this list? We handle that too. What looks unique often resembles something we've already solved.",
     "cta_button": "Book a diagnostic call"
-  },
-  "target_audience": {
-    "title": "The Architectural Filter",
-    "description": "Datelia is a high-performance firm. Our Execution Architecture (D.O.A.™) is not a generic solution; it is designed to resolve structural risks at the board level.",
-    "is_for_title": "Designed For",
-    "is_for": [
-      { "title": "Holdings and Enterprise Groups" },
-      { "title": "Organizations with Active ERPs" },
-      { "title": "Companies with multiple business lines" },
-      { "title": "Institutions with structural complexity" }
-    ],
-    "is_for_item_desc": "Supporting high latency and friction between departments and branches.",
-    "is_not_title": "We Are Not",
-    "is_not": [
-      { "title": "\"OOTB\" Software Providers", "desc": "We don’t sell isolated SaaS licenses expecting clients to adapt processes to the tool." },
-      { "title": "Micro and Functional Solutions", "desc": "If you are looking for a basic WhatsApp bot for a local storefront, our service will carry too much architectural friction." },
-      { "title": "Fast Tactical Automators", "desc": "We reject short-term patches. Our approach is a deep, long-term structural intervention." }
-    ]
-  },
-  "live_events": {
-    "badge": "Open Talk Series",
-    "title": "Execution Architecture in the",
-    "title_highlight": "Industrial Sector",
-    "description": "How to govern execution in groups with multiple factories? Join our next monthly edition where we will discuss invisible structural risks and the D.O.A. model applied to your company.",
-    "date": "Month-end Friday 28, 11:00 AM (ART)",
-    "audience": "Exclusive for Directors and Partners",
-    "agenda_title": "Book your spot",
-    "agenda_desc": "Limited seats to ensure deep interactivity during the final Q&A.",
-    "cta": "Register Free of Charge"
   },
   "cta_section": {
     "title": "What task would you love to never do by hand again?",
@@ -212,32 +139,6 @@
       { "title": "AI proposes, your team decides", "desc": "Every system has approvals, alerts, and a record of who did what. Nothing important ships without a person validating it." },
       { "title": "We care that it actually gets used", "desc": "We train the team and stay close for the first few months. A tool nobody uses is worthless." }
     ]
-  },
-  "problem_solution": {
-    "title": "The Problem vs. The Solution",
-    "subtitle": "Understanding the obstacle is the first step to overcoming it. This is how we transform friction into growth.",
-    "problem": {
-      "badge": "The Problem",
-      "title": "What is holding back my company's growth today?",
-      "p1": "What limits growth is usually not the market, but the internal operation: manual processes, scattered information, and little real-time visibility. This mean that each new branch, customer, or operational unit requires more work, more staff, and more coordination.",
-      "strong": "In that scenario, scaling becomes slow, expensive, and unsustainable.",
-      "p2": "Datelia solves that bottleneck by automating repetitive tasks, integrating critical information into a single panel, and standardizing the way all areas of the company work.",
-      "italic": "The result: less operational load, more traceability, and an operation that grows without friction."
-    },
-    "solution": {
-      "badge": "The Datelia Solution",
-      "title": "What exactly does Datelia do to solve these problems?",
-      "p1": "We apply a proven approach that combines automation, AI, and Business Intelligence to organize, accelerate, and make the operation more efficient.",
-      "p2": "We automate shifts, reports, data entry, customer follow-up, and internal controls. We centralize information in a single dashboard and design standardized flows that eliminate errors and duplications.",
-      "roi": "Automation reduces manual tasks from the first few weeks of use and speeds up decision-making across the whole operation."
-    },
-    "mvp": {
-      "title": "What happens after the MVP?",
-      "p1": "After the MVP, two key stages follow to ensure continuous improvement:",
-      "list_1": "Scaling by areas (administration, sales, logistics, after-sales, operations).",
-      "list_2": "Real-time BI dashboards to ensure traceability and more precise decisions.",
-      "p2": "In addition, we provide continuous support, evolutionary improvements, and internal training so that the solution grows along with the company."
-    }
   },
   "about_us": {
     "hero": {
@@ -529,9 +430,9 @@
     }
   },
   "metadata": {
-    "title": "Datelia | Operational Engineering & AI Solutions in Argentina",
-    "description": "Boutique Engineering firm in Salta, Argentina. We design and deploy Governed Agentic Architecture (D.O.A.™) for complex enterprise groups in Argentina and Latin America.",
-    "keywords": "Operational engineering Argentina, AI consulting Salta, Agentic architecture, D.O.A., Business automation, Enterprise AI"
+    "title": "Datelia · AI-powered administrative automation for companies",
+    "description": "We automate orders, expense reports, supplier price lists, and reports with AI connected to your ERP. Salta, Argentina.",
+    "keywords": "Administrative automation, AI for business, expense reports, orders and quotes, ERP integration, Odoo, Salta Argentina, Datelia"
   }
 }
 

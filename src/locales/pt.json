@@ -14,53 +14,9 @@
     "news": "Blog",
     "about_us": "Sobre Nós"
   },
-  "hero": {
-    "title": "As empresas não falham por falta de estratégia.",
-    "subtitle": "Falham por falta de arquitetura na execução.",
-    "description": "Desenhamos e implementamos Arquitetura Agêntica Governada (Modelo próprio D.O.A.™) para grupos empresariais complexos.",
-    "cta": "Avaliação Estrutural Gratuita",
-    "secondary_cta": "Descobrir Modelo D.O.A.™"
-  },
-  "enterprise_thesis": {
-    "badge": "Nossa Tese Operacional",
-    "quote_1": "\"A execução não se delega a ferramentas. ",
-    "quote_2": "Ela se projeta.\"",
-    "paragraph_1": "O atrito operacional é normalizado em grandes grupos empresariais. A dependência de pessoas-chave torna-se invisível. Automatizar tarefas isoladas sem mudar a arquitetura estrutural apenas amplifica e acelera o caos.",
-    "paragraph_strong": "Desenhar a execução é governar o crescimento."
-  },
-  "architecture": {
-    "title": "Arquitetura Agêntica Governada",
-    "subtitle": "Operar com agentes não significa adicionar bots isolados. Significa estruturar unidades operacionais autônomas sob regras explícitas, integradas aos sistemas existentes e com rastreabilidade auditável.",
-    "card1_title": "Um Agente D.O.A.™ pode:",
-    "card1_items": [
-      "Executar validações cruzadas entre ERPs",
-      "Classificar e rotear informações não estruturadas",
-      "Detectar desvios e disparar alertas escalonados",
-      "Orquestrar sistemas satélite (Legacy/SaaS)",
-      "Registrar decisões com audit trail",
-      "Auxiliar humana-máquina em processos críticos"
-    ],
-    "card1_quote": "\"A inteligência é aplicada apenas quando classificar, validar, prever ou responder gera valor econômico estrutural.\"",
-    "card2_title": "O Padrão D.O.A.™",
-    "card2_subtitle": "Design Operacional Agêntico (D.O.A.™) é a nossa metodologia de intervenção.",
-    "card2_desc": "Não otimizamos tarefas dispersas. Desenhamos a arquitetura operacional.",
-    "card2_items": [
-      { "title": "Diagnóstico estrutural", "desc": "Mapeamento profundo de atritos e gargalos transversais." },
-      { "title": "Arquitetura agêntica", "desc": "Design de unidades autônomas governadas e papéis humano-máquina." },
-      { "title": "Orquestração", "desc": "Centro de decisão, observabilidade técnica e controle de fluxos multiplataforma." }
-    ]
-  },
   "erp_integration": {
     "title": "Nos integramos com o que você já usa",
     "description": "Não substituímos seu ERP nem seus sistemas. Nos conectamos a eles para automatizar sem que sua equipe mude onde trabalha."
-  },
-  "testimonials": {
-    "t1_name": "Jimena Garcia Pinto",
-    "t1_role": "Founder & Partnerships",
-    "t1_quote": "As empresas não falham por falta de estratégia. Falham por falta de estrutura na execução. O atrito é normalizado... Desenhar a execução é governar o crescimento.",
-    "t2_name": "Gaston Horvat",
-    "t2_role": "Founder & CTO",
-    "t2_quote": "Na Datelia desenhamos arquitetura de execução. A engenharia operacional não se trata de ferramentas, mas de como a execução flui dentro da organização... Nossa arquitetura se apoia em integrações via APIs, regras explícitas, logs auditáveis, modularidade e segurança."
   },
   "footer": {
     "description": "Automatizamos o trabalho administrativo que hoje é feito manualmente: pedidos, prestação de despesas, listas de preços de fornecedores e relatórios, com IA conectada ao seu ERP.",
@@ -112,61 +68,6 @@
     "see_more": "Saiba mais",
     "not_listed": "Seu problema não está na lista? Resolvemos igual. Muitas vezes o que parece único se parece com algo que já fizemos.",
     "cta_button": "Agende um diagnóstico"
-  },
-  "problem_solution": {
-    "title": "O Problema vs. A Solução",
-    "subtitle": "Entender o obstáculo é o primeiro passo para superá-lo. É assim que transformamos fricção em crescimento.",
-    "problem": {
-      "badge": "O Problema",
-      "title": "O que está freando o crescimento da minha empresa hoje?",
-      "p1": "O que limita o crescimento geralmente não é o mercado, mas a operação interna: processos manuais, informações dispersas e pouca visibilidade em tempo real. Isso faz com que cada nova sede, cliente ou unidade operativa exija mais trabalho, mais pessoal e mais coordenação.",
-      "strong": "Nesse cenário, escalar se torna lento, caro e insustentável.",
-      "p2": "A Datelia resolve esse gargalo automatizando tarefas repetitivas, integrando informações críticas em um único painel e padronizando a forma como todas as áreas da empresa trabalham.",
-      "italic": "O resultado: menos carga operacional, mais rastreabilidade e uma operação que cresce sem fricção."
-    },
-    "solution": {
-      "badge": "A Solução Datelia",
-      "title": "O que exatamente a Datelia faz para resolver esses problemas?",
-      "p1": "Aplicamos uma abordagem comprovada que combina automação, IA e Business Intelligence para ordenar, acelerar e tornar a operação mais eficiente.",
-      "p2": "Automatizamos turnos, relatórios, entradas de dados, acompanhamento de clientes e controles internos. Centralizamos a informação em um painel único e desenhamos fluxos padronizados que eliminam erros e duplicações.",
-      "roi": "A automação reduz as tarefas manuais desde as primeiras semanas de uso e acelera a tomada de decisão em toda a operação."
-    },
-    "mvp": {
-      "title": "O que acontece depois do MVP?",
-      "p1": "Depois do MVP, vêm duas etapas fundamentais para garantir a melhoria contínua:",
-      "list_1": "Escalonamento por áreas (administração, vendas, logística, pós-venda, operações).",
-      "list_2": "Dashboards de BI em tempo real para garantir rastreabilidade e decisões mais precisas.",
-      "p2": "Além disso, oferecemos suporte contínuo, melhorias evolutivas e treinamento interno para que a solução cresça junto com a empresa."
-    }
-  },
-  "target_audience": {
-    "title": "O Filtro Arquitetônico",
-    "description": "A Datelia é uma firma de alto rendimento. Nossa Arquitetura de Execução (D.O.A.™) não é uma solução genérica, foi desenhada para resolver riscos estruturais de nível diretivo.",
-    "is_for_title": "Desenhado Para",
-    "is_for": [
-      { "title": "Holdings e Grupos Empresariais" },
-      { "title": "Organizações com ERP Ativo" },
-      { "title": "Empresas com múltiplas linhas de negócio" },
-      { "title": "Instituições com complexidade estrutural" }
-    ],
-    "is_for_item_desc": "Suportam grande latência e atrito entre departamentos e filiais.",
-    "is_not_title": "Não Somos",
-    "is_not": [
-      { "title": "Provedores de Software \"OOTB\"", "desc": "Não vendemos licenças SaaS isoladas (\"Out-of-the-Box\") esperando que o cliente adapte seus processos à ferramenta." },
-      { "title": "Soluções Micro e Funcionais", "desc": "Se você procura um bot básico de WhatsApp para um comércio local, nosso serviço terá muito atrito arquitetônico." },
-      { "title": "Automatizadores Táticos Rápidos", "desc": "Rejeitamos patches de curto prazo. Nosso foco é uma intervenção estrutural profunda e de longo prazo." }
-    ]
-  },
-  "live_events": {
-    "badge": "Ciclo de Palestras Abertas",
-    "title": "Arquitetura de Execução no",
-    "title_highlight": "Setor Industrial",
-    "description": "Como governar a execução em grupos com múltiplas fábricas operacionais? Junte-se à nossa próxima edição mensal onde discutiremos riscos estruturais invisíveis e o modelo D.O.A. aplicado à sua empresa.",
-    "date": "Sexta-feira 28, final do mês, 11:00 AM (ART)",
-    "audience": "Exclusivo para Diretores e Sócios",
-    "agenda_title": "Garanta seu lugar",
-    "agenda_desc": "Vagas limitadas para garantir profunda interatividade no Q&A final.",
-    "cta": "Inscrever-se Gratuitamente"
   },
   "cta_section": {
     "title": "Que tarefa você gostaria de nunca mais fazer manualmente?",
@@ -528,8 +429,8 @@
     }
   },
   "metadata": {
-    "title": "Datelia | Firma Boutique de Engenharia Operacional (D.O.A.™)",
-    "description": "As empresas não falham por falta de estratégia, falham por falta de arquitetura na execução. Desenhamos e implementamos Arquitetura Agêntica Governada.",
-    "keywords": "Eficiência operacional, Arquitetura operacional, IA corporativa, Design Operacional Agêntico, D.O.A., arquitetura de execução, Holdings"
+    "title": "Datelia · Automação administrativa com IA para empresas",
+    "description": "Automatizamos pedidos, prestação de despesas, listas de preços de fornecedores e relatórios com IA conectada ao seu ERP. Salta, Argentina.",
+    "keywords": "Automação administrativa, IA para empresas, prestação de despesas, pedidos e orçamentos, integração ERP, Odoo, Salta Argentina, Datelia"
   }
 }

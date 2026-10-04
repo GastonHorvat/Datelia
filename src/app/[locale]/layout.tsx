@@ -97,7 +97,7 @@ export default async function RootLayout(props: {
                   "@type": "Organization",
                   "name": "Datelia",
                   "alternateName": "Datelia IA",
-                  "description": "Firma boutique de Ingeniería Operativa y soluciones de IA en Argentina.",
+                  "description": "Automatización administrativa con IA para empresas medianas: pedidos, rendiciones de gastos, facturas de proveedores y tableros de gestión.",
                   "url": "https://www.datelia.com.ar",
                   "logo": "https://www.datelia.com.ar/images/logo.png",
                   "contactPoint": {
