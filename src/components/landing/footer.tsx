@@ -5,13 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig } from "@/config/site";
 import { useTranslations, useLocale } from "next-intl";
-import { Linkedin, Mail, Phone } from 'lucide-react';
+import { Linkedin, Facebook, Instagram, Mail, Phone } from 'lucide-react';
 
 const currentYear = new Date().getFullYear();
 const companyName = "Datelia";
 
 const socialLinks = [
   { name: 'LinkedIn', href: "https://www.linkedin.com/company/datelia/", icon: Linkedin },
+  { name: 'Facebook', href: "https://www.facebook.com/dateliaonline", icon: Facebook },
+  { name: 'Instagram', href: "https://www.instagram.com/dateliaonline/", icon: Instagram },
 ];
 
 const contactInfo = {
