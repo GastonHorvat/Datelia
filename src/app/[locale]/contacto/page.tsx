@@ -8,14 +8,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, MessageCircle } from 'lucide-react';
 import { siteConfig } from '@/config/site';
+import { ogImageUrl } from '@/lib/og';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: 'contact_page.hero' });
+  const title = `${t('title')} | Datelia`;
+  const description = `${t('subtitle')} ${t('description')}`;
 
   return {
-    title: `${t('title')} | Datelia`,
-    description: `${t('subtitle')} ${t('description')}`,
+    title,
+    description,
+    openGraph: { title, description, images: [ogImageUrl(t('title'), t('subtitle'))] },
   };
 }
 

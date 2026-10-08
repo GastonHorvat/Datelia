@@ -38,9 +38,12 @@ interface SolutionPageTemplateProps {
    * Cuando está presente, usa namespace.screenshot_title/body/caption.
    */
   screenshotSrc?: string;
+  /** Dimensiones reales del archivo de screenshotSrc, para que next/image no la deforme. */
+  screenshotWidth?: number;
+  screenshotHeight?: number;
 }
 
-export function SolutionPageTemplate({ namespace, icon, relatedCases, stepCount, includeCount, screenshotSrc }: SolutionPageTemplateProps) {
+export function SolutionPageTemplate({ namespace, icon, relatedCases, stepCount, includeCount, screenshotSrc, screenshotWidth = 1792, screenshotHeight = 2400 }: SolutionPageTemplateProps) {
   const Icon = ICONS[icon];
   const t = useTranslations(namespace);
   const tCases = useTranslations("case_names");
@@ -137,8 +140,8 @@ export function SolutionPageTemplate({ namespace, icon, relatedCases, stepCount,
                 <Image
                   src={screenshotSrc}
                   alt={t("screenshot_title")}
-                  width={1792}
-                  height={2400}
+                  width={screenshotWidth}
+                  height={screenshotHeight}
                   className="w-full h-auto"
                   sizes="(min-width: 1024px) 64rem, 100vw"
                 />

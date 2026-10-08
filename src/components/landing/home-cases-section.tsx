@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
@@ -7,6 +8,11 @@ const SLUGS: Record<(typeof CASES)[number], string> = {
   cedsa: "cedsa",
   la_francisca: "la-francisca",
   la_tablada: "la-tablada",
+};
+const LOGOS: Record<(typeof CASES)[number], { src: string; width: number; height: number }> = {
+  cedsa: { src: "/images/logos/cedsa.png", width: 550, height: 557 },
+  la_francisca: { src: "/images/logos/la-francisca.png", width: 399, height: 206 },
+  la_tablada: { src: "/images/logos/la-tablada.webp", width: 332, height: 100 },
 };
 
 export function HomeCasesSection() {
@@ -38,10 +44,30 @@ export function HomeCasesSection() {
               href={`/${locale}/casos/${SLUGS[key]}`}
               className="group block rounded-2xl border border-background/15 bg-background/5 p-6 hover:bg-background/10 hover:border-primary/40 transition-colors"
             >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-headline font-bold">{tCaseNames(key)}</h3>
+              <div className="flex items-start justify-between mb-5">
+                {key === "la_tablada" ? (
+                  // Logo blanco pensado para fondo oscuro; esta sección tiene fondo claro (bg-foreground), así que necesita su propio respaldo oscuro para no desaparecer.
+                  <span className="inline-flex items-center rounded-md bg-background px-2.5 py-1.5">
+                    <Image
+                      src={LOGOS[key].src}
+                      alt={tCaseNames(key)}
+                      width={LOGOS[key].width}
+                      height={LOGOS[key].height}
+                      className="h-5 w-auto object-contain"
+                    />
+                  </span>
+                ) : (
+                  <Image
+                    src={LOGOS[key].src}
+                    alt={tCaseNames(key)}
+                    width={LOGOS[key].width}
+                    height={LOGOS[key].height}
+                    className="h-9 w-auto object-contain"
+                  />
+                )}
                 <ArrowUpRight className="h-5 w-5 text-background/50 group-hover:text-primary transition-colors" />
               </div>
+              <h3 className="text-xl font-headline font-bold mb-2">{tCaseNames(key)}</h3>
               <p className="text-background/70 text-sm leading-relaxed">{summaries[key]}</p>
             </Link>
           ))}

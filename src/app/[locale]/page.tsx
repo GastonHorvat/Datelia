@@ -13,11 +13,13 @@ import { Layout } from "@/components/layout";
 import { Metadata } from 'next';
 
 import { getTranslations } from 'next-intl/server';
+import { ogImageUrl } from '@/lib/og';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
   const locale = params.locale;
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const ogImage = ogImageUrl(t('title'));
 
   return {
     title: t('title'),
@@ -30,7 +32,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       type: 'website',
       images: [
         {
-          url: '/images/og/og-home.jpg',
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: t('title'),
@@ -41,7 +43,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/images/og/og-home.jpg'],
+      images: [ogImage],
     },
     alternates: {
       canonical: 'https://www.datelia.com.ar',

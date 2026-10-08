@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { useTranslations, useLocale } from 'next-intl';
@@ -9,16 +10,24 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Quote, ArrowRight } from 'lucide-react';
 import { SectorsSection } from '@/components/case-studies/sectors-section';
 import { CtaSection } from '@/components/landing/cta-section';
+import { ogImageUrl } from '@/lib/og';
 
 const CLUTCH_PROFILE_URL = 'https://clutch.co/profile/datelia';
+const LOGOS: Record<string, { src: string; width: number; height: number }> = {
+  cedsa: { src: '/images/logos/cedsa.png', width: 550, height: 557 },
+  'la-francisca': { src: '/images/logos/la-francisca.png', width: 399, height: 206 },
+  'la-tablada': { src: '/images/logos/la-tablada.webp', width: 332, height: 100 },
+};
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: 'casos_page.hero' });
+  const title = `${t('title')} | Datelia`;
 
   return {
-    title: `${t('title')} | Datelia`,
+    title,
     description: t('subtitle'),
+    openGraph: { title, description: t('subtitle'), images: [ogImageUrl(t('title'), t('subtitle'))] },
   };
 }
 
@@ -107,6 +116,13 @@ const CasosPage = () => {
               <Link href={`/${locale}/casos/${c.slug}`} key={c.slug} className="block group h-full">
                 <Card className="h-full flex flex-col bg-background hover:border-primary transition-colors">
                   <CardHeader>
+                    <Image
+                      src={LOGOS[c.slug].src}
+                      alt={c.name}
+                      width={LOGOS[c.slug].width}
+                      height={LOGOS[c.slug].height}
+                      className="self-start h-9 w-auto object-contain mb-3"
+                    />
                     <CardTitle className="text-xl">{c.name}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">

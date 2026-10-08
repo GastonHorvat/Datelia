@@ -97,7 +97,7 @@
   "home_trust": {
     "rating_text": "on Clutch: verified client reviews",
     "clutch_link_label": "See on Clutch",
-    "clients_label": "Clients"
+    "clients_label": "Some of our clients"
   },
   "home_problems": {
     "title": "Does any of this sound familiar?",
@@ -126,7 +126,7 @@
     "title": "How we work",
     "steps": [
       { "title": "Free diagnostic call (45 min)", "desc": "You tell us how you work today. We tell you what's worth automating first and what isn't worth it." },
-      { "title": "Discovery", "desc": "We sit down with your team and map the process in detail. We present the proposal in a meeting, with scope, timeline, and a fixed price." },
+      { "title": "Discovery", "desc": "For projects that need it, we sit down with your team and map the process in detail. If it has a cost, it's credited against the project if you move forward. We present the proposal in a meeting, with scope, timeline, and a fixed price." },
       { "title": "Phased implementation", "desc": "We deliver in short stages with clear milestones. Your team tests and validates before moving forward. We train whoever will use it." },
       { "title": "Support and continuous improvement", "desc": "A monthly plan covers support, adjustments, and improvements. The system grows with your company." }
     ]
@@ -134,7 +134,7 @@
   "home_why_us": {
     "title": "Why work with us",
     "points": [
-      { "title": "30 years building software projects", "desc": "Gastón led projects for companies like Globant and Cognizant before founding Datelia. We know how to manage projects, not just write code." },
+      { "title": "30 years building software projects", "desc": "Gastón led projects at companies like Globant and Cognizant, and Jimena led teams and technology as CEO of CEDSA. That project-management experience shows up in every delivery, not just in the code." },
       { "title": "We don't replace your ERP", "desc": "We connect to what you already use: Odoo, Paljet, Google Sheets, email, WhatsApp. Your team keeps working where they already work." },
       { "title": "AI proposes, your team decides", "desc": "Every system has approvals, alerts, and a record of who did what. Nothing important ships without a person validating it." },
       { "title": "We care that it actually gets used", "desc": "We train the team and stay close for the first few months. A tool nobody uses is worthless." }
@@ -143,7 +143,7 @@
   "about_us": {
     "hero": {
       "title": "We are Datelia",
-      "subtitle": "A small company by design: the people you talk to in the first call are the same ones who design and support your project."
+      "subtitle": "Gastón and Jimena lead every project end to end, backed by a team of developers, QA, and project managers. You're not a ticket passed from hand to hand: whoever you talk to on the first call stays involved until the end."
     },
     "leadership": {
       "title": "Who we are",
@@ -197,7 +197,7 @@
   "casos_page": {
     "hero": {
       "title": "Real case studies",
-      "subtitle": "Few, but real. Every client featured here agreed to be named. Two of them left a verified review on Clutch."
+      "subtitle": "We only feature clients who gave us permission to tell their story publicly. Two of them left a verified review on Clutch."
     },
     "testimonials": [
       {
@@ -234,6 +234,7 @@
       "Direct integration with CEDSA's management system.",
       "A reconciliation dashboard for Treasury."
     ],
+    "screenshot_caption": "CEDSA's reconciliation dashboard, built by Datelia.",
     "result_label": "Result",
     "result": "The process went from spreadsheets and manual checks to a centralized, automatic flow.",
     "quote": "What impressed us was Datelia's understanding of a specific operational problem and creating a practical solution.",
@@ -246,7 +247,7 @@
   "caso_la_francisca": {
     "title": "La Francisca: orders, expenses and management connected to Odoo",
     "summary": "Order portal, expense reporting with receipt scanning, and a management dashboard, all connected to Odoo.",
-    "ficha": "2025-2026 project",
+    "ficha": "Food industry · Güemes, Salta · 2025-2026 project",
     "starting_point_label": "The starting point",
     "starting_point": "Sales orders and consignment notes were transcribed into the system by hand. Supplier invoices arrived by email and were entered one by one. Driver expense reports were on paper. Information for purchase planning was scattered across tools.",
     "what_we_did_label": "What we did, in 3 stages",
@@ -255,6 +256,7 @@
       { "title": "Expense reporting", "desc": "Offline-capable mobile web app, AI receipt scanning, an approval panel for Treasury, and costs broken down by route and carrier." },
       { "title": "Management dashboard", "desc": "A unified view of sales and suppliers, with demand forecasting and purchase suggestions." }
     ],
+    "screenshot_caption": "La Francisca's logistics dashboard, built by Datelia.",
     "result_label": "Result",
     "result": "Orders, expense reports, and supplier invoices stopped being transcribed by hand and moved into a centralized flow connected to Odoo.",
     "tech_label": "Technology",
@@ -276,6 +278,7 @@
       "An approval panel and PDFs branded for La Tablada.",
       "A dashboard for management: quotes, discounts by rep, and suppliers with the most increases."
     ],
+    "screenshot_caption": "A panel of orders received through Telegram, built by Datelia for La Tablada.",
     "next_stage_label": "Next stage",
     "next_stage": "WhatsApp, direct order entry into the Paljet ERP, and commercial intelligence dashboards.",
     "result_label": "Result",
@@ -302,6 +305,9 @@
       "Treasury approves from a panel and only looks at the exceptions.",
       "Everything is logged and visible on a dashboard by person, branch, or route."
     ],
+    "screenshot_title": "This is what a real expense report looks like",
+    "screenshot_body": "This is the expense management system we built for a real client: each rep uploads their receipts, the system flags issues automatically, and Treasury approves without chasing anyone down.",
+    "screenshot_caption": "An expense report panel delivered by Datelia.",
     "includes_title": "What's included",
     "includes": [
       "Offline-capable mobile web app",
@@ -330,6 +336,9 @@
       "A sales rep reviews and approves it. Discounts outside policy go to management for approval.",
       "A branded PDF quote goes out, or the order is loaded directly into your ERP."
     ],
+    "screenshot_title": "This is what a real quote looks like",
+    "screenshot_body": "These are quotes built automatically from orders that came in by text, photo, or voice note. Each one is traceable: who asked for it, when, and what state it's in.",
+    "screenshot_caption": "A quotes panel delivered by Datelia.",
     "includes_title": "What's included",
     "includes": [
       "Multichannel order intake (text, voice, photo)",
@@ -358,6 +367,9 @@
       "If a price increases beyond what you defined, you get an alert.",
       "A price history is kept per supplier, and invoices move to your ERP as drafts."
     ],
+    "screenshot_title": "This is what real price alerts look like",
+    "screenshot_body": "The system compares every price list against the history and flags anything that deviates from what's expected, before the increase slips through unnoticed.",
+    "screenshot_caption": "A cost alerts panel delivered by Datelia.",
     "includes_title": "What's included",
     "includes": [
       "Automatic intake inbox",

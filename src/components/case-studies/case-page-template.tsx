@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, CheckCircle2, Quote } from "lucide-react";
@@ -19,9 +20,22 @@ interface CasePageTemplateProps {
   whatWeDidCount: number;
   hasQuote: boolean;
   hasNextStage: boolean;
+  /** Logo real del cliente, mostrado en el hero. Opcional: si no hay logo, el hero queda solo con texto. */
+  logoSrc?: string;
+  logoWidth?: number;
+  logoHeight?: number;
+  /** El hero tiene fondo claro (bg-accent). Activar si el logo es blanco/transparente y necesita un respaldo oscuro para no desaparecer. */
+  logoNeedsDarkChip?: boolean;
+  /**
+   * Captura real del sistema entregado a este cliente. Opcional. Cuando está
+   * presente, usa namespace.screenshot_caption; se muestra al final de "Qué hicimos".
+   */
+  screenshotSrc?: string;
+  screenshotWidth?: number;
+  screenshotHeight?: number;
 }
 
-export function CasePageTemplate({ namespace, whatWeDidShape, whatWeDidCount, hasQuote, hasNextStage }: CasePageTemplateProps) {
+export function CasePageTemplate({ namespace, whatWeDidShape, whatWeDidCount, hasQuote, hasNextStage, logoSrc, logoWidth = 400, logoHeight = 240, logoNeedsDarkChip = false, screenshotSrc, screenshotWidth = 1600, screenshotHeight = 1000 }: CasePageTemplateProps) {
   const t = useTranslations(namespace);
   const locale = useLocale();
 
@@ -39,6 +53,27 @@ export function CasePageTemplate({ namespace, whatWeDidShape, whatWeDidCount, ha
       <section className="bg-accent text-accent-foreground pt-32 pb-12 sm:pt-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
+            {logoSrc && (
+              logoNeedsDarkChip ? (
+                <span className="inline-flex items-center rounded-md bg-background px-3 py-2 mb-5">
+                  <Image
+                    src={logoSrc}
+                    alt={t("title")}
+                    width={logoWidth}
+                    height={logoHeight}
+                    className="h-7 w-auto object-contain"
+                  />
+                </span>
+              ) : (
+                <Image
+                  src={logoSrc}
+                  alt={t("title")}
+                  width={logoWidth}
+                  height={logoHeight}
+                  className="h-10 w-auto object-contain mb-5"
+                />
+              )
+            )}
             <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">
               {t("ficha")}
             </p>
@@ -96,6 +131,22 @@ export function CasePageTemplate({ namespace, whatWeDidShape, whatWeDidCount, ha
                 {t("next_stage_label")}
               </p>
               <p className="text-base leading-relaxed">{t("next_stage")}</p>
+            </div>
+          )}
+
+          {screenshotSrc && (
+            <div className="mt-10">
+              <div className="overflow-hidden rounded-xl border border-accent-foreground/15 shadow-2xl shadow-black/20">
+                <Image
+                  src={screenshotSrc}
+                  alt={t("screenshot_caption")}
+                  width={screenshotWidth}
+                  height={screenshotHeight}
+                  className="w-full h-auto"
+                  sizes="(min-width: 1024px) 48rem, 100vw"
+                />
+              </div>
+              <p className="mt-3 text-sm text-accent-foreground/60">{t("screenshot_caption")}</p>
             </div>
           )}
         </div>

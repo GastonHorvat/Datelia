@@ -9,14 +9,17 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CtaSection } from '@/components/landing/cta-section';
 import { Receipt, ClipboardList, FileSpreadsheet, LayoutDashboard, ArrowRight } from 'lucide-react';
+import { ogImageUrl } from '@/lib/og';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: 'solutions_overview' });
+  const title = `${t('hero.title')} | Datelia`;
 
   return {
-    title: `${t('hero.title')} | Datelia`,
+    title,
     description: t('hero.subtitle'),
+    openGraph: { title, description: t('hero.subtitle'), images: [ogImageUrl(t('hero.title'), t('hero.subtitle'))] },
   };
 }
 

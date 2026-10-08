@@ -1,22 +1,24 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, FileSpreadsheet, Mail, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+
+// Capturas reales de productos entregados (no son ilustraciones).
+const COLLAGE = [
+  { src: "/images/casos/la-francisca-real.png", alt: "Panel de logística de un cliente real de Datelia" },
+  { src: "/images/tableros-dashboard-real.jpeg", alt: "Tablero de gestión real construido por Datelia" },
+  { src: "/images/pedidos-y-presupuestos-real.png", alt: "Panel de presupuestos real construido por Datelia" },
+] as const;
 
 export function HeroSection() {
   const tHome = useTranslations("home_hero");
   const locale = useLocale();
   const shouldReduceMotion = useReducedMotion();
   const dur = (d: number) => (shouldReduceMotion ? 0 : d);
-
-  const inputCards = [
-    { icon: MessageCircle, rotate: -6, delay: 0 },
-    { icon: Mail, rotate: 4, delay: 0.15 },
-    { icon: FileSpreadsheet, rotate: -3, delay: 0.3 },
-  ];
 
   return (
     <section id="inicio" className="relative w-full overflow-hidden bg-background pt-28 pb-16 md:pt-32 md:pb-24">
@@ -63,38 +65,55 @@ export function HeroSection() {
             <p className="mt-4 text-sm text-muted-foreground/80">{tHome("note")}</p>
           </div>
 
-          {/* Gráfico: caos de canales -> IA -> ERP ordenado (no es una captura real, es una ilustración) */}
-          <div className="relative h-[320px] sm:h-[380px] hidden lg:block" aria-hidden="true">
-            {inputCards.map(({ icon: Icon, rotate, delay }, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1, rotate }}
-                transition={{ duration: dur(0.4), delay: dur(0.3 + delay) }}
-                className="absolute flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-card shadow-sm"
-                style={{ left: `${10 + i * 8}%`, top: `${10 + i * 28}%` }}
-              >
-                <Icon className="h-6 w-6 text-muted-foreground" />
-              </motion.div>
-            ))}
-
+          {/* Collage de capturas reales de productos entregados */}
+          <div className="relative mt-8 lg:mt-0 h-[260px] sm:h-[360px] lg:h-[420px]" aria-hidden="true">
+            {/* Trasera: logística (La Francisca) — a partir de sm */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: dur(0.5), delay: dur(0.5) }}
-              className="absolute left-[38%] top-[38%] flex h-20 w-20 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/30"
+              initial={{ opacity: 0, scale: 0.92, rotate: -5 }}
+              animate={{ opacity: 1, scale: 1, rotate: -5 }}
+              transition={{ duration: dur(0.5), delay: dur(0.3) }}
+              className="absolute left-0 top-[8%] hidden sm:block w-[52%] aspect-[16/11] rounded-xl border border-border shadow-2xl shadow-black/30 overflow-hidden"
             >
-              <Sparkles className="h-8 w-8 text-primary-foreground" />
+              <Image
+                src={COLLAGE[0].src}
+                alt={COLLAGE[0].alt}
+                fill
+                sizes="(min-width: 1024px) 30vw, 40vw"
+                className="object-cover object-top"
+              />
             </motion.div>
 
+            {/* Principal: tablero de gestión — siempre visible, incluso en mobile */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: dur(0.5), delay: dur(0.7) }}
-              className="absolute right-[6%] top-[42%] flex items-center gap-3 rounded-2xl border border-primary/20 bg-card px-5 py-4 shadow-md"
+              initial={{ opacity: 0, scale: 0.92, rotate: 3 }}
+              animate={{ opacity: 1, scale: 1, rotate: 3 }}
+              transition={{ duration: dur(0.5), delay: dur(0.15) }}
+              className="absolute right-0 top-0 z-10 w-[74%] sm:w-[62%] aspect-[16/11] rounded-xl border border-border shadow-2xl shadow-black/40 overflow-hidden"
             >
-              <CheckCircle2 className="h-6 w-6 text-primary shrink-0" />
-              <span className="text-sm font-medium text-foreground">{tHome("erp_label")}</span>
+              <Image
+                src={COLLAGE[1].src}
+                alt={COLLAGE[1].alt}
+                fill
+                sizes="(min-width: 1024px) 36vw, 60vw"
+                className="object-cover object-top"
+                priority
+              />
+            </motion.div>
+
+            {/* Acento: presupuestos (La Tablada) — solo desktop */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, rotate: -2 }}
+              animate={{ opacity: 1, scale: 1, rotate: -2 }}
+              transition={{ duration: dur(0.5), delay: dur(0.45) }}
+              className="absolute left-[14%] bottom-0 z-20 hidden lg:block w-[42%] aspect-[16/11] rounded-xl border border-border shadow-xl shadow-black/30 overflow-hidden"
+            >
+              <Image
+                src={COLLAGE[2].src}
+                alt={COLLAGE[2].alt}
+                fill
+                sizes="25vw"
+                className="object-cover object-top"
+              />
             </motion.div>
           </div>
         </div>

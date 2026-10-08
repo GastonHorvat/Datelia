@@ -70,7 +70,7 @@
   "home_trust": {
     "rating_text": "en Clutch: reviews verificadas de nuestros clientes",
     "clutch_link_label": "Ver en Clutch",
-    "clients_label": "Clientes"
+    "clients_label": "Algunos de nuestros clientes"
   },
   "home_problems": {
     "title": "¿Te suena alguna de estas?",
@@ -99,7 +99,7 @@
     "title": "Cómo trabajamos",
     "steps": [
       { "title": "Diagnóstico sin costo (45 min)", "desc": "Nos contás cómo trabajan hoy. Te decimos qué conviene automatizar primero y qué no vale la pena." },
-      { "title": "Relevamiento", "desc": "Nos sentamos con tu equipo y mapeamos el proceso en detalle. Te presentamos la propuesta en una reunión, con alcance, plazos y precio cerrado." },
+      { "title": "Relevamiento", "desc": "En proyectos que lo requieren, nos sentamos con tu equipo y mapeamos el proceso en detalle. Si tiene costo, se bonifica del proyecto si seguís adelante. Te presentamos la propuesta en una reunión, con alcance, plazos y precio cerrado." },
       { "title": "Implementación por etapas", "desc": "Entregamos en etapas cortas, con hitos claros. Tu equipo prueba y valida antes de seguir. Capacitamos a quienes lo van a usar." },
       { "title": "Soporte y mejora continua", "desc": "Un abono mensual cubre soporte, ajustes y mejoras. El sistema crece con tu empresa." }
     ]
@@ -107,7 +107,7 @@
   "home_why_us": {
     "title": "Por qué trabajar con nosotros",
     "points": [
-      { "title": "30 años haciendo proyectos de software", "desc": "Gastón lideró proyectos para empresas como Globant y Cognizant antes de fundar Datelia. Sabemos gestionar proyectos, no solo programar." },
+      { "title": "30 años haciendo proyectos de software", "desc": "Gastón dirigió proyectos en empresas como Globant y Cognizant, y Jimena lideró equipos y tecnología como CEO de CEDSA. Esa experiencia en gestión de proyectos está en cada entrega, no solo en el código." },
       { "title": "No reemplazamos tu ERP", "desc": "Nos conectamos a lo que ya usás: Odoo, Paljet, Google Sheets, el mail, WhatsApp. Tu equipo sigue trabajando donde trabaja." },
       { "title": "La IA propone, tu equipo decide", "desc": "Cada sistema tiene aprobaciones, alertas y registro de quién hizo qué. Nada importante sale sin que una persona lo valide." },
       { "title": "Nos importa que se use", "desc": "Capacitamos al equipo y acompañamos los primeros meses. Una herramienta que nadie usa no sirve." }
@@ -143,7 +143,7 @@
   "about_us": {
     "hero": {
       "title": "Somos Datelia",
-      "subtitle": "Una empresa chica a propósito: los que te atienden en la primera charla son los mismos que diseñan y acompañan tu proyecto."
+      "subtitle": "Gastón y Jimena lideran cada proyecto de punta a punta, con un equipo de desarrollo, QA y gestión atrás. No sos un ticket que pasa de mano en mano: quien te atiende en la primera charla sigue involucrado hasta el final."
     },
     "leadership": {
       "title": "Quiénes somos",
@@ -197,7 +197,7 @@
   "casos_page": {
     "hero": {
       "title": "Casos reales",
-      "subtitle": "Pocos, pero reales. Todos los clientes que aparecen acá aceptaron ser mencionados. Dos de ellos dejaron su review verificada en Clutch."
+      "subtitle": "Mostramos los que nos dieron permiso de contar su historia en público. Dos de ellos dejaron su review verificada en Clutch."
     },
     "testimonials": [
       {
@@ -234,6 +234,7 @@
       "Integración directa con el sistema de gestión de CEDSA.",
       "Un tablero de conciliación para Tesorería."
     ],
+    "screenshot_caption": "Tablero de conciliación de CEDSA, construido por Datelia.",
     "result_label": "Resultado",
     "result": "El proceso pasó de planillas y controles manuales a un flujo centralizado y automático.",
     "quote": "Lo que nos impresionó fue cómo entendieron un problema operativo concreto y crearon una solución práctica.",
@@ -246,7 +247,7 @@
   "caso_la_francisca": {
     "title": "La Francisca: pedidos, gastos y gestión conectados a Odoo",
     "summary": "Portal de pedidos, rendición de gastos con lectura de tickets y tablero de gestión, todo conectado con Odoo.",
-    "ficha": "Proyecto 2025-2026",
+    "ficha": "Industria alimenticia · Güemes, Salta · Proyecto 2025-2026",
     "starting_point_label": "El punto de partida",
     "starting_point": "Los pedidos de venta y los remitos de consignación se transcribían a mano al sistema. Las facturas de proveedores llegaban por mail y se cargaban una por una. Las rendiciones de los transportistas eran en papel. La información para planificar compras estaba repartida.",
     "what_we_did_label": "Qué hicimos, en 3 etapas",
@@ -255,6 +256,7 @@
       { "title": "Rendición de gastos", "desc": "App web para celular que funciona sin conexión, lectura de tickets con IA, panel de aprobación para Tesorería y costos por ruta y transportista." },
       { "title": "Tablero de gestión", "desc": "Visión unificada de ventas y proveedores, con pronóstico de demanda y sugerencias de compra." }
     ],
+    "screenshot_caption": "Panel de logística de La Francisca, construido por Datelia.",
     "result_label": "Resultado",
     "result": "Los pedidos, las rendiciones y las facturas de proveedores dejaron de transcribirse a mano y pasaron a un flujo centralizado conectado a Odoo.",
     "tech_label": "Tecnología",
@@ -276,6 +278,7 @@
       "Un panel de aprobación y PDFs con la marca de La Tablada.",
       "Un tablero para la dirección: presupuestos, descuentos por vendedor y proveedores con más aumentos."
     ],
+    "screenshot_caption": "Panel de pedidos recibidos por Telegram, construido por Datelia para La Tablada.",
     "next_stage_label": "Próxima etapa",
     "next_stage": "WhatsApp, carga directa de pedidos en el ERP Paljet y tableros de inteligencia comercial.",
     "result_label": "Resultado",
@@ -302,6 +305,9 @@
       "Tesorería aprueba en un panel y solo mira las excepciones.",
       "Todo queda registrado y se puede ver en un tablero por persona, sucursal o ruta."
     ],
+    "screenshot_title": "Así se ve una rendición real",
+    "screenshot_body": "Esta es la gestión de rendiciones que construimos para un cliente real: cada representante carga sus comprobantes, el sistema detecta alertas automáticamente y Tesorería aprueba sin perseguir a nadie.",
+    "screenshot_caption": "Panel de rendiciones entregado por Datelia.",
     "includes_title": "Qué incluye",
     "includes": [
       "App web para celular (funciona sin conexión)",
@@ -330,6 +336,9 @@
       "Un vendedor lo revisa y lo aprueba. Si hay un descuento fuera de lo permitido, lo aprueba la dirección.",
       "Sale el PDF con tu marca o el pedido se carga directo en el ERP."
     ],
+    "screenshot_title": "Así se ve un presupuesto real",
+    "screenshot_body": "Estos son presupuestos armados automáticamente a partir de pedidos que llegaron por texto, foto o audio. Cada uno queda trazable: quién lo pidió, cuándo y en qué estado está.",
+    "screenshot_caption": "Panel de presupuestos entregado por Datelia.",
     "includes_title": "Qué incluye",
     "includes": [
       "Recepción de pedidos multicanal (texto, audio, foto)",
@@ -358,6 +367,9 @@
       "Si un precio aumenta más de lo que definiste, te llega una alerta.",
       "Queda el historial de precios por proveedor, y las facturas pasan como borrador al ERP."
     ],
+    "screenshot_title": "Así se ven las alertas de precio reales",
+    "screenshot_body": "El sistema compara cada lista de precios contra el historial y avisa apenas algo se desvía de lo esperado, antes de que el aumento pase desapercibido.",
+    "screenshot_caption": "Panel de alertas de costo entregado por Datelia.",
     "includes_title": "Qué incluye",
     "includes": [
       "Casilla de recepción automática",

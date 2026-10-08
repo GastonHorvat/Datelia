@@ -1,10 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 const CLUTCH_PROFILE_URL = "https://clutch.co/profile/datelia";
-const CLIENT_KEYS = ["cedsa", "la_francisca", "la_tablada"] as const;
+const CLIENT_LOGOS = [
+  { key: "cedsa", src: "/images/logos/cedsa.png", width: 550, height: 557, needsLightChip: false, heightClass: "h-8" },
+  // Cartel con interior blanco opaco y fondo transparente afuera: se ve bien en cualquier fondo, sin chip.
+  { key: "la_francisca", src: "/images/logos/la-francisca.png", width: 399, height: 206, needsLightChip: false, heightClass: "h-9" },
+  { key: "la_tablada", src: "/images/logos/la-tablada.webp", width: 332, height: 100, needsLightChip: false, heightClass: "h-7" },
+] as const;
 
 export function TrustBarSection() {
   const t = useTranslations("home_trust");
@@ -31,14 +38,24 @@ export function TrustBarSection() {
 
           <span className="hidden sm:block h-4 w-px bg-border" />
 
-          <div className="flex items-center gap-3 text-muted-foreground">
+          <div className="flex items-center gap-5">
             <span className="font-medium text-foreground/70">{t("clients_label")}:</span>
-            {CLIENT_KEYS.map((key, i) => (
-              <span key={key} className="font-medium">
-                {tCaseNames(key)}
-                {i < CLIENT_KEYS.length - 1 && <span className="mx-1.5 opacity-40">·</span>}
-              </span>
-            ))}
+            {CLIENT_LOGOS.map(({ key, src, width, height, needsLightChip, heightClass }) =>
+              needsLightChip ? (
+                <span key={key} className="inline-flex items-center rounded-md bg-white px-2.5 py-1">
+                  <Image src={src} alt={tCaseNames(key)} width={width} height={height} className={cn(heightClass, "w-auto object-contain")} />
+                </span>
+              ) : (
+                <Image
+                  key={key}
+                  src={src}
+                  alt={tCaseNames(key)}
+                  width={width}
+                  height={height}
+                  className={cn(heightClass, "w-auto object-contain")}
+                />
+              )
+            )}
           </div>
         </div>
       </div>

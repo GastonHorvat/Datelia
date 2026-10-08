@@ -10,14 +10,17 @@ import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Wrench, FileCheck, Handshake } from 'lucide-react';
+import { ogImageUrl } from '@/lib/og';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: 'about_us.hero' });
+  const title = `${t('title')} | Datelia`;
 
   return {
-    title: `${t('title')} | Datelia`,
+    title,
     description: t('subtitle'),
+    openGraph: { title, description: t('subtitle'), images: [ogImageUrl(t('title'), t('subtitle'))] },
   };
 }
 
