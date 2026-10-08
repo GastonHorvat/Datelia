@@ -384,10 +384,13 @@
       "Montamos painéis com os indicadores que você realmente acompanha.",
       "Eles se atualizam sozinhos. Se precisar, somamos previsão de demanda e sugestões de compra."
     ],
+    "screenshot_title": "Assim é um painel de verdade",
+    "screenshot_body": "Nada de licenças de Power BI ou Looker Studio. Este é um painel que construímos sob medida para um cliente, com os indicadores que ele realmente acompanha.",
+    "screenshot_caption": "Painel de gestão entregue pela Datelia.",
     "includes_title": "O que inclui",
     "includes": [
       "Conectores aos seus sistemas",
-      "Painéis (Looker Studio, Power BI ou sob medida)",
+      "Painéis sob medida, sem licenças de Power BI ou Looker Studio",
       "Indicadores definidos com a diretoria",
       "Opcional: previsão de demanda e sugestões de compra"
     ],

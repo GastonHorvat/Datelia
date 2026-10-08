@@ -385,10 +385,13 @@
       "Armamos tableros con los indicadores que de verdad mirás.",
       "Se actualizan solos. Si hace falta, sumamos pronósticos de demanda y sugerencias de compra."
     ],
+    "screenshot_title": "Así se ve un tablero real",
+    "screenshot_body": "Nada de licencias de Power BI ni Looker Studio. Este es un tablero que construimos a medida para un cliente, con los indicadores que realmente mira.",
+    "screenshot_caption": "Tablero de gestión entregado por Datelia.",
     "includes_title": "Qué incluye",
     "includes": [
       "Conectores a tus sistemas",
-      "Tableros (Looker Studio, Power BI o a medida)",
+      "Tableros a medida, sin licencias de Power BI ni Looker Studio",
       "Indicadores definidos con la dirección",
       "Opcional: pronóstico de demanda y sugerencias de compra"
     ],

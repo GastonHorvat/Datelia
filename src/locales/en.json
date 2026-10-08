@@ -385,10 +385,13 @@
       "We build dashboards around the indicators you actually look at.",
       "They update automatically. If needed, we add demand forecasting and purchase suggestions."
     ],
+    "screenshot_title": "This is what a real dashboard looks like",
+    "screenshot_body": "No Power BI or Looker Studio licenses. This is a dashboard we built from scratch for a client, with the indicators they actually look at.",
+    "screenshot_caption": "A management dashboard delivered by Datelia.",
     "includes_title": "What's included",
     "includes": [
       "Connectors to your systems",
-      "Dashboards (Looker Studio, Power BI, or custom-built)",
+      "Custom-built dashboards, no Power BI or Looker Studio licenses",
       "Indicators defined with management",
       "Optional: demand forecasting and purchase suggestions"
     ],

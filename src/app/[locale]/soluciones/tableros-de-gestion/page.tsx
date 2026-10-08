@@ -18,6 +18,7 @@ export default function TablerosDeGestionPage() {
       icon="layout-dashboard"
       stepCount={4}
       includeCount={4}
+      screenshotSrc="/images/tableros-dashboard-real.jpeg"
       relatedCases={[
         { slug: 'la-francisca', name: 'la_francisca' },
         { slug: 'la-tablada', name: 'la_tablada' },

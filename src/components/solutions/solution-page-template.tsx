@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
@@ -31,9 +32,15 @@ interface SolutionPageTemplateProps {
   relatedCases: RelatedCase[];
   stepCount: number;
   includeCount: number;
+  /**
+   * Captura real de un producto entregado. Opcional: solo la solución que
+   * tenga una imagen real para mostrar la pasa (no se inventan screenshots).
+   * Cuando está presente, usa namespace.screenshot_title/body/caption.
+   */
+  screenshotSrc?: string;
 }
 
-export function SolutionPageTemplate({ namespace, icon, relatedCases, stepCount, includeCount }: SolutionPageTemplateProps) {
+export function SolutionPageTemplate({ namespace, icon, relatedCases, stepCount, includeCount, screenshotSrc }: SolutionPageTemplateProps) {
   const Icon = ICONS[icon];
   const t = useTranslations(namespace);
   const tCases = useTranslations("case_names");
@@ -112,6 +119,35 @@ export function SolutionPageTemplate({ namespace, icon, relatedCases, stepCount,
           </ol>
         </div>
       </section>
+
+      {/* Captura real (solo si la solución tiene una para mostrar) */}
+      {screenshotSrc && (
+        <section className="py-16 sm:py-20 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mb-8">
+              <h2 className="text-2xl md:text-3xl font-headline font-bold mb-4">
+                {t("screenshot_title")}
+              </h2>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
+                {t("screenshot_body")}
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto">
+              <div className="overflow-hidden rounded-xl border border-border shadow-2xl shadow-black/20">
+                <Image
+                  src={screenshotSrc}
+                  alt={t("screenshot_title")}
+                  width={1792}
+                  height={2400}
+                  className="w-full h-auto"
+                  sizes="(min-width: 1024px) 64rem, 100vw"
+                />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground">{t("screenshot_caption")}</p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Qué incluye */}
       <section className="py-16 sm:py-20 bg-background">
