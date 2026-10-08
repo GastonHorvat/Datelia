@@ -24,8 +24,8 @@ export function ErpIntegrationSection() {
   const carouselItems = [...integrationNodes, ...integrationNodes];
 
   return (
-    <section className="py-20 bg-white text-slate-900 overflow-hidden relative border-y border-slate-200">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,0,0,0.03)_0%,transparent_80%)] pointer-events-none" />
+    <section className="py-20 bg-background text-foreground overflow-hidden relative border-y border-border">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--foreground)/0.03)_0%,transparent_80%)] pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center mb-12">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -36,7 +36,7 @@ export function ErpIntegrationSection() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">
             {t("title")}
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto font-medium">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-medium">
             {t("description")}
           </p>
         </motion.div>
@@ -46,8 +46,8 @@ export function ErpIntegrationSection() {
       <div className="relative w-full flex overflow-hidden group">
 
         {/* Gradientes laterales para difuminar la entrada y salida de los logos */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
         <motion.div
           className="flex whitespace-nowrap gap-12 items-center"
