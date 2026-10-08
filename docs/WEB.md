@@ -56,3 +56,7 @@ Contacto (botón destacado: "Agendar diagnóstico")
 ## Estado de implementación
 
 Ver `_coaching/entregables/PENDIENTES_WEB_DATELIA.md` (fuera de este repo, carpeta de gestión de Gastón) para el detalle de qué fases están hechas, qué falta, y qué depende de qué. Resumen rápido al 2026-10-04: Fases 1 y 2 completas; Fase 3 (home) y Fase 4 (soluciones/casos) en curso la misma noche; Fase 5 (nosotros/contacto) y Fase 6 (blog/SEO/Clutch/LinkedIn) pendientes.
+
+## Auditoría de visibilidad y posicionamiento
+
+`docs/auditoria-visibilidad/` (gitignoreada, no se commitea) tiene una auditoría integral de 28 bloques (estrategia, SEO, legal, seguridad, accesibilidad, RevOps, analítica, etc.), hecha el 16/07/2026 y re-auditada el 08/10/2026 contra el código post-rediseño. Puntuación: 37,3/100 (crítico) → 47,0/100 (débil). Cada bloque tiene su nota original y una sección "Actualización 08/10/2026" con lo resuelto/pendiente; `Datelia/README.md` es el índice, `Datelia/historial-calificaciones.md` lleva el registro de notas por fecha (nunca se sobrescribe, solo se agregan filas). Si volvés a tocar el sitio de forma sustancial, vale la pena re-auditar y agregar una fila nueva al historial — así se puede mostrar la evolución de la nota en el tiempo.

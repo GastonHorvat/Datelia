@@ -43,3 +43,6 @@ next-env.d.ts
 # graphify (code knowledge graph — generado localmente)
 /graphify-out/
 .graphify/
+
+# auditoría de visibilidad (gestión interna, no se publica)
+/docs/auditoria-visibilidad/
