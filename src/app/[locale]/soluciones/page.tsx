@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CtaSection } from '@/components/landing/cta-section';
 import { Receipt, ClipboardList, FileSpreadsheet, LayoutDashboard, ArrowRight } from 'lucide-react';
 import { ogImageUrl } from '@/lib/og';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -20,6 +21,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     title,
     description: t('hero.subtitle'),
     openGraph: { title, description: t('hero.subtitle'), images: [ogImageUrl(t('hero.title'), t('hero.subtitle'))] },
+    alternates: buildAlternates('/soluciones', params.locale),
   };
 }
 

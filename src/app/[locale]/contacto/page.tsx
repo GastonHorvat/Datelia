@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, MessageCircle } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { ogImageUrl } from '@/lib/og';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -20,6 +21,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     title,
     description,
     openGraph: { title, description, images: [ogImageUrl(t('title'), t('subtitle'))] },
+    alternates: buildAlternates('/contacto', params.locale),
   };
 }
 

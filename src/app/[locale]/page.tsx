@@ -14,6 +14,7 @@ import { Metadata } from 'next';
 
 import { getTranslations } from 'next-intl/server';
 import { ogImageUrl } from '@/lib/og';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -45,9 +46,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       description: t('description'),
       images: [ogImage],
     },
-    alternates: {
-      canonical: 'https://www.datelia.com.ar',
-    },
+    alternates: buildAlternates('', locale),
   };
 }
 

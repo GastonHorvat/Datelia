@@ -1,108 +1,50 @@
 import { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabaseClient'
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.datelia.com.ar'
+const baseUrl = 'https://www.datelia.com.ar'
 
+// El sitio tiene es/en/pt con localePrefix 'as-needed' (es sin prefijo, en/pt con
+// prefijo). Para cada ruta estática armamos las 3 URLs y las "languages" de hreflang.
+function staticRouteEntry(
+  pathWithoutLocale: string,
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'],
+  priority: number
+): MetadataRoute.Sitemap[number] {
+  return {
+    url: `${baseUrl}${pathWithoutLocale}`,
+    lastModified: new Date(),
+    changeFrequency,
+    priority,
+    alternates: {
+      languages: {
+        es: `${baseUrl}${pathWithoutLocale}`,
+        en: `${baseUrl}/en${pathWithoutLocale}`,
+        pt: `${baseUrl}/pt${pathWithoutLocale}`,
+      },
+    },
+  }
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Rutas estáticas principales
   const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/soluciones`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/soluciones/rendicion-de-gastos`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/soluciones/pedidos-y-presupuestos`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/soluciones/facturas-y-proveedores`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/soluciones/tableros-de-gestion`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/casos`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/casos/cedsa`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/casos/la-francisca`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/casos/la-tablada`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/sobre-nosotros`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/contacto`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
+    staticRouteEntry('', 'weekly', 1),
+    staticRouteEntry('/soluciones', 'monthly', 0.9),
+    staticRouteEntry('/soluciones/rendicion-de-gastos', 'monthly', 0.8),
+    staticRouteEntry('/soluciones/pedidos-y-presupuestos', 'monthly', 0.8),
+    staticRouteEntry('/soluciones/facturas-y-proveedores', 'monthly', 0.8),
+    staticRouteEntry('/soluciones/tableros-de-gestion', 'monthly', 0.8),
+    staticRouteEntry('/casos', 'monthly', 0.9),
+    staticRouteEntry('/casos/cedsa', 'monthly', 0.7),
+    staticRouteEntry('/casos/la-francisca', 'monthly', 0.7),
+    staticRouteEntry('/casos/la-tablada', 'monthly', 0.7),
+    staticRouteEntry('/blog', 'weekly', 0.8),
+    staticRouteEntry('/sobre-nosotros', 'monthly', 0.6),
+    staticRouteEntry('/contacto', 'monthly', 0.7),
     // Páginas legales
-    {
-      url: `${baseUrl}/legal/politica-de-privacidad`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/legal/terminos-y-condiciones`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/legal/politica-de-cookies`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+    staticRouteEntry('/legal/politica-de-privacidad', 'yearly', 0.3),
+    staticRouteEntry('/legal/terminos-y-condiciones', 'yearly', 0.3),
+    staticRouteEntry('/legal/politica-de-cookies', 'yearly', 0.3),
   ]
 
   // Rutas dinámicas del blog

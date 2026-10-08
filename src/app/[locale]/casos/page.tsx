@@ -11,6 +11,7 @@ import { Quote, ArrowRight } from 'lucide-react';
 import { SectorsSection } from '@/components/case-studies/sectors-section';
 import { CtaSection } from '@/components/landing/cta-section';
 import { ogImageUrl } from '@/lib/og';
+import { buildAlternates } from '@/lib/seo';
 
 const CLUTCH_PROFILE_URL = 'https://clutch.co/profile/datelia';
 const LOGOS: Record<string, { src: string; width: number; height: number }> = {
@@ -28,6 +29,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     title,
     description: t('subtitle'),
     openGraph: { title, description: t('subtitle'), images: [ogImageUrl(t('title'), t('subtitle'))] },
+    alternates: buildAlternates('/casos', params.locale),
   };
 }
 

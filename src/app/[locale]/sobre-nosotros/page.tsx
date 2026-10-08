@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Wrench, FileCheck, Handshake } from 'lucide-react';
 import { ogImageUrl } from '@/lib/og';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -21,6 +22,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     title,
     description: t('subtitle'),
     openGraph: { title, description: t('subtitle'), images: [ogImageUrl(t('title'), t('subtitle'))] },
+    alternates: buildAlternates('/sobre-nosotros', params.locale),
   };
 }
 

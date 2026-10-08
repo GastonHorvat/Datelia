@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { SolutionPageTemplate } from '@/components/solutions/solution-page-template';
 import { ogImageUrl } from '@/lib/og';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await props.params;
@@ -11,6 +12,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     title,
     description: t('subtitle'),
     openGraph: { title, description: t('subtitle'), images: [ogImageUrl(t('title'), t('subtitle'))] },
+    alternates: buildAlternates('/soluciones/facturas-y-proveedores', locale),
   };
 }
 

@@ -19,6 +19,7 @@ export function ContactForm() {
         empresa: "",
         contacto: "",
         tarea: "",
+        website_url: "", // honeypot: debe quedar siempre vacío para un usuario real
     });
 
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -87,6 +88,17 @@ export function ContactForm() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-5">
+                    {/* Honeypot anti-spam: invisible para una persona, visible para un bot que completa todos los inputs */}
+                    <input
+                        type="text"
+                        name="website_url"
+                        value={formData.website_url}
+                        onChange={handleChange}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+                        aria-hidden="true"
+                    />
                     <div className="space-y-2">
                         <Label htmlFor="nombre">{t('fields.nombre')}</Label>
                         <Input
