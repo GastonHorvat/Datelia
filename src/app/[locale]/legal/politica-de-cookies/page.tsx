@@ -57,13 +57,13 @@ const CookiesPolicyPage = () => {
                                 <p>En Datelia, utilizamos cookies para varios propósitos importantes:</p>
                                 <ul>
                                     <li><strong>Cookies Esenciales:</strong> Son estrictamente necesarias para el funcionamiento del sitio web. Sin ellas, servicios como la navegación segura no pueden ser proporcionados.</li>
-                                    <li><strong>Cookies de Rendimiento y Analíticas:</strong> Nos permiten reconocer y contar el número de visitantes y ver cómo se mueven por nuestro sitio web. Esto nos ayuda a mejorar la forma en que funciona nuestro sitio, por ejemplo, asegurando que los usuarios encuentren lo que buscan fácilmente. Utilizamos herramientas como Google Analytics para este fin.</li>
+                                    <li><strong>Analítica sin cookies:</strong> Para entender cómo se usa nuestro sitio (por ejemplo, cuántas visitas recibe cada página) utilizamos Umami, una herramienta de analítica que, a diferencia de Google Analytics, no utiliza cookies ni recopila datos personales identificables: mide visitas de forma agregada y anónima, sin rastrear usuarios individuales.</li>
                                     <li><strong>Cookies de Funcionalidad:</strong> Se utilizan para reconocerte cuando vuelves a nuestro sitio web. Esto nos permite personalizar nuestro contenido para ti y recordar tus preferencias.</li>
                                 </ul>
 
                                 <h3>3. Cookies de Terceros</h3>
                                 <p>
-                                    En algunos casos, también utilizamos cookies proporcionadas por terceros de confianza. Por ejemplo, nuestro sitio utiliza Google Analytics, que es una de las soluciones de análisis más extendidas y fiables en la web para ayudarnos a entender cómo usas el sitio y cómo podemos mejorar tu experiencia. Estas cookies pueden rastrear cosas como el tiempo que pasas en el sitio y las páginas que visitas.
+                                    Actualmente no utilizamos cookies de terceros con fines publicitarios o de seguimiento entre sitios. La herramienta de analítica que usamos (Umami) no coloca cookies en tu navegador: procesa la información de las visitas de forma anónima y agregada, sin asignarte un identificador persistente.
                                 </p>
 
                                 <h3>4. ¿Cómo puedes controlar las Cookies?</h3>
