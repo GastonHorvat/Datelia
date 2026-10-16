@@ -27,6 +27,7 @@ export default function CedsaPage() {
       logoSrc="/images/logos/cedsa.png"
       logoWidth={550}
       logoHeight={557}
+      logoNeedsDarkChip
       screenshotSrc="/images/casos/cedsa-real.png"
       screenshotWidth={1319}
       screenshotHeight={2009}
