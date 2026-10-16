@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, FormEvent } from "react";
+import React, { useState, useRef, FormEvent } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
@@ -24,19 +24,39 @@ export function ContactForm() {
 
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
+    const [invalidFields, setInvalidFields] = useState<Record<"nombre" | "empresa" | "contacto", boolean>>({
+        nombre: false,
+        empresa: false,
+        contacto: false,
+    });
+
+    const nombreRef = useRef<HTMLInputElement>(null);
+    const empresaRef = useRef<HTMLInputElement>(null);
+    const contactoRef = useRef<HTMLInputElement>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+        if (name in invalidFields) {
+            setInvalidFields((prev) => ({ ...prev, [name]: false }));
+        }
     };
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
 
-        if (!formData.nombre || !formData.empresa || !formData.contacto) {
+        const missing = {
+            nombre: !formData.nombre,
+            empresa: !formData.empresa,
+            contacto: !formData.contacto,
+        };
+        if (missing.nombre || missing.empresa || missing.contacto) {
+            setInvalidFields(missing);
             setErrorMessage(t('errors.required'));
+            (missing.nombre ? nombreRef : missing.empresa ? empresaRef : contactoRef).current?.focus();
             return;
         }
+        setInvalidFields({ nombre: false, empresa: false, contacto: false });
 
         setStatus("loading");
         setErrorMessage("");
@@ -81,7 +101,7 @@ export function ContactForm() {
         <Card className="max-w-xl mx-auto border border-border shadow-sm">
             <CardContent className="pt-8 pb-8 px-6 sm:px-8">
                 {errorMessage && (
-                    <div className="bg-destructive/10 text-destructive p-3 rounded-md flex items-center gap-2 text-sm mb-6">
+                    <div id="contact-form-error" role="alert" className="bg-destructive/10 text-destructive p-3 rounded-md flex items-center gap-2 text-sm mb-6">
                         <AlertCircle className="h-4 w-4 shrink-0" />
                         <span>{errorMessage}</span>
                     </div>
@@ -104,8 +124,11 @@ export function ContactForm() {
                         <Input
                             id="nombre"
                             name="nombre"
+                            ref={nombreRef}
                             value={formData.nombre}
                             onChange={handleChange}
+                            aria-invalid={invalidFields.nombre || undefined}
+                            aria-describedby={invalidFields.nombre ? "contact-form-error" : undefined}
                             className="h-12"
                         />
                     </div>
@@ -114,8 +137,11 @@ export function ContactForm() {
                         <Input
                             id="empresa"
                             name="empresa"
+                            ref={empresaRef}
                             value={formData.empresa}
                             onChange={handleChange}
+                            aria-invalid={invalidFields.empresa || undefined}
+                            aria-describedby={invalidFields.empresa ? "contact-form-error" : undefined}
                             className="h-12"
                         />
                     </div>
@@ -124,8 +150,11 @@ export function ContactForm() {
                         <Input
                             id="contacto"
                             name="contacto"
+                            ref={contactoRef}
                             value={formData.contacto}
                             onChange={handleChange}
+                            aria-invalid={invalidFields.contacto || undefined}
+                            aria-describedby={invalidFields.contacto ? "contact-form-error" : undefined}
                             className="h-12"
                         />
                     </div>

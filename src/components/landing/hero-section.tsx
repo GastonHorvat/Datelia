@@ -39,7 +39,7 @@ export function HeroSection() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur(0.5), delay: dur(0.1) }}
+              transition={{ duration: dur(0.5), delay: dur(0.05) }}
               className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
               {tHome("subtitle")}
@@ -48,7 +48,7 @@ export function HeroSection() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur(0.5), delay: dur(0.2) }}
+              transition={{ duration: dur(0.5), delay: dur(0.15) }}
               className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
             >
               <Button asChild size="lg" className="h-12 px-7 group">
@@ -71,7 +71,7 @@ export function HeroSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.92, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: -5 }}
-              transition={{ duration: dur(0.5), delay: dur(0.3) }}
+              transition={{ duration: dur(0.5), delay: dur(0.2) }}
               className="absolute left-0 top-[8%] hidden sm:block w-[52%] aspect-[16/11] rounded-xl border border-border shadow-2xl shadow-black/30 overflow-hidden"
             >
               <Image
@@ -87,7 +87,7 @@ export function HeroSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.92, rotate: 3 }}
               animate={{ opacity: 1, scale: 1, rotate: 3 }}
-              transition={{ duration: dur(0.5), delay: dur(0.15) }}
+              transition={{ duration: dur(0.5), delay: dur(0.1) }}
               className="absolute right-0 top-0 z-10 w-[74%] sm:w-[62%] aspect-[16/11] rounded-xl border border-border shadow-2xl shadow-black/40 overflow-hidden"
             >
               <Image
@@ -104,7 +104,7 @@ export function HeroSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.92, rotate: -2 }}
               animate={{ opacity: 1, scale: 1, rotate: -2 }}
-              transition={{ duration: dur(0.5), delay: dur(0.45) }}
+              transition={{ duration: dur(0.5), delay: dur(0.25) }}
               className="absolute left-[14%] bottom-0 z-20 hidden lg:block w-[42%] aspect-[16/11] rounded-xl border border-border shadow-xl shadow-black/30 overflow-hidden"
             >
               <Image

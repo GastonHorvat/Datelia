@@ -1,11 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export function ErpIntegrationSection() {
   const t = useTranslations("erp_integration");
+  const shouldReduceMotion = useReducedMotion();
 
   const integrationNodes = [
     { src: "/images/logos/odoo.svg", alt: "Odoo" },
@@ -51,12 +52,16 @@ export function ErpIntegrationSection() {
 
         <motion.div
           className="flex whitespace-nowrap gap-12 items-center"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            ease: "linear",
-            duration: 35, // Tiempo de ralentización del carrusel (a mayor numero, mas lento)
-            repeat: Infinity,
-          }}
+          animate={shouldReduceMotion ? { x: "0%" } : { x: ["0%", "-50%"] }}
+          transition={
+            shouldReduceMotion
+              ? undefined
+              : {
+                  ease: "linear",
+                  duration: 35, // Tiempo de ralentización del carrusel (a mayor numero, mas lento)
+                  repeat: Infinity,
+                }
+          }
         >
           {carouselItems.map((node, idx) => (
             <div
