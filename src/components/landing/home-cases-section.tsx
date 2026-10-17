@@ -45,26 +45,16 @@ export function HomeCasesSection() {
               className="group block rounded-2xl border border-background/15 bg-background/5 p-6 hover:bg-background/10 hover:border-primary/40 transition-colors"
             >
               <div className="flex items-start justify-between mb-5">
-                {key === "la_tablada" ? (
-                  // Logo blanco pensado para fondo oscuro; esta sección tiene fondo claro (bg-foreground), así que necesita su propio respaldo oscuro para no desaparecer.
-                  <span className="inline-flex items-center rounded-md bg-background px-2.5 py-1.5">
-                    <Image
-                      src={LOGOS[key].src}
-                      alt={tCaseNames(key)}
-                      width={LOGOS[key].width}
-                      height={LOGOS[key].height}
-                      className="h-5 w-auto object-contain"
-                    />
-                  </span>
-                ) : (
+                {/* Los 3 logos tienen wordmark claro, pensado para fondo oscuro; esta sección tiene fondo claro (bg-foreground), así que los 3 necesitan su propio respaldo oscuro para no desaparecer. */}
+                <span className="inline-flex items-center rounded-md bg-background px-2.5 py-1.5">
                   <Image
                     src={LOGOS[key].src}
                     alt={tCaseNames(key)}
                     width={LOGOS[key].width}
                     height={LOGOS[key].height}
-                    className="h-9 w-auto object-contain"
+                    className="h-6 w-auto object-contain"
                   />
-                )}
+                </span>
                 <ArrowUpRight className="h-5 w-5 text-background/50 group-hover:text-primary transition-colors" />
               </div>
               <h3 className="text-xl font-headline font-bold mb-2">{tCaseNames(key)}</h3>
