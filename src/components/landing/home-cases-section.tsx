@@ -9,10 +9,11 @@ const SLUGS: Record<(typeof CASES)[number], string> = {
   la_francisca: "la-francisca",
   la_tablada: "la-tablada",
 };
-const LOGOS: Record<(typeof CASES)[number], { src: string; width: number; height: number }> = {
-  cedsa: { src: "/images/logos/cedsa.png", width: 550, height: 557 },
-  la_francisca: { src: "/images/logos/la-francisca.png", width: 399, height: 206 },
-  la_tablada: { src: "/images/logos/la-tablada.webp", width: 332, height: 100 },
+const LOGOS: Record<(typeof CASES)[number], { src: string; width: number; height: number; heightClass: string }> = {
+  cedsa: { src: "/images/logos/cedsa.png", width: 550, height: 557, heightClass: "h-9" },
+  // El cartel de La Francisca tiene mucho borde decorativo: a igual altura que los otros 2, el texto real queda muy chico. Se agranda para compensar.
+  la_francisca: { src: "/images/logos/la-francisca.png", width: 399, height: 206, heightClass: "h-14" },
+  la_tablada: { src: "/images/logos/la-tablada.webp", width: 332, height: 100, heightClass: "h-9" },
 };
 
 export function HomeCasesSection() {
@@ -42,23 +43,23 @@ export function HomeCasesSection() {
             <Link
               key={key}
               href={`/${locale}/casos/${SLUGS[key]}`}
-              className="group block rounded-2xl border border-background/15 bg-background/5 p-6 hover:bg-background/10 hover:border-primary/40 transition-colors"
+              className="group block rounded-2xl border border-background/15 bg-background/5 hover:border-primary/40 transition-colors overflow-hidden"
             >
-              <div className="flex items-start justify-between mb-5">
-                {/* Los 3 logos tienen wordmark claro, pensado para fondo oscuro; esta sección tiene fondo claro (bg-foreground), así que los 3 necesitan su propio respaldo oscuro para no desaparecer. */}
-                <span className="inline-flex items-center rounded-md bg-background px-2.5 py-1.5">
-                  <Image
-                    src={LOGOS[key].src}
-                    alt={tCaseNames(key)}
-                    width={LOGOS[key].width}
-                    height={LOGOS[key].height}
-                    className="h-6 w-auto object-contain"
-                  />
-                </span>
-                <ArrowUpRight className="h-5 w-5 text-background/50 group-hover:text-primary transition-colors" />
+              {/* Barra oscura de ancho completo: mismo tamaño para los 3 logos (en vez de un chip ajustado al contenido, que salía de ancho distinto para cada uno). Los 3 logos tienen wordmark claro, pensado para fondo oscuro. */}
+              <div className="h-20 flex items-center justify-between px-5 bg-background">
+                <Image
+                  src={LOGOS[key].src}
+                  alt={tCaseNames(key)}
+                  width={LOGOS[key].width}
+                  height={LOGOS[key].height}
+                  className={`${LOGOS[key].heightClass} w-auto object-contain`}
+                />
+                <ArrowUpRight className="h-5 w-5 text-foreground/40 group-hover:text-primary transition-colors shrink-0" />
               </div>
-              <h3 className="text-xl font-headline font-bold mb-2">{tCaseNames(key)}</h3>
-              <p className="text-background/70 text-sm leading-relaxed">{summaries[key]}</p>
+              <div className="p-6 group-hover:bg-background/10 transition-colors">
+                <h3 className="text-xl font-headline font-bold mb-2">{tCaseNames(key)}</h3>
+                <p className="text-background/70 text-sm leading-relaxed">{summaries[key]}</p>
+              </div>
             </Link>
           ))}
         </div>
