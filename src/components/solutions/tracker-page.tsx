@@ -20,6 +20,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Layout } from "@/components/layout";
 
 const TRACKER_URL = "https://tracker.datelia.com.ar";
+const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/eaafcfngickmmeolknklcgmaaagjlemp";
 
 const FEATURE_ICONS = [KanbanSquare, Users, Chrome, Webhook, BarChart3] as const;
 
@@ -38,6 +39,8 @@ export function TrackerPage() {
     title: t(`features.${i}.title`),
     description: t(`features.${i}.description`),
   }));
+
+  const extensionSteps = Array.from({ length: 4 }, (_, i) => t(`extension.steps.${i}`));
 
   const showNext = () =>
     setLightboxIndex((i) => (i === null ? null : (i + 1) % SCREENSHOTS.length));
@@ -228,6 +231,70 @@ export function TrackerPage() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Extensión de Chrome */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <div>
+              <motion.h2 {...reveal()} className="text-2xl md:text-3xl font-headline font-bold mb-4">
+                {t("extension.title")}
+              </motion.h2>
+              <motion.p {...reveal(0.05)} className="text-foreground/80 leading-relaxed mb-8">
+                {t("extension.body")}
+              </motion.p>
+              <ol className="space-y-5 mb-8">
+                {extensionSteps.map((step, i) => (
+                  <motion.li key={i} {...reveal(0.1 + i * 0.06)} className="flex gap-4">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
+                      {i + 1}
+                    </span>
+                    <p className="text-foreground/90 leading-relaxed pt-0.5">{step}</p>
+                  </motion.li>
+                ))}
+              </ol>
+              <motion.div {...reveal(0.3)}>
+                <Button asChild size="lg">
+                  <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer">
+                    <Chrome className="mr-2 h-4 w-4" />
+                    {t("extension.cta_button")}
+                  </a>
+                </Button>
+              </motion.div>
+            </div>
+            <motion.div {...reveal(0.15)} className="space-y-6">
+              <div>
+                <div className="flex justify-center overflow-hidden rounded-xl border border-border bg-card p-4 shadow-xl shadow-black/20">
+                  <Image
+                    src="/images/producto/tracker-extension-popup.png"
+                    alt={t("extension.popup_caption")}
+                    width={410}
+                    height={345}
+                    className="h-auto max-w-full rounded-lg"
+                  />
+                </div>
+                <p className="mt-3 text-center text-sm text-muted-foreground">
+                  {t("extension.popup_caption")}
+                </p>
+              </div>
+              <div>
+                <div className="flex justify-center overflow-hidden rounded-xl border border-border bg-card p-4 shadow-xl shadow-black/20">
+                  <Image
+                    src="/images/producto/tracker-extension-capture.png"
+                    alt={t("extension.capture_caption")}
+                    width={630}
+                    height={768}
+                    className="h-auto max-w-full max-h-[420px] rounded-lg"
+                  />
+                </div>
+                <p className="mt-3 text-center text-sm text-muted-foreground">
+                  {t("extension.capture_caption")}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16 sm:py-20 bg-primary text-primary-foreground text-center">

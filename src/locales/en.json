@@ -449,6 +449,19 @@
       "issue_caption": "Issue detail: priority, status, assignee, and tags.",
       "dashboard_caption": "Dashboard with cycle time, aging, and net flow."
     },
+    "extension": {
+      "title": "Install the Chrome extension",
+      "body": "Report a bug without leaving the page where you spotted it. Free, from the Chrome Web Store.",
+      "steps": [
+        "Install it from the Chrome Web Store (the \"Add to Chrome\" button).",
+        "Sign in with your Google account, the same one you use on the tracker.",
+        "On the page where you saw the bug, click the extension icon (or the Ctrl+Shift+X shortcut) and select the problem element.",
+        "Fill in the form (title, priority, project) and submit: the issue is created automatically, with the screenshot attached."
+      ],
+      "cta_button": "Add to Chrome",
+      "popup_caption": "The extension popup, already signed in with your account.",
+      "capture_caption": "Select the element with the bug and fill in the issue, without leaving the page."
+    },
     "cta_title": "Is your team still tracking bugs over WhatsApp or spreadsheets?",
     "cta_button": "Try it for free"
   },

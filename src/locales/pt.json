@@ -448,6 +448,19 @@
       "issue_caption": "Detalhe de um issue: prioridade, status, responsável e tags.",
       "dashboard_caption": "Dashboard com tempo de ciclo, aging e net flow."
     },
+    "extension": {
+      "title": "Instale a extensão do Chrome",
+      "body": "Reporte um bug sem sair da página onde você o viu. Grátis, pela Chrome Web Store.",
+      "steps": [
+        "Instale pela Chrome Web Store (botão \"Add to Chrome\").",
+        "Faça login com sua conta do Google, a mesma que você usa no tracker.",
+        "Na página onde você viu o bug, clique no ícone da extensão (ou no atalho Ctrl+Shift+X) e selecione o elemento com problema.",
+        "Preencha o formulário (título, prioridade, projeto) e envie: o issue é criado sozinho, com a captura de tela anexada."
+      ],
+      "cta_button": "Adicionar ao Chrome",
+      "popup_caption": "O popup da extensão, já conectado com sua conta.",
+      "capture_caption": "Selecione o elemento com o bug e preencha o issue, sem sair da página."
+    },
     "cta_title": "Seu time ainda reporta bugs por WhatsApp ou planilha?",
     "cta_button": "Experimentar grátis"
   },
