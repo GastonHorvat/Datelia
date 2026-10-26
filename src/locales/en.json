@@ -6,6 +6,7 @@
     "sol_pedidos": "Orders and quotes",
     "sol_facturas": "Invoices and suppliers",
     "sol_tableros": "Management dashboards",
+    "sol_tracker": "IssueTracker",
     "all_solutions": "See all solutions",
     "cases": "Case studies",
     "how_we_work": "How we work",
@@ -410,6 +411,46 @@
     "related_cases_title": "Related case studies",
     "cta_title": "Do you have to ask someone for a spreadsheet just to get one number?",
     "cta_button": "Book a diagnostic call"
+  },
+  "sol_tracker": {
+    "hero": {
+      "title": "The issue tracker we built for ourselves, now open to your team",
+      "subtitle": "Multi-project Kanban boards, roles designed for working with outside clients, and a Chrome extension to report bugs in one click. Free.",
+      "cta_primary": "Try it for free",
+      "cta_note": "Free. No credit card required."
+    },
+    "features_title": "What's included",
+    "features": [
+      {
+        "title": "Multi-project Kanban boards",
+        "description": "Fully customizable: columns, tags, and workflows that adapt to each team's process, not the other way around."
+      },
+      {
+        "title": "Roles built for working with clients",
+        "description": "Owner, Admin, Member, Client, and Guest: each outside client sees and edits only their own work, without risking the rest of the project."
+      },
+      {
+        "title": "Chrome extension",
+        "description": "Report a bug from any website in one click, with an automatic screenshot of the element, without leaving the page."
+      },
+      {
+        "title": "REST API for integrations",
+        "description": "Connect bots, AI assistants (via MCP), or your own automations to create and manage issues without touching the UI."
+      },
+      {
+        "title": "Real team metrics",
+        "description": "Workload, cycle time, and progress by team or project. It's not just a board, you can also measure it."
+      }
+    ],
+    "screenshot_title": "A look inside",
+    "screenshot_body": "Real screenshots from a demo project, no client data.",
+    "screenshots": {
+      "kanban_caption": "Multi-project Kanban board.",
+      "issue_caption": "Issue detail: priority, status, assignee, and tags.",
+      "dashboard_caption": "Dashboard with cycle time, aging, and net flow."
+    },
+    "cta_title": "Is your team still tracking bugs over WhatsApp or spreadsheets?",
+    "cta_button": "Try it for free"
   },
   "contact_page": {
     "hero": {

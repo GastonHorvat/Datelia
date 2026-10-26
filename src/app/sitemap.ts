@@ -34,6 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     staticRouteEntry('/soluciones/pedidos-y-presupuestos', 'monthly', 0.8),
     staticRouteEntry('/soluciones/facturas-y-proveedores', 'monthly', 0.8),
     staticRouteEntry('/soluciones/tableros-de-gestion', 'monthly', 0.8),
+    staticRouteEntry('/soluciones/tracker', 'monthly', 0.8),
     staticRouteEntry('/casos', 'monthly', 0.9),
     staticRouteEntry('/casos/cedsa', 'monthly', 0.7),
     staticRouteEntry('/casos/la-francisca', 'monthly', 0.7),

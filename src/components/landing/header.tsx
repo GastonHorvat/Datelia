@@ -58,6 +58,7 @@ export function Header() {
         { href: `/${currentLocale}/soluciones/pedidos-y-presupuestos`, label: t("sol_pedidos") },
         { href: `/${currentLocale}/soluciones/facturas-y-proveedores`, label: t("sol_facturas") },
         { href: `/${currentLocale}/soluciones/tableros-de-gestion`, label: t("sol_tableros") },
+        { href: `/${currentLocale}/soluciones/tracker`, label: t("sol_tracker") },
         { href: `/${currentLocale}/soluciones`, label: t("all_solutions") },
       ],
     },

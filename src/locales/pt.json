@@ -6,6 +6,7 @@
     "sol_pedidos": "Pedidos e orçamentos",
     "sol_facturas": "Faturas e fornecedores",
     "sol_tableros": "Painéis de gestão",
+    "sol_tracker": "IssueTracker",
     "all_solutions": "Ver todas as soluções",
     "cases": "Casos",
     "how_we_work": "Como trabalhamos",
@@ -409,6 +410,46 @@
     "related_cases_title": "Casos relacionados",
     "cta_title": "Para saber um número, você tem que pedir uma planilha a alguém?",
     "cta_button": "Agende um diagnóstico"
+  },
+  "sol_tracker": {
+    "hero": {
+      "title": "O issue tracker que usamos internamente, agora também para seu time",
+      "subtitle": "Quadros Kanban multiprojeto, papéis pensados para trabalhar com clientes externos e uma extensão de Chrome para reportar bugs com um clique. Grátis.",
+      "cta_primary": "Experimentar grátis",
+      "cta_note": "Grátis. Sem cartão de crédito."
+    },
+    "features_title": "O que inclui",
+    "features": [
+      {
+        "title": "Quadros Kanban multiprojeto",
+        "description": "100% personalizáveis: colunas, tags e fluxos que se adaptam ao processo de cada equipe, não o contrário."
+      },
+      {
+        "title": "Papéis pensados para trabalhar com clientes",
+        "description": "Owner, Admin, Member, Client e Guest: cada cliente externo vê e edita só o que é dele, sem arriscar o resto do projeto."
+      },
+      {
+        "title": "Extensão de Chrome",
+        "description": "Reporte um bug de qualquer site com um clique, com captura de tela automática do elemento, sem sair da página."
+      },
+      {
+        "title": "API REST para integrações",
+        "description": "Conecte bots, assistentes de IA (via MCP) ou automações próprias para criar e gerenciar issues sem tocar na interface."
+      },
+      {
+        "title": "Métricas reais de equipe",
+        "description": "Carga de trabalho, tempo de ciclo e andamento por equipe ou projeto. Não é só um quadro, também dá para medir."
+      }
+    ],
+    "screenshot_title": "Veja por dentro",
+    "screenshot_body": "Capturas reais de um projeto demo, sem dados de clientes.",
+    "screenshots": {
+      "kanban_caption": "Quadro Kanban multiprojeto.",
+      "issue_caption": "Detalhe de um issue: prioridade, status, responsável e tags.",
+      "dashboard_caption": "Dashboard com tempo de ciclo, aging e net flow."
+    },
+    "cta_title": "Seu time ainda reporta bugs por WhatsApp ou planilha?",
+    "cta_button": "Experimentar grátis"
   },
   "contact_page": {
     "hero": {

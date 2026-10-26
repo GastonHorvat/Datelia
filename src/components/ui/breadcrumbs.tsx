@@ -14,6 +14,7 @@ const routeNameMap: Record<string, string> = {
     'pedidos-y-presupuestos': 'Pedidos y Presupuestos',
     'facturas-y-proveedores': 'Facturas y Proveedores',
     'tableros-de-gestion': 'Tableros de Gestión',
+    'tracker': 'IssueTracker',
     'blog': 'Blog',
     'casos': 'Casos',
     'cedsa': 'CEDSA',
